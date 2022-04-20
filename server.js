@@ -1,7 +1,7 @@
 
 const express = require('express')
 const app = express()
-const port = 4000
+const port = process.env.PORT || 4000;
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'ejs', 'html');
 
