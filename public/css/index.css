@@ -1,3 +1,9 @@
+:root {
+--Primary1: #1D1D1B;
+--primary2: #FFFFFF;
+--orange: #E84D3C;
+}
+
 h1 {
-    background-color: lightblue;
+    background-color: var(--orange);
 }
