@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/css/index.css">
-    
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/index.css">
+
 
 </head>
+
 <body>
 
 
-<main>
-    <%- include('partials/header') %>
+    <main>
+        <%- include('partials/header') %>
+        <h1>Virtually Human</h1>
 
-    <%- include('partials/img') %>
-  
 
-    <h1>Virtually Human</h1>
+        <textarea id="textReturn" name="code" rows="4" cols="100">
 
-    <button onclick="smileButton()">smile</button>
-      <textarea name="code" rows="4" cols="50">
-          
       </textarea>
-      <span id="textReturn"></span>
-     <script src="/script/chatbot.js"></script>
+        
+        <script src="/script/chatbot.js"></script>
+        <br>
+        <button id="smileButton">smile</button>
+        <button id="frownButton">frown</button>
+
     </main>
-</body> 
-</html> 
+</body>
+<script src="/script/chatbot.js"></script>
+</html>
