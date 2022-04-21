@@ -8,7 +8,7 @@ app.set('view engine', 'ejs', 'html');
 
 app.get('/', function(req, res) {
     
-    res.render('/', {
+    res.render('index', {
      
     });
   });
