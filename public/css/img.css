@@ -1,3 +1,8 @@
+.imageArea{
+    float: left;
+}
 .placeholder {
-    width: 39.5%;
+    width: 40em;
+   
+    margin-right: 2em;
 }
