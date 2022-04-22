@@ -1,0 +1,30 @@
+.dropdown{
+    text-align: center;
+ 
+}
+
+button.dropButton {
+    background-color: rgb(219, 219, 219);
+    border-radius: 0.2em;
+    width: 25em;
+    padding:1.5em;
+    border-style: none;
+    font-weight: bold;
+
+    
+}
+.dropdownContent {
+    background-color:rgb(217, 229, 233);
+    text-align: center;
+    transition:         all 0.8s;
+    visibility: hidden;
+    opacity: 0;
+    padding:1em;
+}
+
+.dropdown:hover .dropdownContent {
+    
+    visibility: visible;
+    opacity: 1;
+    transition:         all 0.4s ease-out;
+}
