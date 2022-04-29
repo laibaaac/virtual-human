@@ -83,10 +83,8 @@ function frownCode() {
     document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='frownLarge' duration='4.5' blendStart='1.5' blendEnd='1.5'/>";
   }
 
-
-
-  function myFunction() {
-    var element = document.getElementById("content");
-    element.classList.add("active");
-    console.log(element)
-  }
+  for (var i = 0; i < document.links.length; i++) {
+    if (document.links[i].href === document.URL) {
+        document.links[i].className = 'current';
+    }
+ }

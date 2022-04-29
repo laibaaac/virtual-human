@@ -1,16 +1,47 @@
-h1 {
-background-color: black;
-    color: white;
-    padding: 0.5em;
-    font-family: Arial, Helvetica, sans-serif;
+
+:root {
+    --Primary1: #1D1D1B;
+    --primary2: #FFFFFF;
+    --orange: #E84D3C;
+    }
+    
+    
+    
+
+img.logo {
+    width: 20em;
+    padding: 1.5em;
 }
 nav {
+   margin-right: 8em;
+    padding: 1.5em;
     float:right;
     margin-top: 1em;
 }
 nav > a {
-    padding: 1em;
-    color: rgb(204, 0, 0);
-
-   
+    font-size: 1em;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    color: var(--primary1);
+    transition: all 0.3s;
 }
+
+a.current {
+    color: var(--orange);
+    font-weight: bolder;
+    border-bottom: 3px solid var(--orange);
+    line-height: 1em;
+}
+nav > a:hover {
+color: var(--orange);
+font-weight: bolder;
+font-size: 1.05em;
+}
+nav > a.current:hover {
+    color: var(--primary1);
+    border-bottom: 3px solid black;
+    }
