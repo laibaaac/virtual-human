@@ -19,6 +19,7 @@ document.getElementById("friendlyButton").addEventListener("click", friendlyCode
 document.getElementById("agreeButton").addEventListener("click", agreeCode);
 document.getElementById("disagreeButton").addEventListener("click", disagreeCode);
 
+var dura=0;
 
 function smileCode() {
     document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='smileLarge' duration='3.5' blendStart='0.5' blendEnd='0.5' peak='0.8'/>";
@@ -51,7 +52,8 @@ function frownCode() {
     document.getElementById("textReturn").innerHTML = "<trl-config lookat='0,0,-20' enable='true' speed='3.75' wait='2.5' returnSpeed='5.25' absolute='false' /><trl-anim type='aux' id='tiltDownLarge3' duration='2.5' />";
   }
   function eyebrowRaiseCode() {
-    document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='raisedBrowLarge' duration='4.25' blendStart='1.5' blendEnd='1.5'/>";
+dura=4;
+    document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='raisedBrowLarge' duration=" + parseInt(dura) + " blendStart='1.5' blendEnd='1.5'/>";
   }
   function eyebrowsSmallCode() {
     document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='raisedBrowSmall' duration='3.5' blendStart='0.5' blendEnd='0.5'/>";
