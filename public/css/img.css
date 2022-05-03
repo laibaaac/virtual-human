@@ -3,17 +3,7 @@
 }
 .placeholder {
     width: 43.5em;
-   
-    margin-right: 1em;
+
 }
 
 
-textarea {
-    padding: 2em;
-    background-color: rgb(241, 241, 241);
-    border-radius: 2em;
-    border: none;
-    font-weight: bold;
-    text-align: center;
-    margin: 1em;
-}

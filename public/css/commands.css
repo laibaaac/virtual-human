@@ -1,10 +1,48 @@
+.codeEditor {
+    
+    width: 43em;
+    border: 3px solid black;
+    border-radius: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.codeEditor >h2 {
+    color: var(--orange);
+    padding-left: 1em;
+}
+
+textarea {
+width: 90%;
+
+    background-color: rgb(241, 241, 241);
+    border-radius: 1.5em;
+    border: none;
+    font-weight: bold;
+    text-align: center;
+    margin: 1em;
+}
+
+
+.buttonStyling {
+    
+
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+}
+
+.buttonStyling > p {
+    padding: 0em 1em 0em 1em;
+}
 section.commandList{
+width: 50%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    padding: 2em;
 }
 ul {
- width: 25%;
+
     font-family: Arial, Helvetica, sans-serif;
     list-style-type: none;
 }
@@ -12,8 +50,7 @@ button {
     width: 15em;
     padding: 0.5em;
     margin: 0.2em;
-    table-layout: fixed;
-    border-collapse: collapse;
+   
     background-color: var(--orange);
     border: 2px solid rgb(163, 65, 0);
     color: white;
@@ -21,7 +58,7 @@ button {
     border-radius: 0.2em;
      transition: all .2s;
 }
-button:hover {
+section.commandList > ul > li > button:hover {
     border: 2px solid darkorange;
     background-color: darkorange;
     padding:0.6em;
@@ -29,8 +66,68 @@ button:hover {
     font-weight: bold;
 }
 button.minus{
+    font-size: large;
+    color: black;
+    font-weight: bolder;
+    width: 3em;
+    background-color: white;
+   border-radius: 0.5em;
+    border: 3px solid red;
+    transition: all 0.3s;
+}
+button.minus:hover {
     background-color: red;
+    color: white;
+    transform: scale(1.1);
 }
 button.plus {
+    font-size: large;
+    color: black;
+    font-weight: bolder;
+    width: 3em;
+    background-color: white;
+    border-radius: 0.5em;
+    border: 3px solid green;
+    transition: all 0.3s;
+}
+button.plus:hover {
     background-color: green;
+    color: white;
+    transform: scale(1.1);
+}
+
+#eyebrowRaiseUpdate {
+    display: none;
+}
+
+#eyebrowRaiseUpdate.show {
+    display: block;
+}
+
+#eyebrowSmallUpdate {
+    display: none;
+}
+#eyebrowSmallUpdate.show {
+    display: block;
+}
+
+#frownUpdate {
+    display: none;
+}
+#frownUpdate.show {
+    display: block;
+}
+
+#frownSmallUpdate {
+    display: none;
+}
+#frownSmallUpdate.show {
+    display: block;
+    
+}
+.changesAdd > ul {
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
 }

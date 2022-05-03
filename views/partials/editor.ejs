@@ -1,11 +1,36 @@
 
 
-<textarea id="textReturn" name="code" rows="4" cols="84"></textarea>
-
-
-<h2>Add duration</h2>
-<button id="plusOne" class="plus"  >Add +1</button>
-<button class="minus" id="minusOne" >Remove -1</button>
-
-
+<body>
+    <section class="codeEditor">
+    <h2>Code editor</h2>
+    <textarea id="textReturn" name="code" rows="4" cols="85"></textarea>
+    <section class="buttonStyling">
+    <p>duration</p>
+    <button id="plusOne" class="plus">+</button>
+    <button class="minus" id="minusOne">-</button>
+    <p id="durationmeter">0s</p>
+</section>
+<section class="buttonStyling">
+    <p>Blend start</p>
+    <button class="plus" id="stPlusOne">+</button>
+    <button class="minus" id="stMinusOne">-</button>
+    <p id="blendStmeter">0s</p>
+</section>
+<section class="buttonStyling">
+    <p>Blend end</p>
+    <button class="plus" id="enPlusOne">+</button>
+    <button class="minus" id="enMinusOne">-</button>
+    <p id="blendEnmeter">0s</p>
+</section>
+<section class="changesAdd">
+    <ul>
+   <li> <button id="eyebrowSmallUpdate">Apply changes to small!</button>
+    <button id="eyebrowRaiseUpdate">Apply changes to raise</button>
+    <button id="frownUpdate">Apply changes frown</button>
+    <button id="frownSmallUpdate">Apply to small frown</button>
+    </li>
+    <li>   <button id="addAnimation">add to animations</button></li>
+    </ul>
+    </section>
+</body>
 <script src="/script/chatbot.js"></script>
