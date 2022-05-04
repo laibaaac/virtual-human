@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/filter.css">
+</head>
+<body>
+    <main>
+        <aside>
+          <!-- bij het openen van de pagina geen filter -> all -->
+          <img input type="button" name="filter" value="all" id="filter-all" >
+          <label for="filter-all">all</label>
+          <!-- de values van de radio buttons worden zo gebruikt om te filteren -->
+          <input type="button" name="filter" value="eyes" id="filter-eyes">
+          <label for="filter-eyes">Eyes</label>
+          <input type="button" name="filter" value="mouth" id="filter-mouth">
+          <label for="filter-mouth">Mouth</label>
+        </aside>
+    </main>
+    
+    <ul class="all">
+    
+        <!-- elke li heeft een class die aangeeft wat voor type karakter het is -->
+        <li class="eyes">
+          <p>Look right</p>
+          <img src="/img/lookright.png" alt="rechts kijken"/>
+        </li>
+
+        <li class="eyes">
+            <p>Look left</p>
+            <img src="/img/lookleft.png" alt="links kijken"/>
+          </li>
+        
+        <li class="mouth">
+          <p>Open</p>
+          <img src="/img/openmouth.png" alt="mond open"/> 
+        </li>
+
+        <li class="mouth">
+            <p>Closed</p>
+            <img src="/img/closedmouth.png" alt="mond dicht"/> 
+        </li>
+        
+</body>
+
+<script src="/script/filter.js"></script>
+
+</html>

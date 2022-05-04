@@ -21,6 +21,7 @@ document.getElementById("disagreeButton").addEventListener("click", disagreeCode
 
 var dura=0;
 
+
 function smileCode() {
     document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='smileLarge' duration='3.5' blendStart='0.5' blendEnd='0.5' peak='0.8'/>";
   }
