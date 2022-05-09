@@ -243,4 +243,21 @@ window.onload = function () {
       document.links[i].className = 'current';
     }
   }
+
+
+
+  
+  document.getElementById("addAnimation").addEventListener('click', () => {
+
+    document.getElementById("sequence").innerHTML += textReturn.value;
+
+  })
+
+
+  
+
+
+
+
+
 }

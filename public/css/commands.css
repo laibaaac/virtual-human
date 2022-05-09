@@ -40,7 +40,9 @@ width: 50%;
     flex-direction: row;
     flex-wrap: wrap;
     padding: 2em;
+
 }
+
 ul {
 
     font-family: Arial, Helvetica, sans-serif;
@@ -64,6 +66,7 @@ section.commandList > ul > li > button:hover {
     padding:0.6em;
     margin:0.1em;
     font-weight: bold;
+  
 }
 button.minus{
     font-size: large;
@@ -126,8 +129,17 @@ button.plus:hover {
     
 }
 .changesAdd > ul {
+    font-weight: 400;
     padding: 1em;
     display: flex;
     flex-direction: row;
     justify-content: right;
+}
+.changesAdd > ul > li > button {
+    border-color: var(--orange);
+    border-radius: 0.6em;
+    animation: all 0.5s;
+}
+.changesAdd > ul > li > button:hover {
+  transform: scale(1.05);
 }
