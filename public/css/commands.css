@@ -1,17 +1,22 @@
+h2 {
+    font-size: 1em;
+}
 .codeEditor {
-    
-    width: 43em;
+   
+    width: 35em;
     border: 3px solid black;
     border-radius: 2em;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
-.codeEditor >h2 {
+.codeEditor > h2 {
+    font-size: 1em;
+    margin-left: 1em;
     color: var(--orange);
     padding-left: 1em;
 }
 
-textarea {
+.codeEditor >textarea {
 width: 90%;
 
     background-color: rgb(241, 241, 241);
@@ -19,7 +24,7 @@ width: 90%;
     border: none;
     font-weight: bold;
     text-align: center;
-    margin: 1em;
+    margin-left: 1em;
 }
 
 
@@ -32,14 +37,17 @@ width: 90%;
 }
 
 .buttonStyling > p {
-    padding: 0em 1em 0em 1em;
+font-weight: lighter;
+font-size: 0.8em;
+    min-width: 3em;
 }
 section.commandList{
-width: 50%;
+width: 60%;
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 2em;
+  
 
 }
 
@@ -69,10 +77,12 @@ section.commandList > ul > li > button:hover {
   
 }
 button.minus{
+    line-height: 0;
     font-size: large;
     color: black;
     font-weight: bolder;
-    width: 3em;
+    width: 2em;
+    max-height: 2em;
     background-color: white;
    border-radius: 0.5em;
     border: 3px solid red;
@@ -84,10 +94,13 @@ button.minus:hover {
     transform: scale(1.1);
 }
 button.plus {
+    line-height: 0;
     font-size: large;
+    
     color: black;
     font-weight: bolder;
-    width: 3em;
+    width: 2em;
+    max-height: 2em;
     background-color: white;
     border-radius: 0.5em;
     border: 3px solid green;
@@ -125,6 +138,76 @@ button.plus:hover {
     display: none;
 }
 #frownSmallUpdate.show {
+    display: block;
+    
+}
+#lookDownUpdate {
+    display: none;
+}
+#lookDownUpdate.show {
+    display: block;
+    
+}
+#lookRightUpdate {
+    display: none;
+}
+#lookRightUpdate.show {
+    display: block;
+    
+}
+#mouthUpdate {
+    display: none;
+}
+#mouthUpdate.show {
+    display: block;
+    
+}
+#mouthTeethUpdate {
+    display: none;
+}
+#mouthTeethUpdate.show {
+    display: block;
+    
+}
+#lookLeftUpdate {
+    display: none;
+}
+#lookLeftUpdate.show {
+    display: block;
+    
+}
+#smileUpdate {
+    display: none;
+}
+#smileUpdate.show {
+    display: block;
+}
+
+#nodUpdate {
+    display: none;
+}
+#nodUpdate.show {
+    display: block;
+    
+}
+#leanInUpdate {
+    display: none;
+}
+#leanInUpdate.show {
+    display: block;
+    
+}
+#shakeFastUpdate {
+    display: none;
+}
+#shakeFastUpdate.show {
+    display: block;
+    
+}
+#shakeSlowUpdate {
+    display: none;
+}
+#shakeSlowUpdate.show {
     display: block;
     
 }
