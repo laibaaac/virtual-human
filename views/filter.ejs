@@ -8,44 +8,41 @@
     <link rel="stylesheet" href="/css/filter.css">
 </head>
 <body>
-    <main>
-        <aside>
-          <!-- bij het openen van de pagina geen filter -> all -->
-          <img input type="button" name="filter" value="all" id="filter-all" >
-          <label for="filter-all">all</label>
-          <!-- de values van de radio buttons worden zo gebruikt om te filteren -->
-          <input type="button" name="filter" value="eyes" id="filter-eyes">
-          <label for="filter-eyes">Eyes</label>
-          <input type="button" name="filter" value="mouth" id="filter-mouth">
-          <label for="filter-mouth">Mouth</label>
-        </aside>
-    </main>
+  <div id="myBtnContainer">
+  <!--<button class="btn active" onclick="filterSelection('all')"> Show all</button>-->
+    <button class="btn" onclick="filterSelection('mouth')"> Mouth</button>
+    <button class="btn" onclick="filterSelection('eyes')"> Eyes</button>
+    <button class="btn" onclick="filterSelection('brow')"> Brows</button>
+    <!--<button class="btn" onclick="filterSelection('')"> Fruits</button>
+    <button class="btn" onclick="filterSelection('colors')"> Colors</button>-->
+  </div>
+  
+  <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+  <div class="container">
+    <div class="filterDiv mouth">Closed mouth</div>
+    <div class="filterDiv mouth">Open mouth</div>
+    <div class="filterDiv mouth">Smiling</div>
+    <div class="filterDiv eyes">Look right</div>
+    <div class="filterDiv eyes">Look left</div>
+    <div class="filterDiv eyes">Look down</div>
+    <div class="filterDiv eyes">Look up</div>
+    <div class="filterDiv brow">Raised brows</div>
+    <div class="filterDiv brow">Furried brows</div>
     
-    <ul class="all">
-    
-        <!-- elke li heeft een class die aangeeft wat voor type karakter het is -->
-        <li class="eyes">
-          <p>Look right</p>
-          <img src="/img/lookright.png" alt="rechts kijken"/>
-        </li>
-
-        <li class="eyes">
-            <p>Look left</p>
-            <img src="/img/lookleft.png" alt="links kijken"/>
-          </li>
-        
-        <li class="mouth">
-          <p>Open</p>
-          <img src="/img/openmouth.png" alt="mond open"/> 
-        </li>
-
-        <li class="mouth">
-            <p>Closed</p>
-            <img src="/img/closedmouth.png" alt="mond dicht"/> 
-        </li>
+    <!--<div class="filterDiv cars animals">Mustang</div>
+    <div class="filterDiv colors">Blue</div>
+    <div class="filterDiv animals">Cat</div>
+    <div class="filterDiv animals">Dog</div>
+    <div class="filterDiv fruits">Melon</div>
+    <div class="filterDiv fruits animals">Kiwi</div>
+    <div class="filterDiv fruits">Banana</div>
+    <div class="filterDiv fruits">Lemon</div>
+    <div class="filterDiv animals">Cow</div>-->
+  </div>
         
 </body>
 
 <script src="/script/filter.js"></script>
 
 </html>
+<!--bron van code = w3school.com -- https://www.w3schools.com/howto/howto_js_filter_elements.asp-->
