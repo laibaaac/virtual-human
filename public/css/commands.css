@@ -16,7 +16,7 @@ h2 {
     padding-left: 1em;
 }
 
-.codeEditor >textarea {
+.codeEditor > textarea {
 width: 90%;
 
     background-color: rgb(241, 241, 241);
