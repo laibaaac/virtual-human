@@ -1,8 +1,14 @@
+/*********/
+/* FONTS */
+/*********/
 @font-face {
     font-family: 'montserrat';
     src: url("/public/fonts/Montserrat-VariableFont_wght.woff2") format("woff2");
 }
 
+/**************/
+/* CSS REMEDY */
+/**************/
 *,
 html {
     margin: 0;
@@ -11,17 +17,23 @@ html {
     font-family: var(--main-font), Arial, Helvetica, sans-serif;
 }
 
+/**************/
+/* VARIABELEN */
+/**************/
 :root {
-    --text-color: #1D1D1B;
+    --black: #1D1D1B;
     --text-color-buttons: #FFFFFF;
     --orange: #E84D3C;
     --blue: #143056;
     --grey: #626262;
     --main-font: 'montserrat';
-    }
+}
 
+/**********/
+/* HEADER */
+/**********/
 header {
-    background-color: var(--text-color);
+    background-color: var(--black);
     height: 5.3125em;
     font-size: 1em;
 }
@@ -56,15 +68,18 @@ nav ul li a.active{
 
 a {
     text-decoration: none;
-    color: var(--primary2);
+    color: var(--text-color-buttons);
     font-size: 0.875em;
+    text-transform: uppercase;
 }
 
+/* current state */
 .current {
     color: var(--orange);
     border-bottom: 2px solid var(--orange);
 }
 
+/* hover state */
 a:hover {
     color: var(--orange);
 }

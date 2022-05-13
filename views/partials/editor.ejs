@@ -2,46 +2,64 @@
 
 <body>
     <section class="codeEditor">
-    <h2>Code editor</h2>
-    <textarea id="textReturn" name="code" rows="4" cols="85"></textarea>
+        <h2>Code editor</h2>
+        <textarea id="textReturn" name="code" rows="4" cols="85"></textarea>
+        <section class="buttonStyling">
+        <p>duration</p>
+        <section>
+            <div>
+                <button class="minus" id="enMinusOne">-</button>
+                <button class="plus" id="enPlusOne">+</button>
+            </div>
+            <p id="durationmeter">0s</p>
+        </section>
+    </section>
+
     <section class="buttonStyling">
-    <p>duration</p>
-    <button id="plusOne" class="plus">+</button>
-    <button class="minus" id="minusOne">-</button>
-    <p id="durationmeter">0s</p>
-</section>
-<section class="buttonStyling">
-    <p>Blend start</p>
-    <button class="plus" id="stPlusOne">+</button>
-    <button class="minus" id="stMinusOne">-</button>
-    <p id="blendStmeter">0s</p>
-</section>
-<section class="buttonStyling">
-    <p>Blend end</p>
-    <button class="plus" id="enPlusOne">+</button>
-    <button class="minus" id="enMinusOne">-</button>
-    <p id="blendEnmeter">0s</p>
-</section>
-<section class="changesAdd">
-    <ul>
-   <li> 
-       <button id="eyebrowSmallUpdate">Apply changes to small!</button>
-    <button id="eyebrowRaiseUpdate">Apply changes to raise</button>
-    <button id="smileUpdate">Apply changes to smile</button>
-    <button id="frownUpdate">Apply changes frown</button>
-    <button id="frownSmallUpdate">Apply to small frown</button>
-    <button id="lookDownUpdate">apply to look down</button>
-    <button id="lookRightUpdate">apply to look right</button>
-    <button id="lookLeftUpdate">apply to look left</button>
-    <button id="mouthUpdate">apply changes to mouth</button>
-    <button id="mouthTeethUpdate">apply to mouth teeth</button>
-    <button id="nodUpdate">apply changes to nod</button>
-    <button id="shakeSlowUpdate">Apply to shake slow</button>
-    <button id="shakeFastUpdate">Apply to shake fast</button>
-    <button id="leanInUpdate">Apply changes to lean in</button>
-    </li>
-    <li>   <button id="addAnimation">add to animations</button></li>
-    </ul>
+        <p>Blend start</p>
+        <section>
+            <div>
+                <button class="minus" id="enMinusOne">-</button>
+                <button class="plus" id="enPlusOne">+</button>
+            </div>
+            <p id="blendStmeter">0s</p>
+        </section>
+    </section>
+
+    <section class="buttonStyling">
+        <p>Blend end</p>
+        <section>
+            <div>
+                <button class="minus" id="enMinusOne">-</button>
+                <button class="plus" id="enPlusOne">+</button>
+            </div>
+            <p id="blendEnmeter">0s</p>
+        </section>
+    </section>
+
+    <section class="changesAdd">
+        <ul>
+            <li> 
+                <button id="eyebrowSmallUpdate">Apply changes to small!</button>
+                <button id="eyebrowRaiseUpdate">Apply changes to raise</button>
+                <button id="smileUpdate">Apply changes to smile</button>
+                <button id="frownUpdate">Apply changes frown</button>
+                <button id="frownSmallUpdate">Apply to small frown</button>
+                <button id="lookDownUpdate">apply to look down</button>
+                <button id="lookRightUpdate">apply to look right</button>
+                <button id="lookLeftUpdate">apply to look left</button>
+                <button id="mouthUpdate">apply changes to mouth</button>
+                <button id="mouthTeethUpdate">apply to mouth teeth</button>
+                <button id="nodUpdate">apply changes to nod</button>
+                <button id="shakeSlowUpdate">Apply to shake slow</button>
+                <button id="shakeFastUpdate">Apply to shake fast</button>
+                <button id="leanInUpdate">Apply changes to lean in</button>
+            </li>
+            
+            <li>   
+                <button id="addAnimation">add to animations</button>
+            </li>
+        </ul>
     </section>
 </body>
 <script src="/script/chatbot.js"></script>

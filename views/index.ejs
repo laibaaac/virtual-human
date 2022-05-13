@@ -9,8 +9,6 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/index.css">
-
-
 </head>
 
 <body>
@@ -19,12 +17,17 @@
     <main>
         <section class="partials">
             <section class="partials_left">
-                <section class="preview">
-                    <%- include('partials/img') %>
-                </section>
+                <div class="left__right">
+                    <h1>Live preview</h1>
+                    <section class="preview">
+                        <%- include('partials/img') %>
+                    </section>
+                </div>
+                
             </section>
 
             <sections class="partials_right">
+                <h1>Animation editor</h1>
                 <section class="variations">
                     <!-- partial van de variaties hierin -->
                 </section>
@@ -41,4 +44,5 @@
     </main>
 </body>
 <script src="/script/chatbot.js"></script>
+<script src="/script/list.js"></script>
 </html>

@@ -1,8 +1,14 @@
+/*********/
+/* FONTS */
+/*********/
 @font-face {
     font-family: 'montserrat';
     src: url("/public/fonts/Montserrat-VariableFont_wght.woff2") format("woff2");
 }
 
+/**************/
+/* CSS REMEDY */
+/**************/
 *,
 html {
     margin: 0;
@@ -11,41 +17,72 @@ html {
     font-family: var(--main-font), Arial, Helvetica, sans-serif;
 }
 
+/**************/
+/* VARIABELEN */
+/**************/
 :root {
-    --text-color: #1D1D1B;
+    --black: #1D1D1B;
     --text-color-buttons: #FFFFFF;
     --orange: #E84D3C;
     --blue: #143056;
     --grey: #626262;
     --main-font: 'montserrat';
-    }
+}
 
+/********************/
+/* ALGEMENE STYLING */
+/********************/
+h1 {
+    color: var(--text-color-buttons);
+    font-size: 1.56em;
+    font-weight: 400;
+}
 
+h2 {
+    color: var(--text-color-buttons);
+    font-size: 1.25em;
+    font-weight: 100;
+}
+
+/*************/
+/* DASHBOARD */
+/*************/
+
+/* splitten van de 2 kleuren */
 .partials {
     display: flex;
     flex-wrap: wrap;
-    background-color: var(--text-color);
+    background-color: var(--black);
     height: calc(100vh - 5.3125em);
 }
 
+/***************/
+/* LINKERHELFT */
+/***************/
+
+/* linkerhelft van het scherm */
 .partials_left  {
+    display: flex;
+    justify-content: flex-end;
     position: relative;
+    width: 50vw;
+    height: 100%;
+    padding: 2em 2em 0 0;
+}
+
+/* rechts positioneren in het linkervak */
+.left__right {
+    background-color: var(--black);
     display: flex;
     flex-direction: column;
     gap: 1em;
-
-    width: 50vw;
-    height: 100%;
-    background-color: var(--text-color);
-    padding: 2em 0 0 0;
 }
 
-.preview {
-    position: absolute;
-    right: 2em;
+/****************/
+/* RECHTERHELFT */
+/****************/
 
-}
-
+/* rechterhelft van het scherm */
 .partials_right {
     display: flex;
     flex-direction: column;
@@ -58,8 +95,17 @@ html {
     padding: 2em 0 0 2em;
 }
 
+/* filter rechts bovenaan */
+.variations {
+    width: 80%;
+    background-color: var(--black);
+    height: 5em;
+    border-radius: 1em;
+}
+
+/* buitenste vlak stylen */
 .commands {
-    background-color: red;
+    background-color: var(--black);
     width: 80%;
     max-height: 20em;
     overflow: scroll;
@@ -67,6 +113,14 @@ html {
     border-radius: 1em;
 }
 
+/* titel en items onder elkaar */
+.commandList {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+/* items in een grid */
 .commands ul {
     display: grid;
     grid-template-columns: repeat(3, 31%);
@@ -74,6 +128,7 @@ html {
     margin-bottom: 1em;
 }
 
+/* list items stylen */
 .commands ul li {
     list-style: none;
     display: flex;
@@ -90,14 +145,73 @@ html {
     border-radius: 5px;
 }
 
+/* TEST */
 .testholder {
     width: 25%;
     aspect-ratio: 1/1;
-    background-color: blue;
+    background-color: red;
 }
 
+/*  */
 .commands ul li button {
     border: none;
     background: transparent;
 }
 
+/* styling van de code editor */
+.editor {
+    background-color: var(--black);
+    width: 80%;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.codeEditor {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+/* textarea styling */
+#textReturn {
+    width: 100%;
+    border-radius: .5em;
+}
+
+/* horizontaal neerzetten van elke button */
+.buttonStyling {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-color-buttons);
+}
+
+/* - & + en secondes naast elkaar */
+.buttonStyling section {
+    display: flex;
+    gap: 1em;
+}
+
+/* - & + binnen een vak zodat ze niet verspringen */
+.buttonStyling section div {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+/* editor button + en - styling */
+.buttonStyling section div button {
+    width: 1.5rem;
+    aspect-ratio: 1/1;
+    font-size: 1em;
+    border-radius: 20%;
+    border: none;
+}
+
+.changesAdd ul {
+    list-style: none;
+}
+
+.changesAdd button{
+    border: none;
+    padding: .6rem;
+}
