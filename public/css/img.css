@@ -1,7 +1,8 @@
-.imageArea{
+/* .imageArea{
     width: 35em;
-}
-.imageArea > textarea {
+} */
+
+/* .imageArea > textarea {
     width: 100%;
    
     background-color: rgb(241, 241, 241);
@@ -10,25 +11,25 @@
     font-weight: bold;
     text-align: center;
     margin: 1em 0em 0em 0em;
+} */
 
-}
 
-
-.imageArea > img {
+/* .imageArea > img {
     width: 100%;
     
-}
+} */
 
 
-#copyTime {
+/* #copyTime {
     margin-bottom: 1em;
     float: right;
     border: none;
     background-color: lightgrey;
     color: black;
-}
-#copyTime:hover {
+} */
+
+/* #copyTime:hover {
    transform: scale(1.05);
     background-color: grey;
   
-}
+} */
