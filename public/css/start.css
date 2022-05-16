@@ -1,0 +1,56 @@
+:root {
+    --black: #1D1D1B;
+    --text-color-buttons: #FFFFFF;
+    --orange: #E84D3C;
+    --blue: #143056;
+    --grey: #626262;
+    --main-font: 'montserrat';
+    --darkestblue: #121B30;
+    --darkblue: #17223C;
+}
+html {
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font), Arial, Helvetica, sans-serif;
+}
+body {
+    color: var(--text-color-buttons);
+    background-color: var(--darkestblue);
+}
+h1, h2 {
+padding-bottom:1em;
+}
+ul {
+    list-style-type: none;
+}
+ul.guideTop {
+    padding:5em;
+    margin-top: 5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 5em;
+}
+ul.guideTop > li {
+    width: 35%;
+}
+ul.guideExplain {
+    background-color: var(--darkblue);
+    padding:5em;
+    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+ul.guideExplain > li {
+    width: 35%;
+    margin-top: 5em;
+}
+ul.guideExplain > li > img {
+    max-width: 35%;
+    height: auto;
+}
