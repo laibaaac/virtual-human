@@ -3,7 +3,7 @@
 /*********/
 @font-face {
     font-family: 'montserrat';
-    src:local("C:\Users\Website\fonts\Harlow_Solid_Italic.ttf");
+    src: url("/public/fonts/Montserrat-VariableFont_wght.woff2") format("woff2");
 }
 
 /**************/
