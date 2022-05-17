@@ -296,7 +296,6 @@ button {
     display: grid;
     grid-template-columns: repeat(3, 30%);
     gap: 1em;
-    max-height: 10em;
     overflow-y: scroll;
 }
 
@@ -406,5 +405,5 @@ button {
 }
 
 .changesAdd button:hover {
-    
+
 }
