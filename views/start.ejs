@@ -11,11 +11,75 @@
 <body>
     <%- include('partials/header') %>
 
-    <main>
-        <h1>DIT IS DE USER GUIDE</h1>
-    </main>
+    
+        <ul class="guideTop">
+            <li>
+        <h1>User guide</h1>
+        <p>Here’s an overview of the use of this tool and a process overview to help guide along before we begin.</p>
+        </li>
+        <li>
+        <h2>Animation catalog</h2>
+        <p>Searching for a full list of available animation with corresponding code strings?</p>
+        <button src="www.trulience.com">Catalog ></button>
+        </li>
+    </ul>
+    <ul class="guideExplain">
+        <li>
+    <h2>How does the animation dashboard work?</h2>
+    <p>Using our tool, you can control the animations of your Digital Human, such as eyes movement, mouth movements but also transitions and more. While you add or edit animations our tool will generate the corresponding code which you can simply copy and paste into your system. You can add multiple animations to create sequence of animations. You'll find an overview of the added animation in the timeline. While using our dashboard you can play a live preview of the animation you assembled to visualize the raw code. Finally, when you’re satisfied with your animation or animation sequence, you will be able to copy the final code and add it to your system.
+    </p>
+    </li>
 
+    <div class="moveUp">
+    <li> <img src="/img/editor.png"></li></div>
+    <div class="sizeUp">
+    <li> <img src="/img/ui.png"></li></div>
+    <li>
+    <h2>In which case will you use our tool?</h2>
+    <p>Our animation dashboard is used to edit animations of a Digital Human in a visual process that will make adding animations easier. These Digital Humans are primarily used for chatbots to add a personal touch for customers communicating with your company. Let's say the customer received two right shoes instead of a pair. Using our tool you can add an animation or animation sequence which responds to the user input, in this case you might want the Digital Human to raise its eyebrows. In conclusion, our tool visualizes code strings that you previously had to edit manually by editing the raw code.</p>
+    </li>
+</ul>
+<ul class="guideBrowse">
+    <li>
+<h2>Browse through categories</h2>
+<p>In the dashboard you will find a series of categories you can choose from to personalise your Digital Human. You can choose various amounts of variations per category seleciton. When you choose one of the available variations you can edit its properties, such as movement speed, waiting time, etc in the code editor. When you are satisfied with the result, click 'Add to animation X' to add your animation to your timeline and definite code.
+   <br><br>
+    When a category has been chosen you can choose which animation variation you want to add to your timeline. When a variation has been chosen it will be send to the code editor to fine-tune the animation. Note: when a variation has been chosen it is not added to your timeline yet.
+</p>
+</li>
+<div class="slideLeft">
+<li> <img src="/img/variations.png"></li> </div>
+<li> <img src="/img/editor.png"></li>
+<li>
+<h2>Code editor</h2>
+<p>When an animation has been chosen you can fine-tune the animation in the code editor. You can change the movement speed, the return speed and the wait time by pressing the + en - buttons. When you want to update these changes to the code you can update the code. If you want to reset the code to its original values you can press the reset button on the bottom right. When you are happy with te animation you can add it to your timeline by pressing the “add to animation X” button. </p>
+</li>
+<li>
+    <h2>Timeline</h2>
+    <p>Here you can see the animations that you added to the sequence. The full code can be seen in the bottom. It is possible to change values manually by changing the text. The code you see here will be the code that is played in your live preview. The timeline will show the order of the animations that are added to the timeline. If you want to delete the full timeline you can press the reset button in the bottom right.
+<br><br>
+        If you are satisfied with the animation you made you can copy the code by pressing the “copy code” button. If you want to save the code to use later or for another animation you can download the PDF with the code.
+        
+    </p>
+    </li>
+    <li> <img src="/img/copyCode.png"></li>
+</ul>
+
+<ul class="contact">
+    <li>
+    <h2>Contact</h2>
+    <p>Virtually human</p>
+    <p>Guido de Jongen</p>
+    <a href="www.google.com">+31 6 556 901 69</a>
+    <br>
+    <a href="www.google.com">site@virtually-human.com</a>
+    </li>
+    <li>
+        <h2>Leave us a message</h2>
+        <textarea>Email</textarea>
+    </li>
+</ul>
 </body>
-<script src="/script/chatbot.js"></script>
+
 <script src="/script/list.js"></script>
 </html>

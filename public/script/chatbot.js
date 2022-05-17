@@ -436,10 +436,4 @@ function updateSmile() {
   })
 
 
-
-
-
-
-
-
 }
