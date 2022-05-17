@@ -1,47 +1,87 @@
+/*********/
+/* FONTS */
+/*********/
+@font-face {
+    font-family: 'montserrat';
+    src: url("/public/fonts/Montserrat-VariableFont_wght.woff2") format("woff2");
+}
 
+/**************/
+/* CSS REMEDY */
+/**************/
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font), Arial, Helvetica, sans-serif;
+}
+
+/**************/
+/* VARIABELEN */
+/**************/
 :root {
-    --Primary1: #1D1D1B;
-    --primary2: #FFFFFF;
+    --black: #1D1D1B;
+    --text-color-buttons: #FFFFFF;
     --orange: #E84D3C;
-    }
-    
-    
-    
+    --blue: #143056;
+    --grey: #626262;
+    --main-font: 'montserrat';
+}
 
-img.logo {
-    width: 20em;
-    padding: 1.5em;
-}
-nav {
-   margin-right: 8em;
-    padding: 1.5em;
-    float:right;
-    margin-top: 1em;
-}
-nav > a {
+/**********/
+/* HEADER */
+/**********/
+header {
+    background-color: var(--black);
+    height: 5.3125em;
     font-size: 1em;
-    text-decoration: none;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 0.5em;
-    padding-left: 1em;
-    padding-right: 1em;
-    color: var(--primary1);
-    transition: all 0.3s;
 }
 
-a.current {
+nav {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20%;
+}  
+
+nav img {
+    height: 2rem;
+    image-rendering: -moz-crisp-edges; /* Firefox */
+    image-rendering: -o-crisp-edges; /* Opera */
+    image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+}
+
+nav ul {
+    display: flex;
+    gap: 3em;
+    color: var(--text-color-buttons);
+    list-style: none;
+}
+
+nav ul li a.active{
     color: var(--orange);
-    font-weight: bolder;
-    border-bottom: 3px solid var(--orange);
-    line-height: 1em;
 }
-nav > a:hover {
-color: var(--orange);
-font-weight: bolder;
-font-size: 1.05em;
+
+a {
+    text-decoration: none;
+    color: var(--text-color-buttons);
+    font-size: 0.875em;
+    text-transform: uppercase;
 }
-nav > a.current:hover {
-    color: var(--primary1);
-    border-bottom: 3px solid black;
-    }
+
+/* current state */
+.current {
+    color: var(--orange);
+    border-bottom: 2px solid var(--orange);
+}
+
+/* hover state */
+a:hover {
+    color: var(--orange);
+}
+    
+

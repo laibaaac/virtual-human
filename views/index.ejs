@@ -9,22 +9,40 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/index.css">
-
-
 </head>
 
 <body>
     <%- include('partials/header') %>
 
     <main>
-     
+        <section class="partials">
+            <section class="partials_left">
+                <div class="left__right">
+                    <h1>Live preview</h1>
+                    <section class="preview">
+                        <%- include('partials/img') %>
+                    </section>
+                </div>
+                
+            </section>
 
-        <%- include('partials/img') %>
-     
-        
-      <%- include('partials/commands') %>
-      <%- include('partials/editor') %>
+            <sections class="partials_right">
+                <h1>Animation editor</h1>
+                <section class="variations">
+                    <!-- partial van de variaties hierin -->
+                </section>
+
+                <section class="commands">
+                    <%- include('partials/commands') %>
+                </section>
+
+                <section class="editor">
+                    <%- include('partials/editor') %>
+                </section>
+            </sections>
+        </section>
     </main>
 </body>
 <script src="/script/chatbot.js"></script>
+<script src="/script/list.js"></script>
 </html>

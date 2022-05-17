@@ -1,9 +1,29 @@
-<link href="/css/img.css" rel="stylesheet">
 <section class="imageArea">
-<img class="placeholder" src="/img/placeholder.webp"></img>
-<br>
-<textarea id="textReturn" name="code" rows="4" cols="84">
+    <div class="preview">
+        <img class="placeholder" src="/img/placeholder.png"></img>
+        <div class="previewbuttons">
+            <button class="playpauseButton"></button>
+            <button class="stopButton"></button>
+            <button class="fullscreenButton"></button>
+        </div>
+    </div>
 
-</textarea>
+    <div class="timelineArea">
+        <h2>timeline</h2>
+        <div class="timeline">
+            <!-- Hier de timeline nog neerzetten -->
+        </div>
+
+        <h2>Copy your code</h2>
+        <textarea id="sequence" placeholder="You have not added any animations yet. Choose from the categories in the animation editor on the right to add and/or adjust an animation." cols="10" rows="5"></textarea>
+
+        <div class="timelineButtons">
+            <div>
+                <button id="copyTime">Copy code</button>
+                <button>PDF</button>
+            </div>
+            <button>reset</button>
+        </div>
+    </div>
+    
 </section>
-<script src="chatbot.js"></script>

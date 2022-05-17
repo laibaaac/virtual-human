@@ -1,4 +1,9 @@
 
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  size:20%;
+}
 
 #dropdown {
     font-family: Arial, Helvetica, sans-serif;
@@ -10,6 +15,7 @@
     margin-right: auto;
     width: 15em;
     padding:1em;
+    border-radius: 1em;
 }
 
 .dropdown-content {
@@ -19,6 +25,8 @@ text-align: center;
   min-width: 50px;
 padding:1em;
   z-index: 1;
+  font-weight:400;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .dropdown-content a {
