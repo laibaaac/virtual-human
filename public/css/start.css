@@ -29,6 +29,7 @@ html {
     --main-font: 'montserrat';
     --darkestblue: #121B30;
     --darkblue: #17223C;
+    --lightblue: #1A3A65;
 }
 
 
@@ -41,7 +42,6 @@ h1, h2 {
 padding-bottom:0.5em;
 }
 h1, h2 {
-    font-family: var(--main-font), Arial, Helvetica, sans-serif;
 font-size: 3em;
 font-weight: 600;
 }
