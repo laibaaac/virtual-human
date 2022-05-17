@@ -22,25 +22,28 @@ body {
 }
 
 h1, h2 {
-padding-bottom:1em;
+padding-bottom:0.5em;
 }
 h1, h2 {
 font-size: 3em;
 font-weight: 600;
 }
 p {
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: 400;
+    line-height: 1.2em;
+ 
 }
 ul {
     list-style-type: none;
 }
+
 ul.guideTop {
     position: inherit;
     padding:5em;
     padding-left: 15%;
     padding-right: 15%;
-    margin-top: 5em;
+    margin-top: 10em;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -81,15 +84,29 @@ ul.guideExplain > li {
     margin-top: 5em;
 }
 ul.guideExplain > li:nth-of-type(2) > img {
-    margin-top: -9em;
-    padding-bottom: 9em;
+    
     width: 35em;
     
     height: auto;
 }
-ul.guideExplain > li:nth-of-type(3) > img {
-width: 25em;
+.moveUp {
+    transition: all 0.5s;
+
+}
+.moveUp.appear {
+    margin-top: -5em;
+    padding-bottom: 5em;
+}
+ul.guideExplain > div.sizeUp >  li >  img {
+width: 30em;
+margin:5em 0em 0em 1em;
 height: auto;
+}
+.sizeUp {
+    transition: all 0.5s;
+}
+.sizeUp.appear {
+    transform: scale(1.05);
 }
 ul.guideBrowse {
     background-color: var(--blue);
@@ -111,6 +128,15 @@ ul.guideBrowse > li > img {
     min-width: 50%;
     max-width: 100%;
     height: auto;
+    padding-left:5em;
+}
+.slideLeft {
+    transition: all 0.5s;
+}
+.slideLeft.appear {
+    margin-left: -5em;
+    padding-right: 5em;
+   
 }
 ul.contact {
     background-color: var(--lightblue);
