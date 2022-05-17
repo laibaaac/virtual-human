@@ -1,25 +1,3 @@
-/*********/
-/* FONTS */
-/*********/
-@font-face {
-    font-family: 'montserrat';
-    src: url("/public/fonts/Montserrat-VariableFont_wght.woff2") format("woff2");
-}
-
-/**************/
-/* CSS REMEDY */
-/**************/
-*,
-html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--main-font), Arial, Helvetica, sans-serif;
-}
-
-/**************/
-/* VARIABELEN */
-/**************/
 :root {
     --black: #1D1D1B;
     --text-color-buttons: #FFFFFF;
@@ -30,151 +8,49 @@ html {
     --darkestblue: #121B30;
     --darkblue: #17223C;
 }
-
-
+html {
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font), Arial, Helvetica, sans-serif;
+}
 body {
     color: var(--text-color-buttons);
     background-color: var(--darkestblue);
 }
-
 h1, h2 {
-padding-bottom:0.5em;
-}
-h1, h2 {
-    font-family: var(--main-font), Arial, Helvetica, sans-serif;
-font-size: 3em;
-font-weight: 600;
-}
-p {
-    font-size: 1em;
-    font-weight: 400;
-    line-height: 1.2em;
- 
+padding-bottom:1em;
 }
 ul {
     list-style-type: none;
 }
-
 ul.guideTop {
-    position: inherit;
     padding:5em;
-    padding-left: 15%;
-    padding-right: 15%;
-    margin-top: 10em;
+    margin-top: 5em;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-bottom: 5em;
 }
 ul.guideTop > li {
-    width: 45%;
-}
-ul.guideTop > li > button {
-float:right;
-border:none;
-    margin: 2em 3em 0em 0em;
-    padding: 1em 3em 1em 3em;
-    color: var(--text-color-buttons);
-    font-weight: bolder;
-    background-color: var(--orange);
-    border-radius: 1em;
-    transition: all 0.3s;
-}
-ul.guideTop > li > button:hover {
-    background-color:#ca2512;
-    transform: scale(1.05);
+    width: 35%;
 }
 ul.guideExplain {
     background-color: var(--darkblue);
-    background-size: 100%;
-    padding: 1em;
-    padding-left: 15%;
-    padding-right: 15%;
+    padding:5em;
+    
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 ul.guideExplain > li {
-    width: 45%;
-    margin-top: 5em;
-}
-ul.guideExplain > li:nth-of-type(2) > img {
-    
-    width: 35em;
-    
-    height: auto;
-}
-.moveUp {
-    transition: all 0.5s;
-
-}
-.moveUp.appear {
-    margin-top: -5em;
-    padding-bottom: 5em;
-}
-ul.guideExplain > div.sizeUp >  li >  img {
-width: 30em;
-margin:5em 0em 0em 1em;
-height: auto;
-}
-.sizeUp {
-    transition: all 0.5s;
-}
-.sizeUp.appear {
-    transform: scale(1.05);
-}
-ul.guideBrowse {
-    background-color: var(--blue);
-    background-size: cover;
-    padding:2em;
-    padding-left: 15%;
-    padding-right: 15%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-ul.guideBrowse > li {
-    width: 45%;
-    margin-top: 2em;
-}
-ul.guideBrowse > li > img {
-    min-width: 50%;
-    max-width: 100%;
-    height: auto;
-    padding-left:5em;
-}
-.slideLeft {
-    transition: all 0.5s;
-}
-.slideLeft.appear {
-    margin-left: -5em;
-    padding-right: 5em;
-   
-}
-ul.contact {
-    background-color: var(--lightblue);
-    padding:5em;
-    padding-left: 15%;
-    padding-right: 15%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-ul.contact > li {
     width: 35%;
     margin-top: 5em;
 }
-ul.contact > li > img {
+ul.guideExplain > li > img {
     max-width: 35%;
     height: auto;
-}
-ul.contact > li > a {
-    font-weight: bold;
-color:var(--orange);
 }
