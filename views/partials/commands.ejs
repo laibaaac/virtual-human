@@ -1,19 +1,31 @@
 <link href="/css/commands.css" rel="stylesheet">
-
+<link href="/css/filter.css" rel="stylesheet">
 <section class="commandList">
-    <h2>Variations</h2>
-    <ul class="eyes">
-        <li>
-            <div class="testholder"></div>
-            <button id="lookButton">Look at camera</button>
-        </li>
-        <li>
-            <img src="/public/img/placeholder.png" alt="">
-            <button id="lookLeftButton">Look left</button>
-        </li>
-        <li><button id="lookRightButton">Look right</button></li>
-        <li><button id="lookDownButton">Look down</button></li>
-    </ul>
+    <div id="myBtnContainer">
+        <!--<button class="btn active" onclick="filterSelection('all')"> Show all</button>-->
+          <button class="btn" onclick="filterSelection('mouth')"> Mouth</button>
+          <button class="btn" onclick="filterSelection('eyes')"> Eyes</button>
+          <button class="btn" onclick="filterSelection('brow')"> Brows</button>
+          <!--<button class="btn" onclick="filterSelection('')"> Fruits</button>
+          <button class="btn" onclick="filterSelection('colors')"> Colors</button>-->
+        </div>
+        <!-- <div class="container">
+            <div class="filterDiv mouth">Closed mouth</div>
+            <div class="filterDiv mouth">Open mouth</div>
+            <div class="filterDiv mouth">Smiling</div>
+            <div class="filterDiv eyes">Look right</div>
+            <div class="filterDiv eyes">Look left</div>
+            <div class="filterDiv eyes">Look down</div>
+            <div class="filterDiv eyes">Look up</div>
+            <div class="filterDiv brow">Raised brows</div>
+            <div class="filterDiv brow">Furried brows</div> -->
+<ul class="eyes">
+    <h2 class="filterDiv eyess">Eyes</h2>
+<li><button class="filterDiv eyes" id="lookButton">Look at camera</button></li>
+<li><button class="filterDiv eyes" id="lookLeftButton">Look left</button></li>
+<li><button class="filterDiv eyes" id="lookRightButton">Look right</button></li>
+<li><button class="filterDiv eyes" id="lookDownButton">Look down</button></li>
+</ul>
 
     <!-- <ul class="eyebrows">
         <li><button id="eyebrowsRaiseButton">Raised eyebrows</button></li>
@@ -50,5 +62,6 @@
         <li><button id="zoomOutLeftButton">Zoom out right</button></li>
     </ul> -->
 </section>
-
+<script src="/script/filter.js"></script>
 <script src="/script/chatbot.js"></script>
+
