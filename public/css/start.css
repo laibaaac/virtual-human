@@ -1,3 +1,25 @@
+/*********/
+/* FONTS */
+/*********/
+@font-face {
+    font-family: 'montserrat';
+    src:local("C:\Users\Website\fonts\Harlow_Solid_Italic.ttf");
+}
+
+/**************/
+/* CSS REMEDY */
+/**************/
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font), Arial, Helvetica, sans-serif;
+}
+
+/**************/
+/* VARIABELEN */
+/**************/
 :root {
     --black: #1D1D1B;
     --text-color-buttons: #FFFFFF;
@@ -7,15 +29,9 @@
     --main-font: 'montserrat';
     --darkestblue: #121B30;
     --darkblue: #17223C;
-    --lightblue: #1A3A65;
 }
-html {
-    
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--main-font), Arial, Helvetica, sans-serif;
-}
+
+
 body {
     color: var(--text-color-buttons);
     background-color: var(--darkestblue);
@@ -25,6 +41,7 @@ h1, h2 {
 padding-bottom:0.5em;
 }
 h1, h2 {
+    font-family: var(--main-font), Arial, Helvetica, sans-serif;
 font-size: 3em;
 font-weight: 600;
 }
@@ -51,10 +68,6 @@ ul.guideTop {
 }
 ul.guideTop > li {
     width: 45%;
-}
-img {
-    -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
-    filter: drop-shadow(15px 15px 15px rgba(0, 0, 0, 0.3));
 }
 ul.guideTop > li > button {
 float:right;
