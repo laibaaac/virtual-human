@@ -29,7 +29,7 @@
     background-color: #f1f1f1;
     cursor: pointer;
   }
-  
+
   /* Add a light grey background on mouse-over */
   .btn:hover {
     background-color: #ddd;
