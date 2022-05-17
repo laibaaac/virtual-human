@@ -29,6 +29,7 @@ html {
     --main-font: 'montserrat';
     --darkestblue: #121B30;
     --darkblue: #17223C;
+    --hover-orange: #F47E71;
 }
 
 /********************/
@@ -46,6 +47,11 @@ h2 {
     font-weight: 100;
 }
 
+button {
+    border: none;
+    cursor: pointer;
+}
+
 /*************/
 /* DASHBOARD */
 /*************/
@@ -55,7 +61,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     background-color: var(--black);
-    height: calc(100vh - 5.3125em);
+    height: calc(100vh - 5em);
 }
 
 /***************/
@@ -69,7 +75,7 @@ h2 {
     position: relative;
     width: 50vw;
     height: 100%;
-    padding: 2em 2em 0 0;
+    padding: 1em 2em 0 0;
 }
 
 /* rechts positioneren in het linkervak */
@@ -82,8 +88,12 @@ h2 {
     position: absolute;
     right: 2em;
     width: 80%;
+    height: calc(100vh);
 }
 
+/***********/
+/* PREVIEW */
+/***********/
 /* preview vak styling */
 .imageArea {
     width: 100%;
@@ -159,6 +169,10 @@ h2 {
     /*  */
 }
 
+/*******************/
+/* TIMELINE + CODE */
+/*******************/
+/* vormgeving timeline blok */
 .timelineArea {
     display: flex;
     flex-direction: column;
@@ -169,20 +183,43 @@ h2 {
     gap: .5em;
 }
 
+/* timeline zelf */
 .timeline {
     height: 4em;
     background-color: red;
 }
 
+/* textarea timeline */
 .timelineArea textarea {
     width: 100%;
     border-radius: .5em;
     padding: .5em;
 }
 
+/* positioneren buttons onderaan timeline */
 .timelineButtons {
     display: flex;
     justify-content: space-between;
+}
+
+/* copy code button */
+.timelineButtons div button:first-of-type{
+    background-color: var(--orange);
+    padding: .5em 1em;
+    color: var(--text-color-buttons);
+    border-radius: .5em;
+}
+
+/* pdf buttom */
+.timelineButtons div button:nth-of-type(2) {
+    height: 1em;
+    background: transparent;
+}
+
+.timelineButtons > button {
+    background: transparent;
+    color: var(--text-color-buttons);
+    font-size: 1em;
 }
 
 /****************/
@@ -199,17 +236,37 @@ h2 {
     height: 100%;
     background-color: var(--blue);
     border-radius: 2em 0 0 0;
-    padding: 2em 0 0 2em;
+    padding: 1em 0 0 2em;
 }
 
+/*******************/
+/* HOOFD VARIATIES */
+/*******************/
 /* filter rechts bovenaan */
 .variations {
     width: 80%;
     background-color: var(--black);
-    height: 5em;
+    height: 6em;
     border-radius: 1em;
+    padding: 1em;
 }
 
+.variations button {
+    background-color: var(--text-color-buttons);
+    border: none;
+    height: 100%;
+    padding: .5em;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+}
+
+/********************/
+/* OPTIES VARIATIES */
+/********************/
 /* buitenste vlak stylen */
 .commands {
     background-color: var(--black);
@@ -238,6 +295,10 @@ h2 {
 /* list items stylen */
 .commands ul li {
     list-style: none;
+
+}
+
+.commands ul li button {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -252,6 +313,10 @@ h2 {
     border-radius: 5px;
 }
 
+.commands ul li button:hover {
+    background-color: var(--hover-orange);
+}
+
 /* TEST */
 .testholder {
     width: 25%;
@@ -260,10 +325,10 @@ h2 {
 }
 
 /*  */
-.commands ul li button {
-    border: none;
-    background: transparent;
-}
+
+/***************/
+/* CODE EDITOR */
+/***************/
 
 /* styling van de code editor */
 .editor {
@@ -297,6 +362,7 @@ h2 {
 .buttonStyling section {
     display: flex;
     gap: 1em;
+    position: relative;
 }
 
 /* - & + binnen een vak zodat ze niet verspringen */
@@ -304,6 +370,8 @@ h2 {
     display: flex;
     justify-content: space-between;
     gap: 1em;
+    position: absolute;
+    right: 2.5em;
 }
 
 /* editor button + en - styling */
@@ -317,6 +385,8 @@ h2 {
 
 .changesAdd ul {
     list-style: none;
+    display: flex;
+    gap: 1em;
 }
 
 .changesAdd button{
