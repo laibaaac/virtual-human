@@ -27,6 +27,13 @@ app.get('/', function(req, res) {
   
   });
 
+
+  app.get("/filter", async (req, res) => {
+  
+    res.render("filter");
+  
+  });
+
   app.use(express.static("public"));
 
 

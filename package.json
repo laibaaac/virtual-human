@@ -22,7 +22,8 @@
     "express",
     "routing"
   ],
-  "author": "Laiba Choudhry",
+  "author": "Laiba Choudhry" ,
+  "co-owner": "Chris Gabriel |||",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/laibaaac/virtual-human/issues"
