@@ -299,21 +299,6 @@ button {
     overflow-y: scroll;
 }
 
-/* .container button {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: .4em;
-
-    background-color: var(--text-color-buttons);
-    border: none;
-    width: 100%;
-    padding: .5em;
-    height: auto;
-    border-radius: 5px;
-} */
-
 .container button {
     background-color: var(--text-color-buttons);
     border: none;
