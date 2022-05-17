@@ -3,7 +3,7 @@
 /*********/
 @font-face {
     font-family: 'montserrat';
-    src: url("/public/fonts/Montserrat-VariableFont_wght.woff2") format("woff2");
+    src:local("C:\Users\Website\fonts\Harlow_Solid_Italic.ttf");
 }
 
 /**************/
@@ -29,7 +29,6 @@ html {
     --main-font: 'montserrat';
     --darkestblue: #121B30;
     --darkblue: #17223C;
-    --lightblue: #1A3A65;
 }
 
 
