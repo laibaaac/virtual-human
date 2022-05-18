@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/filter.css">
+</head>
+<body>
+  <div id="myBtnContainer">
+  <!--<button class="btn active" onclick="filterSelection('all')"> Show all</button>-->
+    <button class="btn" onclick="filterSelection('mouth')"> Mouth</button>
+    <button class="btn" onclick="filterSelection('eyes')"> Eyes</button>
+    <button class="btn" onclick="filterSelection('brow')"> Brows</button>
+    <!--<button class="btn" onclick="filterSelection('')"> Fruits</button>
+    <button class="btn" onclick="filterSelection('colors')"> Colors</button>-->
+  </div>
+  
+  <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+  <div class="container">
+    <div class="filterDiv mouth"><button><img src="/img/closedmouth.png" alt="closedmouth"></button></div>
+    <div class="filterDiv mouth"><button><img src="/img/openmouth.png" alt="openmouth"></button></div>
+    <div class="filterDiv mouth">Smiling</div>
+    <div class="filterDiv eyes"><button><img src="/img/lookright.png" alt="lookright"></button></div>
+    <div class="filterDiv eyes"><button><img src="/img/lookleft.png" alt="lookleft"></button></div>
+    <div class="filterDiv eyes">Look down</div>
+    <div class="filterDiv eyes">Look up</div>
+    <div class="filterDiv brow">Raised brows</div>
+    <div class="filterDiv brow">Furried brows</div>
+    
+    <!--<div class="filterDiv cars animals">Mustang</div>
+    <div class="filterDiv colors">Blue</div>
+    <div class="filterDiv animals">Cat</div>
+    <div class="filterDiv animals">Dog</div>
+    <div class="filterDiv fruits">Melon</div>
+    <div class="filterDiv fruits animals">Kiwi</div>
+    <div class="filterDiv fruits">Banana</div>
+    <div class="filterDiv fruits">Lemon</div>
+    <div class="filterDiv animals">Cow</div>-->
+  </div>
+        
+</body>
+
+
+
+</html>
+<!--bron van code = w3school.com -- https://www.w3schools.com/howto/howto_js_filter_elements.asp-->

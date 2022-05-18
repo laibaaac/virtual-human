@@ -1,0 +1,210 @@
+/* h2 {
+    font-size: 1em;
+}
+.codeEditor {
+    width: 35em;
+    border: 3px solid black;
+    border-radius: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.codeEditor > h2 {
+    font-size: 1em;
+    margin-left: 1em;
+    color: var(--orange);
+    padding-left: 1em;
+}
+
+.codeEditor > textarea {
+width: 90%;
+
+    background-color: rgb(241, 241, 241);
+    border-radius: 1.5em;
+    border: none;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 1em;
+}
+
+
+.buttonStyling {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+}
+
+.buttonStyling > p {
+font-weight: lighter;
+font-size: 0.8em;
+    min-width: 3em;
+}
+section.commandList{
+width: 60%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  
+
+}
+
+ul {
+
+    font-family: Arial, Helvetica, sans-serif;
+    list-style-type: none;
+}
+button { 
+    width: 15em;
+    padding: 0.5em;
+    margin: 0.2em;
+   
+    background-color: var(--orange);
+    border: 2px solid rgb(163, 65, 0);
+    color: white;
+  font-weight: bolder;
+    border-radius: 0.2em;
+     transition: all .2s;
+}
+section.commandList > ul > li > button:hover {
+    border: 2px solid darkorange;
+    background-color: darkorange;
+    padding:0.6em;
+    margin:0.1em;
+    font-weight: bold;
+  
+}
+button.minus{
+    line-height: 0;
+    font-size: large;
+    color: black;
+    font-weight: bolder;
+    width: 2em;
+    max-height: 2em;
+    background-color: white;
+   border-radius: 0.5em;
+    border: 3px solid red;
+    transition: all 0.3s;
+}
+button.minus:hover {
+    background-color: red;
+    color: white;
+    transform: scale(1.1);
+}
+button.plus {
+    line-height: 0;
+    font-size: large;
+    
+    color: black;
+    font-weight: bolder;
+    width: 2em;
+    max-height: 2em;
+    background-color: white;
+    border-radius: 0.5em;
+    border: 3px solid green;
+    transition: all 0.3s;
+}
+button.plus:hover {
+    background-color: green;
+    color: white;
+    transform: scale(1.1);
+} */
+
+#eyebrowRaiseUpdate {
+    display: none;
+}
+
+#eyebrowRaiseUpdate.show {
+    display: block;
+}
+
+#eyebrowSmallUpdate {
+    display: none;
+}
+#eyebrowSmallUpdate.show {
+    display: block;
+}
+
+#frownUpdate {
+    display: none;
+}
+#frownUpdate.show {
+    display: block;
+}
+
+#frownSmallUpdate {
+    display: none;
+}
+#frownSmallUpdate.show {
+    display: block;
+    
+}
+#lookDownUpdate {
+    display: none;
+}
+#lookDownUpdate.show {
+    display: block;
+    
+}
+#lookRightUpdate {
+    display: none;
+}
+#lookRightUpdate.show {
+    display: block;
+    
+}
+#mouthUpdate {
+    display: none;
+}
+#mouthUpdate.show {
+    display: block;
+    
+}
+#mouthTeethUpdate {
+    display: none;
+}
+#mouthTeethUpdate.show {
+    display: block;
+    
+}
+#lookLeftUpdate {
+    display: none;
+}
+#lookLeftUpdate.show {
+    display: block;
+    
+}
+#smileUpdate {
+    display: none;
+}
+#smileUpdate.show {
+    display: block;
+}
+
+#nodUpdate {
+    display: none;
+}
+#nodUpdate.show {
+    display: block;
+    
+}
+#leanInUpdate {
+    display: none;
+}
+#leanInUpdate.show {
+    display: block;
+    
+}
+#shakeFastUpdate {
+    display: none;
+}
+#shakeFastUpdate.show {
+    display: block;
+    
+}
+#shakeSlowUpdate {
+    display: none;
+}
+#shakeSlowUpdate.show {
+    display: block;
+    
+}

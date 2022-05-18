@@ -1,0 +1,37 @@
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font), Arial, Helvetica, sans-serif;
+}
+
+/**************/
+/* VARIABELEN */
+/**************/
+:root {
+    --black: #1D1D1B;
+    --text-color-buttons: #FFFFFF;
+    --orange: #E84D3C;
+    --blue: #143056;
+    --grey: #626262;
+    --main-font: 'Montserrat';
+    --darkestblue: #121B30;
+    --darkblue: #17223C;
+    --hover-orange: #F47E71;
+}
+
+/********************/
+/* ALGEMENE STYLING */
+/********************/
+h1 {
+    color: var(--text-color-buttons);
+    font-size: 1.56em;
+    font-weight: 400;
+}
+
+h2 {
+    color: var(--text-color-buttons);
+    font-size: 1.25em;
+    font-weight: 100;
+}

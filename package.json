@@ -4,7 +4,7 @@
   "description": "virtually-human chatbot",
   "main": "server.js",
   "dependencies": {
-    "ejs": "^3.1.6",
+    "ejs": "^3.1.7",
     "express": "^4.17.3"
   },
   "devDependencies": {
@@ -22,7 +22,8 @@
     "express",
     "routing"
   ],
-  "author": "Laiba Choudhry",
+  "author": "Laiba Choudhry" ,
+  "co-owner": "Chris Gabriel |||",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/laibaaac/virtual-human/issues"
