@@ -208,18 +208,3 @@ button.plus:hover {
     display: block;
     
 }
-.changesAdd > ul {
-    font-weight: 400;
-    padding: 1em;
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-}
-.changesAdd > ul > li > button {
-    border-color: var(--orange);
-    border-radius: 0.6em;
-    animation: all 0.5s;
-}
-.changesAdd > ul > li > button:hover {
-  transform: scale(1.05);
-}
