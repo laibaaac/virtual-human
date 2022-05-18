@@ -20,7 +20,9 @@
   .show {
     display: block;
   }
-  
+  .filterShow {
+    display: block;
+  }
   /* Style the buttons */
   .btn {
     border: none;
