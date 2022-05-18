@@ -1,11 +1,10 @@
 /*********/
 /* FONTS */
 /*********/
-@font-face {
-    font-family: 'montserrat';
-    src: url("/public/fonts/Montserrat-VariableFont_wght.woff2") format("woff2");
-}
-
+/* @font-face { */
+    /* font-family: 'montserrat'; */
+    /*src: url("../fonts/Montserrat-VariableFont_wght.woff2") format("woff2");*/
+/* } */
 /**************/
 /* CSS REMEDY */
 /**************/
@@ -26,7 +25,7 @@ html {
     --orange: #E84D3C;
     --blue: #143056;
     --grey: #626262;
-    --main-font: 'montserrat';
+    --main-font: 'Montserrat';
     --darkestblue: #121B30;
     --darkblue: #17223C;
 }
