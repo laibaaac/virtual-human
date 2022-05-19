@@ -5,16 +5,6 @@
     /* font-family: 'montserrat'; */
     /*src: url("../fonts/Montserrat-VariableFont_wght.woff2") format("woff2");*/
 /* } */
-/**************/
-/* CSS REMEDY */
-/**************/
-*,
-html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--main-font), Arial, Helvetica, sans-serif;
-}
 
 /**************/
 /* VARIABELEN */
@@ -31,12 +21,23 @@ html {
     --hover-orange: #F47E71;
 }
 
+/**************/
+/* CSS REMEDY */
+/**************/
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font), Arial, Helvetica, sans-serif;
+}
+
 /********************/
 /* ALGEMENE STYLING */
 /********************/
 h1 {
     color: var(--text-color-buttons);
-    font-size: 1.56em;
+    font-size: 1.25em;
     font-weight: 400;
 }
 
@@ -49,6 +50,10 @@ h2 {
 button {
     border: none;
     cursor: pointer;
+}
+
+body {
+    overflow: hidden;
 }
 
 /*************/
@@ -101,17 +106,16 @@ button {
     gap: 1em;
 }
 
+.preview {
+    position: relative;
+    height: 43vh;
+}
 /* preview img binnen vak houden & border-radius */
 .preview > img {
     width: 100%;
-    height: 40vh;
+    height: 42vh;
     border-radius: 1em;
     object-fit: cover;
-}
-
-.preview {
-    position: relative;
-    height: 40vh;
 }
 
 /* buttons onder aan de preview */
@@ -166,7 +170,7 @@ button {
 
 /* stopbutton styling */
 .stopButton {
-    /*  */
+    border-radius: .2em;
 }
 
 /*******************/
@@ -195,6 +199,8 @@ button {
     width: 100%;
     border-radius: .5em;
     padding: .5em;
+    height: 100%;
+    resize: none;
 }
 
 /* positioneren buttons onderaan timeline */
@@ -255,19 +261,30 @@ button {
 /*******************/
 /* filter rechts bovenaan */
 #myBtnContainer {
-    width: 80%;
+    width: 100%;
     background-color: var(--black);
-    height: 13vh;
+    height: 11vh;
     border-radius: 1em;
     padding: 1em;
     display: flex;
     gap: 1em;
     overflow-x: scroll;
+    grid-area: 1 / 1 / 2 / 5;
+}
+
+.autoAnimation {
+    width: 100%;
+    height: 11vh;
+    background-color: var(--black);
+    padding: 1em;
+    border-radius: 1em;
+    color: var(--text-color-buttons);
+    grid-area: 1 / 5 / 2 / 6;
 }
 
 
 .btn {
-    background-color: var(--text-color-buttons);
+    background-color: transparent;
     border: none;
     width: 100%;
     padding: .5em;
@@ -277,6 +294,51 @@ button {
     flex-direction: column;
     gap: 1em;
     justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    filter: invert(100%) sepia(3%) saturate(13%) hue-rotate(81deg) brightness(106%) contrast(106%);
+}
+  
+  /* Add a light grey background on mouse-over */
+  .btn:hover {
+    background-color: var(--hover-orange);
+    color: var(--black);
+    filter: none;
+  }
+  
+  /* Add a dark background to the active button */
+  .btn.active {
+    color: var(--orange);
+    filter: none;
+  }
+
+  .btn.active img {
+    filter: invert(60%) sepia(91%) saturate(5059%) hue-rotate(338deg) brightness(94%) contrast(92%);
+}
+
+/* buttons in variations stylen */
+.filterDiv.mouth.show,
+.filterDiv.eyes.show,
+.filterDiv.brow.show,
+.filterDiv.movement.show,
+.filterDiv.position.show,
+.filterDiv.visemes.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1em;
+    height: 8em;
+    padding: 2em 1em 2em 1em;
+}
+
+.filterDiv.mouth.show img,
+.filterDiv.eyes.show img,
+.filterDiv.brow.show img,
+.filterDiv.movement.show img,
+.filterDiv.position.show img,
+.filterDiv.visemes.show img {
+    width: 80%;
 }
 
 /********************/
@@ -285,39 +347,45 @@ button {
 /* buitenste vlak stylen */
 .commands {
     background-color: var(--black);
-    width: 80%;
-    max-height: 30vh;
+    width: 100%;
+    height: 26vh;
     padding: 1em;
     border-radius: 1em;
     display: flex;
     flex-direction: column;
     gap: .7em;
+    grid-area: 2 / 1 / 3 / 6;
 }
 
 /* filter & commands */
 .commandList {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    width: 80%;
 }
 
 /* items in een grid */
 .container {
     display: grid;
-    grid-template-columns: repeat(3, 30%);
+    grid-template-columns: repeat(4, 23%);
     gap: 1em;
-    max-height: 10em;
-    height: 100%;
     overflow-y: scroll;
 }
 
 .container button {
     background-color: var(--text-color-buttons);
     border: none;
-    width: 100%;
     padding: .5em;
     height: auto;
-    border-radius: 5px;}
+    border-radius: .5em;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5em; */
+}
 
 .container button:hover {
     background-color: var(--hover-orange);
@@ -342,6 +410,7 @@ button {
     width: 80%;
     padding: 1em;
     border-radius: 1em;
+    height: 39vh;
 }
 
 .codeEditor {
@@ -355,6 +424,8 @@ button {
     width: 100%;
     border-radius: .5em;
     padding: .5em;
+    resize: none;
+    height: 100%;
 }
 
 /* horizontaal neerzetten van elke button */
