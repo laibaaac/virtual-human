@@ -1,45 +1,37 @@
-/* h1 {
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-  size:20%;
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font), Arial, Helvetica, sans-serif;
 }
 
-#dropdown {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 2em;
-    text-align: center;
-    margin: 1em;
-    background-color: lightgrey;
-    margin-left: auto;
-    margin-right: auto;
-    width: 15em;
-    padding:1em;
-    border-radius: 1em;
+/**************/
+/* VARIABELEN */
+/**************/
+:root {
+    --black: #1D1D1B;
+    --text-color-buttons: #FFFFFF;
+    --orange: #E84D3C;
+    --blue: #143056;
+    --grey: #626262;
+    --main-font: 'Montserrat';
+    --darkestblue: #121B30;
+    --darkblue: #17223C;
+    --hover-orange: #F47E71;
 }
 
-.dropdown-content {
-  display: none;
-  text-align: center;
-  background-color: #f9f9f9;
-  min-width: 50px;
-  padding:1em;
-  z-index: 1;
-  font-weight:400;
-  font-family: Arial, Helvetica, sans-serif;
+/********************/
+/* ALGEMENE STYLING */
+/********************/
+h1 {
+    color: var(--text-color-buttons);
+    font-size: 1.56em;
+    font-weight: 400;
 }
 
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-} */
-
-
-
-
-.show {
-  display: block;
+h2 {
+    color: var(--text-color-buttons);
+    font-size: 1.25em;
+    font-weight: 100;
 }
