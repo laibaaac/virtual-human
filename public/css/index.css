@@ -5,16 +5,6 @@
     /* font-family: 'montserrat'; */
     /*src: url("../fonts/Montserrat-VariableFont_wght.woff2") format("woff2");*/
 /* } */
-/**************/
-/* CSS REMEDY */
-/**************/
-*,
-html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--main-font), Arial, Helvetica, sans-serif;
-}
 
 /**************/
 /* VARIABELEN */
@@ -31,12 +21,23 @@ html {
     --hover-orange: #F47E71;
 }
 
+/**************/
+/* CSS REMEDY */
+/**************/
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font), Arial, Helvetica, sans-serif;
+}
+
 /********************/
 /* ALGEMENE STYLING */
 /********************/
 h1 {
     color: var(--text-color-buttons);
-    font-size: 1.56em;
+    font-size: 1.25em;
     font-weight: 400;
 }
 
@@ -107,12 +108,12 @@ body {
 
 .preview {
     position: relative;
-    height: 46vh;
+    height: 43vh;
 }
 /* preview img binnen vak houden & border-radius */
 .preview > img {
     width: 100%;
-    height: 45vh;
+    height: 42vh;
     border-radius: 1em;
     object-fit: cover;
 }
@@ -262,7 +263,7 @@ body {
 #myBtnContainer {
     width: 100%;
     background-color: var(--black);
-    height: 13vh;
+    height: 11vh;
     border-radius: 1em;
     padding: 1em;
     display: flex;
@@ -273,7 +274,7 @@ body {
 
 .autoAnimation {
     width: 100%;
-    height: 13vh;
+    height: 11vh;
     background-color: var(--black);
     padding: 1em;
     border-radius: 1em;
@@ -312,7 +313,32 @@ body {
   }
 
   .btn.active img {
-    filter: none;
+    filter: invert(60%) sepia(91%) saturate(5059%) hue-rotate(338deg) brightness(94%) contrast(92%);
+}
+
+/* buttons in variations stylen */
+.filterDiv.mouth.show,
+.filterDiv.eyes.show,
+.filterDiv.brow.show,
+.filterDiv.movement.show,
+.filterDiv.position.show,
+.filterDiv.visemes.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1em;
+    height: 8em;
+    padding: 2em 1em 2em 1em;
+}
+
+.filterDiv.mouth.show img,
+.filterDiv.eyes.show img,
+.filterDiv.brow.show img,
+.filterDiv.movement.show img,
+.filterDiv.position.show img,
+.filterDiv.visemes.show img {
+    width: 80%;
 }
 
 /********************/
@@ -322,7 +348,7 @@ body {
 .commands {
     background-color: var(--black);
     width: 100%;
-    height: 36vh;
+    height: 26vh;
     padding: 1em;
     border-radius: 1em;
     display: flex;
@@ -345,7 +371,6 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 23%);
     gap: 1em;
-    height: 100%;
     overflow-y: scroll;
 }
 
@@ -385,6 +410,7 @@ body {
     width: 80%;
     padding: 1em;
     border-radius: 1em;
+    height: 39vh;
 }
 
 .codeEditor {
@@ -399,6 +425,7 @@ body {
     border-radius: .5em;
     padding: .5em;
     resize: none;
+    height: 100%;
 }
 
 /* horizontaal neerzetten van elke button */
