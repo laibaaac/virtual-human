@@ -414,7 +414,7 @@
     var Text = document.getElementById("sequence");
     Text.select();
     navigator.clipboard.writeText(Text.value);
-    document.getElementById("copyTime").innerHTML = "text copied!";
+    document.getElementById("copyTime").innerHTML = "Text copied!";
     setTimeout(resetCopy, 2000);
   }
   function resetCopy() {
