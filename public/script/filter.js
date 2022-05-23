@@ -1,3 +1,4 @@
+
 filterSelection("all")
 function filterSelection(c) {
   var x, i;
@@ -5,8 +6,8 @@ function filterSelection(c) {
   //if (c == "all") c = "";
   // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
   for (i = 0; i < x.length; i++) {
-    RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+    RemoveClass(x[i], "filterShow");
+    if (x[i].className.indexOf(c) > -1) AddClass(x[i], "filterShow");
   }
 }
 
@@ -38,13 +39,39 @@ function RemoveClass(element, name) {
 // Add active class to the current control button (highlight it)
 var btnContainer = document.getElementById("myBtnContainer");
 var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
+
+for (const btn of btns) {
+  btn.addEventListener('click', function() {
+    
+    // heeft een btn in btns een class active? Zoja verwijder deze class
+    const test = btnContainer.querySelectorAll('.btn')
+    test.forEach(element => {
+      
+      if (element.classList.contains('active')) {
+        console.log('activated filter')
+        element.classList.remove('active')
+      }
+    });
+    btn.classList.add('active')
+  })
 }
+
+// btns.forEach(element => {
+//   element.addEventListener('click', function() {
+//     console.log('klik op een knop')
+//     element.classList.add('active')
+//   })
+// });
+
+// for (var i = 0; i < btns.length; i++) {
+//   btns[i].addEventListener("click", function(event) {
+//     console.log(i)
+//     console.log(btns)
+//     // Als de button, is geklikt, check als de button class Active heeft, zo niet voeg de class active toe 
+//     btns.classList.add("active");
+//     var current = document.getElementsByClassName("active");
+//   });
+// }
 
 
 //bron van code = w3school.com -- https://www.w3schools.com/howto/howto_js_filter_elements.asp//

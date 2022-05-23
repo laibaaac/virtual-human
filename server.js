@@ -28,12 +28,16 @@ app.get('/', function(req, res) {
   });
 
 
-  app.get("/filter", async (req, res) => {
+  app.get("/avatar", async (req, res) => {
   
-    res.render("filter");
+    res.render("avatar");
   
   });
-
+  app.get("/avataar", async (req, res) => {
+  
+    res.render("avataar");
+  
+  });
   app.use(express.static("public"));
 
 
