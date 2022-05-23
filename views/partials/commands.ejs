@@ -6,7 +6,7 @@
           <button class="btn" onclick="filterSelection('mouth')"><img src="/img/openmouth.png" alt="">Mouth</button>
           <button class="btn" onclick="filterSelection('eyes')"><img src="/img/openmouth.png" alt="">Eyes</button>
           <button class="btn" onclick="filterSelection('brow')"><img src="/img/openmouth.png" alt="">Brows</button>
-          <button class="btn" onclick="filterSelection('movement')"><img src="/img/openmouth.png" alt="">Movement</button>
+          <button class="btn" onclick="filterSelection('head')"><img src="/img/openmouth.png" alt="">Head</button>
           <button class="btn" onclick="filterSelection('position')"><img src="/img/openmouth.png" alt="">Positions</button>
           <button class="btn" onclick="filterSelection('visemes')"><img src="/img/openmouth.png" alt="">Visemes</button>
       
@@ -15,7 +15,7 @@
 
     <div class="autoAnimation">
         <!--hier is een apart div gemaakt, omdat dit button niet hoort bij de andere buttons. Dit is ook meteen gelinkt aan de buttons die animations hebben-->
-     <button class="btn" onclick="filterSelection('animation')"><img src="/img/lookleft.png" alt="animation">Auto animation</button> 
+     <button class="btn" onclick="filterSelection('animation')"><img src="/img/lookleft.png" alt="animation">Emotions</button> 
     </div>
         
      <div class="commands">
@@ -30,42 +30,40 @@
         <button class="filterDiv mouth" id=""><img src="/img/lookleft.png" alt="smile large">Smile large</button>
         <button class="filterDiv mouth" id=""><img src="/img/lookleft.png" alt="smile xl">Smile extra large</button>
 
-        <button class="filterDiv eyes" id=""><img src="/img/lookright.png" alt="lookright">Look right</button>
+        <button class="filterDiv eyes" id="lookrButton"><img src="/img/lookright.png" alt="lookright">Look right</button>
         <button class="filterDiv eyes" id=""><img src="/img/lookleft.png" alt="lookleft">Look left</button>
-        <button class="filterDiv eyes" id=""><img src="/img/lookleft.png" alt="look down">Look down</button>
-        <button class="filterDiv eyes" id=""><img src="/img/lookleft.png" alt="look down l">Look down left</button>
-        <button class="filterDiv eyes" id=""><img src="/img/lookleft.png" alt="look down r">Look down right</button>
-        <button class="filterDiv eyes" id=""><img src="/img/lookleft.png" alt="look up">Look up</button>
-        <button class="filterDiv eyes" id=""><img src="/img/lookleft.png" alt="camera">Look at camera</button>
-        <button class="filterDiv eyes" id=""><img src="/img/lookleft.png" alt="look up l">Look up left</button>
-        <button class="filterDiv eyes" id=""><img src="/img/lookleft.png" alt="look up r">Look up right</button>
+        <button class="filterDiv eyes" id=""><img src="/img/lookdown.png" alt="look down">Look down</button>
+        <button class="filterDiv eyes" id=""><img src="/img/lookdownl.png" alt="look down l">Look down left</button>
+        <button class="filterDiv eyes" id=""><img src="/img/lookdownr.png" alt="look down r">Look down right</button>
+        <button class="filterDiv eyes" id=""><img src="/img/lookup.png" alt="look up">Look up</button>
+        <button class="filterDiv eyes" id=""><img src="/img/look.png" alt="camera">Look at camera</button>
+        <button class="filterDiv eyes" id=""><img src="/img/lookupl.png" alt="look up l">Look up left</button>
+        <button class="filterDiv eyes" id=""><img src="/img/lookupr.png" alt="look up r">Look up right</button>
 
         <button class="filterDiv brow" id=""><img src="/img/lookleft.png" alt="raised brow xs">Raised brows extra small</button>
         <button class="filterDiv brow" id=""><img src="/img/lookleft.png" alt="raised brow s">Raised brows small</button>
-        <button class="filterDiv brow" id=""><img src="/img/lookleft.png" alt="raised brow mid">Raised brows mid</button>
         <button class="filterDiv brow" id=""><img src="/img/lookleft.png" alt="raised brow m">Raised brows medium</button>
         <button class="filterDiv brow" id=""><img src="/img/lookleft.png" alt="raised brow l">Raised brows large</button>
         <button class="filterDiv brow" id=""><img src="/img/lookleft.png" alt="frown xs">Frown extra small</button>
         <button class="filterDiv brow" id=""><img src="/img/lookleft.png" alt="frown s">Frown small</button>
-        <button class="filterDiv brow" id=""><img src="/img/lookleft.png" alt="frown mid">Frown mid</button>
         <button class="filterDiv brow" id=""><img src="/img/lookleft.png" alt="frown m">Frown medium</button>
         <button class="filterDiv brow" id=""><img src="/img/lookleft.png" alt="frown l">Frown large</button>
 
-        <button class="filterDiv movement" id=""><img src="/img/lookleft.png" alt="nodding s">Nodding small</button>
-        <button class="filterDiv movement" id=""><img src="/img/lookleft.png" alt="nodding m">Nodding medium</button>
-        <button class="filterDiv movement" id=""><img src="/img/lookleft.png" alt="nodding l">Nodding large</button>
-        <button class="filterDiv movement" id=""><img src="/img/lookleft.png" alt="nodding slow">Nodding slow</button>
-        <button class="filterDiv movement" id=""><img src="/img/lookleft.png" alt="nodding average">Nodding average</button>
-        <button class="filterDiv movement" id=""><img src="/img/lookleft.png" alt="nodding fast">Nodding fast</button>
-        <button class="filterDiv movement" id=""><img src="/img/lookleft.png" alt="shaking head slow">Shaking head slow</button>
-        <button class="filterDiv movement" id=""><img src="/img/lookleft.png" alt="shaking head av">Shaking head average</button>
-        <button class="filterDiv movement" id=""><img src="/img/lookleft.png" alt="shaking head f">Shaking head fast</button>
-        <button class="filterDiv movement" id=""><img src="/img/lookleft.png" alt="lean in">Lean in 1</button>
-        <button class="filterDiv movement" id=""><img src="/img/lookleft.png" alt="lean in">Lean in 2</button>
-        <button class="filterDiv movement" id=""><img src="/img/lookleft.png" alt="lean in nod">Lean in nodding</button>
-        <button class="filterDiv movement" id=""><img src="/img/lookleft.png" alt="lean in nod">Lean in nodding 2</button>
-        <button class="filterDiv movement" id=""><img src="/img/lookleft.png" alt="turn left">Turn left</button>
-        <button class="filterDiv movement" id="lookButton"><img src="/img/lookleft.png" alt="turn right">Turn right</button>
+        <button class="filterDiv head" id=""><img src="/img/lookleft.png" alt="nodding s">Nodding small</button>
+        <button class="filterDiv head" id=""><img src="/img/lookleft.png" alt="nodding m">Nodding medium</button>
+        <button class="filterDiv head" id=""><img src="/img/lookleft.png" alt="nodding l">Nodding large</button>
+        <button class="filterDiv head" id=""><img src="/img/lookleft.png" alt="nodding slow">Nodding slow</button>
+        <button class="filterDiv head" id=""><img src="/img/lookleft.png" alt="nodding average">Nodding average</button>
+        <button class="filterDiv head" id=""><img src="/img/lookleft.png" alt="nodding fast">Nodding fast</button>
+        <button class="filterDiv head" id=""><img src="/img/lookleft.png" alt="shaking head slow">Shaking head slow</button>
+        <button class="filterDiv head" id=""><img src="/img/lookleft.png" alt="shaking head av">Shaking head average</button>
+        <button class="filterDiv head" id=""><img src="/img/lookleft.png" alt="shaking head f">Shaking head fast</button>
+        <button class="filterDiv head" id=""><img src="/img/lookleft.png" alt="lean in">Lean in 1</button>
+        <button class="filterDiv head" id=""><img src="/img/lookleft.png" alt="lean in">Lean in 2</button>
+        <button class="filterDiv head" id=""><img src="/img/lookleft.png" alt="lean in nod">Lean in nodding</button>
+        <button class="filterDiv head" id=""><img src="/img/lookleft.png" alt="lean in nod">Lean in nodding 2</button>
+        <button class="filterDiv head" id=""><img src="/img/lookleft.png" alt="turn left">Turn left</button>
+        <button class="filterDiv head" id="lookButton"><img src="/img/lookleft.png" alt="turn right">Turn right</button>
 
         <button class="filterDiv position" id=""><img src="/img/lookleft.png" alt="Default center">Default center</button>
         <button class="filterDiv position" id=""><img src="/img/lookleft.png" alt="Face in center">Face in center</button>

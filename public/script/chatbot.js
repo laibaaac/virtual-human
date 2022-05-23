@@ -20,8 +20,9 @@
 //   document.getElementById("lookLeftButton").addEventListener("click", lookLeftNumber);
 //   document.getElementById("lookLeftButton").addEventListener("click", lookLeftCode);
 
-//   document.getElementById("lookRightButton").addEventListener("click", lookRightNumber);
-//   document.getElementById("lookRightButton").addEventListener("click", lookRightCode);
+ 
+document.getElementById("lookrButton").addEventListener("click", lookRightNumber);
+document.getElementById("lookrButton").addEventListener("click", lookRightCode);
 
 //   document.getElementById("eyebrowsRaiseButton").addEventListener("click", eyebrowNumber);
 //   document.getElementById("eyebrowsRaiseButton").addEventListener("click", eyebrowRaiseCode);
@@ -64,9 +65,11 @@
 //   document.getElementById("smileUpdate").addEventListener("click", updateSmile);
 //   document.getElementById("nodUpdate").addEventListener("click", updateNod);
   document.getElementById("mouthUpdate").addEventListener("click", updateMouth);
+  
+
 //   document.getElementById("mouthTeethUpdate").addEventListener("click", updateMouthTeeth);
 //   document.getElementById("lookDownUpdate").addEventListener("click", updateLookDown);
-//   document.getElementById("lookRightUpdate").addEventListener("click", updateLookRight);
+ document.getElementById("lookRightUpdate").addEventListener("click", updatelookRight);
 //   document.getElementById("lookLeftUpdate").addEventListener("click", updateLookLeft);
 //   document.getElementById("eyebrowSmallUpdate").addEventListener("click", updateEyebrowSmall);
 //   document.getElementById("eyebrowRaiseUpdate").addEventListener("click", updateEyebrowRaise);
@@ -156,26 +159,26 @@
 //     lookLeftCode();
 //   }
 
-//   function lookRightNumber() {
-//     dura = 4;
-//     blendSt = 1;
-//     blendEn = 1;
-//     document.getElementById('durationmeter').innerHTML = dura + "s";
-//     document.getElementById('blendStmeter').innerHTML = blendSt + "s";
-//     document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
-//     document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
-//     document.getElementById("lookRightUpdate").classList.add("show");
-//   }
+  function lookRightNumber() {
+    dura = 4;
+    blendSt = 1;
+    blendEn = 1;
+    document.getElementById('durationmeter').innerHTML = dura + "s";
+    document.getElementById('blendStmeter').innerHTML = blendSt + "s";
+    document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
+    document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+    document.getElementById("lookRightUpdate").classList.add("show");
+  }
 
-//   function lookRightCode() {
-//     document.getElementById("textReturn").innerHTML = "<trl-config lookat='-20,0,0' enable='true' speed='4' wait='2.5' returnSpeed='3.5' absolute='false' /><trl-anim type='aux' id='translateRotateRightSmall' duration=" + dura + " />";
-//   }
+function lookRightCode() {
+document.getElementById("textReturn").innerHTML = "<trl-config lookat='-20,0,0' enable='true' speed='4' wait='2.5' returnSpeed='3.5' absolute='false' /><trl-anim type='aux' id='translateRotateRightSmall' duration=" + dura + " />";
+ }
 
-//   function updateLookRight() {
+ function updateLookRight() {
 
-//     lookRightCode();
+ lookRightCode();
 
-//   }
+}
 
 //   function lookDownNumber() {
 //     dura = 2.5;
