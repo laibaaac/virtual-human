@@ -57,6 +57,30 @@ body {
 }
 
 /*************/
+/* SCROLLBAR */
+/*************/
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #1D1D1B;
+}
+
+::-webkit-scrollbar
+{
+    height: 10px;
+	width: 10px;
+
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #E84D3C;
+}
+
+/*************/
 /* DASHBOARD */
 /*************/
 
@@ -273,7 +297,7 @@ body {
     background-color: var(--black);
     height: 11vh;
     border-radius: 1em;
-    padding: 1em;
+    padding: 0.3em 1em 0.3em 1em;
     display: flex;
     gap: 1em;
     overflow-x: scroll;
@@ -290,13 +314,12 @@ body {
     grid-area: 1 / 5 / 2 / 6;
 }
 
-
 .btn {
     background-color: transparent;
     border: none;
-    width: 100%;
     padding: .5em;
     border-radius: 5px;
+    height: 100%;
 
     display: flex;
     flex-direction: column;
@@ -305,6 +328,10 @@ body {
     align-items: center;
     font-size: 1em;
     filter: invert(100%) sepia(3%) saturate(13%) hue-rotate(81deg) brightness(106%) contrast(106%);
+}
+
+.btn img {
+    height: 2.5em;
 }
   
   /* Add a light grey background on mouse-over */
@@ -322,31 +349,6 @@ body {
 
   .btn.active img {
     filter: invert(60%) sepia(91%) saturate(5059%) hue-rotate(338deg) brightness(94%) contrast(92%);
-}
-
-/* buttons in variations stylen */
-.filterDiv.mouth.show,
-.filterDiv.eyes.show,
-.filterDiv.brow.show,
-.filterDiv.movement.show,
-.filterDiv.position.show,
-.filterDiv.visemes.show {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    gap: 1em;
-    height: 8em;
-    padding: 2em 1em 2em 1em;
-}
-
-.filterDiv.mouth.show img,
-.filterDiv.eyes.show img,
-.filterDiv.brow.show img,
-.filterDiv.movement.show img,
-.filterDiv.position.show img,
-.filterDiv.visemes.show img {
-    width: 80%;
 }
 
 /********************/
@@ -377,33 +379,17 @@ body {
 /* items in een grid */
 .container {
     display: grid;
-    grid-template-columns: repeat(4, 23%);
+    grid-template-columns: repeat(4, 22.7%);
     gap: 1em;
     overflow-y: scroll;
-}
-
-.container button {
-    background-color: var(--text-color-buttons);
-    border: none;
-    padding: .5em;
-    height: auto;
-    border-radius: .5em;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: .5em; */
 }
 
 .container button:hover {
     background-color: var(--hover-orange);
 }
 
-/* TEST */
-.testholder {
-    width: 25%;
-    aspect-ratio: 1/1;
-    background-color: red;
+.container button:active {
+    background-color: var(--orange);
 }
 
 /*  */
@@ -466,6 +452,10 @@ body {
     font-size: 1em;
     border-radius: .25em;
     border: none;
+}
+
+.buttonStyling section div button:active {
+    background-color: var(--orange);
 }
 
 .changesAdd ul {

@@ -417,7 +417,7 @@ document.getElementById("textReturn").innerHTML = "<trl-config lookat='-20,0,0' 
     var Text = document.getElementById("plain-textarea-id");
     Text.select();
     navigator.clipboard.writeText(Text.value);
-    document.getElementById("copyTime").innerHTML = "text copied!";
+    document.getElementById("copyTime").innerHTML = "Text copied!";
     setTimeout(resetCopy, 2000);
   }
   function resetCopy() {
