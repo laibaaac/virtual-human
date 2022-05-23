@@ -2,26 +2,25 @@
 <link href="/css/filter.css" rel="stylesheet">
 <section class="commandList">
     <div id="myBtnContainer">
-        <!--<button class="btn active" onclick="filterSelection('all')"> Show all</button>-->
+        <!--hier staan de categorieen buttons, je klikt op deze buttons en dan krijg je meerdere variaties te zien-->
           <button class="btn" onclick="filterSelection('mouth')"><img src="/img/openmouth.png" alt="">Mouth</button>
           <button class="btn" onclick="filterSelection('eyes')"><img src="/img/openmouth.png" alt="">Eyes</button>
           <button class="btn" onclick="filterSelection('brow')"><img src="/img/openmouth.png" alt="">Brows</button>
           <button class="btn" onclick="filterSelection('movement')"><img src="/img/openmouth.png" alt="">Movement</button>
           <button class="btn" onclick="filterSelection('position')"><img src="/img/openmouth.png" alt="">Positions</button>
           <button class="btn" onclick="filterSelection('visemes')"><img src="/img/openmouth.png" alt="">Visemes</button>
-          <button class="btn" onclick="filterSelection('visemes')"><img src="/img/openmouth.png" alt="">test</button>
-          <button class="btn" onclick="filterSelection('visemes')"><img src="/img/openmouth.png" alt="">test</button>
-          <button class="btn" onclick="filterSelection('visemes')"><img src="/img/openmouth.png" alt="">test</button>
-
-          <!--<button class="btn" onclick="filterSelection('')"> Fruits</button>
-          <button class="btn" onclick="filterSelection('colors')"> Colors</button>-->
+      
+    
         </div>
+
     <div class="autoAnimation">
-        <button><img src="/img/openmouth.png" alt="">Auto animation</button>
+        <!--hier is een apart div gemaakt, omdat dit button niet hoort bij de andere buttons. Dit is ook meteen gelinkt aan de buttons die animations hebben-->
+     <button class="btn" onclick="filterSelection('animation')"><img src="/img/lookleft.png" alt="animation">Auto animation</button> 
     </div>
         
      <div class="commands">
         <h2>Variations</h2>
+       
      <div class="container">
         <button class="filterDiv mouth" id=""><img src="/img/closedmouth.png" alt="closedmouth">Closed mouth</button>
         <button class="filterDiv mouth" id="mouthButton"><img src="/img/openmouth.png" alt="openmouth"> Open mouth</button>
@@ -109,6 +108,17 @@
         <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="E">E viseme</button>
         <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="o">o viseme</button>
         <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="O">O viseme</button>
+
+
+    <!--Deze buttons zijn gelinked aan de button die in de div animation zit. Voor deze commands heb je een andere button-->
+        <button class="filterDiv animation" id=""><img src="/img/lookleft.png" alt="question">Question</button>
+        <button class="filterDiv animation" id=""><img src="/img/openmouth.png" alt="friendly">Friendly</button>
+        <button class="filterDiv animation" id=""><img src="/img/lookright.png" alt="surprise">Surprise</button>
+        <button class="filterDiv animation" id=""><img src="/img/closedmouth.png" alt="disapproval">Disapproval</button>
+        <button class="filterDiv animation" id=""><img src="/img/lookleft.png" alt="agreement">Agreement</button>
+        <button class="filterDiv animation" id=""><img src="/img/lookright.png" alt="disagreement">Disagreement</button>
+
+       
 
     </div>
 
