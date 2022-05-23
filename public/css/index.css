@@ -5,8 +5,6 @@
     /* font-family: 'montserrat'; */
     /*src: url("../fonts/Montserrat-VariableFont_wght.woff2") format("woff2");*/
 /* } */
-<<<<<<< HEAD
-=======
 
 /**************/
 /* VARIABELEN */
@@ -23,7 +21,6 @@
     --hover-orange: #F47E71;
 }
 
->>>>>>> f73c3b6408f44f5d44a1193e713535c474d17ed0
 /**************/
 /* CSS REMEDY */
 /**************/
@@ -109,17 +106,6 @@ body {
     gap: 1em;
 }
 
-<<<<<<< HEAD
-/* preview img binnen vak houden & border-radius */
-.preview > img {
-    width: 100%;
-    height: 40vh;
-    border-radius: 1em;
-    object-fit: cover;
-}
-
-=======
->>>>>>> f73c3b6408f44f5d44a1193e713535c474d17ed0
 .preview {
     position: relative;
     height: 43vh;
@@ -298,11 +284,7 @@ body {
 
 
 .btn {
-<<<<<<< HEAD
-    background-color: var(--text-color-buttons);
-=======
     background-color: transparent;
->>>>>>> f73c3b6408f44f5d44a1193e713535c474d17ed0
     border: none;
     width: 100%;
     padding: .5em;
@@ -365,13 +347,8 @@ body {
 /* buitenste vlak stylen */
 .commands {
     background-color: var(--black);
-<<<<<<< HEAD
-    width: 80%;
-    max-height: 30vh;
-=======
     width: 100%;
     height: 26vh;
->>>>>>> f73c3b6408f44f5d44a1193e713535c474d17ed0
     padding: 1em;
     border-radius: 1em;
     display: flex;
@@ -394,11 +371,6 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 23%);
     gap: 1em;
-<<<<<<< HEAD
-    max-height: 10em;
-    height: 100%;
-=======
->>>>>>> f73c3b6408f44f5d44a1193e713535c474d17ed0
     overflow-y: scroll;
 }
 
