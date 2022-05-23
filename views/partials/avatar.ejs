@@ -638,12 +638,11 @@
 
             if (tgStatus === Trulience.TGStatus.CONNECTING) {
                 //TGStatus
-                document.getElementById('tgConnectingId').style.display = 'inline';
+                document.getElementById('tgConnectingId').style.display = 'none';
                 document.getElementById('tgConnectedId').style.display = 'none';
                 document.getElementById('tgDisconnectedId').style.display = 'none';
                 //VPSStatus
-                document.getElementById('vpsAssigningId').style.display = 'none';
-                document.getElementById('vpsAssignedId').style.display = 'none';
+            
 
             } else if (tgStatus === Trulience.TGStatus.CONNECTED) {
 
@@ -653,33 +652,29 @@
                     document.getElementById('tgConnectedId').style.display = 'none';
                     document.getElementById('tgDisconnectedId').style.display = 'none';
                     //VPSStatus
-                    document.getElementById('vpsAssigningId').style.display = 'none';
-                    document.getElementById('vpsAssignedId').style.display = 'inline';
+         
 
                 } else if (vpsStatus === Trulience.VPSStatus.DISCONNECTED) {
                     //TGStatus
                     document.getElementById('tgConnectingId').style.display = 'none';
-                    document.getElementById('tgConnectedId').style.display = 'inline';
-                    document.getElementById('tgDisconnectedId').style.display = 'none';
-                    //VPSStatus
-                    document.getElementById('vpsAssigningId').style.display = 'none';
-                    document.getElementById('vpsAssignedId').style.display = 'none';
-                } else if (vpsStatus === Trulience.VPSStatus.CONNECTING) {
-                    //TGStatus
-                    document.getElementById('tgConnectingId').style.display = 'inline';
                     document.getElementById('tgConnectedId').style.display = 'none';
                     document.getElementById('tgDisconnectedId').style.display = 'none';
                     //VPSStatus
-                    document.getElementById('vpsAssigningId').style.display = 'none';
-                    document.getElementById('vpsAssignedId').style.display = 'none';
+               
+                } else if (vpsStatus === Trulience.VPSStatus.CONNECTING) {
+                    //TGStatus
+                    document.getElementById('tgConnectingId').style.display = 'none';
+                    document.getElementById('tgConnectedId').style.display = 'none';
+                    document.getElementById('tgDisconnectedId').style.display = 'none';
+                    //VPSStatus
+                 
                 } else {
                     //TGStatus
                     document.getElementById('tgConnectingId').style.display = 'none';
                     document.getElementById('tgConnectedId').style.display = 'none';
                     document.getElementById('tgDisconnectedId').style.display = 'none';
                     //VPSStatus
-                    document.getElementById('vpsAssigningId').style.display = 'inline';
-                    document.getElementById('vpsAssignedId').style.display = 'none';
+             
                 }
             } else /*if (tgStatus === Trulience.TGStatus.DISCONNECTED)*/ {
                 //TGStatus
@@ -687,8 +682,7 @@
                 document.getElementById('tgConnectedId').style.display = 'none';
                 document.getElementById('tgDisconnectedId').style.display = 'none';
                 //VPSStatus
-                document.getElementById('vpsAssigningId').style.display = 'none';
-                document.getElementById('vpsAssignedId').style.display = 'none';
+               
             }
         }
 
@@ -902,10 +896,7 @@
             </span>
 
             <!----------------------------- VPSStatus -------------------------------->
-            <span id="vpsAssigningId" title="Waiting for VPS Assignment...">
-                <img src='/img/closedmouth.png'/> </span>
-            <span id="vpsAssignedId" title="VPS Assigned"> <img src='/img/closedmouth.png'
-           /> </span> </div>
+        
     <div id="errorMessageId"></div>
 
  
