@@ -88,6 +88,7 @@ body {
     background-color: var(--black);
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     gap: 1em;
     align-items: right;
     position: absolute;
@@ -100,7 +101,8 @@ body {
 /***********/
 /* preview vak styling */
 .imageArea {
-    width: 100%;
+    z-index: 11;
+    width: 40%;
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -178,6 +180,7 @@ body {
 /*******************/
 /* vormgeving timeline blok */
 .timelineArea {
+    z-index: 10;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -187,7 +190,11 @@ body {
     gap: .5em;
     height: 35vh;
 }
-
+.previewVid {
+    border: 15px solid red;
+    float:left;
+    max-width: 10%;
+}
 /* timeline zelf */
 .timeline {
     height: 4em;

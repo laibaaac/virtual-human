@@ -411,7 +411,7 @@
   document.getElementById("copyTime").addEventListener("click", copyText);
 
   function copyText() {
-    var Text = document.getElementById("sequence");
+    var Text = document.getElementById("plain-textarea-id");
     Text.select();
     navigator.clipboard.writeText(Text.value);
     document.getElementById("copyTime").innerHTML = "text copied!";
@@ -423,7 +423,7 @@
 
   document.getElementById("addAnimation").addEventListener('click', () => {
 
-    document.getElementById("sequence").innerHTML += textReturn.value;
+    document.getElementById("plain-textarea-id").innerHTML += textReturn.value;
 
   })
 
