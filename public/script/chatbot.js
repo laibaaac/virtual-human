@@ -69,7 +69,7 @@ document.getElementById("lookrButton").addEventListener("click", lookRightCode);
 
 //   document.getElementById("mouthTeethUpdate").addEventListener("click", updateMouthTeeth);
 //   document.getElementById("lookDownUpdate").addEventListener("click", updateLookDown);
- document.getElementById("lookRightUpdate").addEventListener("click", updatelookRight);
+ document.getElementById("lookRightUpdate").addEventListener("click", updateLookRight);
 //   document.getElementById("lookLeftUpdate").addEventListener("click", updateLookLeft);
 //   document.getElementById("eyebrowSmallUpdate").addEventListener("click", updateEyebrowSmall);
 //   document.getElementById("eyebrowRaiseUpdate").addEventListener("click", updateEyebrowRaise);
