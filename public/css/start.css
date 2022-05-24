@@ -52,6 +52,10 @@ ul.guideTop {
 ul.guideTop > li {
     width: 45%;
 }
+img {
+    -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(15px 15px 15px rgba(0, 0, 0, 0.3));
+}
 ul.guideTop > li > button {
 float:right;
 border:none;

@@ -24,6 +24,9 @@ html {
 /********************/
 /* ALGEMENE STYLING */
 /********************/
+body {
+  background-color: var(--darkblue);
+}
 h1 {
     color: var(--text-color-buttons);
     font-size: 1.56em;
@@ -34,4 +37,80 @@ h2 {
     color: var(--text-color-buttons);
     font-size: 1.25em;
     font-weight: 100;
+}
+.titlebar {
+  display:  flex;
+  flex-direction: row;
+  padding: 3em 15% 3em 20%;
+}
+ul.titlebar {
+  color: white;
+  list-style: none;
+}
+.titlebar > li {
+
+  padding: 0em 1em 0em 0em;
+}
+.titlebar > li:nth-of-type(3) > a {
+  color: var(--orange);
+}
+.listIntro {
+  width: 100%;
+  color: var(--darkestblue);
+  background-color: var(--darkestblue);
+  padding-bottom: 3em;
+}
+p.introText {
+  color: white;
+  
+  padding: 1em 20% 2em 20%;
+}
+.listTitle {
+  padding: 0em 20% 0em 20%;
+  font-size: 2em;
+
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+
+}
+h2.titles {
+  font-size: 2em;
+  padding-top:3em;
+  font-weight: 500;
+  padding: 3em 0em 0em 20%;
+}
+ul.list {
+  display: flex;
+  justify-content: center;
+}
+.list {
+  padding: 1em;
+}
+.list > li:first-of-type {
+height: 10em;
+ display: block;
+}
+.list > li > img {
+ width: 100%;
+ height: 100%;
+ border-radius: 1em;
+  
+  
+}
+.list li:nth-of-type(2) {
+  background-color: var(--blue);
+padding: 2em;
+margin-left: 1.2em;
+  width: 50%;
+  border-radius: 1em;
+  min-height: 10em;
+  max-height: 10em;
+  -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(15px 15px 15px rgba(0, 0, 0, 0.1));
+  
 }
