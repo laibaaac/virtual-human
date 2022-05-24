@@ -197,7 +197,7 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
 /* preview vak styling */
 .imageArea {
     z-index: 11;
-    width: 40%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -248,7 +248,7 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
   
     display: flex;
     flex-direction: column;
-    width: 220%;
+    width: 100%;
     background-color: var(--blue);
     padding: 1em;
     border-radius: 1em;
