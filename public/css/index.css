@@ -352,7 +352,7 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
     width: 25%;
     height: 11vh;
     background-color: var(--black);
-    padding: 1em;
+    padding: .5em;
     border-radius: 1em;
     color: var(--text-color-buttons);
     display: flex;
@@ -380,7 +380,7 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
 
 .autoAnimation button img {
     width: 100%;
-    max-width: 5rem;
+    max-width: 2.5rem;
 }
   
   /* Add a light grey background on mouse-over */
