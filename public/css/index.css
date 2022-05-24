@@ -197,6 +197,7 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
 /* preview vak styling */
 .imageArea {
     z-index: 11;
+    width: 40%;
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -243,15 +244,21 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
 /* TIMELINE + CODE */
 /*******************/
 /* vormgeving timeline blok */
-.timelineArea { 
+.timelineArea {
+  
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 220%;
     background-color: var(--blue);
     padding: 1em;
     border-radius: 1em;
     gap: .5em;
     height: 30vh;
+}
+.previewVid {
+    border: 15px solid red;
+    float:left;
+    max-width: 10%;
 }
 .previewVid {
     border: 15px solid red;
