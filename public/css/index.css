@@ -343,7 +343,7 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
     border-radius: 1em;
     padding: .5em 1em .5em 1em;
     display: flex;
-    gap: 1em;
+    gap: .5em;
     overflow-x: scroll;
     width: 75%;
 }
@@ -352,17 +352,36 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
     width: 25%;
     height: 11vh;
     background-color: var(--black);
+<<<<<<< Updated upstream
     padding: .5em;
     border-radius: 1em;
     color: var(--text-color-buttons);
     display: flex;
     justify-content: center
 ;}
+=======
+    border-radius: 1em;
+    color: var(--text-color-buttons);
+    grid-area: 1 / 5 / 2 / 6;
+}
+
+.btn {
+    background-color: transparent;
+    border: none;
+    padding: .5em;
+    border-radius: 5px;
+    height: 100%;
+    min-width: 6em;
+>>>>>>> Stashed changes
 
 .autoAnimation button,
 #myBtnContainer button {
     display: flex;
     flex-direction: column;
+<<<<<<< Updated upstream
+=======
+    justify-content: space-between;
+>>>>>>> Stashed changes
     align-items: center;
     justify-content: space-between;
     gap: auto;
@@ -381,6 +400,10 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
 .autoAnimation button img {
     width: 100%;
     max-width: 2.5rem;
+}
+
+.btn img {
+    width: 60%;
 }
   
   /* Add a light grey background on mouse-over */
@@ -445,6 +468,16 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
 
 .container button:active {
     background-color: var(--orange);
+<<<<<<< Updated upstream
+=======
+}
+
+/* TEST */
+.testholder {
+    width: 25%;
+    aspect-ratio: 1/1;
+    background-color: red;
+>>>>>>> Stashed changes
 }
 
 /*  */
