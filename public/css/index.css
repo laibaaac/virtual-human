@@ -349,20 +349,14 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
 }
 
 .autoAnimation {
-    width: 25%;
     height: 11vh;
     background-color: var(--black);
-<<<<<<< Updated upstream
-    padding: .5em;
     border-radius: 1em;
     color: var(--text-color-buttons);
     display: flex;
-    justify-content: center
-;}
-=======
-    border-radius: 1em;
-    color: var(--text-color-buttons);
-    grid-area: 1 / 5 / 2 / 6;
+    width: 25%;
+    padding: 0.5em 0;
+    justify-content: center;
 }
 
 .btn {
@@ -372,16 +366,13 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
     border-radius: 5px;
     height: 100%;
     min-width: 6em;
->>>>>>> Stashed changes
+}
 
 .autoAnimation button,
 #myBtnContainer button {
     display: flex;
     flex-direction: column;
-<<<<<<< Updated upstream
-=======
     justify-content: space-between;
->>>>>>> Stashed changes
     align-items: center;
     justify-content: space-between;
     gap: auto;
@@ -468,8 +459,6 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
 
 .container button:active {
     background-color: var(--orange);
-<<<<<<< Updated upstream
-=======
 }
 
 /* TEST */
@@ -477,7 +466,6 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
     width: 25%;
     aspect-ratio: 1/1;
     background-color: red;
->>>>>>> Stashed changes
 }
 
 /*  */
