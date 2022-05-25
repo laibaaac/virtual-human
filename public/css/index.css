@@ -10,7 +10,7 @@
 /* VARIABELEN */
 /**************/
 :root {
-    --black: #1D1D1B;
+    --black: #020B23;
     --text-color-buttons: #FFFFFF;
     --orange: #E84D3C;
     --blue: #143056;
@@ -18,7 +18,7 @@
     --main-font: 'Montserrat';
     --darkestblue: #121B30;
     --darkblue: #17223C;
-    --hover-orange: #F47E71;
+    --hover-orange: #f99a90;
 }
 
 /**************/
@@ -30,6 +30,13 @@ html {
     padding: 0;
     box-sizing: border-box;
     font-family: var(--main-font), Arial, Helvetica, sans-serif;
+}
+
+button:focus,
+a:focus,
+textarea:focus {
+    outline: 2px solid var(--orange);
+    border-radius: 2px;
 }
 
 /********************/
@@ -63,7 +70,7 @@ body {
 {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	border-radius: 10px;
-	background-color: #1D1D1B;
+	background-color: var(--black);
 }
 
 ::-webkit-scrollbar
@@ -176,6 +183,21 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) {
     width: 70%;
 }
 
+table tbody tr:nth-of-type(2) td:nth-of-type(2) button:hover,
+table tbody tr:nth-of-type(2) td:first-of-type button:hover {
+    background-color: var(--hover-orange);
+}
+
+table tbody tr:nth-of-type(2) td:nth-of-type(2) button:active,
+table tbody tr:nth-of-type(2) td:first-of-type button:active {
+    background-color: var(--orange);
+}
+
+table tbody tr:nth-of-type(2) td:nth-of-type(2) button.active,
+table tbody tr:nth-of-type(2) td:first-of-type button.active {
+    background-color: var(--orange);
+}
+
 /* Send message button styling */
 table tbody tr:nth-of-type(2) td:first-of-type button {
     background-color: var(--text-color-buttons);
@@ -284,7 +306,9 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
 .timelineButtons {
     display: flex;
     justify-content: space-between;
+    height: 2em;
 }
+
 
 .timelineButtons div {
     display: flex;
@@ -302,7 +326,7 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
 
 /* pdf button */
 .timelineButtons div button:nth-of-type(2) {
-    height: 1.875em;
+    height: 100%;
     background: transparent;
 }
 
@@ -310,10 +334,26 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
     height: 100%;
 }
 
+.timelineButtons div button:nth-of-type(2):hover {
+    filter: invert(41%) sepia(18%) saturate(2013%) hue-rotate(318deg) brightness(100%) contrast(91%);
+}
+
+.timelineButtons div button:nth-of-type(2):active {
+    filter: invert(45%) sepia(90%) saturate(1840%) hue-rotate(332deg) brightness(88%) contrast(107%);
+}
+
 .timelineButtons > button {
     background: transparent;
     color: var(--text-color-buttons);
     font-size: 1em;
+}
+
+.timelineButtons > button:hover {
+    color: var(--hover-orange);
+}
+
+.timelineButtons > button:active {
+    color: var(--orange);
 }
 
 /****************/
@@ -338,49 +378,64 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
 /*******************/
 /* filter rechts bovenaan */
 #myBtnContainer {
+    position: relative;
     background-color: var(--black);
     height: 11vh;
     border-radius: 1em;
     padding: .5em 1em .5em 1em;
     display: flex;
-    gap: 1em;
+    gap: .5em;
     overflow-x: scroll;
     width: 75%;
 }
 
+#myBtnContainer::after {
+    content: "";
+    position: fixed;
+    width: 6em;
+    height: 10vh;
+    right: 19.9vw;
+    top: 13.2vh;
+    bottom: 0;
+    background-color: var(--black);
+    -webkit-mask: linear-gradient(to right, transparent, red 90%);
+    border-radius: 0 1em 0 0;
+}
+
 .autoAnimation {
-    width: 25%;
     height: 11vh;
     background-color: var(--black);
-    padding: 1em;
     border-radius: 1em;
     color: var(--text-color-buttons);
     display: flex;
-    justify-content: center
-;}
+    width: 25%;
+    padding: 0.5em 0;
+    justify-content: center;
+}
 
 .autoAnimation button,
 #myBtnContainer button {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    justify-content: space-between;
-    gap: auto;
     background-color: transparent;
     border: none;
     border-radius: 0.5em;
     filter: invert(100%) sepia(3%) saturate(13%) hue-rotate(81deg) brightness(106%) contrast(106%);
     height: 100%;
     padding: .5em;
+    font-size: 1em;
+    min-width: 5em;
 }
 
 #myBtnContainer button img {
-    height: 2.5em;
+    height: 2em;
 }
 
 .autoAnimation button img {
     width: 100%;
-    max-width: 5rem;
+    max-width: 2.5rem;
 }
   
   /* Add a light grey background on mouse-over */
@@ -437,6 +492,7 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
     grid-template-columns: repeat(4, 22%);
     gap: 1em;
     overflow-y: scroll;
+    -webkit-mask: linear-gradient(red 90%, transparent);
 }
 
 .container button:hover {
@@ -445,6 +501,13 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
 
 .container button:active {
     background-color: var(--orange);
+}
+
+/* TEST */
+.testholder {
+    width: 25%;
+    aspect-ratio: 1/1;
+    background-color: red;
 }
 
 /*  */
@@ -466,7 +529,7 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
 .codeEditor {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: .7em;
     width: 100%;
 }
 
