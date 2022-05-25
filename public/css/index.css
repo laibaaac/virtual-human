@@ -389,7 +389,7 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
     width: 75%;
 }
 
-#myBtnContainer::after {
+/* #myBtnContainer::after {
     content: "";
     position: fixed;
     width: 6em;
@@ -400,7 +400,7 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
     background-color: var(--black);
     -webkit-mask: linear-gradient(to right, transparent, red 90%);
     border-radius: 0 1em 0 0;
-}
+} */
 
 .autoAnimation {
     height: 11vh;
