@@ -173,7 +173,7 @@ document.getElementById("lookrButton").addEventListener("click", lookRightCode);
   }
   function closedMouthCode() {
 
-    document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='smileLarge' duration=" + dura + " blendStart=" + blendSt + " blendEnd=" + blendEn + " peak='0.8'/>";
+    document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='smileLarge' duration='" + dura + "' blendStart='" + blendSt + "' blendEnd='" + blendEn + "' peak='0.8'/>";
   }
 function updateClosedMouth() {
  closedMouthCode();
@@ -190,7 +190,7 @@ function mouthTeethNumber() {
 }
 function mouthTeethCode() {
 
-  document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='mouthOpenTeeth' duration='3.5' blendStart='0.5' blendEnd='0.5'/>";
+  document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='mouthOpenTeeth' duration='" + dura + "' blendStart=' " + blendSt +" ' blendEnd=' " + blendEn + "'/>";
 }
 function updateMouthTeeth() {
 mouthTeethCode();
@@ -208,7 +208,7 @@ function smileSmallNumber() {
 }
 function smileSmallCode() {
 
-  document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='smileSmall' duration='3.5' blendStart='0.5' blendEnd='0.5'/>";
+  document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='smileSmall' duration=' " + dura + " ' blendStart=' " + blendSt +" ' blendEnd='" + blendEn + "'/>";
 }
 function updateSmileSmall() {
 smileSmallCode();
@@ -226,7 +226,7 @@ function smileMediumNumber() {
 }
 function smileMediumCode() {
 
-  document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='smileMedium' duration='3.5' blendStart='0.5' blendEnd='0.5'/>";
+  document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='smileMedium' duration=' " + dura + " ' blendStart=' " + blendSt +" ' blendEnd='" + blendEn + "'/>";
 }
 function updateSmileMedium() {
 smileMediumCode();
@@ -243,16 +243,16 @@ function smileLargeNumber() {
 }
 function smileLargeCode() {
 
-  document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='smileLarge' duration='3.5' blendStart='0.5' blendEnd='0.5' peak='0.8'/>";
+  document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='smileLarge' duration=' " + dura + " ' blendStart=' " + blendSt +" ' blendEnd='" + blendEn + "' peak='0.8'/>";
 }
 function updateSmileLarge() {
 smileLargeCode();
 }
 
 function smileXlNumber() {
-  dura = 3.5;
-  blendSt = 0.5;
-  blendEn = 0.5;
+  dura = 4.2;
+  blendSt = 0.1;
+  blendEn = 0.1;
   document.getElementById('durationmeter').innerHTML = dura + "s";
   document.getElementById('blendStmeter').innerHTML = blendSt + "s";
   document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
@@ -261,10 +261,11 @@ function smileXlNumber() {
 }
 function smileXlCode() {
 
-  document.getElementById("textReturn").innerHTML = "<trl-morph id='All_Smile,All_CheekSmileLeft,All_CheekSmileRight' min='0' max='0.15' speed='0.3' wait='3' returnSpeed='0.2'/><trl-morph id='All_Smile,All_CheekSmileLeft,All_CheekSmileRight' min='0' max='0.25' speed='0.4' wait='5' returnSpeed='0.15'/><trl-anim type='aux' id='smileLarge' duration='4.2' blendStart='0.1' blendEnd='0.1' />";
+  document.getElementById("textReturn").innerHTML = "<trl-morph id='All_Smile,All_CheekSmileLeft,All_CheekSmileRight' min='0' max='0.15' speed='0.3' wait='3' returnSpeed='0.2'/><trl-morph id='All_Smile,All_CheekSmileLeft,All_CheekSmileRight' min='0' max='0.25' speed='0.4' wait='5' returnSpeed='0.15'/><trl-anim type='aux' id='smileLarge' duration=' " + dura + " ' blendStart=' " + blendSt +" ' blendEnd='" + blendEn + "' />";
 }
+
 function updateSmileXl() {
-smileXlcode();
+  smileXlCode();
 }
 function lookDownLeftNumber() {
   dura = 3.5;
@@ -472,6 +473,8 @@ document.getElementById("textReturn").innerHTML = "<trl-config lookat='-15,0,5' 
 
   function lookDownNumber() {
     dura = 2.5;
+    blendst = 0;
+    blendEn = 0;
     document.getElementById('durationmeter').innerHTML = dura + "s";
     document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
     document.getElementById("lookDownUpdate").classList.add("show");
