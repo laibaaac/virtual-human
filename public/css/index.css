@@ -18,7 +18,7 @@
     --main-font: 'Montserrat';
     --darkestblue: #121B30;
     --darkblue: #17223C;
-    --hover-orange: #F47E71;
+    --hover-orange: #f99a90;
 }
 
 /**************/
@@ -30,6 +30,13 @@ html {
     padding: 0;
     box-sizing: border-box;
     font-family: var(--main-font), Arial, Helvetica, sans-serif;
+}
+
+button:focus,
+a:focus,
+textarea:focus {
+    outline: 2px solid var(--orange);
+    border-radius: 2px;
 }
 
 /********************/
@@ -299,6 +306,7 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
 .timelineButtons {
     display: flex;
     justify-content: space-between;
+    height: 2em;
 }
 
 
@@ -318,7 +326,7 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
 
 /* pdf button */
 .timelineButtons div button:nth-of-type(2) {
-    height: 1.875em;
+    height: 100%;
     background: transparent;
 }
 
@@ -378,6 +386,7 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
     gap: .5em;
     overflow-x: scroll;
     width: 75%;
+    -webkit-mask: linear-gradient(to left, red 90%, transparent);
 }
 
 .autoAnimation {
@@ -470,6 +479,7 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
     grid-template-columns: repeat(4, 22%);
     gap: 1em;
     overflow-y: scroll;
+    -webkit-mask: linear-gradient(red 90%, transparent);
 }
 
 .container button:hover {
