@@ -10,15 +10,15 @@ html {
 /* VARIABELEN */
 /**************/
 :root {
-    --black: #1D1D1B;
-    --text-color-buttons: #FFFFFF;
-    --orange: #E84D3C;
-    --blue: #143056;
-    --grey: #626262;
-    --main-font: 'Montserrat';
-    --darkestblue: #121B30;
-    --darkblue: #17223C;
-    --hover-orange: #F47E71;
+  --black: #020B23;
+  --text-color-buttons: #FFFFFF;
+  --orange: #E84D3C;
+  --blue: #143056;
+  --grey: #626262;
+  --main-font: 'Montserrat';
+  --darkestblue: #121B30;
+  --darkblue: #17223C;
+  --hover-orange: #F47E71;
 }
 
 /********************/
