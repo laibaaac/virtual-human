@@ -208,7 +208,7 @@ function smileSmallNumber() {
 }
 function smileSmallCode() {
 
-  document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='mouthOpenTeeth' duration='3.5' blendStart='0.5' blendEnd='0.5'/>";
+  document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='smileSmall' duration='3.5' blendStart='0.5' blendEnd='0.5'/>";
 }
 function updateSmileSmall() {
 smileSmallCode();
@@ -226,7 +226,7 @@ function smileMediumNumber() {
 }
 function smileMediumCode() {
 
-  document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='mouthOpenTeeth' duration='3.5' blendStart='0.5' blendEnd='0.5'/>";
+  document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='smileMedium' duration='3.5' blendStart='0.5' blendEnd='0.5'/>";
 }
 function updateSmileMedium() {
 smileMediumCode();
@@ -243,7 +243,7 @@ function smileLargeNumber() {
 }
 function smileLargeCode() {
 
-  document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='mouthOpenTeeth' duration='3.5' blendStart='0.5' blendEnd='0.5'/>";
+  document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='smileLarge' duration='3.5' blendStart='0.5' blendEnd='0.5' peak='0.8'/>";
 }
 function updateSmileLarge() {
 smileLargeCode();
@@ -261,7 +261,7 @@ function smileXlNumber() {
 }
 function smileXlCode() {
 
-  document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='mouthOpenTeeth' duration='3.5' blendStart='0.5' blendEnd='0.5'/>";
+  document.getElementById("textReturn").innerHTML = "<trl-morph id='All_Smile,All_CheekSmileLeft,All_CheekSmileRight' min='0' max='0.15' speed='0.3' wait='3' returnSpeed='0.2'/><trl-morph id='All_Smile,All_CheekSmileLeft,All_CheekSmileRight' min='0' max='0.25' speed='0.4' wait='5' returnSpeed='0.15'/><trl-anim type='aux' id='smileLarge' duration='4.2' blendStart='0.1' blendEnd='0.1' />";
 }
 function updateSmileXl() {
 smileXlcode();
@@ -278,7 +278,7 @@ function lookDownLeftNumber() {
 }
 function lookDownLeftCode() {
 
-  document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='mouthOpenTeeth' duration='3.5' blendStart='0.5' blendEnd='0.5'/>";
+  document.getElementById("textReturn").innerHTML = "<trl-config lookat='20,0,-20' enable='true' speed='4.5' wait='2.5' returnSpeed='4.5' absolute='false' /><trl-anim type='aux' id='translateRotateLeftSmall1' duration='3.0' /><trl-anim type='aux' id='tiltLeftDownMedium3' duration='2.5' />";
 }
 function updateLookDownLeft() {
 lookDownLeftCode();
@@ -295,7 +295,7 @@ function lookDownRightNumber() {
 }
 function lookDownRightCode() {
 
-  document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='mouthOpenTeeth' duration='3.5' blendStart='0.5' blendEnd='0.5'/>";
+  document.getElementById("textReturn").innerHTML = "<trl-config lookat='-20,0,-20' enable='true' speed='4.5' wait='2.5' returnSpeed='5.5' absolute='false' /><trl-anim type='aux' id='translateRotateRightSmall1' duration='3.0' /><trl-anim type='aux' id='tiltRightDownMedium3' duration='2.5' />";
 }
 function updateLookDownRight() {
 lookDownRightCode();
@@ -312,7 +312,7 @@ function lookUpNumber() {
 }
 function lookUpCode() {
 
-  document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='mouthOpenTeeth' duration='3.5' blendStart='0.5' blendEnd='0.5'/>";
+  document.getElementById("textReturn").innerHTML = "<trl-config lookat='0,0,20' enable='true' speed='4.5' wait='2.5' returnSpeed='6.25' absolute='false' /><trl-anim type='aux' id='tiltUpLarge3' duration='2.5' />";
 }
 function updatelookUp() {
 lookUpCode();
@@ -329,7 +329,7 @@ function lookAtCamNumber() {
 }
 function lookAtCamCode() {
 
-  document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='mouthOpenTeeth' duration='3.5' blendStart='0.5' blendEnd='0.5'/>";
+  document.getElementById("textReturn").innerHTML = "<trl-config lookat='camera' speed='3.5'/>";
 }
 function updateLookAtCam() {
 lookAtCamCode();
@@ -347,7 +347,7 @@ function lookUpLeftNumber() {
 }
 function lookUpLeftCode() {
 
-  document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='mouthOpenTeeth' duration='3.5' blendStart='0.5' blendEnd='0.5'/>";
+  document.getElementById("textReturn").innerHTML = "<trl-config lookat='15,0,5' enable='true' speed='4.5' wait='2.5' returnSpeed='4.5' absolute='false' /><trl-anim type='aux' id='translateRotateLeftSmall' duration='2.5' /><trl-anim type='aux' id='tiltLeftUpMedium3' duration='2.5' />";
 }
 function updatelookUpLeft() {
 lookUpLeftCode();
@@ -364,7 +364,7 @@ function lookUpRightNumber() {
 }
 function lookUpRightCode() {
 
-  document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='mouthOpenTeeth' duration='3.5' blendStart='0.5' blendEnd='0.5'/>";
+  document.getElementById("textReturn").innerHTML = "<trl-config lookat='-15,0,5' enable='true' speed='4.5' wait='2.5' returnSpeed='5.5' absolute='false' /><trl-anim type='aux' id='translateRotateRightSmall' duration='2.5' /><trl-anim type='aux' id='tiltRightUpMedium3' duration='3.0' />";
 }
 function updateLookUpRight() {
 lookUpRightCode();
@@ -381,7 +381,7 @@ function eyebrowsRaiseXSNumber() {
 }
 function eyebrowsRaiseXSCode() {
 
-  document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='mouthOpenTeeth' duration='3.5' blendStart='0.5' blendEnd='0.5'/>";
+  document.getElementById("textReturn").innerHTML = "<trl-morph id='Right_BrowsUp,Left_BrowsUp' min='0' max='0.28' speed='0.3' wait='3' returnSpeed='0.8'/>";
 }
 function updateEyebrowsRaiseXS() {
 eyebrowsRaiseSCode();
@@ -442,7 +442,7 @@ eyebrowsRaiseSCode();
   }
 
   function lookLeftCode() {
-    document.getElementById("textReturn").innerHTML = "<trl-config lookat='20,0,0' enable='true' speed='4' wait='2.5' returnSpeed='3.5' absolute='false' /><trl-anim type='aux' id='translateRotateLeftSmall' duration=" + dura + " />";
+    document.getElementById("textReturn").innerHTML = "<trl-config lookat='15,0,5' enable='true' speed='4.5' wait='2.5' returnSpeed='4.5' absolute='false' /><trl-anim type='aux' id='translateRotateLeftSmall' duration='2.5' /><trl-anim type='aux' id='tiltLeftUpMedium3' duration='2.5' />";
   }
 
   function updateLookLeft() {
@@ -461,7 +461,7 @@ eyebrowsRaiseSCode();
   }
 
 function lookRightCode() {
-document.getElementById("textReturn").innerHTML = "<trl-config lookat='-20,0,0' enable='true' speed='4' wait='2.5' returnSpeed='3.5' absolute='false' /><trl-anim type='aux' id='translateRotateRightSmall' duration=" + dura + " />";
+document.getElementById("textReturn").innerHTML = "<trl-config lookat='-15,0,5' enable='true' speed='4.5' wait='2.5' returnSpeed='5.5' absolute='false' /><trl-anim type='aux' id='translateRotateRightSmall' duration='2.5' /><trl-anim type='aux' id='tiltRightUpMedium3' duration='3.0' />";
  }
 
  function updateLookRight() {
