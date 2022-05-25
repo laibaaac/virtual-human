@@ -378,6 +378,7 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
 /*******************/
 /* filter rechts bovenaan */
 #myBtnContainer {
+    position: relative;
     background-color: var(--black);
     height: 11vh;
     border-radius: 1em;
@@ -386,7 +387,19 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
     gap: .5em;
     overflow-x: scroll;
     width: 75%;
-    -webkit-mask: linear-gradient(to left, red 90%, transparent);
+}
+
+#myBtnContainer::after {
+    content: "";
+    position: fixed;
+    width: 6em;
+    height: 10vh;
+    right: 19.9vw;
+    top: 13.2vh;
+    bottom: 0;
+    background-color: var(--black);
+    -webkit-mask: linear-gradient(to right, transparent, red 90%);
+    border-radius: 0 1em 0 0;
 }
 
 .autoAnimation {
