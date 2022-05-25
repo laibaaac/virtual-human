@@ -1,24 +1,21 @@
-/*********/
-/* FONTS */
-/*********/
-@font-face {
-    font-family: 'montserrat';
-    src: url("/public/fonts/Montserrat-VariableFont_wght.woff2") format("woff2");
+:root {
+    --black: #020B23;
+    --text-color-buttons: #FFFFFF;
+    --orange: #E84D3C;
+    --blue: #143056;
+    --grey: #626262;
+    --main-font: 'Montserrat';
+    --darkestblue: #121B30;
+    --darkblue: #17223C;
+    --hover-orange: #f99a90;
 }
-
-/**************/
-/* CSS REMEDY */
-/**************/
-*,
 html {
+    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: var(--main-font), Arial, Helvetica, sans-serif;
 }
-
-
-
 body {
     color: var(--text-color-buttons);
     background-color: var(--darkestblue);
@@ -37,6 +34,22 @@ p {
     line-height: 1.2em;
  
 }
+.titlebar {
+    display:  flex;
+    flex-direction: row;
+    padding: 3em 15% 3em 20%;
+  }
+  ul.titlebar > li {
+    color: white;
+    list-style: none;
+  }
+  .titlebar > li {
+  
+    padding: 0em 1em 0em 0em;
+  }
+  .titlebar > li:nth-of-type(3) > a {
+    color: var(--orange);
+  }
 ul {
     list-style-type: none;
 }
@@ -46,7 +59,7 @@ ul.guideTop {
     padding:5em;
     padding-left: 15%;
     padding-right: 15%;
-    margin-top: 10em;
+    margin-top: 5em;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -54,6 +67,10 @@ ul.guideTop {
 }
 ul.guideTop > li {
     width: 45%;
+}
+img {
+    -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(15px 15px 15px rgba(0, 0, 0, 0.3));
 }
 ul.guideTop > li > button {
 float:right;
@@ -137,8 +154,8 @@ ul.guideBrowse > li > img {
     transition: all 0.5s;
 }
 .slideLeft.appear {
-    margin-left: -5em;
-    padding-right: 5em;
+    margin-left: -3em;
+    padding-right: 3em;
    
 }
 ul.contact {

@@ -1,3 +1,16 @@
+/**************/
+:root {
+  --black: #020B23;
+  --text-color-buttons: #FFFFFF;
+  --orange: #E84D3C;
+  --blue: #143056;
+  --grey: #626262;
+  --main-font: 'Montserrat';
+  --darkestblue: #121B30;
+  --darkblue: #17223C;
+  --hover-orange: #f99a90;
+}
+
 *,
 html {
     margin: 0;
