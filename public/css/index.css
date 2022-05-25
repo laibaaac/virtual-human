@@ -492,7 +492,7 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
     grid-template-columns: repeat(4, 22%);
     gap: 1em;
     overflow-y: scroll;
-    -webkit-mask: linear-gradient(red 90%, transparent);
+    -webkit-mask: linear-gradient(red 90%,  transparent);
 }
 
 .container button:hover {

@@ -1,3 +1,16 @@
+/**************/
+:root {
+  --black: #020B23;
+  --text-color-buttons: #FFFFFF;
+  --orange: #E84D3C;
+  --blue: #143056;
+  --grey: #626262;
+  --main-font: 'Montserrat';
+  --darkestblue: #121B30;
+  --darkblue: #17223C;
+  --hover-orange: #f99a90;
+}
+
 *,
 html {
     margin: 0;
@@ -75,6 +88,7 @@ ul.list {
 }
 .list {
   padding: 1em;
+ 
 }
 .list > li:first-of-type {
 height: 10em;
@@ -87,6 +101,14 @@ height: 10em;
   
   
 }
+.list > li:nth-of-type(2) { 
+  transition: all 0.3s;
+}
+.list > li:nth-of-type(2):hover {
+transform: scale(1.04);
+
+   
+ }
 .list li:nth-of-type(2) {
   background-color: var(--blue);
 padding: 2em;

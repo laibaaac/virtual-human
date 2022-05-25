@@ -208,3 +208,185 @@ button.plus:hover {
     display: block;
     
 }
+#closedMouthUpdate {
+    display: none;
+}
+#closedMouthUpdate.show {
+    display: block;
+    
+}
+#mouthTeethUpdate {
+    display: none;
+}
+#mouthTeethupdate.show {
+    display: block;
+    
+}
+#smileSmallUpdate {
+    display: none;
+}
+#smileSmallUpdate.show {
+    display: block;
+    
+}
+
+#smileMediumUpdate {
+    display: none;
+}
+#smileMediumUpdate.show {
+    display: block;
+    
+}
+#smileXlUpdate {
+    display: none;
+}
+#smileXlUpdate.show {
+    display: block;
+    
+}
+
+#lookDownLeftUpdate {
+    display: none;
+}
+#lookDownLeftUpdate.show {
+    display: block;
+    
+}
+#lookDownRightUpdate {
+    display: none;
+}
+#lookDownRightUpdate.show {
+    display: block;
+    
+}
+#lookAtCamUpdate {
+    display: none;
+}
+#lookAtCamUpdate.show {
+    display: block;
+    
+}
+#lookUpLeftUpdate {
+    display: none;
+}
+#lookUpLeftUpdate.show {
+    display: block;
+    
+}
+
+#lookUpRightUpdate {
+    display: none;
+}
+#lookUpRightUpdate.show {
+    display: block;
+    
+}
+#eyebrowRaiseXSUpdate {
+    display: none;
+}
+#eyebrowRaiseXSUpdate.show {
+    display: block;
+    
+}
+#eyebrowSmallUpdate {
+    display: none;
+}
+#eyebrowSmallUpdate.show {
+    display: block;
+    
+}
+#eyebrowRaiseUpdate {
+    display: none;
+}
+#eyebrowRaiseUpdate.show {
+    display: block;
+    
+}
+#frownXSUpdate {
+    display: none;
+}
+#frownXSUpdate.show {
+    display: block;
+    
+}
+#smallFrownUpdate {
+    display: none;
+}
+#smallFrownUpdate.show {
+    display: block;
+    
+}
+
+#frownLUpdate {
+    display: none;
+}
+#frownLpdate.show {
+    display: block;
+    
+}
+#nodSmallUpdate {
+    display: none;
+}
+#nodSmallUpdate.show {
+    display: block;
+    
+}
+#nodFastUpdate {
+    display: none;
+}
+#nodFastUpdate.show {
+    display: block;
+    
+}
+#nodLargeUpdate {
+    display: none;
+}
+#nodLargeUpdate.show {
+    display: block;
+    
+}
+#nodAverageUpdate {
+    display: none;
+}
+#nodAverageUpdate.show {
+    display: block;
+    
+}
+#nodSlowUpdate {
+    display: none;
+}
+#nodSlowUpdate.show {
+    display: block;
+    
+}
+#shakeUpdate {
+    display: none;
+}
+#shakeUpdate.show {
+    display: block;
+    
+}
+#eyebrowRaiseLUpdate {
+    display: none;
+
+}
+#eyebrowRaiseLUpdate.show {
+    display: block;
+    
+}
+#lookUpUpdate {
+    display: none;
+
+}
+#lookUpUpdate.show {
+    display: block;
+    
+}
+#smileLargeUpdate {
+    display: none;
+
+}
+#smileLargeUpdate.show {
+    display: block;
+    
+}
