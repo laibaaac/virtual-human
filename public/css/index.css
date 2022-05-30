@@ -66,22 +66,18 @@ body {
 /*************/
 /* SCROLLBAR */
 /*************/
-::-webkit-scrollbar-track
-{
+::-webkit-scrollbar-track {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	border-radius: 10px;
 	background-color: var(--black);
 }
 
-::-webkit-scrollbar
-{
+::-webkit-scrollbar {
     height: 10px;
 	width: 10px;
-
 }
 
-::-webkit-scrollbar-thumb
-{
+::-webkit-scrollbar-thumb {
 	border-radius: 10px;
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	background-color: #E84D3C;
@@ -104,7 +100,7 @@ body {
 /***************/
 
 /* linkerhelft van het scherm */
-.partials_left  {
+.partials_left {
 
     display: flex;
     justify-content: flex-end;
@@ -324,6 +320,11 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
     border-radius: .5em;
 }
 
+.timelineButtons div button:first-of-type:hover {
+    background-color: var(--hover-orange);
+    color: var(--black);
+}
+
 /* pdf button */
 .timelineButtons div button:nth-of-type(2) {
     height: 100%;
@@ -387,19 +388,6 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
     gap: .5em;
     overflow-x: scroll;
     width: 75%;
-}
-
-#myBtnContainer::after {
-    content: "";
-    position: fixed;
-    width: 6em;
-    height: 10vh;
-    right: 19.9vw;
-    top: 13.2vh;
-    bottom: 0;
-    background-color: var(--black);
-    -webkit-mask: linear-gradient(to right, transparent, red 90%);
-    border-radius: 0 1em 0 0;
 }
 
 .autoAnimation {
@@ -490,9 +478,13 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
 .container {
     display: grid;
     grid-template-columns: repeat(4, 22%);
-    gap: 1em;
+    gap: 0 1em;
     overflow-y: scroll;
     -webkit-mask: linear-gradient(red 90%,  transparent);
+}
+
+.container button {
+    margin-bottom: 1em;
 }
 
 .container button:hover {
@@ -502,15 +494,6 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
 .container button:active {
     background-color: var(--orange);
 }
-
-/* TEST */
-.testholder {
-    width: 25%;
-    aspect-ratio: 1/1;
-    background-color: red;
-}
-
-/*  */
 
 /***************/
 /* CODE EDITOR */
