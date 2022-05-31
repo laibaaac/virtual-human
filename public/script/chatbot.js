@@ -279,7 +279,8 @@ function lookDownLeftNumber() {
 }
 function lookDownLeftCode() {
 
-  document.getElementById("textReturn").innerHTML = "<trl-config lookat='20,0,-20' enable='true' speed='4.5' wait='2.5' returnSpeed='4.5' absolute='false' /><trl-anim type='aux' id='translateRotateLeftSmall1' duration='3.0' /><trl-anim type='aux' id='tiltLeftDownMedium3' duration='2.5' />";
+  document.getElementById("textReturn").innerHTML = "<trl-config lookat='20,0,-20' enable='true' speed='4.5' wait='2.5' returnSpeed='4.5' absolute='false' /><trl-anim type='aux' id='translateRotateLeftSmall1' duration='3.0' /><trl-anim type='aux' id='tiltLeftDownMedium3' duration='2.5' />\n\n";
+
 }
 function updateLookDownLeft() {
 lookDownLeftCode();
