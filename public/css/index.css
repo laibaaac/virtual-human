@@ -205,7 +205,7 @@ table tbody tr:nth-of-type(2) td:first-of-type button.active {
 /* Send message button styling */
 table tbody tr:nth-of-type(2) td:first-of-type button {
     background-color: var(--text-color-buttons);
-    padding: .2em;
+    padding: .2em 1em;
     border-radius: .25em;
     text-transform: capitalize;
     height: 2em;

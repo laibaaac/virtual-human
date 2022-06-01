@@ -99,6 +99,11 @@ ul.titlebar {
   border: none;
   width: 6em;
   color: var(--text-color-buttons);
+  text-align: center;
+}
+
+.listFilter li:last-of-type {
+  margin-right: 2em;
 }
 
 .listFilter div {
@@ -120,18 +125,21 @@ ul.titlebar {
   width: 100%;
 }
 
-.listFilter::-webkit-scrollbar-track {
+.listFilter::-webkit-scrollbar-track,
+.list div textarea::-webkit-scrollbar-track {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	border-radius: 10px;
 	background-color: var(--black);
 }
 
-.listFilter::-webkit-scrollbar {
+.listFilter::-webkit-scrollbar,
+.list div textarea::-webkit-scrollbar {
   height: 10px;
 	width: 10px;
 }
 
-.listFilter::-webkit-scrollbar-thumb {
+.listFilter::-webkit-scrollbar-thumb,
+.list div textarea::-webkit-scrollbar-thumb {
 	border-radius: 10px;
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	background-color: #E84D3C;
@@ -166,10 +174,24 @@ ul.titlebar {
   padding: 1em;
   border-radius: 1em;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: .1rem;
 }
 
 .listSections li img {
   width: 15em;
   object-fit: cover;
   border-radius: 1em;
+}
+
+.list div textarea {
+  width: 100%;
+  height: 100%;
+  padding: .5em;
+  border-radius: .5em;
+  background-color: var(--darkestblue);
+  color: var(--text-color-buttons);
+  border: none;
+  resize: none;
 }
