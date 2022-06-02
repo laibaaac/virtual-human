@@ -199,6 +199,10 @@ ul.titlebar {
   resize: none;
 }
 
+.list div textarea:hover {
+  color: var(--orange);
+}
+
 .list div a {
   position: absolute;
   right: 1em;
