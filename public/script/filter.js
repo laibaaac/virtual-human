@@ -55,7 +55,12 @@ for (const btn of btns) {
     btn.classList.add('active')
   })
 }
+document.getElementById("emotionId").addEventListener("click", removeClass);
 
+function removeClass() {
+  x = document.getElementsByClassName("filterDiv")
+  RemoveClass(x, "filterShow");
+}
 // btns.forEach(element => {
 //   element.addEventListener('click', function() {
 //     console.log('klik op een knop')

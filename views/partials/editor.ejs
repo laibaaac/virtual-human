@@ -4,7 +4,8 @@
     <section class="codeEditor">
         <h2>Code editor</h2>
         <textarea id="textReturn" placeholder="You have not added any animations yet. Choose from the categories in the animation editor above to add and/or adjust an animation." name="code" rows="4" cols="85"></textarea>
-        <section class="buttonStyling">
+       
+        <section class="buttonStyling" id="duraCss">
         <p>Duration</p>
         <section>
             <div>
@@ -15,7 +16,7 @@
         </section>
     </section>
 
-    <section class="buttonStyling">
+    <section class="buttonStyling" id="blendStCss">
         <p>Blend start</p>
         <section>
             <div>
@@ -26,7 +27,7 @@
         </section>
     </section>
 
-    <section class="buttonStyling">
+    <section class="buttonStyling" id="blendEnCss">
         <p>Blend end</p>
         <section>
             <div>
@@ -37,6 +38,17 @@
         </section>
     </section>
 
+    <section class="buttonStyling" id="speedCss">
+        <p>speed</p>
+        <section>
+            <div>
+                <button class="minus" id="spMinusOne">-</button>
+                <button class="plus" id="spPlusOne">+</button>
+            </div>
+            <p id="speedmeter">0s</p>
+        </section>
+    </section>
+    
     <section class="changesAdd">
         <ul>
             <li> 
