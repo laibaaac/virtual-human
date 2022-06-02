@@ -1,4 +1,5 @@
 
+
 filterSelection("all")
 function filterSelection(c) {
   var x, i;
@@ -55,6 +56,7 @@ for (const btn of btns) {
     btn.classList.add('active')
   })
 }
+
 
 // btns.forEach(element => {
 //   element.addEventListener('click', function() {
