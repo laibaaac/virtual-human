@@ -46,6 +46,7 @@ h1 {
     color: var(--text-color-buttons);
     font-size: 1.25em;
     font-weight: 400;
+    position: relative;
 }
 
 h2 {
@@ -61,6 +62,40 @@ button {
 
 body {
     overflow: hidden;
+}
+
+i {
+    fill: var(--black);
+}
+
+.infoSvg {
+    position: absolute;
+    left: 8.5em;
+    top: .2em;
+    width: 1.25em;
+    aspect-ratio: 1/1;
+    -webkit-filter: grayscale(1) invert(1);
+    filter: grayscale(1) invert(1);
+}
+
+.infoTekst {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    left: 10em;
+    top: .2em;
+    background-color: green;
+    padding: 1em;
+    border-radius: 1em;
+    font-size: 1em;
+}
+
+.infoSvg::after {
+    content: "In the dashboard you will find a series of categories you can choose from to personalise your Digital Human.  When a variation has been chosen it will be send to the code editor where you can fine-tune the animation to finally send add it to your animation timeline. For more information, see the User Guide.";
+    background-color: green;
+    display: inline;
+    left: 0;
+    top: 0;
 }
 
 /*************/
@@ -138,6 +173,10 @@ body {
     object-fit: cover;
 }
 
+.livePlayer {
+    position: relative;
+}
+
 .livePlayer table {
     width: 100%;
 }
@@ -179,38 +218,56 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) {
     width: 70%;
 }
 
-table tbody tr:nth-of-type(2) td:nth-of-type(2) button:hover,
-table tbody tr:nth-of-type(2) td:first-of-type button:hover {
-    background-color: var(--hover-orange);
+.button.button-trl.button-green:hover,
+.button.button-trl.button-grey:hover,
+.button.button-trl.button-red:hover,
+.button.button-trl.button-blue:hover {
+    color: var(--hover-orange);
+
 }
 
-table tbody tr:nth-of-type(2) td:nth-of-type(2) button:active,
-table tbody tr:nth-of-type(2) td:first-of-type button:active {
-    background-color: var(--orange);
-}
-
-table tbody tr:nth-of-type(2) td:nth-of-type(2) button.active,
-table tbody tr:nth-of-type(2) td:first-of-type button.active {
-    background-color: var(--orange);
+.button.button-trl.button-green:active,
+.button.button-trl.button-grey:active,
+.button.button-trl.button-red:active,
+.button.button-trl.button-blue:active {
+    color: var(--orange);
 }
 
 /* Send message button styling */
 table tbody tr:nth-of-type(2) td:first-of-type button {
     background-color: var(--text-color-buttons);
-    padding: .2em;
+    padding: .2em 1em;
     border-radius: .25em;
     text-transform: capitalize;
     height: 2em;
 }
 
 /* play, end, mutemic & fullscreen button styling */
-table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
-    background-color: var(--text-color-buttons);
-    padding: .2em;
+.button.button-trl.button-grey,
+.button.button-trl.button-red,
+.button.button-trl.button-blue {
+    background-color: transparent;
     border-radius: .25em;
     text-transform: capitalize;
     height: 2em;
+    width: 2em;
+    color: white;
 }
+
+.button-green {
+    background-color: var(--orange);
+    padding: .2em 1em;
+    border-radius: .25em;
+    text-transform: capitalize;
+    height: 2em;
+    color: var(--text-color-buttons);
+}
+
+.button.button-trl.button-green:hover {
+    color: var(--black);
+}
+
+
 
 /* preview vak styling */
 .imageArea {
@@ -221,7 +278,9 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
     gap: 1em;
 }
 
-
+#errorMessageId {
+    display: none !important;
+}
 
 /* styling playpause button */
 /* .playpauseButton {
@@ -258,9 +317,9 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
     border-radius: .2em;
 } */
 
-/*******************/
-/* TIMELINE + CODE */
-/*******************/
+/*********/
+/*  CODE */
+/*********/
 /* vormgeving timeline blok */
 .timelineArea {
   
