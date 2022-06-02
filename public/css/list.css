@@ -169,6 +169,7 @@ ul.titlebar {
   gap: 1em;
 }
 
+
 .listSections li div {
   background-color: var(--blue);
   padding: 1em;
@@ -176,7 +177,7 @@ ul.titlebar {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: .1rem;
+  gap: .5rem;
 }
 
 .listSections li img {
@@ -185,13 +186,24 @@ ul.titlebar {
   border-radius: 1em;
 }
 
+.list div {
+  position: relative;
+}
+
 .list div textarea {
-  width: 100%;
+  width: calc(100% - 8.5em);
   height: 100%;
-  padding: .5em;
-  border-radius: .5em;
-  background-color: var(--darkestblue);
+  background-color: var(--blue);
   color: var(--text-color-buttons);
   border: none;
   resize: none;
+}
+
+.list div a {
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+  background-color: var(--black);
+  padding: .5em 1em;
+  border-radius: 1em;
 }
