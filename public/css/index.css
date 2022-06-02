@@ -388,6 +388,7 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 .timelineButtons div button:nth-of-type(2) {
     height: 100%;
     background: transparent;
+   
 }
 
 .timelineButtons div button:nth-of-type(2) img {
@@ -403,6 +404,7 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 }
 
 .timelineButtons > button {
+    
     background: transparent;
     color: var(--text-color-buttons);
     font-size: 1em;
@@ -415,7 +417,14 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 .timelineButtons > button:active {
     color: var(--orange);
 }
-
+#sendMsgBtn {
+    background-color: var(--text-color-buttons);
+    color: var(--black);
+    border-radius: 0.5em;
+}
+#sendMsgBtn:hover {
+    background-color: var(--hover-orange);
+}
 /****************/
 /* RECHTERHELFT */
 /****************/
