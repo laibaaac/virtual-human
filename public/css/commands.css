@@ -390,3 +390,28 @@ button.plus:hover {
     display: block;
     
 }
+#blendStCss {
+    display: none;
+}
+#blendStCss.active {
+    display: flex;
+}
+#blendEnCss {
+    display: none;
+}
+#blendEnCss.active {
+    display: flex;
+}
+
+#duraCss {
+    display: none;
+}
+#duraCss.active {
+    display: flex;
+}
+#speedCss {
+    display: none;
+}
+#speedCss.active {
+    display: flex;
+}

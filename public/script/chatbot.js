@@ -113,9 +113,10 @@ document.getElementById("lookrButton").addEventListener("click", lookRightCode);
   document.getElementById("stMinusOne").addEventListener("click", stRemoveOne);
 
   document.getElementById("enPlusOne").addEventListener("click", enAddOne);
-
   document.getElementById("enMinusOne").addEventListener("click", enRemoveOne);
 
+  document.getElementById("spPlusOne").addEventListener("click", spAddOne);
+  document.getElementById("spMinusOne").addEventListener("click", spRemoveOne);
 
   document.getElementById("nodUpdate").addEventListener("click", updateNod);
   document.getElementById("mouthUpdate").addEventListener("click", updateMouth);
@@ -160,6 +161,7 @@ document.getElementById("lookrButton").addEventListener("click", lookRightCode);
   var dura = 0;
   var blendSt = 0;
   var blendEn = 0;
+  var speed = 0;
 
   function closedMouthNumber() {
     dura = 3;
@@ -170,6 +172,10 @@ document.getElementById("lookrButton").addEventListener("click", lookRightCode);
     document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
     document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
     document.getElementById("closedMouthUpdate").classList.add("show");
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+      el.classList.remove('active');});
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss").forEach((el) => {
+      el.classList.add('active');});
   }
   function closedMouthCode() {
 
@@ -182,11 +188,17 @@ function mouthTeethNumber() {
   dura = 3.5;
   blendSt = 0.5;
   blendEn = 0.5;
+  speed = 1;
+  document.getElementById('speedmeter').innerHTML = speed + "s";
   document.getElementById('durationmeter').innerHTML = dura + "s";
   document.getElementById('blendStmeter').innerHTML = blendSt + "s";
   document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
   document.getElementById("mouthTeethUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');});
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss").forEach((el) => {
+    el.classList.add('active');});
 }
 function mouthTeethCode() {
 
@@ -205,6 +217,10 @@ function smileSmallNumber() {
   document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
   document.getElementById("smileSmallUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');});
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss").forEach((el) => {
+    el.classList.add('active');});
 }
 function smileSmallCode() {
 
@@ -223,6 +239,10 @@ function smileMediumNumber() {
   document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
   document.getElementById("smileMediumUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');});
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss").forEach((el) => {
+    el.classList.add('active');});
 }
 function smileMediumCode() {
 
@@ -240,6 +260,10 @@ function smileLargeNumber() {
   document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
   document.getElementById("smileLargeUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');});
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss").forEach((el) => {
+    el.classList.add('active');});
 }
 function smileLargeCode() {
 
@@ -258,6 +282,10 @@ function smileXlNumber() {
   document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
   document.getElementById("smileXlUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');});
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss").forEach((el) => {
+    el.classList.add('active');});
 }
 function smileXlCode() {
 
@@ -268,18 +296,20 @@ function updateSmileXl() {
   smileXlCode();
 }
 function lookDownLeftNumber() {
-  dura = 3.5;
-  blendSt = 0.5;
-  blendEn = 0.5;
+  dura = 3;
+  speed = 4.5
   document.getElementById('durationmeter').innerHTML = dura + "s";
-  document.getElementById('blendStmeter').innerHTML = blendSt + "s";
-  document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
+  document.getElementById('speedmeter').innerHTML = speed + "s";
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
   document.getElementById("lookDownLeftUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');});
+  document.querySelectorAll("#speedCss, #duraCss").forEach((el) => {
+    el.classList.add('active');});
 }
 function lookDownLeftCode() {
 
-  document.getElementById("textReturn").innerHTML = "<trl-config lookat='20,0,-20' enable='true' speed='4.5' wait='2.5' returnSpeed='4.5' absolute='false' /><trl-anim type='aux' id='translateRotateLeftSmall1' duration='3.0' /><trl-anim type='aux' id='tiltLeftDownMedium3' duration='2.5' />\n\n";
+  document.getElementById("textReturn").innerHTML = "<trl-config lookat='20,0,-20' enable='true' speed='" + speed + "' wait='2.5' returnSpeed='4.5' absolute='false' /><trl-anim type='aux' id='translateRotateLeftSmall1' duration='" + dura + "' /><trl-anim type='aux' id='tiltLeftDownMedium3' duration='2.5' />\n\n";
 
 }
 function updateLookDownLeft() {
@@ -287,73 +317,84 @@ lookDownLeftCode();
 }
 function lookDownRightNumber() {
   dura = 3.5;
-  blendSt = 0.5;
-  blendEn = 0.5;
+
+  speed = 4.5;
   document.getElementById('durationmeter').innerHTML = dura + "s";
-  document.getElementById('blendStmeter').innerHTML = blendSt + "s";
-  document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
+  document.getElementById('speedmeter').innerHTML = speed + "s";
+
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
   document.getElementById("lookDownRightUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');});
+  document.querySelectorAll("#speedCss, #duraCss").forEach((el) => {
+    el.classList.add('active');});
 }
 function lookDownRightCode() {
 
-  document.getElementById("textReturn").innerHTML = "<trl-config lookat='-20,0,-20' enable='true' speed='4.5' wait='2.5' returnSpeed='5.5' absolute='false' /><trl-anim type='aux' id='translateRotateRightSmall1' duration='3.0' /><trl-anim type='aux' id='tiltRightDownMedium3' duration='2.5' />";
+  document.getElementById("textReturn").innerHTML = "<trl-config lookat='-20,0,-20' enable='true' speed='" + speed + "' wait='2.5' returnSpeed='5.5' absolute='false' /><trl-anim type='aux' id='translateRotateRightSmall1' duration='" + dura + "' /><trl-anim type='aux' id='tiltRightDownMedium3' duration='" + dura + "' />";
 }
 function updateLookDownRight() {
 lookDownRightCode();
 }
 function lookUpNumber() {
-  dura = 3.5;
-  blendSt = 0.5;
-  blendEn = 0.5;
+  dura = 2.5;
+  speed = 4.5;
   document.getElementById('durationmeter').innerHTML = dura + "s";
-  document.getElementById('blendStmeter').innerHTML = blendSt + "s";
-  document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
+document.getElementById('speedmeter').innerHTML = speed + "s";
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
   document.getElementById("lookUpUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');});
+  document.querySelectorAll("#speedCss, #duraCss").forEach((el) => {
+    el.classList.add('active');});
 }
 function lookUpCode() {
 
-  document.getElementById("textReturn").innerHTML = "<trl-config lookat='0,0,20' enable='true' speed='4.5' wait='2.5' returnSpeed='6.25' absolute='false' /><trl-anim type='aux' id='tiltUpLarge3' duration='2.5' />";
+  document.getElementById("textReturn").innerHTML = "<trl-config lookat='0,0,20' enable='true' speed='" + speed + "' wait='2.5' returnSpeed='6.25' absolute='false' /><trl-anim type='aux' id='tiltUpLarge3' duration='" + dura + "' />";
 }
 function updatelookUp() {
 lookUpCode();
 }
 function lookAtCamNumber() {
-  dura = 3.5;
-  blendSt = 0.5;
-  blendEn = 0.5;
-  document.getElementById('durationmeter').innerHTML = dura + "s";
-  document.getElementById('blendStmeter').innerHTML = blendSt + "s";
-  document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
+speed = 3.5;
+  document.getElementById('speedmeter').innerHTML = speed + "s";
+
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
   document.getElementById("lookAtCamUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');});
+  document.querySelectorAll("#speedCss").forEach((el) => {
+    el.classList.add('active');});
 }
 function lookAtCamCode() {
 
-  document.getElementById("textReturn").innerHTML = "<trl-config lookat='camera' speed='3.5'/>";
+  document.getElementById("textReturn").innerHTML = "<trl-config lookat='camera' speed='" + speed + "'/>";
 }
 function updateLookAtCam() {
 lookAtCamCode();
 }
 
 function lookUpLeftNumber() {
-  dura = 3.5;
-  blendSt = 0.5;
-  blendEn = 0.5;
+  dura = 2.5;
+  speed = 4.5;
   document.getElementById('durationmeter').innerHTML = dura + "s";
-  document.getElementById('blendStmeter').innerHTML = blendSt + "s";
-  document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
+document.getElementById('speedmeter').innerHTML = speed + "s";
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
   document.getElementById("lookUpLeftUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');});
+  document.querySelectorAll("#speedCss, #duraCss").forEach((el) => {
+    el.classList.add('active');});
+  
 }
 function lookUpLeftCode() {
 
-  document.getElementById("textReturn").innerHTML = "<trl-config lookat='15,0,5' enable='true' speed='4.5' wait='2.5' returnSpeed='4.5' absolute='false' /><trl-anim type='aux' id='translateRotateLeftSmall' duration='2.5' /><trl-anim type='aux' id='tiltLeftUpMedium3' duration='2.5' />";
+  document.getElementById("textReturn").innerHTML = "<trl-config lookat='15,0,5' enable='true' speed='" + speed + "' wait='2.5' returnSpeed='4.5' absolute='false' /><trl-anim type='aux' id='translateRotateLeftSmall' duration='" + dura + "' /><trl-anim type='aux' id='tiltLeftUpMedium3' duration='" + dura + "' />";
 }
 function updatelookUpLeft() {
 lookUpLeftCode();
 }
+//checkpoint
 function lookUpRightNumber() {
   dura = 3.5;
   blendSt = 0.5;
@@ -363,6 +404,10 @@ function lookUpRightNumber() {
   document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
   document.getElementById("lookUpRightUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');});
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss").forEach((el) => {
+    el.classList.add('active');});
 }
 function lookUpRightCode() {
 
@@ -380,6 +425,10 @@ function eyebrowsRaiseXSNumber() {
   document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
   document.getElementById("eyebrowsRaiseXSUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');});
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss").forEach((el) => {
+    el.classList.add('active');});
 }
 function eyebrowsRaiseXSCode() {
 
@@ -402,6 +451,10 @@ eyebrowsRaiseSCode();
     document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
     document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
     document.getElementById("mouthUpdate").classList.add("show");
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+      el.classList.remove('active');});
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss").forEach((el) => {
+      el.classList.add('active');});
   }
 
   function mouthCode() {
@@ -460,6 +513,10 @@ eyebrowsRaiseSCode();
     document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
     document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
     document.getElementById("lookRightUpdate").classList.add("show");
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+      el.classList.remove('active');});
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss").forEach((el) => {
+      el.classList.add('active');});
   }
 
 function lookRightCode() {
@@ -479,6 +536,10 @@ document.getElementById("textReturn").innerHTML = "<trl-config lookat='-15,0,5' 
     document.getElementById('durationmeter').innerHTML = dura + "s";
     document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
     document.getElementById("lookDownUpdate").classList.add("show");
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+      el.classList.remove('active');});
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss").forEach((el) => {
+      el.classList.add('active');});
   }
 
   function lookDownCode() {
@@ -500,6 +561,10 @@ document.getElementById("textReturn").innerHTML = "<trl-config lookat='-15,0,5' 
     document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
     document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
     document.getElementById("eyebrowRaiseUpdate").classList.add("show");
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+      el.classList.remove('active');});
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss").forEach((el) => {
+      el.classList.add('active');});
   }
 
   function eyebrowRaiseCode() {
@@ -522,6 +587,10 @@ document.getElementById("textReturn").innerHTML = "<trl-config lookat='-15,0,5' 
     document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
     document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
     document.getElementById("eyebrowSmallUpdate").classList.add("show");
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+      el.classList.remove('active');});
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss").forEach((el) => {
+      el.classList.add('active');});
 
   }
 
@@ -542,6 +611,10 @@ document.getElementById("textReturn").innerHTML = "<trl-config lookat='-15,0,5' 
     document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
     document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
     document.getElementById("eyebrowSmallUpdate").classList.add("show");
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+      el.classList.remove('active');});
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss").forEach((el) => {
+      el.classList.add('active');});
 
   }
 
@@ -562,6 +635,10 @@ document.getElementById("textReturn").innerHTML = "<trl-config lookat='-15,0,5' 
     document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
     document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
     document.getElementById("eyebrowSmallUpdate").classList.add("show");
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+      el.classList.remove('active');});
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss").forEach((el) => {
+      el.classList.add('active');});
 
   }
 
@@ -582,6 +659,10 @@ document.getElementById("textReturn").innerHTML = "<trl-config lookat='-15,0,5' 
     document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
     document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
     document.getElementById("eyebrowSmallUpdate").classList.add("show");
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+      el.classList.remove('active');});
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss").forEach((el) => {
+      el.classList.add('active');});
 
   }
 
@@ -604,6 +685,10 @@ document.getElementById("textReturn").innerHTML = "<trl-config lookat='-15,0,5' 
     document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
     document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
     document.getElementById("eyebrowSmallUpdate").classList.add("show");
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+      el.classList.remove('active');});
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss").forEach((el) => {
+      el.classList.add('active');});
 
   }
 
@@ -624,6 +709,10 @@ document.getElementById("textReturn").innerHTML = "<trl-config lookat='-15,0,5' 
     document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
     document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
     document.getElementById("eyebrowSmallUpdate").classList.add("show");
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+      el.classList.remove('active');});
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss").forEach((el) => {
+      el.classList.add('active');});
 
   }
 
@@ -648,6 +737,10 @@ document.getElementById("textReturn").innerHTML = "<trl-config lookat='-15,0,5' 
     document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
     document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
     document.getElementById("frownUpdate").classList.add("show");
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+      el.classList.remove('active');});
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss").forEach((el) => {
+      el.classList.add('active');});
 
   }
 
@@ -669,6 +762,10 @@ document.getElementById("textReturn").innerHTML = "<trl-config lookat='-15,0,5' 
     document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
     document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
     document.getElementById("frownSmallUpdate").classList.add("show");
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+      el.classList.remove('active');});
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss").forEach((el) => {
+      el.classList.add('active');});
 
   }
 
@@ -687,6 +784,10 @@ document.getElementById("textReturn").innerHTML = "<trl-config lookat='-15,0,5' 
     document.getElementById('durationmeter').innerHTML = dura + "s";
     document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
     document.getElementById("nodUpdate").classList.add("show");
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+      el.classList.remove('active');});
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss").forEach((el) => {
+      el.classList.add('active');});
 
   }
 
@@ -707,6 +808,10 @@ document.getElementById("textReturn").innerHTML = "<trl-config lookat='-15,0,5' 
     document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
     document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
     document.getElementById("frownUpdate").classList.add("show");
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+      el.classList.remove('active');});
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss").forEach((el) => {
+      el.classList.add('active');});
 
   }
 
@@ -728,6 +833,10 @@ document.getElementById("textReturn").innerHTML = "<trl-config lookat='-15,0,5' 
     document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
     document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
     document.getElementById("frownUpdate").classList.add("show");
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+      el.classList.remove('active');});
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss").forEach((el) => {
+      el.classList.add('active');});
 
   }
 
@@ -749,6 +858,10 @@ document.getElementById("textReturn").innerHTML = "<trl-config lookat='-15,0,5' 
     document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
     document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
     document.getElementById("frownUpdate").classList.add("show");
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+      el.classList.remove('active');});
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss").forEach((el) => {
+      el.classList.add('active');});
 
   }
 
@@ -770,6 +883,10 @@ document.getElementById("textReturn").innerHTML = "<trl-config lookat='-15,0,5' 
     document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
     document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
     document.getElementById("frownUpdate").classList.add("show");
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+      el.classList.remove('active');});
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss").forEach((el) => {
+      el.classList.add('active');});
 
   }
 
@@ -791,6 +908,10 @@ document.getElementById("textReturn").innerHTML = "<trl-config lookat='-15,0,5' 
     document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
     document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
     document.getElementById("frownUpdate").classList.add("show");
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+      el.classList.remove('active');});
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss").forEach((el) => {
+      el.classList.add('active');});
 
   }
 
@@ -814,6 +935,10 @@ document.getElementById("textReturn").innerHTML = "<trl-config lookat='-15,0,5' 
     document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
     document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
     document.getElementById("shakeSlowUpdate").classList.add("show");
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+      el.classList.remove('active');});
+    document.querySelectorAll("#blendEnCss, #blendStCss").forEach((el) => {
+      el.classList.add('active');});
 
   }
   function shakeSlowCode() {
@@ -829,6 +954,10 @@ document.getElementById("textReturn").innerHTML = "<trl-config lookat='-15,0,5' 
     document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
     document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
     document.getElementById("shakeFastUpdate").classList.add("show");
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+      el.classList.remove('active');});
+    document.querySelectorAll("#blendEnCss, #blendStCss").forEach((el) => {
+      el.classList.add('active');});
 
   }
 
@@ -847,6 +976,10 @@ document.getElementById("textReturn").innerHTML = "<trl-config lookat='-15,0,5' 
     document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
     document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
     document.getElementById("leanInUpdate").classList.add("show");
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+      el.classList.remove('active');});
+    document.querySelectorAll("#blendEnCss, #blendStCss").forEach((el) => {
+      el.classList.add('active');});
 
   }
   function leanInCode() {
@@ -915,7 +1048,17 @@ document.getElementById("textReturn").innerHTML = "<trl-config lookat='-15,0,5' 
     console.log(blendEn);
     document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
   }
+  function spAddOne() {
+    speed += 0.5;
+    console.log(speed);
+    document.getElementById('speedmeter').innerHTML = speed + "s";
+  }
 
+  function spRemoveOne() {
+    speed -= 0.5;
+    console.log(speed);
+    document.getElementById('speedmeter').innerHTML = speed + "s";
+  }
 
 
   document.getElementById("copyTime").addEventListener("click", copyText);
