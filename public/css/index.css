@@ -14,7 +14,7 @@
     --text-color-buttons: #FFFFFF;
     --orange: #E84D3C;
     --blue: #143056;
-    --grey: #626262;
+    --grey: #D9D9D9;
     --main-font: 'Montserrat';
     --darkestblue: #121B30;
     --darkblue: #17223C;
@@ -53,6 +53,7 @@ h2 {
     color: var(--text-color-buttons);
     font-size: 1.25em;
     font-weight: 100;
+    position: relative;
 }
 
 button {
@@ -68,34 +69,61 @@ i {
     fill: var(--black);
 }
 
-.infoSvg {
+.infoSvg1,
+.infoSvg2,
+.infoSvg3 {
     position: absolute;
-    left: 8.5em;
-    top: .2em;
-    width: 1.25em;
+    width: 1em;
     aspect-ratio: 1/1;
     -webkit-filter: grayscale(1) invert(1);
     filter: grayscale(1) invert(1);
+    cursor: help;
+    top: .15em;
 }
 
-.infoTekst {
+.infoSvg1 {
+    left: 9em;
+}
+
+.infoSvg2 {
+    left: 6.5em;
+}
+
+.infoSvg3 {
+    left: 8.3em;
+}
+
+.infoTekst1,
+.infoTekst2,
+.infoTekst3 {
     display: none;
     position: absolute;
+    top: .15em;
     z-index: 1;
-    left: 10em;
-    top: .2em;
-    background-color: green;
+    background-color: var(--grey);
     padding: 1em;
     border-radius: 1em;
-    font-size: 1em;
+    font-size: 16px;
+    width: 20vw;
+    color: var(--black);
 }
 
-.infoSvg::after {
-    content: "In the dashboard you will find a series of categories you can choose from to personalise your Digital Human.  When a variation has been chosen it will be send to the code editor where you can fine-tune the animation to finally send add it to your animation timeline. For more information, see the User Guide.";
-    background-color: green;
-    display: inline;
-    left: 0;
-    top: 0;
+.infoTekst1 {
+    left: 13em;
+}
+
+.infoTekst2 {
+    left: 10em;
+}
+
+.infoTekst3 {
+    left: 12em;
+}
+
+.infoSvg1:hover + .infoTekst1,
+.infoSvg2:hover + .infoTekst2,
+.infoSvg3:hover + .infoTekst3 {
+    display: block;
 }
 
 /*************/
