@@ -5,22 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/css/login.css">
 </head>
 <body>
   <h1>Access</h1>
   <p>Type in the given code to access the dashboard</p>
   
     <main>
-        <form method="get" action="/">
-
-            <fieldset class="code">
+        <form class="passform" action="/ " onsubmit="return passcheck ()">
+            <input type="password" required id="pass1">
+           <!--  <fieldset class="code">
                 <label for="name">Type in the code</label>
                 <input type="password" name="nummer" id="nummer"> 
-            </fieldset>
-            <input type="submit" value="Login!" id="Login">
+            </fieldset>-->
+            <input type="submit" value="Continue" id="continue">
         </form>
       
 
         </main>
 </body>
+
+<script src="/script/login.js"></script>
 </html>
