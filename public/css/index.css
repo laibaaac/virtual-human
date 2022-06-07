@@ -69,6 +69,35 @@ i {
     fill: var(--black);
 }
 
+.infoSvg {
+    position: absolute;
+    left: 8.5em;
+    top: .2em;
+    width: 1.25em;
+    aspect-ratio: 1/1;
+    -webkit-filter: grayscale(1) invert(1);
+    filter: grayscale(1) invert(1);
+}
+
+.infoTekst {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    left: 10em;
+    top: .2em;
+    background-color: green;
+    padding: 1em;
+    border-radius: 1em;
+    font-size: 1em;
+}
+
+.infoSvg::after {
+    content: "In the dashboard you will find a series of categories you can choose from to personalise your Digital Human.  When a variation has been chosen it will be send to the code editor where you can fine-tune the animation to finally send add it to your animation timeline. For more information, see the User Guide.";
+    background-color: green;
+    display: inline;
+    left: 0;
+    top: 0;
+=======
 .infoSvg1,
 .infoSvg2,
 .infoSvg3 {
@@ -416,6 +445,7 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 .timelineButtons div button:nth-of-type(2) {
     height: 100%;
     background: transparent;
+   
 }
 
 .timelineButtons div button:nth-of-type(2) img {
@@ -431,6 +461,7 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 }
 
 .timelineButtons > button {
+    
     background: transparent;
     color: var(--text-color-buttons);
     font-size: 1em;
@@ -443,7 +474,14 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 .timelineButtons > button:active {
     color: var(--orange);
 }
-
+#sendMsgBtn {
+    background-color: var(--text-color-buttons);
+    color: var(--black);
+    border-radius: 0.5em;
+}
+#sendMsgBtn:hover {
+    background-color: var(--hover-orange);
+}
 /****************/
 /* RECHTERHELFT */
 /****************/
