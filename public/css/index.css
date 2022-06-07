@@ -108,14 +108,6 @@ i {
     color: var(--black);
 }
 
-<<<<<<< Updated upstream
-.infoSvg::after {
-    content: "In the dashboard you will find a series of categories you can choose from to personalise your Digital Human.  When a variation has been chosen it will be send to the code editor where you can fine-tune the animation to finally send add it to your animation timeline. For more information, see the User Guide.";
-    background-color: green;
-    display: inline;
-    left: 0;
-    top: 0;
-=======
 .infoSvg1,
 .infoSvg2,
 .infoSvg3 {
@@ -155,8 +147,6 @@ i {
     color: var(--black);
 }
 
-=======
->>>>>>> Stashed changes
 .infoTekst1 {
     left: 13em;
 }
