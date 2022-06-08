@@ -69,36 +69,45 @@ i {
     fill: var(--black);
 }
 
-.infoSvg {
+.infoSvg1,
+.infoSvg2,
+.infoSvg3 {
     position: absolute;
-    left: 8.5em;
-    top: .2em;
-    width: 1.25em;
+    width: 1em;
     aspect-ratio: 1/1;
     -webkit-filter: grayscale(1) invert(1);
     filter: grayscale(1) invert(1);
+    cursor: help;
+    top: .15em;
 }
 
-.infoTekst {
+.infoSvg1 {
+    left: 9em;
+}
+
+.infoSvg2 {
+    left: 6.5em;
+}
+
+.infoSvg3 {
+    left: 8.3em;
+}
+
+.infoTekst1,
+.infoTekst2,
+.infoTekst3 {
     display: none;
     position: absolute;
+    top: .15em;
     z-index: 1;
-    left: 10em;
-    top: .2em;
-    background-color: green;
+    background-color: var(--grey);
     padding: 1em;
     border-radius: 1em;
-    font-size: 1em;
+    font-size: 16px;
+    width: 20vw;
+    color: var(--black);
 }
 
-.infoSvg::after {
-    content: "In the dashboard you will find a series of categories you can choose from to personalise your Digital Human.  When a variation has been chosen it will be send to the code editor where you can fine-tune the animation to finally send add it to your animation timeline. For more information, see the User Guide.";
-    background-color: green;
-    display: inline;
-    left: 0;
-    top: 0;
-
-}
 .infoSvg1,
 .infoSvg2,
 .infoSvg3 {
@@ -267,13 +276,22 @@ table tbody tr:nth-of-type(2) td {
 
 table tbody tr:nth-of-type(2) td:first-of-type {
     margin-left: calc(1em - 5px);
-    width: 30%;
 }
 
 table tbody tr:nth-of-type(2) td:nth-of-type(2) {
     justify-content: flex-end;
     margin-right: 1em;
     width: 70%;
+}
+
+.button.button-trl.button-green {
+    height: 100%;
+}
+
+.button.button-trl.button-grey i,
+.button.button-trl.button-red i,
+.button.button-trl.button-blue i{
+    font-size: 1.6em;
 }
 
 .button.button-trl.button-green:hover,
@@ -293,7 +311,7 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) {
 
 /* Send message button styling */
 table tbody tr:nth-of-type(2) td:first-of-type button {
-    background-color: var(--text-color-buttons);
+    background-color: var(--orange);
     padding: .2em 1em;
     border-radius: .25em;
     text-transform: capitalize;
@@ -319,13 +337,12 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
     text-transform: capitalize;
     height: 2em;
     color: var(--text-color-buttons);
+    white-space: nowrap;
 }
 
 .button.button-trl.button-green:hover {
     color: var(--black);
 }
-
-
 
 /* preview vak styling */
 .imageArea {
@@ -418,23 +435,22 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 /* positioneren buttons onderaan timeline */
 .timelineButtons {
     display: flex;
-    justify-content: space-between;
     height: 2em;
+    justify-content: space-between;
 }
 
 
 .timelineButtons div {
     display: flex;
-    justify-content: center;
     gap: 1em;
 }
 
-/* copy code button */
-.timelineButtons div button:first-of-type{
+/* play animation button */
+.timelineButtons div button:first-of-type {
     background-color: var(--orange);
-    padding: .5em 1em;
     color: var(--text-color-buttons);
     border-radius: .5em;
+    padding: 0.2em 1em;
 }
 
 .timelineButtons div button:first-of-type:hover {
@@ -442,27 +458,42 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
     color: var(--black);
 }
 
-/* pdf button */
+/* Copy code button */
 .timelineButtons div button:nth-of-type(2) {
-    height: 100%;
-    background: transparent;
-   
-}
-
-.timelineButtons div button:nth-of-type(2) img {
-    height: 100%;
+    background-color: var(--text-color-buttons);
+    color: var(--black);
+    border-radius: .5em;
+    padding: 0.2em 1em;
 }
 
 .timelineButtons div button:nth-of-type(2):hover {
+    background-color: var(--hover-orange);
+}
+
+/* pdf button */
+.timelineButtons div button:nth-of-type(3) {
+    height: 100%;
+    background: transparent;
+}
+
+.timelineButtons div button:nth-of-type(3) img {
+    height: 100%;
+}
+
+.timelineButtons div button:nth-of-type(3):hover {
     filter: invert(41%) sepia(18%) saturate(2013%) hue-rotate(318deg) brightness(100%) contrast(91%);
 }
 
-.timelineButtons div button:nth-of-type(2):active {
+.timelineButtons div button:nth-of-type(3):active {
     filter: invert(45%) sepia(90%) saturate(1840%) hue-rotate(332deg) brightness(88%) contrast(107%);
 }
 
+
+#sendMsgBtn:active {
+    background-color: var(--orange);
+}
+
 .timelineButtons > button {
-    
     background: transparent;
     color: var(--text-color-buttons);
     font-size: 1em;
@@ -475,14 +506,7 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 .timelineButtons > button:active {
     color: var(--orange);
 }
-#sendMsgBtn {
-    background-color: var(--text-color-buttons);
-    color: var(--black);
-    border-radius: 0.5em;
-}
-#sendMsgBtn:hover {
-    background-color: var(--hover-orange);
-}
+
 /****************/
 /* RECHTERHELFT */
 /****************/
