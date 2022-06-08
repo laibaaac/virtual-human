@@ -14,7 +14,7 @@
     --text-color-buttons: #FFFFFF;
     --orange: #E84D3C;
     --blue: #143056;
-    --grey: #626262;
+    --grey: #D9D9D9;
     --main-font: 'Montserrat';
     --darkestblue: #121B30;
     --darkblue: #17223C;
@@ -53,6 +53,7 @@ h2 {
     color: var(--text-color-buttons);
     font-size: 1.25em;
     font-weight: 100;
+    position: relative;
 }
 
 button {
@@ -96,6 +97,62 @@ i {
     display: inline;
     left: 0;
     top: 0;
+=======
+.infoSvg1,
+.infoSvg2,
+.infoSvg3 {
+    position: absolute;
+    width: 1em;
+    aspect-ratio: 1/1;
+    -webkit-filter: grayscale(1) invert(1);
+    filter: grayscale(1) invert(1);
+    cursor: help;
+    top: .15em;
+}
+
+.infoSvg1 {
+    left: 9em;
+}
+
+.infoSvg2 {
+    left: 6.5em;
+}
+
+.infoSvg3 {
+    left: 8.3em;
+}
+
+.infoTekst1,
+.infoTekst2,
+.infoTekst3 {
+    display: none;
+    position: absolute;
+    top: .15em;
+    z-index: 1;
+    background-color: var(--grey);
+    padding: 1em;
+    border-radius: 1em;
+    font-size: 16px;
+    width: 20vw;
+    color: var(--black);
+}
+
+.infoTekst1 {
+    left: 13em;
+}
+
+.infoTekst2 {
+    left: 10em;
+}
+
+.infoTekst3 {
+    left: 12em;
+}
+
+.infoSvg1:hover + .infoTekst1,
+.infoSvg2:hover + .infoTekst2,
+.infoSvg3:hover + .infoTekst3 {
+    display: block;
 }
 
 /*************/
