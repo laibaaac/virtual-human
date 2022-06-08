@@ -740,6 +740,8 @@ overflow: hidden;
     height: 100px;
 }
 #newImage > img {
+width: auto;
+max-height: 4em;
 
     padding-bottom:1em;
 padding-left: 1em;
