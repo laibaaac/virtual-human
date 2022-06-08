@@ -733,3 +733,15 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 .changesAdd button:active {
     background-color: var(--orange);
 }
+#newImage {
+overflow: hidden;
+    object-fit: none;
+   
+    height: 100px;
+}
+#newImage > img {
+
+    padding-bottom:1em;
+padding-left: 1em;
+filter: invert(100%);
+}
