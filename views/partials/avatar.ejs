@@ -911,6 +911,10 @@
  
 
     <table border="0">
+  
+            
+     
+    
         <tr>
             <td colspan="2">
                 <video id="remoteVideo" onclick="fullscreen();" width="700" height="420"
@@ -932,8 +936,11 @@
                         style="position:absolute;left:560px;top:524px;color:white;"></i></span>
                 <span id="statusFailId" style="display:none"><i class="fa fa-times"></i></span>
             </td>
+            
             <td align="left">
-                
+                  <button class="button button-grey" value="Left" onClick="toggleCC();" /><i
+                    class="far fa-closed-captioning" style="color:white"></i>captions</button> 
+                    
                 <button class="button button-trl button-red" value="End" id="endBtn" onClick="endCall(0);"
                     disabled /><i class="fa fa-stop"></i></button>
                 <button class="button button-trl button-grey" value="End" id="endBtn" onClick="toggleMic();" /><i
