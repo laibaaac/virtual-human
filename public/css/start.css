@@ -42,9 +42,9 @@ a:focus {
 }
 
 .titlebar {
-    display:  flex;
+    display: flex;
     flex-direction: row;
-    padding: 3em 15% 3em 20%;
+    padding: 1em 0 2em 15%;
   }
   ul.titlebar > li {
     color: white;

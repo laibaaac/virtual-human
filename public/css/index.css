@@ -69,44 +69,6 @@ i {
     fill: var(--black);
 }
 
-.infoSvg1,
-.infoSvg2,
-.infoSvg3 {
-    position: absolute;
-    width: 1em;
-    aspect-ratio: 1/1;
-    -webkit-filter: grayscale(1) invert(1);
-    filter: grayscale(1) invert(1);
-    cursor: help;
-    top: .15em;
-}
-
-.infoSvg1 {
-    left: 9em;
-}
-
-.infoSvg2 {
-    left: 6.5em;
-}
-
-.infoSvg3 {
-    left: 8.3em;
-}
-
-.infoTekst1,
-.infoTekst2,
-.infoTekst3 {
-    display: none;
-    position: absolute;
-    top: .15em;
-    z-index: 1;
-    background-color: var(--grey);
-    padding: 1em;
-    border-radius: 1em;
-    font-size: 16px;
-    width: 20vw;
-    color: var(--black);
-}
 
 .infoSvg1,
 .infoSvg2,
@@ -135,7 +97,8 @@ i {
 .infoTekst1,
 .infoTekst2,
 .infoTekst3 {
-    display: none;
+    opacity: 0;
+    transition: .25s;
     position: absolute;
     top: .15em;
     z-index: 1;
@@ -143,7 +106,7 @@ i {
     padding: 1em;
     border-radius: 1em;
     font-size: 16px;
-    width: 20vw;
+    width: 25vw;
     color: var(--black);
 }
 
@@ -162,7 +125,8 @@ i {
 .infoSvg1:hover + .infoTekst1,
 .infoSvg2:hover + .infoTekst2,
 .infoSvg3:hover + .infoTekst3 {
-    display: block;
+    opacity: 100;
+    transition: .25s;
 }
 
 /*************/
@@ -664,6 +628,7 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
     flex-direction: column;
     gap: .7em;
     width: 100%;
+    position: relative;
 }
 
 /* textarea styling */
@@ -714,7 +679,8 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
     list-style: none;
     display: flex;
     gap: 1em 1em 1em 0em;
-  
+    position: absolute;
+    bottom: 0;
 }
 
 .changesAdd button {
@@ -733,6 +699,7 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 .changesAdd button:active {
     background-color: var(--orange);
 }
+
 #newImage {
 overflow: hidden;
     object-fit: none;
@@ -740,10 +707,9 @@ overflow: hidden;
     height: 100px;
 }
 #newImage > img {
-width: auto;
-max-height: 4em;
-
+    width: auto;
+    max-height: 2.5em;
     padding-bottom:1em;
-padding-left: 1em;
-filter: invert(100%);
+    padding-left: 1em;
+    filter: invert(100%);
 }
