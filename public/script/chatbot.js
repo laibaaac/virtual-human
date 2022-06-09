@@ -1,6 +1,7 @@
 document.getElementById("lookButton").addEventListener("click", lookCode);
 document.getElementById("lookDownButton").addEventListener("click", lookDownNumber);
 document.getElementById("lookDownButton").addEventListener("click", lookDownCode);
+
 document.getElementById("frowningButton").addEventListener("click", frownNumber);
 document.getElementById("frowningButton").addEventListener("click", frownCode);
 
@@ -12,49 +13,70 @@ document.getElementById("mouthTeethButton").addEventListener("click", mouthTeeth
 
 document.getElementById("smileSmallButton").addEventListener("click", smileSmallNumber);
 document.getElementById("smileSmallButton").addEventListener("click", smileSmallCode);
+
 document.getElementById("smileMediumButton").addEventListener("click", smileMediumNumber);
 document.getElementById("smileMediumButton").addEventListener("click", smileMediumCode);
+
 document.getElementById("smileLargeButton").addEventListener("click", smileLargeNumber);
 document.getElementById("smileLargeButton").addEventListener("click", smileLargeCode);
+
 document.getElementById("smileXlButton").addEventListener("click", smileXlNumber);
 document.getElementById("smileXlButton").addEventListener("click", smileXlCode);
 
 document.getElementById("lookDownLeftButton").addEventListener("click", lookDownLeftNumber);
 document.getElementById("lookDownLeftButton").addEventListener("click", lookDownLeftCode);
+
 document.getElementById("lookDownRightButton").addEventListener("click", lookDownRightNumber);
 document.getElementById("lookDownRightButton").addEventListener("click", lookDownRightCode);
+
 document.getElementById("lookUpButton").addEventListener("click", lookUpNumber);
 document.getElementById("lookUpButton").addEventListener("click", lookUpCode);
+
 document.getElementById("lookAtCamButton").addEventListener("click", lookAtCamNumber);
 document.getElementById("lookAtCamButton").addEventListener("click", lookAtCamCode);
+
 document.getElementById("lookUpLeftButton").addEventListener("click", lookUpLeftNumber);
 document.getElementById("lookUpLeftButton").addEventListener("click", lookUpLeftCode);
+
 document.getElementById("lookUpRightButton").addEventListener("click", lookUpRightNumber);
 document.getElementById("lookUpRightButton").addEventListener("click", lookUpRightCode);
+
 document.getElementById("eyebrowRaiseXSButton").addEventListener("click", eyebrowsRaiseXSNumber);
 document.getElementById("eyebrowRaiseXSButton").addEventListener("click", eyebrowsRaiseXSCode);
+
 document.getElementById("eyebrowsSmallButton").addEventListener("click", eyebrowsSmallNumber);
 document.getElementById("eyebrowsSmallButton").addEventListener("click", eyebrowsSmallCode);
+
 document.getElementById("eyebrowsRaiseButton").addEventListener("click", eyebrowsRaiseNumber);
 document.getElementById("eyebrowsRaiseButton").addEventListener("click", eyebrowsRaiseCode);
+
 document.getElementById("eyebrowsRaiseLButton").addEventListener("click", eyebrowsRaiseLNumber);
 document.getElementById("eyebrowsRaiseLButton").addEventListener("click", eyebrowsRaiseLCode);
+
 document.getElementById("frownXSButton").addEventListener("click", frownXSNumber);
 document.getElementById("frownXSButton").addEventListener("click", frownXSCode);
+
 document.getElementById("frownSmallButton").addEventListener("click", frownSmallNumber);
 document.getElementById("frownSmallButton").addEventListener("click", frownSmallCode);
+
 document.getElementById("frownLButton").addEventListener("click", frownLNumber);
 document.getElementById("frownLButton").addEventListener("click", frownLCode);
+
 document.getElementById("nodSmallButton").addEventListener("click", nodSmallNumber);
 document.getElementById("nodSmallButton").addEventListener("click", nodSmallCode);
+
 // document.getElementById("nodFastButton").addEventListener("click", nodFastNumber);
 // document.getElementById("nodFastButton").addEventListener("click", nodFastCode);
+
 document.getElementById("nodLargeButton").addEventListener("click", nodLargeNumber);
 document.getElementById("nodLargeButton").addEventListener("click", nodLargeCode);
+
 document.getElementById("nodAverageButton").addEventListener("click", nodAverageNumber);
 document.getElementById("nodAverageButton").addEventListener("click", nodAverageCode);
+
 document.getElementById("nodSlowButton").addEventListener("click", nodSlowNumber);
 document.getElementById("nodSlowButton").addEventListener("click", nodSlowCode);
+
 document.getElementById("nodLargeButton").addEventListener("click", nodLargeNumber);
 document.getElementById("nodLargeButton").addEventListener("click", nodLargeCode);
 
@@ -100,8 +122,6 @@ document.getElementById("leanInButton").addEventListener("click", leanInCode);
 //   document.getElementById("friendlyButton").addEventListener("click", friendlyCode);
 //   document.getElementById("agreeButton").addEventListener("click", agreeCode);
 //   document.getElementById("disagreeButton").addEventListener("click", disagreeCode);
-
-
 
 document.getElementById("plusOne").addEventListener("click", addOne);
 document.getElementById("minusOne").addEventListener("click", removeOne);
@@ -155,15 +175,13 @@ document.getElementById("nodSlowUpdate").addEventListener("click", updateNodSlow
 document.getElementById("shakeUpdate").addEventListener("click", updateShake);
 
 
-
 var element = document.getElementById("newImage");
 var img = null;
-
-
 var dura = 0;
 var blendSt = 0;
 var blendEn = 0;
 var speed = 0;
+
 
 function closedMouthNumber() {
   dura = 3;
@@ -185,7 +203,6 @@ function closedMouthNumber() {
 }
 
 function closedMouthCode() {
-
   document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='smileLarge' duration='" + dura + "' blendStart='" + blendSt + "' blendEnd='" + blendEn + "' peak='0.8'/>\n\n";
 }
 
@@ -215,13 +232,13 @@ function mouthTeethNumber() {
 }
 
 function mouthTeethCode() {
-
   document.getElementById("textReturn").value = "<trl-anim type='aux' id='mouthOpenTeeth' duration='" + dura + "' blendStart=' " + blendSt + " ' blendEnd=' " + blendEn + "'/>\n\n";
 }
 
 function updateMouthTeeth() {
   mouthTeethCode();
 }
+
 
 function smileSmallNumber() {
   dura = 3.5;
@@ -243,13 +260,13 @@ function smileSmallNumber() {
 }
 
 function smileSmallCode() {
-
   document.getElementById("textReturn").value = "<trl-anim type='aux' id='smileSmall' duration=' " + dura + " ' blendStart=' " + blendSt + " ' blendEnd='" + blendEn + "'/>\n\n";
 }
 
 function updateSmileSmall() {
   smileSmallCode();
 }
+
 
 function smileMediumNumber() {
   dura = 3.5;
@@ -271,7 +288,6 @@ function smileMediumNumber() {
 }
 
 function smileMediumCode() {
-
   document.getElementById("textReturn").value = "<trl-anim type='aux' id='smileMedium' duration=' " + dura + " ' blendStart=' " + blendSt + " ' blendEnd='" + blendEn + "'/>\n\n";
 }
 
@@ -299,13 +315,13 @@ function smileLargeNumber() {
 }
 
 function smileLargeCode() {
-
   document.getElementById("textReturn").value = "<trl-anim type='aux' id='smileLarge' duration=' " + dura + " ' blendStart=' " + blendSt + " ' blendEnd='" + blendEn + "' peak='0.8'/>\n\n";
 }
 
 function updateSmileLarge() {
   smileLargeCode();
 }
+
 
 function smileXlNumber() {
   dura = 4.2;
@@ -327,13 +343,13 @@ function smileXlNumber() {
 }
 
 function smileXlCode() {
-
   document.getElementById("textReturn").value = "<trl-morph id='All_Smile,All_CheekSmileLeft,All_CheekSmileRight' min='0' max='0.15' speed='0.3' wait='3' returnSpeed='0.2'/><trl-morph id='All_Smile,All_CheekSmileLeft,All_CheekSmileRight' min='0' max='0.25' speed='0.4' wait='5' returnSpeed='0.15'/><trl-anim type='aux' id='smileLarge' duration=' " + dura + " ' blendStart=' " + blendSt + " ' blendEnd='" + blendEn + "' />\n\n";
 }
 
 function updateSmileXl() {
   smileXlCode();
 }
+
 
 function lookDownLeftNumber() {
   dura = 3;
@@ -353,7 +369,6 @@ function lookDownLeftNumber() {
 }
 
 function lookDownLeftCode() {
-
   document.getElementById("textReturn").value = "<trl-config lookat='20,0,-20' enable='true' speed='" + speed + "' wait='2.5' returnSpeed='4.5' absolute='false' /><trl-anim type='aux' id='translateRotateLeftSmall1' duration='" + dura + "' /><trl-anim type='aux' id='tiltLeftDownMedium3' duration='2.5' />\n\n";
 
 }
@@ -362,13 +377,12 @@ function updateLookDownLeft() {
   lookDownLeftCode();
 }
 
+
 function lookDownRightNumber() {
   dura = 3.5;
-
   speed = 4.5;
   document.getElementById('durationmeter').innerHTML = dura + "s";
   document.getElementById('speedmeter').innerHTML = speed + "s";
-
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
   document.getElementById("lookDownRightUpdate").classList.add("show");
   document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
@@ -377,20 +391,18 @@ function lookDownRightNumber() {
   document.querySelectorAll("#speedCss, #duraCss").forEach((el) => {
     el.classList.add('active');
   });
-
   img = document.createElement('img');
   img.src = 'img/lookdownr.png';
-
 }
 
 function lookDownRightCode() {
-
   document.getElementById("textReturn").value = "<trl-config lookat='-20,0,-20' enable='true' speed='" + speed + "' wait='2.5' returnSpeed='5.5' absolute='false' /><trl-anim type='aux' id='translateRotateRightSmall1' duration='" + dura + "' /><trl-anim type='aux' id='tiltRightDownMedium3' duration='" + dura + "' />\n\n";
 }
 
 function updateLookDownRight() {
   lookDownRightCode();
 }
+
 
 function lookUpNumber() {
   dura = 2.5;
@@ -405,15 +417,11 @@ function lookUpNumber() {
   document.querySelectorAll("#speedCss, #duraCss").forEach((el) => {
     el.classList.add('active');
   });
-
   img = document.createElement('img');
   img.src = 'img/lookup.png';
-
-
 }
 
 function lookUpCode() {
-
   document.getElementById("textReturn").value = "<trl-config lookat='0,0,20' enable='true' speed='" + speed + "' wait='2.5' returnSpeed='6.25' absolute='false' /><trl-anim type='aux' id='tiltUpLarge3' duration='" + dura + "' />\n\n";
 }
 
@@ -421,10 +429,10 @@ function updatelookUp() {
   lookUpCode();
 }
 
+
 function lookAtCamNumber() {
   speed = 3.5;
   document.getElementById('speedmeter').innerHTML = speed + "s";
-
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
   document.getElementById("lookAtCamUpdate").classList.add("show");
   document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
@@ -433,20 +441,18 @@ function lookAtCamNumber() {
   document.querySelectorAll("#speedCss").forEach((el) => {
     el.classList.add('active');
   });
-
   img = document.createElement('img');
   img.src = 'img/look.png';
-
 }
 
 function lookAtCamCode() {
-
   document.getElementById("textReturn").value = "<trl-config lookat='camera' speed='" + speed + "'/>\n\n";
 }
 
 function updateLookAtCam() {
   lookAtCamCode();
 }
+
 
 function lookUpLeftNumber() {
   dura = 2.5;
@@ -491,10 +497,8 @@ function lookUpRightNumber() {
   document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss").forEach((el) => {
     el.classList.add('active');
   });
-
   img = document.createElement('img');
   img.src = 'img/lookupr.png';
-
 }
 
 function lookUpRightCode() {
@@ -504,8 +508,8 @@ function lookUpRightCode() {
 
 function updateLookUpRight() {
   lookUpRightCode();
-
 }
+
 
 function eyebrowsRaiseXSNumber() {
   dura = 3.5;
@@ -524,22 +528,15 @@ function eyebrowsRaiseXSNumber() {
   });
   img = document.createElement('img');
   img.src = 'img/rbxs.png';
-
-
 }
 
 function eyebrowsRaiseXSCode() {
-
   document.getElementById("textReturn").value = "<trl-morph id='Right_BrowsUp,Left_BrowsUp' min='0' max='0.28' speed='0.3' wait='3' returnSpeed='0.8'/>\n\n";
 }
 
 function updateEyebrowsRaiseXS() {
   eyebrowsRaiseSCode();
-
 }
-
-
-
 
 
 function mouthNumber() {
@@ -567,8 +564,8 @@ function mouthCode() {
 
 function updateMouth() {
   mouthCode();
-
 }
+
 
 // function mouthTeethNumber() {
 //   dura = 2.5;
@@ -611,6 +608,7 @@ function updateLookLeft() {
   lookLeftCode();
 }
 
+
 function lookRightNumber() {
   dura = 4;
   blendSt = 1;
@@ -635,10 +633,9 @@ function lookRightCode() {
 }
 
 function updateLookRight() {
-
   lookRightCode();
-
 }
+
 
 function lookDownNumber() {
   dura = 2.5;
@@ -662,10 +659,9 @@ function lookDownCode() {
 }
 
 function updateLookDown() {
-
   lookDownCode();
-
 }
+
 
 function eyebrowNumber() {
   dura = 3.5;
@@ -687,15 +683,13 @@ function eyebrowNumber() {
 }
 
 function eyebrowRaiseCode() {
-
   document.getElementById("textReturn").value = "<trl-anim type='aux' id='raisedBrowMedium' duration=" + dura + " blendStart=" + blendSt + " blendEnd=" + blendEn + "/>\n\n";
 }
 
 function updateEyebrowRaise() {
-
   eyebrowRaiseCode();
-
 }
+
 
 function eyebrowsSmallNumber() {
   dura = 3.5;
@@ -722,8 +716,8 @@ function eyebrowsSmallCode() {
 
 function updateEyebrowSmall() {
   eyebrowsSmallCode();
-
 }
+
 
 function frownXSNumber() {
   document.getElementById('durationmeter').innerHTML = dura + "s";
@@ -744,8 +738,8 @@ function frownXSCode() {
 
 function updateFrownXS() {
   frownXSCode();
-
 }
+
 
 function eyebrowsRaiseNumber() {
   dura = 3.5;
@@ -772,8 +766,8 @@ function eyebrowsRaiseCode() {
 
 function updateEyebrowsRaise() {
   eyebrowsRaiseCode();
-
 }
+
 
 function eyebrowsRaiseLNumber() {
   dura = 4.25;
@@ -800,7 +794,6 @@ function eyebrowsRaiseLCode() {
 
 function updateEyebrowsRaiseL() {
   eyebrowsRaiseLcode();
-
 }
 
 
@@ -829,8 +822,8 @@ function frownLCode() {
 
 function updateFrownL() {
   frownLCode();
-
 }
+
 
 function nodSmallNumber() {
   dura = 3.1;
@@ -857,16 +850,13 @@ function nodSmallCode() {
 
 function updateNodSmall() {
   nodSmallCode();
-
 }
-
 
 
 function frownNumber() {
   dura = 4.5;
   blendSt = 1.5;
   blendEn = 1.5;
-
   document.getElementById('durationmeter').innerHTML = dura + "s";
   document.getElementById('blendStmeter').innerHTML = blendSt + "s";
   document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
@@ -888,8 +878,8 @@ function frownCode() {
 
 function updateFrown() {
   frownCode();
-
 }
+
 
 function frownSmallNumber() {
   dura = 3.5;
@@ -911,14 +901,13 @@ function frownSmallNumber() {
 }
 
 function frownSmallCode() {
-
   document.getElementById("textReturn").value = "<trl-anim type='aux' id='frownSmall' duration=" + dura + " blendStart=" + blendSt + " blendEnd=" + blendEn + "/>\n\n";
 }
 
 function updateSmallFrown() {
   frownSmallCode()
-
 }
+
 
 function nodNumber() {
   dura = 3.1;
@@ -944,6 +933,7 @@ function nodCode() {
 function updateNod() {
   nodCode();
 }
+
 // function nodFastNumber() {
 //   dura = 4;
 //   blendSt = 1;
@@ -973,7 +963,6 @@ function nodLargeNumber() {
   dura = 3.9;
   blendSt = 0.9;
   blendEn = 0.9;
-
   document.getElementById('durationmeter').innerHTML = dura + "s";
   document.getElementById('blendStmeter').innerHTML = blendSt + "s";
   document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
@@ -995,14 +984,13 @@ function nodLargeCode() {
 
 function updateNodLarge() {
   nodlargeCode();
-
 }
+
 
 function nodAverageNumber() {
   dura = 4;
   blendSt = 1;
   blendEn = 1;
-
   document.getElementById('durationmeter').innerHTML = dura + "s";
   document.getElementById('blendStmeter').innerHTML = blendSt + "s";
   document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
@@ -1024,13 +1012,12 @@ function nodAverageCode() {
 
 function updateNodAverage() {
   nodAverageCode();
-
 }
+
 
 function nodSlowNumber() {
   blendSt = 1.25;
   blendEn = 1.25;
-
   document.getElementById('durationmeter').innerHTML = dura + "s";
   document.getElementById('blendStmeter').innerHTML = blendSt + "s";
   document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
@@ -1052,14 +1039,12 @@ function nodSlowCode() {
 
 function updateNodSlow() {
   nodSlowCode();
-
 }
 
-function shakeNumber() {
 
+function shakeNumber() {
   blendSt = 1.25;
   blendEn = 1.25;
-
   document.getElementById('durationmeter').innerHTML = dura + "s";
   document.getElementById('blendStmeter').innerHTML = blendSt + "s";
   document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
@@ -1081,11 +1066,7 @@ function shakeCode() {
 
 function updateShake() {
   shakeCode();
-
 }
-
-
-
 
 
 function shakeSlowNumber() {
@@ -1113,6 +1094,7 @@ function updateShakeSlow() {
   shakeSlowCode();
 }
 
+
 function shakeFastNumber() {
   blendSt = 1.25;
   blendEn = 1.25;
@@ -1136,7 +1118,6 @@ function shakeFastCode() {
 
 function UpdateShakeFast() {
   shakeFastCode();
-
 }
 
 
@@ -1163,7 +1144,6 @@ function leanInCode() {
 
 function updateLeanIn() {
   leanInCode();
-
 }
 
 
