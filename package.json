@@ -5,7 +5,10 @@
   "main": "server.js",
   "dependencies": {
     "ejs": "^3.1.7",
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "mongodb": "^4.6.0",
+    "mongoose": "^6.3.5",
+    "passport": "^0.6.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
@@ -22,7 +25,7 @@
     "express",
     "routing"
   ],
-  "author": "Laiba Choudhry" ,
+  "author": "Laiba Choudhry",
   "co-owner": "Chris Gabriel |||",
   "license": "MIT",
   "bugs": {
