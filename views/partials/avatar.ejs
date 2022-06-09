@@ -926,23 +926,20 @@
         <tr>
 
             <td>
-
-                <button class="button button-light-grey" style="margin-left:5px !important; margin:0px;width:220px"
-                    value="Send" id="sendMsgBtn" onclick="sendMessageToVPS();" /><i class="fa fa-paper-plane"
-                    style="color:white"></i> Send Messages</button>
+                <button class="button button-trl button-green" value="Connect" id="startBtn"
+                onClick="startCall();" />Connect virtual human</button>
                 <span id="statusOkId" style="display:none"><i class="fa fa-check"
                         style="position:absolute;left:560px;top:524px;color:white;"></i></span>
                 <span id="statusFailId" style="display:none"><i class="fa fa-times"></i></span>
             </td>
             <td align="left">
-                <button class="button button-trl button-green" value="Connect" id="startBtn"
-                    onClick="startCall();" />start<i class="fa fa-play" style="color:white"></i></button>
+                
                 <button class="button button-trl button-red" value="End" id="endBtn" onClick="endCall(0);"
-                    disabled />end<i class="fa fa-stop" style="color:white"></i></button>
-                <button class="button button-trl button-grey" value="End" id="endBtn" onClick="toggleMic();" />mutemic<i
-                    id="mic-icon" class="fa fa-microphone-slash" style="color:white"></i></button>
+                    disabled /><i class="fa fa-stop"></i></button>
+                <button class="button button-trl button-grey" value="End" id="endBtn" onClick="toggleMic();" /><i
+                    id="mic-icon" class="fa fa-microphone-slash"></i></button>
                 <button class="button button-trl button-blue" value="Full" id="fsBtn"
-                    onClick="fullscreen();" />fullscreen<i class="fa fa-expand" style="color:white"></i></button>
+                    onClick="fullscreen();" /><i class="fa fa-expand"></i></button>
             </td>
         </tr>
 

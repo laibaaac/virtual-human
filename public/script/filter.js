@@ -1,4 +1,5 @@
 
+
 filterSelection("all")
 function filterSelection(c) {
   var x, i;
@@ -37,16 +38,13 @@ function RemoveClass(element, name) {
 }
 
 // Add active class to the current control button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
+var btnContainer = document.querySelector(".filtercommands");
 var btns = btnContainer.getElementsByClassName("btn");
-
 for (const btn of btns) {
   btn.addEventListener('click', function() {
-    
     // heeft een btn in btns een class active? Zoja verwijder deze class
     const test = btnContainer.querySelectorAll('.btn')
     test.forEach(element => {
-      
       if (element.classList.contains('active')) {
         console.log('activated filter')
         element.classList.remove('active')
@@ -55,12 +53,11 @@ for (const btn of btns) {
     btn.classList.add('active')
   })
 }
-document.getElementById("emotionId").addEventListener("click", removeClass);
+// document.getElementById("emotionId").addEventListener("click", removeClass);
 
-function removeClass() {
-  x = document.getElementsByClassName("filterDiv")
-  RemoveClass(x, "filterShow");
-}
+// TO DO querySelector naar de emotion div, add eventlistener, voer dezelfde actie uit als hierboven + filter naar emoties
+
+
 // btns.forEach(element => {
 //   element.addEventListener('click', function() {
 //     console.log('klik op een knop')

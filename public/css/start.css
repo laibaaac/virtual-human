@@ -34,10 +34,17 @@ p {
     line-height: 1.2em;
  
 }
+
+button:focus,
+a:focus {
+    outline: 2px solid var(--orange);
+    border-radius: 2px;
+}
+
 .titlebar {
-    display:  flex;
+    display: flex;
     flex-direction: row;
-    padding: 3em 15% 3em 20%;
+    padding: 1em 0 2em 15%;
   }
   ul.titlebar > li {
     color: white;
@@ -72,7 +79,7 @@ img {
     -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
     filter: drop-shadow(15px 15px 15px rgba(0, 0, 0, 0.3));
 }
-ul.guideTop > li > button {
+ul.guideTop > li > a {
 float:right;
 border:none;
     margin: 2em 3em 0em 0em;
@@ -83,10 +90,16 @@ border:none;
     border-radius: 1em;
     transition: all 0.3s;
 }
-ul.guideTop > li > button:hover {
-    background-color:#ca2512;
-    transform: scale(1.05);
+ul.guideTop > li > a:hover {
+    background-color: var(--hover-orange);
+    color: var(--black);
 }
+
+ul.guideTop > li > a:active {
+    background-color: var(--orange);
+    color: var(--text-color-buttons);
+}
+
 ul.guideExplain {
     background-color: var(--darkblue);
     background-size: 100%;
@@ -177,7 +190,25 @@ ul.contact > li > img {
     max-width: 35%;
     height: auto;
 }
-ul.contact > li > a {
+ul.contact > li:first-of-type > a {
     font-weight: bold;
 color:var(--orange);
+}
+
+.siteButton {
+    padding: 1em;
+    background-color: var(--orange);
+    color: var(--text-color-buttons);
+    border-radius: 1em;
+    font-weight: bold;
+}
+
+.siteButton:hover {
+    background-color: var(--hover-orange);
+    color: var(--black);
+}
+
+.siteButton:active{
+    background-color: var(--orange);
+    color: var(--text-color-buttons);
 }

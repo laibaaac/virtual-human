@@ -3,6 +3,16 @@ const express = require('express');
 const app = express();
 const router = express.Router();
 const port = process.env.PORT ||4000
+mongoose = require("mongoose"),
+passport = require("passport"),
+bodyParser = require("body-parser"),
+//const dotenv = require('dotenv').config();
+//const {
+ // MongoClient
+//} = require('mongodb');
+//const {
+//ObjectID } = require('mongodb'); 
+
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'ejs', 'html');
 
@@ -27,6 +37,12 @@ app.get('/', function(req, res) {
   
   });
 
+ app.get("/login", async (req, res) => {
+  
+    res.render("login");
+  
+  });
+
 
   app.get("/avatar", async (req, res) => {
   
@@ -41,6 +57,20 @@ app.get('/', function(req, res) {
   app.use(express.static("public"));
 
 
+ 
+  /*async function connectDB() {
+    const uri = process.env.DB_URI;
+    const client = new MongoClient(uri, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    try {
+      await client.connect();
+      db = client.db(process.env.DB_NAME);
+    } catch (error) {
+      throw error;
+    }
+  }*/
 
 
 app.listen(port, () => {
