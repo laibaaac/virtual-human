@@ -669,10 +669,13 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 /* textarea styling */
 #textReturn {
     width: 100%;
+   
     border-radius: .5em;
     padding: .5em;
     resize: none;
     height: 100%;
+    max-height: 10em;
+
 }
 
 /* horizontaal neerzetten van elke button */
@@ -710,13 +713,15 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 .changesAdd ul {
     list-style: none;
     display: flex;
-    gap: 1em;
+    gap: 1em 1em 1em 0em;
+  
 }
 
 .changesAdd button {
     border: none;
     padding: .6rem;
     border-radius: .5em;
+    margin-right: 1em;
 }
 
 .buttonStyling section div button:hover,
@@ -727,4 +732,18 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 .buttonStyling section div button:active,
 .changesAdd button:active {
     background-color: var(--orange);
+}
+#newImage {
+overflow: hidden;
+    object-fit: none;
+   
+    height: 100px;
+}
+#newImage > img {
+width: auto;
+max-height: 4em;
+
+    padding-bottom:1em;
+padding-left: 1em;
+filter: invert(100%);
 }
