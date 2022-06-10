@@ -40,12 +40,17 @@ faders.forEach(fader => {
 });
 
 
-document.getElementById("resetButton").addEventListener('click', () => {
 
-  document.getElementById("plain-textarea-id").value = '';
-  const timelineImages = Array.from(document.getElementsByClassName('timelineImg'));
+// document.getElementById("copyThis").addEventListener("click", copyCode);
 
-  timelineImages.forEach(timelineImg => {
-    timelineImg.remove();
-  })})
+//   function copyCode() {
+//     var Text = document.getElementById("copyString");
+//     Text.select();
+//     navigator.clipboard.writeText(Text.value);
+//     document.getElementById("copyThis").innerHTML = "Text copied!";
+//     setTimeout(resetCopy, 2000);
+//   }
 
+//   function resetCopy() {
+//     document.getElementById("copyThis").innerHTML = "Copy code";
+//   }
