@@ -8,18 +8,33 @@
     <link rel="stylesheet" href="/css/login.css">
 </head>
 <body>
-  <h1>Access</h1>
-  <p>Type in the given code to access the dashboard</p>
+
+    <header>
+        <a href="#"><img class="logo" src="/img/logo_wit.png"></a>
+    </header>
+
+
+  
   
     <main>
-        <form class="passform" action="/ " onsubmit="return passcheck ()">
-            <input type="password" required id="pass1">
-           <!--  <fieldset class="code">
-                <label for="name">Type in the code</label>
-                <input type="password" name="nummer" id="nummer"> 
-            </fieldset>-->
-            <input type="submit" value="Continue" id="continue">
-        </form>
+        <div>
+            <img src="/img/loginImg.png" alt="">
+        </div>
+
+        <div>
+            <h1>Sign in</h1>
+            <p>Please enter your password to get access to the Animation Dashboard. You can receive te password by contacting Virtually Human at <a href="mailto: site@virtually-human.com">site@virtually-human.com</a></p>
+
+            <form class="passform" action="/ " onsubmit="return passcheck ()">
+                <input type="password" required id="pass1" placeholder="Password">
+               <!--  <fieldset class="code">
+                    <label for="name">Type in the code</label>
+                    <input type="password" name="nummer" id="nummer"> 
+                </fieldset>-->
+                <input type="submit" value="Continue" id="continue">
+            </form>
+        </div>
+        
       
 
         </main>
