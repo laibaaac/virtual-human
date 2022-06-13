@@ -384,11 +384,45 @@ button.plus:hover {
 }
 #smileLargeUpdate {
     display: none;
-
 }
 #smileLargeUpdate.show {
     display: block;
-    
+}
+#leftBrowRaiseUpdate {
+    display: none;
+}
+#leftBrowRaiseUpdate.show {
+    display: block;
+}
+#rightBrowRaiseUpdate {
+    display: none;
+}
+#rightBrowRaiseUpdate.show {
+    display: block;
+}
+#quizicalUpdate {
+    display: none;
+}
+#quizicalUpdate.show {
+    display: block;
+}
+#outerBrowsUpdate {
+    display: none;
+}
+#outerBrowsUpdate.show {
+    display: block;
+}
+#browsInUpdate {
+    display: none;
+}
+#browsInUpdate.show {
+    display: block;
+}
+#browsDownScrunchUpdate {
+    display: none;
+}
+#browsDownScrunchUpdate.show {
+    display: block;
 }
 #blendStCss {
     display: none;

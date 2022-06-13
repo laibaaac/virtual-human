@@ -5,6 +5,24 @@ document.getElementById("lookDownButton").addEventListener("click", lookDownCode
 document.getElementById("frowningButton").addEventListener("click", frownNumber);
 document.getElementById("frowningButton").addEventListener("click", frownCode);
 
+document.getElementById("leftBrowRaiseButton").addEventListener("click", leftBrowRaiseNumber);
+document.getElementById("leftBrowRaiseButton").addEventListener("click", leftBrowRaiseCode);
+
+document.getElementById("rightBrowRaiseButton").addEventListener("click", rightBrowRaiseNumber);
+document.getElementById("rightBrowRaiseButton").addEventListener("click", rightBrowRaiseCode);
+
+document.getElementById("quizicalButton").addEventListener("click", quizicalNumber);
+document.getElementById("quizicalButton").addEventListener("click", quizicalCode);
+
+document.getElementById("outerBrowsButton").addEventListener("click", outerBrowsNumber);
+document.getElementById("outerBrowsButton").addEventListener("click", outerBrowsCode);
+
+document.getElementById("browsInRaisedButton").addEventListener("click", browsInRaisedNumber);
+document.getElementById("browsInRaisedButton").addEventListener("click", browsInRaisedCode);
+
+document.getElementById("browsDownScrunchButton").addEventListener("click", browsDownScrunchNumber);
+document.getElementById("browsDownScrunchButton").addEventListener("click", browsDownScrunchCode);
+
 document.getElementById("closedMouthButton").addEventListener("click", closedMouthNumber);
 document.getElementById("closedMouthButton").addEventListener("click", closedMouthCode);
 
@@ -143,6 +161,12 @@ document.getElementById("lookRightUpdate").addEventListener("click", updateLookR
 document.getElementById("lookLeftUpdate").addEventListener("click", updateLookLeft);
 document.getElementById("eyebrowSmallUpdate").addEventListener("click", updateEyebrowSmall);
 document.getElementById("eyebrowRaiseUpdate").addEventListener("click", updateEyebrowRaise);
+document.getElementById("rightBrowRaiseUpdate").addEventListener("click", updateRightBrowRaise);
+document.getElementById("leftBrowRaiseUpdate").addEventListener("click", updateLeftBrowRaise);
+document.getElementById("quizicalUpdate").addEventListener("click", updateQuizical);
+document.getElementById("outerBrowsUpdate").addEventListener("click", updateOuterBrows);
+document.getElementById("browsInUpdate").addEventListener("click", updateBrowsInRaised);
+document.getElementById("browsDownScrunchUpdate").addEventListener("click", updateBrowsDownScrunch);
 document.getElementById("frownUpdate").addEventListener("click", updateFrown);
 document.getElementById("frownSmallUpdate").addEventListener("click", updateSmallFrown);
 document.getElementById("shakeSlowUpdate").addEventListener("click", updateShakeSlow);
@@ -879,7 +903,142 @@ function frownCode() {
 function updateFrown() {
   frownCode();
 }
+function leftBrowRaiseNumber() {
+speed = 0.6;
+document.getElementById('speedmeter').innerHTML = speed + "s";
+  document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+  document.getElementById("leftBrowRaiseUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');
+  });
+  document.querySelectorAll("#speedCss").forEach((el) => {
+    el.classList.add('active');
+  });
+  img = document.createElement('img');
+  img.src = 'img/leftbrow.png';
+}
 
+function leftBrowRaiseCode() {
+  document.getElementById("textReturn").value = "<trl-morph id='Left_BrowsUp' min='0' max='0.4' speed='" + speed + "' wait='3' returnSpeed='0.8' />\n\n";
+}
+
+function updateLeftBrowRaise() {
+  leftBrowRaiseCode();
+}
+
+function rightBrowRaiseNumber() {
+  speed = 0.6;
+  document.getElementById('speedmeter').innerHTML = speed + "s";
+    document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+    document.getElementById("rightBrowRaiseUpdate").classList.add("show");
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+      el.classList.remove('active');
+    });
+    document.querySelectorAll("#speedCss").forEach((el) => {
+      el.classList.add('active');
+    });
+    img = document.createElement('img');
+    img.src = 'img/rightbrow.png';
+  }
+  
+  function rightBrowRaiseCode() {
+    document.getElementById("textReturn").value = "<trl-morph id='Right_BrowsUp' min='0' max='0.4' speed='" + speed + "' wait='3' returnSpeed='0.8' />\n\n";
+  }
+  
+  function updateRightBrowRaise() {
+    rightBrowRaiseCode();
+  }
+
+  function quizicalNumber() {
+    speed = 0.6;
+    document.getElementById('speedmeter').innerHTML = speed + "s";
+      document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+      document.getElementById("quizicalUpdate").classList.add("show");
+      document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+        el.classList.remove('active');
+      });
+      document.querySelectorAll("#speedCss").forEach((el) => {
+        el.classList.add('active');
+      });
+      img = document.createElement('img');
+      img.src = 'img/quizical.png';
+    }
+    
+    function quizicalCode() {
+      document.getElementById("textReturn").value = "<trl-morph id='Right_BrowsIn,Left_BrowsIn' min='0' max='0.4' speed='"+ speed +"' wait='3' returnSpeed='0.8'/>\n\n";
+    }
+    
+    function updateQuizical() {
+      rightBrowRaiseCode();
+    }
+
+    function outerBrowsNumber() {
+      speed = 0.6;
+      document.getElementById('speedmeter').innerHTML = speed + "s";
+        document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+        document.getElementById("outerBrowsUpdate").classList.add("show");
+        document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+          el.classList.remove('active');
+        });
+        document.querySelectorAll("#speedCss").forEach((el) => {
+          el.classList.add('active');
+        });
+        img = document.createElement('img');
+        img.src = 'img/outer.png';
+      }
+      
+      function outerBrowsCode() {
+        document.getElementById("textReturn").value = "<trl-morph id='Right_BrowsOuterUp,Left_BrowsOuterUp' min='0' max='0.4' speed='"+ speed +"' wait='3' returnSpeed='0.3'/>\n\n";
+      }
+      
+      function updateOuterBrows() {
+        outerBrowsCode();
+      }
+      function browsInRaisedNumber() {
+        speed = 0.6;
+        document.getElementById('speedmeter').innerHTML = speed + "s";
+          document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+          document.getElementById("browsInUpdate").classList.add("show");
+          document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+            el.classList.remove('active');
+          });
+          document.querySelectorAll("#speedCss").forEach((el) => {
+            el.classList.add('active');
+          });
+          img = document.createElement('img');
+          img.src = 'img/browsin.png';
+        }
+        
+        function browsInRaisedCode() {
+          document.getElementById("textReturn").value = "<trl-morph id='Right_BrowsOuterUp,Left_BrowsOuterUp' min='0' max='0.4' speed='"+ speed +"' wait='3' returnSpeed='0.3'/>\n\n";
+        }
+        
+        function updateBrowsInRaised() {
+          browsInRaisedCode();
+        }
+
+        function browsDownScrunchNumber() {
+          speed = 0.6;
+          document.getElementById('speedmeter').innerHTML = speed + "s";
+            document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+            document.getElementById("browsDownScrunchUpdate").classList.add("show");
+            document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+              el.classList.remove('active');
+            });
+            document.querySelectorAll("#speedCss").forEach((el) => {
+              el.classList.add('active');
+            });
+            img = document.createElement('img');
+            img.src = 'img/browsdown.png';
+          }
+          
+          function browsDownScrunchCode() {
+            document.getElementById("textReturn").value = "<trl-morph id='Right_BrowsDownScrunchEyes,Left_BrowsDownScrunchEyes' min='0' max='0.4' speed='"+ speed +"' wait='3' returnSpeed='0.8'/>\n\n";
+          }
+          
+          function updateBrowsDownScrunch() {
+            browsInRaisedCode();
+          }
 
 function frownSmallNumber() {
   dura = 3.5;
