@@ -97,8 +97,9 @@ i {
 .infoTekst1,
 .infoTekst2,
 .infoTekst3 {
+    visibility: hidden;
+    transition: 0s, 0.15s linear;
     opacity: 0;
-    transition: .25s;
     position: absolute;
     top: .15em;
     z-index: 1;
@@ -108,6 +109,7 @@ i {
     font-size: 16px;
     width: 25vw;
     color: var(--black);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .infoTekst1 {
@@ -125,8 +127,8 @@ i {
 .infoSvg1:hover + .infoTekst1,
 .infoSvg2:hover + .infoTekst2,
 .infoSvg3:hover + .infoTekst3 {
-    opacity: 100;
-    transition: .25s;
+    visibility: visible;
+    opacity: 1;
 }
 
 /*************/
@@ -701,15 +703,15 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 }
 
 #newImage {
-overflow: hidden;
     object-fit: none;
    
-    height: 100px;
+    height: 5em;
 }
 #newImage > img {
+    height: 2.5em;
     width: auto;
-    max-height: 2.5em;
-    padding-bottom:1em;
-    padding-left: 1em;
-    filter: invert(100%);
+    background-color: var(--grey);
+    border-radius: 2em;
+    padding: .5em;
+    margin: 0 .5em;
 }
