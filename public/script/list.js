@@ -39,6 +39,15 @@ faders.forEach(fader => {
   appearOnScroll.observe(fader);
 });
 
+document.getElementById("resetButton").addEventListener('click', () => {
+
+  document.getElementById("plain-textarea-id").value = '';
+  const timelineImages = Array.from(document.getElementsByClassName('timelineImg'));
+
+  timelineImages.forEach(timelineImg => {
+    timelineImg.remove();
+  })})
+
 
 
 // document.getElementById("copyThis").addEventListener("click", copyCode);

@@ -1396,12 +1396,8 @@ function resetCopy() {
 
 document.getElementById("addAnimation").addEventListener('click', () => {
 
-
   img.classList = 'timelineImg';
   element.append(img);
-
-
-
   document.getElementById("plain-textarea-id").value += textReturn.value;
 
 })
