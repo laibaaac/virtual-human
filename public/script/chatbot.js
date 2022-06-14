@@ -635,7 +635,7 @@ function updateLookLeft() {
 
 function lookRightNumber() {
   dura = 3;
-  blendSt = 1;
+  blendSt = 1.1;
   blendEn = 1;
   document.getElementById('durationmeter').innerHTML = dura + "s";
   document.getElementById('blendStmeter').innerHTML = blendSt + "s";
