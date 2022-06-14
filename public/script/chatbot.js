@@ -634,7 +634,7 @@ function updateLookLeft() {
 
 
 function lookRightNumber() {
-  dura = 4;
+  dura = 3;
   blendSt = 1;
   blendEn = 1;
   document.getElementById('durationmeter').innerHTML = dura + "s";
@@ -653,7 +653,7 @@ function lookRightNumber() {
 }
 
 function lookRightCode() {
-  document.getElementById("textReturn").value = "<trl-config lookat='-15,0,5' enable='true' speed='4.5' wait='2.5' returnSpeed='5.5' absolute='false' /><trl-anim type='aux' id='translateRotateRightSmall' duration='2.5' /><trl-anim type='aux' id='tiltRightUpMedium3' duration='3.0' />\n\n";
+  document.getElementById("textReturn").value = "<trl-config lookat='-15,0,5' enable='true' speed='4.5' wait='2.5' returnSpeed='5.5' absolute='false' /><trl-anim type='aux' id='translateRotateRightSmall' duration='2.5' /><trl-anim type='aux' id='tiltRightUpMedium3' duration='"+ dura +"' />\n\n";
 }
 
 function updateLookRight() {
