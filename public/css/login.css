@@ -61,13 +61,13 @@ main {
     justify-content: space-around;
 }
 
-main div {
+main section {
     width: 100%;
     padding: 0 3em;
     max-width: 30em;
 }
 
-main div:nth-of-type(2) {
+main section:nth-of-type(2) {
     display: flex;
     flex-direction: column;  
 }
@@ -85,7 +85,7 @@ form input:first-of-type {
     background: transparent;
     border: none;
     border-bottom: 4px solid var(--orange);
-    padding: 1em 0;
+    padding: 1em .1em;
     font-size: 1.2em;
     margin-bottom: 1em;
     color: var(--text-color-buttons);
@@ -95,7 +95,7 @@ form input:nth-of-type(2) {
     background: var(--orange);
     border-radius: .5rem;
     border: none;
-    font-size: 1.5em;
+    font-size: 1.2em;
     color: var(--text-color-buttons);
     text-align: left;
     padding: .5em;

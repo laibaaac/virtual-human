@@ -1,4 +1,6 @@
-/**************/
+/****************/
+/* ROOT STYLING */
+/****************/
 :root {
   --black: #020B23;
   --text-color-buttons: #FFFFFF;
@@ -11,6 +13,9 @@
   --hover-orange: #f99a90;
 }
 
+/*************/
+/* CSS RESET */
+/*************/
 *,
 html {
     margin: 0;
@@ -20,9 +25,9 @@ html {
     scroll-behavior: smooth;
 }
 
-/********************/
-/* ALGEMENE STYLING */
-/********************/
+/*******************/
+/* GENERAL STYLING */
+/*******************/
 body {
   background-color: var(--darkblue);
 }
@@ -50,10 +55,9 @@ a {
   cursor: pointer;
 }
 
-p.introText {
-  margin-bottom: 2em;
-}
-
+/*******************/
+/* TOP OF THE PAGE */
+/*******************/
 .listIntro {
   background-color: var(--darkestblue);
   padding: 0 20% 2em 20%;
@@ -61,6 +65,7 @@ p.introText {
   color: var(--text-color-buttons);
 }
 
+/* BREADCRUMB STYLING */
 .titlebar {
   display:  flex;
   flex-direction: row;
@@ -81,6 +86,12 @@ ul.titlebar {
   color: var(--orange);
 }
 
+/* INTRO TEXT STYLING */
+p.introText {
+  margin-bottom: 2em;
+}
+
+/* SCROLL-TO FILTER STYLING */
 .listFilter {
   color: white;
   list-style: none;
@@ -90,6 +101,7 @@ ul.titlebar {
   -webkit-mask: linear-gradient(to right, red 98%,  transparent);
 }
 
+/* ITEM DISPLAY FLEX */
 .listFilter a {
   display: flex;
   flex-direction: column;
@@ -102,6 +114,7 @@ ul.titlebar {
   text-align: center;
 }
 
+/* EXTRA MARGIN ON THE LAST ITEM */
 .listFilter li:last-of-type {
   margin-right: 2em;
 }
@@ -125,6 +138,8 @@ ul.titlebar {
   width: 100%;
 }
 
+
+/* SCROLLBAR STYLING */
 .listFilter::-webkit-scrollbar-track,
 .list div textarea::-webkit-scrollbar-track {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
@@ -145,22 +160,31 @@ ul.titlebar {
 	background-color: #E84D3C;
 }
 
+/************************************/
+/* STYLING OF AL TE CODE CATEGORIES */
+/************************************/
+
+/* WHITESPACE ON SIDES */
 .listSections {
   padding: 1em 20%;
 }
 
+/* MARGIN TOP FOR FIRST CATEGORY */
 .listSections section:first-of-type {
   margin-top: 2rem;
 }
 
+/* MARGIN BETWEEN CATEGORIES */
 .listSections section {
   margin-bottom: 5rem;
 }
 
+/* CATEGORY TITLE */
 .listSections h2 {
   margin-bottom: .5rem;
 }
 
+/* IMG AND BLOCK NEXT TO EACH OTHER */
 .listSections li {
   display: flex;
   height: 10em;
@@ -169,7 +193,7 @@ ul.titlebar {
   gap: 1em;
 }
 
-
+/* STYLING OF THE BLOCK */
 .listSections li div {
   background-color: var(--blue);
   padding: 1em;
@@ -180,16 +204,19 @@ ul.titlebar {
   gap: .5rem;
 }
 
+/* IMG STYLING */
 .listSections li img {
   width: 15em;
   object-fit: cover;
   border-radius: 1em;
 }
 
+/* COPY CODE BUTTON POSITION */
 .list div {
   position: relative;
 }
 
+/* TEXTAREA STYLING */
 .list div textarea {
   width: calc(100% - 8.5em);
   height: 100%;
@@ -199,10 +226,12 @@ ul.titlebar {
   resize: none;
 }
 
+/* HOVER ON TEXT */
 .list div textarea:hover {
   color: var(--orange);
 }
 
+/* COPY CODE BUTTON STYLING */
 .list div a {
   position: absolute;
   right: 1em;
@@ -210,4 +239,33 @@ ul.titlebar {
   background-color: var(--black);
   padding: .5em 1em;
   border-radius: 1em;
+}
+
+/**********************/
+/* BACK TO TOP BUTTON */
+/**********************/
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 1.5em; /* Place the button at the bottom of the page */
+  right: 2em; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: var(--orange); /* Set a background color */
+  color: var(--text-color-buttons); /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 1em; /* Some padding */
+  border-radius: .5em; /* Rounded corners */
+  font-size: 1em; /* Increase font size */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+#myBtn:hover {
+  background-color: var(--hover-orange); /* Add a dark-grey background on hover */
+  color: var(--black);
+}
+
+#myBtn:active {
+  background-color: var(--orange);
 }
