@@ -39,17 +39,37 @@ faders.forEach(fader => {
   appearOnScroll.observe(fader);
 });
 
-document.getElementById("resetButton").addEventListener('click', () => {
+// function copyToClipboard(text) {
+//   const elem = document.createElement('textarea');
+//   elem.value = text;
+//   document.body.appendChild(elem);
+//   elem.select();
+//   document.execCommand('copy');
+//   document.body.removeChild(elem);
+// }
+// document.getElementById("resetButton").addEventListener('click', () => {
 
-  document.getElementById("plain-textarea-id").value = '';
-  const timelineImages = Array.from(document.getElementsByClassName('timelineImg'));
+//   document.getElementById("plain-textarea-id").value = '';
+//   const timelineImages = Array.from(document.getElementsByClassName('timelineImg'));
 
-  timelineImages.forEach(timelineImg => {
-    timelineImg.remove();
-  })})
-
-
-
+//   timelineImages.forEach(timelineImg => {
+//     timelineImg.remove();
+//   })})
+  // document.querySelectorAll('#copyThis').addEventListener("click", handleCopyTextFromArea);
+  // function handleCopyTextFromArea() {
+  //   const area = document.getElementById("copyThisCode");
+  //   area.select();
+  //   document.execCommand('copy')
+  // }
+  let cbox = document.querySelectorAll("#copyThis");
+  cbox.forEach(box => {
+    box.addEventListener('click', () => handleCopyTextFromArea())
+    
+  });
+  function handleCopyTextFromArea() {
+    const area = document.getElementById("copyThisCode");
+    area.select();
+    document.execCommand('copy')}
 // document.getElementById("copyThis").addEventListener("click", copyCode);
 
 //   function copyCode() {
