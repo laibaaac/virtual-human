@@ -244,8 +244,7 @@ p.introText {
 /**********************/
 /* BACK TO TOP BUTTON */
 /**********************/
-#myBtn {
-  display: none; /* Hidden by default */
+#B2TBtn {
   position: fixed; /* Fixed/sticky position */
   bottom: 1.5em; /* Place the button at the bottom of the page */
   right: 2em; /* Place the button 30px from the right */
@@ -261,11 +260,11 @@ p.introText {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
-#myBtn:hover {
+#B2TBtn:hover {
   background-color: var(--hover-orange); /* Add a dark-grey background on hover */
   color: var(--black);
 }
 
-#myBtn:active {
+#B2TBtn:active {
   background-color: var(--orange);
 }
