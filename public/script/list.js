@@ -47,29 +47,29 @@ faders.forEach(fader => {
 //   document.execCommand('copy');
 //   document.body.removeChild(elem);
 // }
-// document.getElementById("resetButton").addEventListener('click', () => {
+document.getElementById("resetButton").addEventListener('click', () => {
 
-//   document.getElementById("plain-textarea-id").value = '';
-//   const timelineImages = Array.from(document.getElementsByClassName('timelineImg'));
+  document.getElementById("plain-textarea-id").value = '';
+  const timelineImages = Array.from(document.getElementsByClassName('timelineImg'));
 
-//   timelineImages.forEach(timelineImg => {
-//     timelineImg.remove();
-//   })})
+  timelineImages.forEach(timelineImg => {
+    timelineImg.remove();
+  })})
   // document.querySelectorAll('#copyThis').addEventListener("click", handleCopyTextFromArea);
   // function handleCopyTextFromArea() {
   //   const area = document.getElementById("copyThisCode");
   //   area.select();
   //   document.execCommand('copy')
   // }
-  let cbox = document.querySelectorAll("#copyThis");
-  cbox.forEach(box => {
-    box.addEventListener('click', () => handleCopyTextFromArea())
+  // let cbox = document.querySelectorAll("#copyThis");
+  // cbox.forEach(box => {
+  //   box.addEventListener('click', () => handleCopyTextFromArea())
     
-  });
-  function handleCopyTextFromArea() {
-    const area = document.getElementById("copyThisCode");
-    area.select();
-    document.execCommand('copy')}
+  // });
+  // function handleCopyTextFromArea() {
+  //   const area = document.getElementById("copyThisCode");
+  //   area.select();
+  //   document.execCommand('copy')}
 // document.getElementById("copyThis").addEventListener("click", copyCode);
 
 //   function copyCode() {

@@ -3,13 +3,13 @@
 <section class="commandList">
     <div class="filtercommands" >  <div id="myBtnContainer">
         <!--hier staan de categorieen buttons, je klikt op deze buttons en dan krijg je meerdere variaties te zien-->
-          <button class="btn" onclick="filterSelection('mouth')"><img src="/img/category_mouth.png" alt="">Mouth</button>
-          <button class="btn" onclick="filterSelection('eyes')"><img src="/img/category_eyes.png" alt="">Eyes</button>
-          <button class="btn" onclick="filterSelection('brow')"><img src="/img/category_brows.png" alt="">Brows</button>
-          <button class="btn" onclick="filterSelection('head')"><img src="/img/category_head.png" alt="">Head</button>
-          <button class="btn" onclick="filterSelection('position')"><img src="/img/category_position.png" alt="">Positions</button>
-          <button class="btn" onclick="filterSelection('visemes')"><img src="/img/visemes.png" alt="">Visemes</button>
-    
+          <button class="btn" onclick="filterSelection('mouth'); addEditor()"><img src="/img/category_mouth.png" alt="">Mouth</button>
+          <button class="btn" onclick="filterSelection('eyes'); addEditor()"><img src="/img/category_eyes.png" alt="">Eyes</button>
+          <button class="btn" onclick="filterSelection('brow'); addEditor()"><img src="/img/category_brows.png" alt="">Brows</button>
+          <button class="btn" onclick="filterSelection('head'); addEditor()"><img src="/img/category_head.png" alt="">Head</button>
+          <button class="btn" onclick="filterSelection('position'); addEditor()"><img src="/img/category_position.png" alt="">Positions</button>
+          <button class="btn" onclick="filterSelection('visemes'); addEditor()"><img src="/img/visemes.png" alt="">Visemes</button>
+          <button class="btn" id="deletebtn" onclick="filterSelection('textspeech')"><img src="/img/category_emotions.png" alt="">Text-to-speech</button>
         </div>
 
     <div class="autoAnimation">
@@ -108,6 +108,10 @@
         <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="E">E viseme</button>
         <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="o">o viseme</button>
         <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="O">O viseme</button>
+        <ul class="filterDiv textspeech">
+            <li> <textarea name="voer maar in jongen" id="" cols="30" rows="10"></textarea></li>
+           
+        </ul>
 
 
     <!--Deze buttons zijn gelinked aan de button die in de div animation zit. Voor deze commands heb je een andere button-->
