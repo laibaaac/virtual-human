@@ -717,3 +717,9 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
     padding: .5em;
     margin: 0 .5em;
 }
+#explanation {
+    color: white;
+    font-size: 0.9em;
+    font-weight: lighter;
+
+}
