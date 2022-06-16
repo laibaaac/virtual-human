@@ -1,4 +1,4 @@
-document.getElementById("lookButton").addEventListener("click", lookCode);
+
 document.getElementById("lookDownButton").addEventListener("click", lookDownNumber);
 document.getElementById("lookDownButton").addEventListener("click", lookDownCode);
 
@@ -610,16 +610,18 @@ function updateMouth() {
 //   mouthTeethCode();
 // }
 
-function lookCode() {
-  document.getElementById("textReturn").innerHTML = "<trl-config lookat='camera' speed='3.5'/>";
-  document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
-}
 
 function lookLeftNumber() {
   dura = 4.5;
   document.getElementById('durationmeter').innerHTML = dura + "s";
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
   document.getElementById("lookLeftUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');
+  });
+  document.querySelectorAll("#duraCss").forEach((el) => {
+    el.classList.add('active');
+  });
   img = document.createElement('img');
   img.src = 'img/lookleft.png';
 }
@@ -635,8 +637,6 @@ function updateLookLeft() {
 
 function lookRightNumber() {
   dura = 3;
-  blendSt = 1.1;
-  blendEn = 1;
   document.getElementById('durationmeter').innerHTML = dura + "s";
   document.getElementById('blendStmeter').innerHTML = blendSt + "s";
   document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
@@ -645,7 +645,7 @@ function lookRightNumber() {
   document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
     el.classList.remove('active');
   });
-  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss").forEach((el) => {
+  document.querySelectorAll("#duraCss").forEach((el) => {
     el.classList.add('active');
   });
   img = document.createElement('img');
@@ -663,15 +663,13 @@ function updateLookRight() {
 
 function lookDownNumber() {
   dura = 2.5;
-  blendst = 0;
-  blendEn = 0;
   document.getElementById('durationmeter').innerHTML = dura + "s";
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
   document.getElementById("lookDownUpdate").classList.add("show");
   document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
     el.classList.remove('active');
   });
-  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss").forEach((el) => {
+  document.querySelectorAll("#duraCss").forEach((el) => {
     el.classList.add('active');
   });
   img = document.createElement('img');
@@ -748,7 +746,7 @@ function frownXSNumber() {
   document.getElementById('blendStmeter').innerHTML = blendSt + "s";
   document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
-  document.getElementById("eyebrowSmallUpdate").classList.add("show");
+  document.getElementById("frownXSUpdate").classList.add("show");
   document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
     el.classList.remove('active');
   });
@@ -773,7 +771,7 @@ function eyebrowsRaiseNumber() {
   document.getElementById('blendStmeter').innerHTML = blendSt + "s";
   document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
-  document.getElementById("eyebrowSmallUpdate").classList.add("show");
+  document.getElementById("eyebrowRaiseUpdate").classList.add("show");
   document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
     el.classList.remove('active');
   });
@@ -801,7 +799,7 @@ function eyebrowsRaiseLNumber() {
   document.getElementById('blendStmeter').innerHTML = blendSt + "s";
   document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
-  document.getElementById("eyebrowSmallUpdate").classList.add("show");
+  document.getElementById("eyebrowRaiseLUpdate").classList.add("show");
   document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
     el.classList.remove('active');
   });
@@ -829,7 +827,7 @@ function frownLNumber() {
   document.getElementById('blendStmeter').innerHTML = blendSt + "s";
   document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
-  document.getElementById("eyebrowSmallUpdate").classList.add("show");
+  document.getElementById("frownLUpdate").classList.add("show");
   document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
     el.classList.remove('active');
   });
@@ -857,7 +855,7 @@ function nodSmallNumber() {
   document.getElementById('blendStmeter').innerHTML = blendSt + "s";
   document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
-  document.getElementById("eyebrowSmallUpdate").classList.add("show");
+  document.getElementById("nodSmallUpdate").classList.add("show");
   document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
     el.classList.remove('active');
   });
