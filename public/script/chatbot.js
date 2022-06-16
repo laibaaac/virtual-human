@@ -227,7 +227,7 @@ function closedMouthNumber() {
 }
 
 function closedMouthCode() {
-  document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='smileLarge' duration='" + dura + "' blendStart='" + blendSt + "' blendEnd='" + blendEn + "' peak='0.8'/>\n\n";
+  document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='smileLarge' duration='" + dura + "' blendStart='" + blendSt + "' blendEnd='" + blendEn + "' peak='0.8'/>";
 }
 
 function updateClosedMouth() {
@@ -256,7 +256,7 @@ function mouthTeethNumber() {
 }
 
 function mouthTeethCode() {
-  document.getElementById("textReturn").value = "<trl-anim type='aux' id='mouthOpenTeeth' duration='" + dura + "' blendStart=' " + blendSt + " ' blendEnd=' " + blendEn + "'/>\n\n";
+  document.getElementById("textReturn").value = "<trl-anim type='aux' id='mouthOpenTeeth' duration='" + dura + "' blendStart=' " + blendSt + " ' blendEnd=' " + blendEn + "'/>";
 }
 
 function updateMouthTeeth() {
@@ -284,7 +284,7 @@ function smileSmallNumber() {
 }
 
 function smileSmallCode() {
-  document.getElementById("textReturn").value = "<trl-anim type='aux' id='smileSmall' duration=' " + dura + " ' blendStart=' " + blendSt + " ' blendEnd='" + blendEn + "'/>\n\n";
+  document.getElementById("textReturn").value = "<trl-anim type='aux' id='smileSmall' duration=' " + dura + " ' blendStart=' " + blendSt + " ' blendEnd='" + blendEn + "'/>";
 }
 
 function updateSmileSmall() {
@@ -312,7 +312,7 @@ function smileMediumNumber() {
 }
 
 function smileMediumCode() {
-  document.getElementById("textReturn").value = "<trl-anim type='aux' id='smileMedium' duration=' " + dura + " ' blendStart=' " + blendSt + " ' blendEnd='" + blendEn + "'/>\n\n";
+  document.getElementById("textReturn").value = "<trl-anim type='aux' id='smileMedium' duration=' " + dura + " ' blendStart=' " + blendSt + " ' blendEnd='" + blendEn + "'/>";
 }
 
 function updateSmileMedium() {
@@ -339,7 +339,7 @@ function smileLargeNumber() {
 }
 
 function smileLargeCode() {
-  document.getElementById("textReturn").value = "<trl-anim type='aux' id='smileLarge' duration=' " + dura + " ' blendStart=' " + blendSt + " ' blendEnd='" + blendEn + "' peak='0.8'/>\n\n";
+  document.getElementById("textReturn").value = "<trl-anim type='aux' id='smileLarge' duration=' " + dura + " ' blendStart=' " + blendSt + " ' blendEnd='" + blendEn + "' peak='0.8'/>";
 }
 
 function updateSmileLarge() {
@@ -367,7 +367,7 @@ function smileXlNumber() {
 }
 
 function smileXlCode() {
-  document.getElementById("textReturn").value = "<trl-morph id='All_Smile,All_CheekSmileLeft,All_CheekSmileRight' min='0' max='0.15' speed='0.3' wait='3' returnSpeed='0.2'/><trl-morph id='All_Smile,All_CheekSmileLeft,All_CheekSmileRight' min='0' max='0.25' speed='0.4' wait='5' returnSpeed='0.15'/><trl-anim type='aux' id='smileLarge' duration=' " + dura + " ' blendStart=' " + blendSt + " ' blendEnd='" + blendEn + "' />\n\n";
+  document.getElementById("textReturn").value = "<trl-morph id='All_Smile,All_CheekSmileLeft,All_CheekSmileRight' min='0' max='0.15' speed='0.3' wait='3' returnSpeed='0.2'/><trl-morph id='All_Smile,All_CheekSmileLeft,All_CheekSmileRight' min='0' max='0.25' speed='0.4' wait='5' returnSpeed='0.15'/><trl-anim type='aux' id='smileLarge' duration=' " + dura + " ' blendStart=' " + blendSt + " ' blendEnd='" + blendEn + "' />";
 }
 
 function updateSmileXl() {
@@ -393,7 +393,7 @@ function lookDownLeftNumber() {
 }
 
 function lookDownLeftCode() {
-  document.getElementById("textReturn").value = "<trl-config lookat='20,0,-20' enable='true' speed='" + speed + "' wait='2.5' returnSpeed='4.5' absolute='false' /><trl-anim type='aux' id='translateRotateLeftSmall1' duration='" + dura + "' /><trl-anim type='aux' id='tiltLeftDownMedium3' duration='2.5' />\n\n";
+  document.getElementById("textReturn").value = "<trl-config lookat='20,0,-20' enable='true' speed='" + speed + "' wait='2.5' returnSpeed='4.5' absolute='false' /><trl-anim type='aux' id='translateRotateLeftSmall1' duration='" + dura + "' /><trl-anim type='aux' id='tiltLeftDownMedium3' duration='2.5' />";
 
 }
 
@@ -420,7 +420,7 @@ function lookDownRightNumber() {
 }
 
 function lookDownRightCode() {
-  document.getElementById("textReturn").value = "<trl-config lookat='-20,0,-20' enable='true' speed='" + speed + "' wait='2.5' returnSpeed='5.5' absolute='false' /><trl-anim type='aux' id='translateRotateRightSmall1' duration='" + dura + "' /><trl-anim type='aux' id='tiltRightDownMedium3' duration='" + dura + "' />\n\n";
+  document.getElementById("textReturn").value = "<trl-config lookat='-20,0,-20' enable='true' speed='" + speed + "' wait='2.5' returnSpeed='5.5' absolute='false' /><trl-anim type='aux' id='translateRotateRightSmall1' duration='" + dura + "' /><trl-anim type='aux' id='tiltRightDownMedium3' duration='" + dura + "' />";
 }
 
 function updateLookDownRight() {
@@ -446,7 +446,7 @@ function lookUpNumber() {
 }
 
 function lookUpCode() {
-  document.getElementById("textReturn").value = "<trl-config lookat='0,0,20' enable='true' speed='" + speed + "' wait='2.5' returnSpeed='6.25' absolute='false' /><trl-anim type='aux' id='tiltUpLarge3' duration='" + dura + "' />\n\n";
+  document.getElementById("textReturn").value = "<trl-config lookat='0,0,20' enable='true' speed='" + speed + "' wait='2.5' returnSpeed='6.25' absolute='false' /><trl-anim type='aux' id='tiltUpLarge3' duration='" + dura + "' />";
 }
 
 function updatelookUp() {
@@ -470,7 +470,7 @@ function lookAtCamNumber() {
 }
 
 function lookAtCamCode() {
-  document.getElementById("textReturn").value = "<trl-config lookat='camera' speed='" + speed + "'/>\n\n";
+  document.getElementById("textReturn").value = "<trl-config lookat='camera' speed='" + speed + "'/>";
 }
 
 function updateLookAtCam() {
@@ -498,7 +498,7 @@ function lookUpLeftNumber() {
 
 function lookUpLeftCode() {
 
-  document.getElementById("textReturn").value = "<trl-config lookat='15,0,5' enable='true' speed='" + speed + "' wait='2.5' returnSpeed='4.5' absolute='false' /><trl-anim type='aux' id='translateRotateLeftSmall' duration='" + dura + "' /><trl-anim type='aux' id='tiltLeftUpMedium3' duration='" + dura + "' />\n\n";
+  document.getElementById("textReturn").value = "<trl-config lookat='15,0,5' enable='true' speed='" + speed + "' wait='2.5' returnSpeed='4.5' absolute='false' /><trl-anim type='aux' id='translateRotateLeftSmall' duration='" + dura + "' /><trl-anim type='aux' id='tiltLeftUpMedium3' duration='" + dura + "' />";
 }
 
 function updatelookUpLeft() {
@@ -527,7 +527,7 @@ function lookUpRightNumber() {
 
 function lookUpRightCode() {
 
-  document.getElementById("textReturn").value = "<trl-config lookat='-15,0,5' enable='true' speed='4.5' wait='2.5' returnSpeed='5.5' absolute='false' /><trl-anim type='aux' id='translateRotateRightSmall' duration='2.5' /><trl-anim type='aux' id='tiltRightUpMedium3' duration='3.0' />\n\n";
+  document.getElementById("textReturn").value = "<trl-config lookat='-15,0,5' enable='true' speed='4.5' wait='2.5' returnSpeed='5.5' absolute='false' /><trl-anim type='aux' id='translateRotateRightSmall' duration='2.5' /><trl-anim type='aux' id='tiltRightUpMedium3' duration='3.0' />";
 }
 
 function updateLookUpRight() {
@@ -555,7 +555,7 @@ function eyebrowsRaiseXSNumber() {
 }
 
 function eyebrowsRaiseXSCode() {
-  document.getElementById("textReturn").value = "<trl-morph id='Right_BrowsUp,Left_BrowsUp' min='0' max='0.28' speed='0.3' wait='3' returnSpeed='0.8'/>\n\n";
+  document.getElementById("textReturn").value = "<trl-morph id='Right_BrowsUp,Left_BrowsUp' min='0' max='0.28' speed='0.3' wait='3' returnSpeed='0.8'/>";
 }
 
 function updateEyebrowsRaiseXS() {
@@ -583,7 +583,7 @@ function mouthNumber() {
 }
 
 function mouthCode() {
-  document.getElementById("textReturn").value = "<trl-anim type='aux' id='mouthOpen' duration=" + dura + "' blendStart=" + blendSt + " blendEnd=" + blendEn + "/>\n\n";
+  document.getElementById("textReturn").value = "<trl-anim type='aux' id='mouthOpen' duration=" + dura + "' blendStart=" + blendSt + " blendEnd=" + blendEn + "/>";
 }
 
 function updateMouth() {
@@ -625,7 +625,7 @@ function lookLeftNumber() {
 }
 
 function lookLeftCode() {
-  document.getElementById("textReturn").value = "<trl-config lookat='15,0,5' enable='true' speed='4.5' wait='2.5' returnSpeed='4.5' absolute='false' /><trl-anim type='aux' id='translateRotateLeftSmall' duration='2.5' /><trl-anim type='aux' id='tiltLeftUpMedium3' duration='"+ dura +"' />\n\n";
+  document.getElementById("textReturn").value = "<trl-config lookat='15,0,5' enable='true' speed='4.5' wait='2.5' returnSpeed='4.5' absolute='false' /><trl-anim type='aux' id='translateRotateLeftSmall' duration='2.5' /><trl-anim type='aux' id='tiltLeftUpMedium3' duration='"+ dura +"' />";
 }
 
 function updateLookLeft() {
@@ -653,7 +653,7 @@ function lookRightNumber() {
 }
 
 function lookRightCode() {
-  document.getElementById("textReturn").value = "<trl-config lookat='-15,0,5' enable='true' speed='4.5' wait='2.5' returnSpeed='5.5' absolute='false' /><trl-anim type='aux' id='translateRotateRightSmall' duration='2.5' /><trl-anim type='aux' id='tiltRightUpMedium3' duration='"+ dura +"' />\n\n";
+  document.getElementById("textReturn").value = "<trl-config lookat='-15,0,5' enable='true' speed='4.5' wait='2.5' returnSpeed='5.5' absolute='false' /><trl-anim type='aux' id='translateRotateRightSmall' duration='2.5' /><trl-anim type='aux' id='tiltRightUpMedium3' duration='"+ dura +"' />";
 }
 
 function updateLookRight() {
@@ -679,7 +679,7 @@ function lookDownNumber() {
 }
 
 function lookDownCode() {
-  document.getElementById("textReturn").value = "<trl-config lookat='0,0,-20' enable='true' speed='3.75' wait='2.5' returnSpeed='5.25' absolute='false' /><trl-anim type='aux' id='tiltDownLarge3' duration=" + dura + " />\n\n";
+  document.getElementById("textReturn").value = "<trl-config lookat='0,0,-20' enable='true' speed='3.75' wait='2.5' returnSpeed='5.25' absolute='false' /><trl-anim type='aux' id='tiltDownLarge3' duration=" + dura + " />";
 }
 
 function updateLookDown() {
@@ -707,7 +707,7 @@ function eyebrowNumber() {
 }
 
 function eyebrowRaiseCode() {
-  document.getElementById("textReturn").value = "<trl-anim type='aux' id='raisedBrowMedium' duration=" + dura + " blendStart=" + blendSt + " blendEnd=" + blendEn + "/>\n\n";
+  document.getElementById("textReturn").value = "<trl-anim type='aux' id='raisedBrowMedium' duration=" + dura + " blendStart=" + blendSt + " blendEnd=" + blendEn + "/>";
 }
 
 function updateEyebrowRaise() {
@@ -735,7 +735,7 @@ function eyebrowsSmallNumber() {
 }
 
 function eyebrowsSmallCode() {
-  document.getElementById("textReturn").value = "<trl-anim type='aux' id='raisedBrowSmall' duration=" + dura + " blendStart=" + blendSt + " blendEnd=" + blendEn + " />\n\n";
+  document.getElementById("textReturn").value = "<trl-anim type='aux' id='raisedBrowSmall' duration=" + dura + " blendStart=" + blendSt + " blendEnd=" + blendEn + " />";
 }
 
 function updateEyebrowSmall() {
@@ -757,7 +757,7 @@ function frownXSNumber() {
 }
 
 function frownXSCode() {
-  document.getElementById("textReturn").value = "<trl-morph id='Right_BrowsDown,Left_BrowsDown' min='0' max='0.15' speed='0.6' wait='3' returnSpeed='0.8'/>\n\n";
+  document.getElementById("textReturn").value = "<trl-morph id='Right_BrowsDown,Left_BrowsDown' min='0' max='0.15' speed='0.6' wait='3' returnSpeed='0.8'/>";
 }
 
 function updateFrownXS() {
@@ -785,7 +785,7 @@ function eyebrowsRaiseNumber() {
 }
 
 function eyebrowsRaiseCode() {
-  document.getElementById("textReturn").value = "<trl-anim type='aux' id='raisedBrowMedium' duration=" + dura + " blendStart=" + blendSt + " blendEnd=" + blendEn + " />\n\n";
+  document.getElementById("textReturn").value = "<trl-anim type='aux' id='raisedBrowMedium' duration=" + dura + " blendStart=" + blendSt + " blendEnd=" + blendEn + " />";
 }
 
 function updateEyebrowsRaise() {
@@ -813,7 +813,7 @@ function eyebrowsRaiseLNumber() {
 }
 
 function eyebrowsRaiseLCode() {
-  document.getElementById("textReturn").value = "<trl-anim type='aux' id='raisedBrowLarge' duration=" + dura + " blendStart=" + blendSt + " blendEnd=" + blendEn + " />\n\n";
+  document.getElementById("textReturn").value = "<trl-anim type='aux' id='raisedBrowLarge' duration=" + dura + " blendStart=" + blendSt + " blendEnd=" + blendEn + " />";
 }
 
 function updateEyebrowsRaiseL() {
@@ -841,7 +841,7 @@ function frownLNumber() {
 }
 
 function frownLCode() {
-  document.getElementById("textReturn").value = "<trl-anim type='aux' id='frownLarge' duration=" + dura + " blendStart=" + blendSt + " blendEnd=" + blendEn + " />\n\n";
+  document.getElementById("textReturn").value = "<trl-anim type='aux' id='frownLarge' duration=" + dura + " blendStart=" + blendSt + " blendEnd=" + blendEn + " />";
 }
 
 function updateFrownL() {
@@ -869,7 +869,7 @@ function nodSmallNumber() {
 }
 
 function nodSmallCode() {
-  document.getElementById("textReturn").value = "<trl-anim type='aux' id='noddingSmall' duration=" + dura + " blendStart=" + blendSt + " blendEnd=" + blendEn + " />\n\n";
+  document.getElementById("textReturn").value = "<trl-anim type='aux' id='noddingSmall' duration=" + dura + " blendStart=" + blendSt + " blendEnd=" + blendEn + " />";
 }
 
 function updateNodSmall() {
@@ -897,7 +897,7 @@ function frownNumber() {
 }
 
 function frownCode() {
-  document.getElementById("textReturn").value = "<trl-anim type='aux' id='frownMedium' duration=" + dura + " blendStart=" + blendSt + " blendEnd=" + blendEn + "/>\n\n";
+  document.getElementById("textReturn").value = "<trl-anim type='aux' id='frownMedium' duration=" + dura + " blendStart=" + blendSt + " blendEnd=" + blendEn + "/>";
 }
 
 function updateFrown() {
@@ -919,7 +919,7 @@ document.getElementById('speedmeter').innerHTML = speed + "s";
 }
 
 function leftBrowRaiseCode() {
-  document.getElementById("textReturn").value = "<trl-morph id='Left_BrowsUp' min='0' max='0.4' speed='" + speed + "' wait='3' returnSpeed='0.8' />\n\n";
+  document.getElementById("textReturn").value = "<trl-morph id='Left_BrowsUp' min='0' max='0.4' speed='" + speed + "' wait='3' returnSpeed='0.8' />";
 }
 
 function updateLeftBrowRaise() {
@@ -942,7 +942,7 @@ function rightBrowRaiseNumber() {
   }
   
   function rightBrowRaiseCode() {
-    document.getElementById("textReturn").value = "<trl-morph id='Right_BrowsUp' min='0' max='0.4' speed='" + speed + "' wait='3' returnSpeed='0.8' />\n\n";
+    document.getElementById("textReturn").value = "<trl-morph id='Right_BrowsUp' min='0' max='0.4' speed='" + speed + "' wait='3' returnSpeed='0.8' />";
   }
   
   function updateRightBrowRaise() {
@@ -965,7 +965,7 @@ function rightBrowRaiseNumber() {
     }
     
     function quizicalCode() {
-      document.getElementById("textReturn").value = "<trl-morph id='Right_BrowsIn,Left_BrowsIn' min='0' max='0.4' speed='"+ speed +"' wait='3' returnSpeed='0.8'/>\n\n";
+      document.getElementById("textReturn").value = "<trl-morph id='Right_BrowsIn,Left_BrowsIn' min='0' max='0.4' speed='"+ speed +"' wait='3' returnSpeed='0.8'/>";
     }
     
     function updateQuizical() {
@@ -988,7 +988,7 @@ function rightBrowRaiseNumber() {
       }
       
       function outerBrowsCode() {
-        document.getElementById("textReturn").value = "<trl-morph id='Right_BrowsOuterUp,Left_BrowsOuterUp' min='0' max='0.4' speed='"+ speed +"' wait='3' returnSpeed='0.3'/>\n\n";
+        document.getElementById("textReturn").value = "<trl-morph id='Right_BrowsOuterUp,Left_BrowsOuterUp' min='0' max='0.4' speed='"+ speed +"' wait='3' returnSpeed='0.3'/>";
       }
       
       function updateOuterBrows() {
@@ -1010,7 +1010,7 @@ function rightBrowRaiseNumber() {
         }
         
         function browsInRaisedCode() {
-          document.getElementById("textReturn").value = "<trl-morph id='Right_BrowsOuterUp,Left_BrowsOuterUp' min='0' max='0.4' speed='"+ speed +"' wait='3' returnSpeed='0.3'/>\n\n";
+          document.getElementById("textReturn").value = "<trl-morph id='Right_BrowsOuterUp,Left_BrowsOuterUp' min='0' max='0.4' speed='"+ speed +"' wait='3' returnSpeed='0.3'/>";
         }
         
         function updateBrowsInRaised() {
@@ -1033,7 +1033,7 @@ function rightBrowRaiseNumber() {
           }
           
           function browsDownScrunchCode() {
-            document.getElementById("textReturn").value = "<trl-morph id='Right_BrowsDownScrunchEyes,Left_BrowsDownScrunchEyes' min='0' max='0.4' speed='"+ speed +"' wait='3' returnSpeed='0.8'/>\n\n";
+            document.getElementById("textReturn").value = "<trl-morph id='Right_BrowsDownScrunchEyes,Left_BrowsDownScrunchEyes' min='0' max='0.4' speed='"+ speed +"' wait='3' returnSpeed='0.8'/>";
           }
           
           function updateBrowsDownScrunch() {
@@ -1060,7 +1060,7 @@ function frownSmallNumber() {
 }
 
 function frownSmallCode() {
-  document.getElementById("textReturn").value = "<trl-anim type='aux' id='frownSmall' duration=" + dura + " blendStart=" + blendSt + " blendEnd=" + blendEn + "/>\n\n";
+  document.getElementById("textReturn").value = "<trl-anim type='aux' id='frownSmall' duration=" + dura + " blendStart=" + blendSt + " blendEnd=" + blendEn + "/>";
 }
 
 function updateSmallFrown() {
@@ -1086,7 +1086,7 @@ function nodNumber() {
 }
 
 function nodCode() {
-  document.getElementById("textReturn").value = "<trl-anim type='aux' id='noddingMedium' duration='" + dura + "' blendStart='" + blendSt + "' blendEnd='" + blendEn + "'/>\n\n";
+  document.getElementById("textReturn").value = "<trl-anim type='aux' id='noddingMedium' duration='" + dura + "' blendStart='" + blendSt + "' blendEnd='" + blendEn + "'/>";
 }
 
 function updateNod() {
@@ -1138,7 +1138,7 @@ function nodLargeNumber() {
 }
 
 function nodLargeCode() {
-  document.getElementById("textReturn").value = "<trl-anim type='aux' id='noddingLarge' duration=" + dura + " blendStart=" + blendSt + " blendEnd=" + blendEn + "/>\n\n";
+  document.getElementById("textReturn").value = "<trl-anim type='aux' id='noddingLarge' duration=" + dura + " blendStart=" + blendSt + " blendEnd=" + blendEn + "/>";
 }
 
 function updateNodLarge() {
@@ -1166,7 +1166,7 @@ function nodAverageNumber() {
 }
 
 function nodAverageCode() {
-  document.getElementById("textReturn").value = "<trl-anim type='aux' id='frownLarge' duration=" + dura + " blendStart=" + blendSt + " blendEnd=" + blendEn + "/>\n\n";
+  document.getElementById("textReturn").value = "<trl-anim type='aux' id='frownLarge' duration=" + dura + " blendStart=" + blendSt + " blendEnd=" + blendEn + "/>";
 }
 
 function updateNodAverage() {
@@ -1193,7 +1193,7 @@ function nodSlowNumber() {
 }
 
 function nodSlowCode() {
-  document.getElementById("textReturn").value = "<trl-anim type='aux' id='MCnoddingSlow' blendStart=" + blendSt + " blendEnd=" + blendEn + "/>\n\n";
+  document.getElementById("textReturn").value = "<trl-anim type='aux' id='MCnoddingSlow' blendStart=" + blendSt + " blendEnd=" + blendEn + "/>";
 }
 
 function updateNodSlow() {
@@ -1220,7 +1220,7 @@ function shakeNumber() {
 }
 
 function shakeCode() {
-  document.getElementById("textReturn").value = "<trl-anim type='aux' id='MCshakeAverage' blendStart=" + blendSt + " blendEnd=" + blendEn + "/>\n\n";
+  document.getElementById("textReturn").value = "<trl-anim type='aux' id='MCshakeAverage' blendStart=" + blendSt + " blendEnd=" + blendEn + "/>";
 }
 
 function updateShake() {
@@ -1246,7 +1246,7 @@ function shakeSlowNumber() {
 }
 
 function shakeSlowCode() {
-  document.getElementById("textReturn").value = "<trl-anim type='aux' id='MCshakeSlow' blendStart=" + blendSt + " blendEnd=" + blendEn + "/>\n\n";
+  document.getElementById("textReturn").value = "<trl-anim type='aux' id='MCshakeSlow' blendStart=" + blendSt + " blendEnd=" + blendEn + "/>";
 }
 
 function updateShakeSlow() {
@@ -1272,7 +1272,7 @@ function shakeFastNumber() {
 }
 
 function shakeFastCode() {
-  document.getElementById("textReturn").value = "<trl-anim type='aux' id='MCshakeFast' blendStart=" + blendSt + " blendEnd=" + blendEn + "/>\n\n";
+  document.getElementById("textReturn").value = "<trl-anim type='aux' id='MCshakeFast' blendStart=" + blendSt + " blendEnd=" + blendEn + "/>";
 }
 
 function UpdateShakeFast() {
@@ -1298,7 +1298,7 @@ function leanInNumber() {
 }
 
 function leanInCode() {
-  document.getElementById("textReturn").value = "<trl-anim type='aux' id='leanIn' blendStart=" + blendSt + " blendEnd=" + blendEn + "/>\n\n";
+  document.getElementById("textReturn").value = "<trl-anim type='aux' id='leanIn' blendStart=" + blendSt + " blendEnd=" + blendEn + "/>";
 }
 
 function updateLeanIn() {
@@ -1398,6 +1398,6 @@ document.getElementById("addAnimation").addEventListener('click', () => {
 
   img.classList = 'timelineImg';
   element.append(img);
-  document.getElementById("plain-textarea-id").value += textReturn.value;
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 
 })
