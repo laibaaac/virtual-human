@@ -1,29 +1,55 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/login.css">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <h1>Access</h1>
-  <p>Type in the given code to access the dashboard</p>
-  
+    <%- include('partials/header') %>
+
+   
+
     <main>
-        <form class="passform" action="/dashboard" onsubmit="return passcheck ()">
-            <input type="password" required id="pass1">
-           <!--  <fieldset class="code">
-                <label for="name">Type in the code</label>
-                <input type="password" name="nummer" id="nummer"> 
-            </fieldset>-->
-            <input type="submit" value="Continue" id="continue">
-        </form>
-      
+    
+        <section class="partials">
+          
+            <section class="partials_left">
+        
+                <ul class="left__right">
+                  <li>  <h1>Live preview</h1> </li>
+                    <li><%- include('partials/avatar') %> </li>
+                  <li>  <%- include('partials/img') %> </li>
+                </ul>
+                
+            </section>
 
-        </main>
+            <sections class="partials_right">
+                <h1>Animation editor</h1>
+
+                <section class="filter&commands">
+                    <%- include('partials/commands') %>
+                </section>
+
+                <section class="editor">
+                    <%- include('partials/editor') %>
+                </section>
+            </sections>
+        </section>
+    </main>
 </body>
+<script src="/script/filter.js"></script>
+<script src="/script/chatbot.js"></script>
+<script src="/script/list.js"></script>
 
-<script src="/script/login.js"></script>
+
 </html>

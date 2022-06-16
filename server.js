@@ -36,11 +36,6 @@ app.get("/", function (req, res) {
 });
 
 
-app.get("/dashboard", async (req, res) => {
-  res.render("dashboard");
-});
-
-
 app.get("/start", async (req, res) => {
   res.render("start");
 });
@@ -55,10 +50,6 @@ app.get("/avatar", async (req, res) => {
   res.render("avatar");
 });
 
-
-app.get("/avataar", async (req, res) => {
-  res.render("avataar");
-});
 app.use(express.static("public"));
 
 
