@@ -10,15 +10,15 @@
 /* VARIABELEN */
 /**************/
 :root {
-    --black: #1D1D1B;
+    --black: #020B23;
     --text-color-buttons: #FFFFFF;
     --orange: #E84D3C;
     --blue: #143056;
-    --grey: #626262;
+    --grey: #D9D9D9;
     --main-font: 'Montserrat';
     --darkestblue: #121B30;
     --darkblue: #17223C;
-    --hover-orange: #F47E71;
+    --hover-orange: #f99a90;
 }
 
 /**************/
@@ -32,6 +32,13 @@ html {
     font-family: var(--main-font), Arial, Helvetica, sans-serif;
 }
 
+button:focus,
+a:focus,
+textarea:focus {
+    outline: 2px solid var(--orange);
+    border-radius: 2px;
+}
+
 /********************/
 /* ALGEMENE STYLING */
 /********************/
@@ -39,12 +46,14 @@ h1 {
     color: var(--text-color-buttons);
     font-size: 1.25em;
     font-weight: 400;
+    position: relative;
 }
 
 h2 {
     color: var(--text-color-buttons);
     font-size: 1.25em;
     font-weight: 100;
+    position: relative;
 }
 
 button {
@@ -56,25 +65,87 @@ body {
     overflow: hidden;
 }
 
+i {
+    fill: var(--black);
+}
+
+
+.infoSvg1,
+.infoSvg2,
+.infoSvg3 {
+    position: absolute;
+    width: 1em;
+    aspect-ratio: 1/1;
+    -webkit-filter: grayscale(1) invert(1);
+    filter: grayscale(1) invert(1);
+    cursor: help;
+    top: .15em;
+}
+
+.infoSvg1 {
+    left: 9em;
+}
+
+.infoSvg2 {
+    left: 6.5em;
+}
+
+.infoSvg3 {
+    left: 8.3em;
+}
+
+.infoTekst1,
+.infoTekst2,
+.infoTekst3 {
+    visibility: hidden;
+    transition: 0s, 0.15s linear;
+    opacity: 0;
+    position: absolute;
+    top: .15em;
+    z-index: 1;
+    background-color: var(--grey);
+    padding: 1em;
+    border-radius: 1em;
+    font-size: 16px;
+    width: 25vw;
+    color: var(--black);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.infoTekst1 {
+    left: 13em;
+}
+
+.infoTekst2 {
+    left: 10em;
+}
+
+.infoTekst3 {
+    left: 12em;
+}
+
+.infoSvg1:hover + .infoTekst1,
+.infoSvg2:hover + .infoTekst2,
+.infoSvg3:hover + .infoTekst3 {
+    visibility: visible;
+    opacity: 1;
+}
+
 /*************/
 /* SCROLLBAR */
 /*************/
-::-webkit-scrollbar-track
-{
+::-webkit-scrollbar-track {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	border-radius: 10px;
-	background-color: #1D1D1B;
+	background-color: var(--black);l
 }
 
-::-webkit-scrollbar
-{
+::-webkit-scrollbar {
     height: 10px;
 	width: 10px;
-
 }
 
-::-webkit-scrollbar-thumb
-{
+::-webkit-scrollbar-thumb {
 	border-radius: 10px;
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	background-color: #E84D3C;
@@ -97,7 +168,7 @@ body {
 /***************/
 
 /* linkerhelft van het scherm */
-.partials_left  {
+.partials_left {
 
     display: flex;
     justify-content: flex-end;
@@ -135,6 +206,10 @@ body {
     object-fit: cover;
 }
 
+.livePlayer {
+    position: relative;
+}
+
 .livePlayer table {
     width: 100%;
 }
@@ -167,7 +242,6 @@ table tbody tr:nth-of-type(2) td {
 
 table tbody tr:nth-of-type(2) td:first-of-type {
     margin-left: calc(1em - 5px);
-    width: 30%;
 }
 
 table tbody tr:nth-of-type(2) td:nth-of-type(2) {
@@ -176,22 +250,64 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) {
     width: 70%;
 }
 
+.button.button-trl.button-green {
+    height: 100%;
+}
+
+.button.button-trl.button-grey i,
+.button.button-trl.button-red i,
+.button.button-trl.button-blue i{
+    font-size: 1.6em;
+}
+
+.button.button-trl.button-green:hover,
+.button.button-trl.button-grey:hover,
+.button.button-trl.button-red:hover,
+.button.button-trl.button-blue:hover {
+    color: var(--hover-orange);
+
+}
+
+.button.button-trl.button-green:active,
+.button.button-trl.button-grey:active,
+.button.button-trl.button-red:active,
+.button.button-trl.button-blue:active {
+    color: var(--orange);
+}
+
 /* Send message button styling */
 table tbody tr:nth-of-type(2) td:first-of-type button {
-    background-color: var(--text-color-buttons);
-    padding: .2em;
+    background-color: var(--orange);
+    padding: .2em 1em;
     border-radius: .25em;
     text-transform: capitalize;
     height: 2em;
 }
 
 /* play, end, mutemic & fullscreen button styling */
-table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
-    background-color: var(--text-color-buttons);
-    padding: .2em;
+.button.button-trl.button-grey,
+.button.button-trl.button-red,
+.button.button-trl.button-blue {
+    background-color: transparent;
     border-radius: .25em;
     text-transform: capitalize;
     height: 2em;
+    width: 2em;
+    color: white;
+}
+
+.button-green {
+    background-color: var(--orange);
+    padding: .2em 1em;
+    border-radius: .25em;
+    text-transform: capitalize;
+    height: 2em;
+    color: var(--text-color-buttons);
+    white-space: nowrap;
+}
+
+.button.button-trl.button-green:hover {
+    color: var(--black);
 }
 
 /* preview vak styling */
@@ -203,7 +319,9 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
     gap: 1em;
 }
 
-
+#errorMessageId {
+    display: none !important;
+}
 
 /* styling playpause button */
 /* .playpauseButton {
@@ -240,9 +358,9 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
     border-radius: .2em;
 } */
 
-/*******************/
-/* TIMELINE + CODE */
-/*******************/
+/*********/
+/*  CODE */
+/*********/
 /* vormgeving timeline blok */
 .timelineArea {
   
@@ -283,37 +401,76 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
 /* positioneren buttons onderaan timeline */
 .timelineButtons {
     display: flex;
+    height: 2em;
     justify-content: space-between;
 }
 
+
 .timelineButtons div {
     display: flex;
-    justify-content: center;
     gap: 1em;
 }
 
-/* copy code button */
-.timelineButtons div button:first-of-type{
+/* play animation button */
+.timelineButtons div button:first-of-type {
     background-color: var(--orange);
-    padding: .5em 1em;
     color: var(--text-color-buttons);
     border-radius: .5em;
+    padding: 0.2em 1em;
+}
+
+.timelineButtons div button:first-of-type:hover {
+    background-color: var(--hover-orange);
+    color: var(--black);
+}
+
+/* Copy code button */
+.timelineButtons div button:nth-of-type(2) {
+    background-color: var(--text-color-buttons);
+    color: var(--black);
+    border-radius: .5em;
+    padding: 0.2em 1em;
+}
+
+.timelineButtons div button:nth-of-type(2):hover {
+    background-color: var(--hover-orange);
 }
 
 /* pdf button */
-.timelineButtons div button:nth-of-type(2) {
-    height: 1.875em;
+.timelineButtons div button:nth-of-type(3) {
+    height: 100%;
     background: transparent;
 }
 
-.timelineButtons div button:nth-of-type(2) img {
+.timelineButtons div button:nth-of-type(3) img {
     height: 100%;
+}
+
+.timelineButtons div button:nth-of-type(3):hover {
+    filter: invert(41%) sepia(18%) saturate(2013%) hue-rotate(318deg) brightness(100%) contrast(91%);
+}
+
+.timelineButtons div button:nth-of-type(3):active {
+    filter: invert(45%) sepia(90%) saturate(1840%) hue-rotate(332deg) brightness(88%) contrast(107%);
+}
+
+
+#sendMsgBtn:active {
+    background-color: var(--orange);
 }
 
 .timelineButtons > button {
     background: transparent;
     color: var(--text-color-buttons);
     font-size: 1em;
+}
+
+.timelineButtons > button:hover {
+    color: var(--hover-orange);
+}
+
+.timelineButtons > button:active {
+    color: var(--orange);
 }
 
 /****************/
@@ -338,49 +495,51 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
 /*******************/
 /* filter rechts bovenaan */
 #myBtnContainer {
+    position: relative;
     background-color: var(--black);
     height: 11vh;
     border-radius: 1em;
     padding: .5em 1em .5em 1em;
     display: flex;
-    gap: 1em;
+    gap: .5em;
     overflow-x: scroll;
     width: 75%;
 }
 
 .autoAnimation {
-    width: 25%;
     height: 11vh;
     background-color: var(--black);
-    padding: 1em;
     border-radius: 1em;
     color: var(--text-color-buttons);
     display: flex;
-    justify-content: center
-;}
+    width: 25%;
+    padding: 0.5em 0;
+    justify-content: center;
+}
 
 .autoAnimation button,
 #myBtnContainer button {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    justify-content: space-between;
-    gap: auto;
     background-color: transparent;
     border: none;
     border-radius: 0.5em;
     filter: invert(100%) sepia(3%) saturate(13%) hue-rotate(81deg) brightness(106%) contrast(106%);
     height: 100%;
     padding: .5em;
+    font-size: 1em;
+    min-width: 5em;
 }
 
 #myBtnContainer button img {
-    height: 2.5em;
+    height: 2em;
 }
 
 .autoAnimation button img {
     width: 100%;
-    max-width: 5rem;
+    max-width: 2.5rem;
 }
   
   /* Add a light grey background on mouse-over */
@@ -417,7 +576,9 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
     flex-direction: column;
     gap: .7em;
 }
-
+.commands.inactive {
+    display: none;
+ }
 /* filter & commands */
 .commandList {
     display: flex;
@@ -435,8 +596,13 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
 .container {
     display: grid;
     grid-template-columns: repeat(4, 22%);
-    gap: 1em;
+    gap: 0 1em;
     overflow-y: scroll;
+    -webkit-mask: linear-gradient(red 90%,  transparent);
+}
+
+.container button {
+    margin-bottom: 1em;
 }
 
 .container button:hover {
@@ -446,8 +612,6 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
 .container button:active {
     background-color: var(--orange);
 }
-
-/*  */
 
 /***************/
 /* CODE EDITOR */
@@ -466,17 +630,21 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
 .codeEditor {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: .7em;
     width: 100%;
+    position: relative;
 }
 
 /* textarea styling */
 #textReturn {
     width: 100%;
+   
     border-radius: .5em;
     padding: .5em;
     resize: none;
     height: 100%;
+    max-height: 10em;
+
 }
 
 /* horizontaal neerzetten van elke button */
@@ -514,13 +682,16 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
 .changesAdd ul {
     list-style: none;
     display: flex;
-    gap: 1em;
+    gap: 1em 1em 1em 0em;
+    position: absolute;
+    bottom: 0;
 }
 
 .changesAdd button {
     border: none;
     padding: .6rem;
     border-radius: .5em;
+    margin-right: 1em;
 }
 
 .buttonStyling section div button:hover,
@@ -531,4 +702,18 @@ table tbody tr:nth-of-type(2) td:nth-of-type(2) button {
 .buttonStyling section div button:active,
 .changesAdd button:active {
     background-color: var(--orange);
+}
+
+#newImage {
+    object-fit: none;
+   
+    height: 5em;
+}
+#newImage > img {
+    height: 2.5em;
+    width: auto;
+    background-color: var(--grey);
+    border-radius: 2em;
+    padding: .5em;
+    margin: 0 .5em;
 }

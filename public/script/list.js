@@ -39,4 +39,47 @@ faders.forEach(fader => {
   appearOnScroll.observe(fader);
 });
 
+// function copyToClipboard(text) {
+//   const elem = document.createElement('textarea');
+//   elem.value = text;
+//   document.body.appendChild(elem);
+//   elem.select();
+//   document.execCommand('copy');
+//   document.body.removeChild(elem);
+// }
+document.getElementById("resetButton").addEventListener('click', () => {
 
+  document.getElementById("plain-textarea-id").value = '';
+  const timelineImages = Array.from(document.getElementsByClassName('timelineImg'));
+
+  timelineImages.forEach(timelineImg => {
+    timelineImg.remove();
+  })})
+  // document.querySelectorAll('#copyThis').addEventListener("click", handleCopyTextFromArea);
+  // function handleCopyTextFromArea() {
+  //   const area = document.getElementById("copyThisCode");
+  //   area.select();
+  //   document.execCommand('copy')
+  // }
+  // let cbox = document.querySelectorAll("#copyThis");
+  // cbox.forEach(box => {
+  //   box.addEventListener('click', () => handleCopyTextFromArea())
+    
+  // });
+  // function handleCopyTextFromArea() {
+  //   const area = document.getElementById("copyThisCode");
+  //   area.select();
+  //   document.execCommand('copy')}
+// document.getElementById("copyThis").addEventListener("click", copyCode);
+
+//   function copyCode() {
+//     var Text = document.getElementById("copyString");
+//     Text.select();
+//     navigator.clipboard.writeText(Text.value);
+//     document.getElementById("copyThis").innerHTML = "Text copied!";
+//     setTimeout(resetCopy, 2000);
+//   }
+
+//   function resetCopy() {
+//     document.getElementById("copyThis").innerHTML = "Copy code";
+//   }

@@ -43,6 +43,8 @@ var btns = btnContainer.getElementsByClassName("btn");
 for (const btn of btns) {
   btn.addEventListener('click', function() {
     // heeft een btn in btns een class active? Zoja verwijder deze class
+ 
+     
     const test = btnContainer.querySelectorAll('.btn')
     test.forEach(element => {
       if (element.classList.contains('active')) {
@@ -53,6 +55,7 @@ for (const btn of btns) {
     btn.classList.add('active')
   })
 }
+// document.getElementById("emotionId").addEventListener("click", removeClass);
 
 // TO DO querySelector naar de emotion div, add eventlistener, voer dezelfde actie uit als hierboven + filter naar emoties
 
@@ -76,3 +79,25 @@ for (const btn of btns) {
 
 
 //bron van code = w3school.com -- https://www.w3schools.com/howto/howto_js_filter_elements.asp//
+
+document.getElementById("deletebtn").addEventListener("click", removeEditor);
+
+function removeEditor() {
+document.querySelectorAll(".commands").forEach((el) => {
+  el.classList.add('inactive');
+})}
+function addEditor() {
+  document.querySelectorAll(".commands").forEach((el) => {
+    el.classList.remove('inactive');
+  })}
+  
+
+
+// document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+// document.getElementById("smileLargeUpdate").classList.add("show");
+// document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+//   el.classList.remove('active');
+// });
+// document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss").forEach((el) => {
+//   el.classList.add('active');
+// });
