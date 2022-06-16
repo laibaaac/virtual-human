@@ -85,11 +85,11 @@ document.getElementById("deletebtn").addEventListener("click", removeEditor);
 function removeEditor() {
   dura = 101;
   if (dura > 100) {
+    document.getElementById("textReturn").classList.add("active");
     document.getElementById("explanation").innerHTML = "You use the <mstts:express-as> element to express emotions like cheerfulness, empathy, and calmness. You can also optimize the voice for different scenarios like customer service, newscast, and voice assistant. Click on a button bellow to open the Animation Catalog and see what your options are.";
     document.getElementById("codetitle").innerHTML = "text to speech";
-    
+    document.getElementById("textReturn").value = " ";
     document.querySelectorAll(".commands").forEach((el) => {
-  document.getElementById("textReturn").value = " ";
 
   el.classList.add('inactive');
   img = document.createElement('img');
@@ -97,6 +97,7 @@ function removeEditor() {
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
   document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
     el.classList.remove('active');
+    document.getElementById("textReturn").AddClass('active');
   });
 
 })
@@ -107,11 +108,13 @@ function removeEditor() {
 function addEditor() {
   dura = 0;
   if (dura > 100) {
+    
     document.getElementById("explanation").innerHTML = ""
     document.getElementById("codetitle").innerHTML = "text to speech";
   } else {
     document.getElementById("codetitle").innerHTML = "Code editor";
   }
+  document.getElementById("textReturn").classList.remove("active");
   document.querySelectorAll(".commands").forEach((el) => {
     document.getElementById("explanation").innerHTML = ""
     el.classList.remove('inactive');

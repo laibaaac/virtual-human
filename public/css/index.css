@@ -638,7 +638,7 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 /* textarea styling */
 #textReturn {
     width: 100%;
-   
+   display: none;
     border-radius: .5em;
     padding: .5em;
     resize: none;
@@ -646,7 +646,9 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
     max-height: 10em;
 
 }
-
+#textReturn.active {
+    display: block;
+}
 /* horizontaal neerzetten van elke button */
 .buttonStyling {
     display: flex;
