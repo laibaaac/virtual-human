@@ -4,11 +4,11 @@
   "description": "virtually-human chatbot",
   "main": "server.js",
   "dependencies": {
+    "basic-auth": "^2.0.1",
     "ejs": "^3.1.7",
     "express": "^4.17.3",
-    "mongodb": "^4.6.0",
-    "mongoose": "^6.3.5",
-    "passport": "^0.6.0"
+    "passport": "^0.6.0",
+    "tsscmp": "^1.0.6"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
