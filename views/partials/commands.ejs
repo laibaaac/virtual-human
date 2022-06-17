@@ -8,14 +8,15 @@
           <button class="btn" onclick="filterSelection('brow'); addEditor()"><img src="/img/category_brows.png" alt="">Brows</button>
           <button class="btn" onclick="filterSelection('head'); addEditor()"><img src="/img/category_head.png" alt="">Head</button>
           <button class="btn" onclick="filterSelection('position'); addEditor()"><img src="/img/category_position.png" alt="">Positions</button>
-          <button class="btn" onclick="filterSelection('visemes'); addEditor()"><img src="/img/visemes.png" alt="">Visemes</button>
+         
+          <button class="btn" onclick="filterSelection('animation'); addEditor()"><img src="/img/category_emotions.png" alt="">Emotions</button>
           <button class="btn" id="deletebtn" onclick="filterSelection('textspeech')"><img src="/img/category_emotions.png" alt="">Text-to-speech</button>
         </div>
 
     <div class="autoAnimation">
         <!--hier is een apart div gemaakt, omdat dit button niet hoort bij de andere buttons. Dit is ook meteen gelinkt aan de buttons die animations hebben-->
-    <button class="btn" onclick="filterSelection('animation')">
-    <img src="/img/category_emotions.png" alt="animation">Emotions</button> 
+    <button class="btn" onclick="filterSelection('various')">
+    <img src="/img/various.png" alt="various">Various</button> 
     </div>
       </div>
     </div>
@@ -90,31 +91,6 @@
         <button class="filterDiv position" id=""><img src="/img/avatarsl.png" alt="avatar medium right">L: Screen S: avatar left</button>
         <button class="filterDiv position" id=""><img src="/img/lscreensavatarright.png" alt="avatar small right">L: Screen S: avatar right</button>
         
-
-        <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="p">p viseme</button>
-        <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="t">t viseme</button>
-        <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="S">S viseme</button>
-        <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="T">T viseme</button>
-        <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="f">f viseme</button>
-        <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="k">k viseme</button>
-        <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="i">i viseme</button>
-        <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="r">r viseme</button>
-        <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="s">s viseme</button>
-        <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="u">u viseme</button>
-        <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="u_soft">u_soft viseme</button>
-        <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="@">@ viseme</button>
-        <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="a">a viseme</button>
-        <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="e">e viseme</button>
-        <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="E">E viseme</button>
-        <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="o">o viseme</button>
-        <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="O">O viseme</button>
-        <ul class="filterDiv textspeech">
-            <li> <textarea name="voer maar in jongen" id="" cols="30" rows="10"></textarea></li>
-           
-        </ul>
-
-
-    <!--Deze buttons zijn gelinked aan de button die in de div animation zit. Voor deze commands heb je een andere button-->
         <button class="filterDiv animation" id=""><img src="/img/question.png" alt="question">Question</button>
         <button class="filterDiv animation" id=""><img src="/img/friendly.png" alt="friendly">Friendly</button>
         <button class="filterDiv animation" id=""><img src="/img/surprise.png" alt="surprise">Surprise</button>
@@ -122,7 +98,16 @@
         <button class="filterDiv animation" id=""><img src="/img/agreement.png" alt="agreement">Agreement</button>
         <button class="filterDiv animation" id=""><img src="/img/disagreement.png" alt="disagreement">Disagreement</button>
 
-       
+<ul class="various">
+   <h1 class="filterDiv various" id="">Various</h1> 
+     <p class="filterDiv various" id="">There are a hand full of other options that you can choose to implement in your Digital Human like visemes, lighting and breaks.</p> 
+     <p class="filterDiv various" id="">Click on a button below to open the <a href="/catalog">animation catalog</a></p>
+    <button class="filterDiv various" id=""><img src="/img/visemes.png" alt="visemes">Visemes</button>
+    <button class="filterDiv various" id=""><img src="/img/lightning.png" alt="ligthning">Lightning</button>
+     <button class="filterDiv various" id=""><img src="/img/break.png" alt="break">Break</button>
+
+</ul>
+      
 
     </div>
 
