@@ -1,1 +1,2 @@
 web: npm start
+Authorization: Bearer HEROKU_TOKEN
