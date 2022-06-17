@@ -28,29 +28,41 @@ const basicAuth = (req, res, next) => {
 };
 
 app.use(basicAuth);
-
-app.get("/", function (req, res) {
-
-
-  res.render("index", {});
+app.get('/', function(req, res) {
+    
+  res.render('index', {
+   
+  });
 });
 
 
 app.get("/start", async (req, res) => {
+
   res.render("start");
+
 });
 
 
 app.get("/list", async (req, res) => {
+
   res.render("list");
+
 });
 
 
 app.get("/avatar", async (req, res) => {
-  res.render("avatar");
-});
 
+  res.render("avatar");
+
+});
+app.get("/avataar", async (req, res) => {
+
+  res.render("avataar");
+
+});
 app.use(express.static("public"));
+
+
 
 
 app.listen(port, () => {
