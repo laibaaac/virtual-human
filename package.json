@@ -12,6 +12,9 @@
     "passport": "^0.6.0",
     "tsscmp": "^1.0.6"
   },
+  "engines": {
+    "node": "17.7.1"
+  },
   "devDependencies": {
     "nodemon": "^2.0.15"
   },
@@ -34,4 +37,5 @@
     "url": "https://github.com/laibaaac/virtual-human/issues"
   },
   "homepage": "https://github.com/laibaaac/virtual-human#readme"
+  
 }
