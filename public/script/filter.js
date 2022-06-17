@@ -96,8 +96,6 @@ function removeEditor() {
   img = document.createElement('img');
   img.src = 'img/category_emotions.png';
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
-
-    document.getElementById("textReturn").AddClass('active');
   });
 
 
