@@ -12,9 +12,7 @@
     "passport": "^0.6.0",
     "tsscmp": "^1.0.6"
   },
-  "engines": {
-    "node": "17.7.1"
-  },
+
   "devDependencies": {
     "nodemon": "^2.0.15"
   },
