@@ -15,7 +15,7 @@
 
     <div class="autoAnimation">
         <!--hier is een apart div gemaakt, omdat dit button niet hoort bij de andere buttons. Dit is ook meteen gelinkt aan de buttons die animations hebben-->
-    <button class="btn" onclick="filterSelection('various')">
+    <button class="btn" onclick="filterSelection('various'); addEditor()">
     <img src="/img/various.png" alt="various">Various</button> 
     </div>
       </div>
@@ -98,13 +98,11 @@
         <button class="filterDiv animation" id=""><img src="/img/agreement.png" alt="agreement">Agreement</button>
         <button class="filterDiv animation" id=""><img src="/img/disagreement.png" alt="disagreement">Disagreement</button>
 
-<ul class="various">
+<ul class="various" id="variousStyling">
    <h1 class="filterDiv various" id="">Various</h1> 
      <p class="filterDiv various" id="">There are a hand full of other options that you can choose to implement in your Digital Human like visemes, lighting and breaks.</p> 
-     <p class="filterDiv various" id="">Click on a button below to open the <a href="/catalog">animation catalog</a></p>
-    <button class="filterDiv various" id=""><img src="/img/visemes.png" alt="visemes">Visemes</button>
-    <button class="filterDiv various" id=""><img src="/img/lightning.png" alt="ligthning">Lightning</button>
-     <button class="filterDiv various" id=""><img src="/img/break.png" alt="break">Break</button>
+     <p class="filterDiv various" id="">Check out all the options in the<a href="/list">animation catalog</a></p>
+  
 
 </ul>
       
