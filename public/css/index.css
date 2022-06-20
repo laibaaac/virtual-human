@@ -565,23 +565,15 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 .timelineButtons > button:active {
     color: var(--orange);
 }
-
-#resetButton {
-    position: absolute;
-    top: 1em;
-    right: 1em;
-    background-color: transparent;
-}
-
 #resetButton > img  {
   
-    height: 1.5em;
+    width: 45%;
     
 }
-
-.breakButton {
-    position: relative;
-    margin-right: 1.5em;
+.timelineButtons div:last-of-type button {
+    font-size: 0.9em;
+ color: #ffffff;
+ background-color: #00000000;
 }
 /****************/
 /* RECHTERHELFT */

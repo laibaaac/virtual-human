@@ -1,5 +1,5 @@
 window.onbeforeunload = function() {
-  return "reloading the page will remove your progress, continue?";
+  return "you will lose any progress on leaving or reloading, continue?";
 };
 document.getElementById("lookDownButton").addEventListener("click", lookDownNumber);
 document.getElementById("lookDownButton").addEventListener("click", lookDownCode);
@@ -2140,16 +2140,3 @@ function halfSecBreak() {
 function oneSecBreak() {
   document.getElementById("plain-textarea-id").value += "<trl-break duration='1.0' />" +"\n";
 }
-
-// Loading animation
-
-var spinner = document.querySelector('.lds-spinner');
-
-document.querySelector('#startBtn').addEventListener('click', playAnimation);
-
-function playAnimation() {
-  spinner.classList.add("activeSpinner");
-  setTimeout(()=>{
-    spinner.classList.remove("activeSpinner"); 
-   },7000);
-};
