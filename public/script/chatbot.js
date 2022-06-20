@@ -232,6 +232,9 @@ function closedMouthCode() {
 
 function updateClosedMouth() {
   closedMouthCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
 function mouthTeethNumber() {
@@ -261,6 +264,10 @@ function mouthTeethCode() {
 
 function updateMouthTeeth() {
   mouthTeethCode();
+  
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
 
@@ -289,6 +296,9 @@ function smileSmallCode() {
 
 function updateSmileSmall() {
   smileSmallCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
 
@@ -317,6 +327,9 @@ function smileMediumCode() {
 
 function updateSmileMedium() {
   smileMediumCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
 function smileLargeNumber() {
@@ -344,6 +357,9 @@ function smileLargeCode() {
 
 function updateSmileLarge() {
   smileLargeCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
 
@@ -372,6 +388,9 @@ function smileXlCode() {
 
 function updateSmileXl() {
   smileXlCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
 
@@ -399,6 +418,9 @@ function lookDownLeftCode() {
 
 function updateLookDownLeft() {
   lookDownLeftCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
 
@@ -425,6 +447,9 @@ function lookDownRightCode() {
 
 function updateLookDownRight() {
   lookDownRightCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
 
@@ -451,6 +476,9 @@ function lookUpCode() {
 
 function updatelookUp() {
   lookUpCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
 
@@ -475,6 +503,9 @@ function lookAtCamCode() {
 
 function updateLookAtCam() {
   lookAtCamCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
 
@@ -503,6 +534,9 @@ function lookUpLeftCode() {
 
 function updatelookUpLeft() {
   lookUpLeftCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
 //checkpoint
@@ -532,6 +566,9 @@ function lookUpRightCode() {
 
 function updateLookUpRight() {
   lookUpRightCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
 
@@ -560,6 +597,9 @@ function eyebrowsRaiseXSCode() {
 
 function updateEyebrowsRaiseXS() {
   eyebrowsRaiseSCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
 
@@ -588,6 +628,9 @@ function mouthCode() {
 
 function updateMouth() {
   mouthCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
 
@@ -632,6 +675,9 @@ function lookLeftCode() {
 
 function updateLookLeft() {
   lookLeftCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
 
@@ -658,6 +704,9 @@ function lookRightCode() {
 
 function updateLookRight() {
   lookRightCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
 
@@ -682,6 +731,9 @@ function lookDownCode() {
 
 function updateLookDown() {
   lookDownCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
 
@@ -710,6 +762,9 @@ function eyebrowRaiseCode() {
 
 function updateEyebrowRaise() {
   eyebrowRaiseCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
 
@@ -738,6 +793,9 @@ function eyebrowsSmallCode() {
 
 function updateEyebrowSmall() {
   eyebrowsSmallCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
 
@@ -760,6 +818,9 @@ function frownXSCode() {
 
 function updateFrownXS() {
   frownXSCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
 
@@ -788,6 +849,9 @@ function eyebrowsRaiseCode() {
 
 function updateEyebrowsRaise() {
   eyebrowsRaiseCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
 
@@ -816,6 +880,9 @@ function eyebrowsRaiseLCode() {
 
 function updateEyebrowsRaiseL() {
   eyebrowsRaiseLcode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
 
@@ -844,6 +911,9 @@ function frownLCode() {
 
 function updateFrownL() {
   frownLCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
 
@@ -872,6 +942,9 @@ function nodSmallCode() {
 
 function updateNodSmall() {
   nodSmallCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
 
@@ -900,6 +973,9 @@ function frownCode() {
 
 function updateFrown() {
   frownCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 function leftBrowRaiseNumber() {
 speed = 0.6;
@@ -922,6 +998,9 @@ function leftBrowRaiseCode() {
 
 function updateLeftBrowRaise() {
   leftBrowRaiseCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
 function rightBrowRaiseNumber() {
@@ -945,6 +1024,9 @@ function rightBrowRaiseNumber() {
   
   function updateRightBrowRaise() {
     rightBrowRaiseCode();
+    img.classList = 'timelineImg';
+    element.append(img);
+    document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
   }
 
   function quizicalNumber() {
@@ -968,6 +1050,9 @@ function rightBrowRaiseNumber() {
     
     function updateQuizical() {
       rightBrowRaiseCode();
+      img.classList = 'timelineImg';
+      element.append(img);
+      document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
     }
 
     function outerBrowsNumber() {
@@ -991,6 +1076,9 @@ function rightBrowRaiseNumber() {
       
       function updateOuterBrows() {
         outerBrowsCode();
+        img.classList = 'timelineImg';
+        element.append(img);
+        document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
       }
       function browsInRaisedNumber() {
         speed = 0.6;
@@ -1013,6 +1101,9 @@ function rightBrowRaiseNumber() {
         
         function updateBrowsInRaised() {
           browsInRaisedCode();
+          img.classList = 'timelineImg';
+          element.append(img);
+          document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
         }
 
         function browsDownScrunchNumber() {
@@ -1036,6 +1127,9 @@ function rightBrowRaiseNumber() {
           
           function updateBrowsDownScrunch() {
             browsInRaisedCode();
+            img.classList = 'timelineImg';
+            element.append(img);
+            document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
           }
 
 function frownSmallNumber() {
@@ -1063,6 +1157,9 @@ function frownSmallCode() {
 
 function updateSmallFrown() {
   frownSmallCode()
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
 
@@ -1089,6 +1186,9 @@ function nodCode() {
 
 function updateNod() {
   nodCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
 // function nodFastNumber() {
@@ -1141,6 +1241,9 @@ function nodLargeCode() {
 
 function updateNodLarge() {
   nodlargeCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
 
@@ -1169,6 +1272,9 @@ function nodAverageCode() {
 
 function updateNodAverage() {
   nodAverageCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
 
@@ -1196,6 +1302,9 @@ function nodSlowCode() {
 
 function updateNodSlow() {
   nodSlowCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
 
@@ -1223,6 +1332,9 @@ function shakeCode() {
 
 function updateShake() {
   shakeCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
 
@@ -1249,6 +1361,9 @@ function shakeSlowCode() {
 
 function updateShakeSlow() {
   shakeSlowCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
 
@@ -1275,6 +1390,9 @@ function shakeFastCode() {
 
 function UpdateShakeFast() {
   shakeFastCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
 
@@ -1301,6 +1419,9 @@ function leanInCode() {
 
 function updateLeanIn() {
   leanInCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
 
