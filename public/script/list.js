@@ -50,36 +50,23 @@ faders.forEach(fader => {
 document.getElementById("resetButton").addEventListener('click', () => {
 
   document.getElementById("plain-textarea-id").value = '';
-  const timelineImages = Array.from(document.getElementsByClassName('timelineImg'));
 
+  const timelineImages = Array.from(document.getElementsByClassName('timelineImg'));
   timelineImages.forEach(timelineImg => {
     timelineImg.remove();
   })})
-  // document.querySelectorAll('#copyThis').addEventListener("click", handleCopyTextFromArea);
-  // function handleCopyTextFromArea() {
-  //   const area = document.getElementById("copyThisCode");
-  //   area.select();
-  //   document.execCommand('copy')
-  // }
-  // let cbox = document.querySelectorAll("#copyThis");
-  // cbox.forEach(box => {
-  //   box.addEventListener('click', () => handleCopyTextFromArea())
-    
-  // });
-  // function handleCopyTextFromArea() {
-  //   const area = document.getElementById("copyThisCode");
-  //   area.select();
-  //   document.execCommand('copy')}
-// document.getElementById("copyThis").addEventListener("click", copyCode);
 
-//   function copyCode() {
-//     var Text = document.getElementById("copyString");
-//     Text.select();
-//     navigator.clipboard.writeText(Text.value);
-//     document.getElementById("copyThis").innerHTML = "Text copied!";
-//     setTimeout(resetCopy, 2000);
-//   }
 
-//   function resetCopy() {
-//     document.getElementById("copyThis").innerHTML = "Copy code";
-//   }
+//Get the button:
+mybutton = document.getElementById("B2TBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+

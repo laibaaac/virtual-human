@@ -4,12 +4,15 @@
   "description": "virtually-human chatbot",
   "main": "server.js",
   "dependencies": {
-    "basic-auth": "^2.0.1",
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@fortawesome/react-fontawesome": "^0.1.18",
     "ejs": "^3.1.7",
     "express": "^4.17.3",
     "passport": "^0.6.0",
     "tsscmp": "^1.0.6"
   },
+
   "devDependencies": {
     "nodemon": "^2.0.15"
   },
@@ -32,4 +35,5 @@
     "url": "https://github.com/laibaaac/virtual-human/issues"
   },
   "homepage": "https://github.com/laibaaac/virtual-human#readme"
+  
 }
