@@ -629,7 +629,7 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 #textReturn.active {
  
     height: 100%;
-    max-height: 15em;
+    max-height: 20em;
 }
 /* horizontaal neerzetten van elke button */
 .buttonStyling {
@@ -718,7 +718,7 @@ color: rgba(255, 0, 0, 0);
     justify-content: space-around;
 }
 #explainButtons {
-   
+   padding-bottom: 10em;
     background-color: var(--blue);
     border-radius: 1em;
     flex-wrap: wrap;
@@ -726,13 +726,21 @@ color: rgba(255, 0, 0, 0);
 }
 
 #linkToList.filterDiv.filterShow {
-    max-width: 15em;
-    height: 5em;
-  position: relative;
-    background-color: var(--darkblue)
-display: flex;
-justify-content: space-around;
-
-  flex-wrap: wrap;
-  
+ max-width: 15em;
+ height: 5em;
+ position: relative;
+ background-color: rgba(255, 0, 0, 0);
+ filter: invert(100%) sepia(3%) saturate(13%) hue-rotate(81deg) brightness(106%);
+ display: flex;
+ justify-content: space-around;
+ flex-wrap: wrap;
+}
+.editor.active {
+    height: 60vh;
+}
+h3.filterDiv.filterShow {
+    background-color: rgba(255, 0, 0, 0);
+    color: white;
+    font-weight: lighter;
+    font-size: 0.9em;
 }
