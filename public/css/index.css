@@ -867,9 +867,30 @@ color: rgba(255, 0, 0, 0);
 .editor.active {
     height: 60vh;
 }
+.various {
+    padding-bottom: 10em;
+}
 h3.filterDiv.filterShow {
+    
     background-color: rgba(255, 0, 0, 0);
     color: white;
     font-weight: lighter;
     font-size: 0.9em;
+    padding-bottom: 5em;
+    
+}
+.filterDiv.various.filterShow{
+z-index: 100;
+width: 450%;
+background-color: rgba(255, 0, 0, 0);
+color: white;
+height: 1em;
+text-align: left;
+
+}
+.animationAdd {
+    display: none;
+}
+.animationAdd.active {
+    display: block;
 }

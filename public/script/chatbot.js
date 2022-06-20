@@ -692,7 +692,7 @@ function eyebrowsRaiseXSCode() {
 }
 
 function updateEyebrowsRaiseXS() {
-  eyebrowsRaiseXSCode();
+  eyebrowsRaiseSCode();
   img.classList = 'timelineImg';
   element.append(img);
   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
