@@ -1,5 +1,5 @@
 window.onbeforeunload = function() {
-  return "you will lose any progress on leaving or reloading, continue?";
+  return "reloading the page will remove your progress, continue?";
 };
 document.getElementById("lookDownButton").addEventListener("click", lookDownNumber);
 document.getElementById("lookDownButton").addEventListener("click", lookDownCode);
