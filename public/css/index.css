@@ -389,6 +389,7 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 .timelineButtons div {
     display: flex;
     gap: 1em;
+  
 }
 
 /* play animation button */
@@ -452,7 +453,16 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 .timelineButtons > button:active {
     color: var(--orange);
 }
-
+#resetButton > img  {
+  
+    width: 45%;
+    
+}
+.timelineButtons div:last-of-type button {
+    font-size: 0.9em;
+ color: #ffffff;
+ background-color: #00000000;
+}
 /****************/
 /* RECHTERHELFT */
 /****************/
