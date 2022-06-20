@@ -32,7 +32,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20%;
+    padding: 0 10% 0 calc(10% - 2em);
 }  
 
 nav img {
