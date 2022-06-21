@@ -700,8 +700,6 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 
 #newImage {
     object-fit: none;
-   
-    height: 5em;
 }
 #newImage > img {
     height: 2.5em;
@@ -709,7 +707,9 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
     background-color: var(--grey);
     border-radius: 2em;
     padding: .5em;
-    margin: 0 .5em;
+    margin: .5em;
+    margin-bottom: .3em;
+    
 }
 #explanation {
     color: white;
