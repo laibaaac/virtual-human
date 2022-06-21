@@ -1528,3 +1528,16 @@ function halfSecBreak() {
 function oneSecBreak() {
   document.getElementById("plain-textarea-id").value += "<trl-break duration='1.0' />" +"\n";
 }
+
+// Loading animation
+
+var spinner = document.querySelector('.lds-spinner');
+
+document.querySelector('#startBtn').addEventListener('click', playAnimation);
+
+function playAnimation() {
+  spinner.classList.add("activeSpinner");
+  setTimeout(()=>{
+    spinner.classList.remove("activeSpinner"); 
+   },7000);
+};
