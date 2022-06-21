@@ -69,7 +69,7 @@ a {
 .titlebar {
   display:  flex;
   flex-direction: row;
-  padding: 1em 0 2em 0;
+  padding: 3em 0 5em 0;
 }
 
 ul.titlebar {
@@ -88,7 +88,7 @@ ul.titlebar {
 
 /* INTRO TEXT STYLING */
 p.introText {
-  margin-bottom: 2em;
+  margin-bottom: 5em;
 }
 
 /* SCROLL-TO FILTER STYLING */
@@ -144,7 +144,7 @@ p.introText {
 .list div textarea::-webkit-scrollbar-track {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	border-radius: 10px;
-	background-color: var(--black);
+	background-color: var(--grey);
 }
 
 .listFilter::-webkit-scrollbar,
@@ -181,7 +181,7 @@ p.introText {
 
 /* CATEGORY TITLE */
 .listSections h2 {
-  margin-bottom: .5rem;
+  margin-bottom: 1rem;
 }
 
 /* IMG AND BLOCK NEXT TO EACH OTHER */
@@ -245,7 +245,6 @@ p.introText {
 /* BACK TO TOP BUTTON */
 /**********************/
 #B2TBtn {
-  
   position: fixed; /* Fixed/sticky position */
   bottom: 1.5em; /* Place the button at the bottom of the page */
   right: 2em; /* Place the button 30px from the right */
