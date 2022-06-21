@@ -449,3 +449,118 @@ button.plus:hover {
 #speedCss.active {
     display: flex;
 }
+#leanInNodUpdate {
+    display: none;
+}
+#leanInNodUpdate.show {
+    display: flex;
+}
+#leanIn2Update {
+    display: none;
+}
+#leanIn2Update.show {
+    display: flex;
+}
+#leanInNod2Update {
+    display: none;
+}
+#leanInNod2Update.show {
+    display: flex;
+}
+
+#turnLeftUpdate {
+    display: none;
+}
+#turnLeftUpdate.show {
+    display: flex;
+}
+#turnRightUpdate {
+    display: none;
+}
+#turnRightUpdate.show {
+    display: flex;
+}
+#closeUpUpdate {
+    display: none;
+}
+#closeUpUpdate.show {
+    display: flex;
+}
+#screenNoAvatarUpdate {
+    display: none;
+}
+#screenNoAvatarUpdate.show {
+    display: flex;
+}
+#upperBodyVisibleUpdate {
+    display: none;
+}
+#upperBodyVisibleUpdate.show {
+    display: flex;
+}
+#upperBodyVisibleZoomedUpdate {
+    display: none;
+}
+#upperBodyVisibleZoomedUpdate.show {
+    display: flex;
+}
+#screenLeftUpdate {
+    display: none;
+}
+#screenLeftUpdate.show {
+    display: flex;
+}
+#screenRightUpdate {
+    display: none;
+}
+#screenRightUpdate.show {
+    display: flex;
+}
+#screenAvatarLeftUpdate {
+    display: none;
+}
+#screenAvatarLeftUpdate.show {
+    display: flex;
+}
+#screenAvatarRightUpdate {
+    display: none;
+}
+#screenAvatarRightUpdate.show {
+    display: flex;
+}
+#screenAvatarCenterMUpdate {
+    display: none;
+}
+#screenAvatarCenterMUpdate.show {
+    display: flex;
+}
+#screenAvatarCenterLUpdate {
+    display: none;
+}
+#screenAvatarCenterLUpdate.show {
+    display: flex;
+}
+#screenAvatarLeftSUpdate {
+    display: none;
+}
+#screenAvatarLeftSUpdate.show {
+    display: flex;
+}
+#screenAvatarRightSUpdate {
+    display: none;
+}
+#screenAvatarRightSUpdate.show {
+    display: flex;
+}
+#screenAvatarLeftMUpdate {
+    display: none;
+}
+#screenAvatarLeftMUpdate.show {
+    display: flex;
+}
+#screenAvatarRightMUpdate {
+    display: none;
+}
+#screenAvatarRightMUpdate.show {
+    display: flex;
+}

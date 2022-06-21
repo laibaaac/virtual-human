@@ -137,12 +137,76 @@ document.getElementById("noddingButton").addEventListener("click", nodCode);
 
 document.getElementById("leanInButton").addEventListener("click", leanInNumber);
 document.getElementById("leanInButton").addEventListener("click", leanInCode);
+// vanaf hier?????????????????????????????????????????????????????????????????????????????????????
+// hiero
+document.getElementById("leanIn2Button").addEventListener("click", leanIn2Number);
+document.getElementById("leanIn2Button").addEventListener("click", leanIn2Code);
+////////
+document.getElementById("leanInNodButton").addEventListener("click", leanInNodNumber);
+document.getElementById("leanInNodButton").addEventListener("click", leanInNodCode);
 
-//   document.getElementById("questionButton").addEventListener("click", questionCode);
-//   document.getElementById("friendlyButton").addEventListener("click", friendlyCode);
-//   document.getElementById("agreeButton").addEventListener("click", agreeCode);
-//   document.getElementById("disagreeButton").addEventListener("click", disagreeCode);
+document.getElementById("leanInNod2Button").addEventListener("click", leanInNod2Number);
+document.getElementById("leanInNod2Button").addEventListener("click", leanInNod2Code);
 
+document.getElementById("turnLeftButton").addEventListener("click", turnLeftNumber);
+document.getElementById("turnLeftButton").addEventListener("click", turnLeftCode);
+
+document.getElementById("turnRightButton").addEventListener("click", turnRightNumber);
+document.getElementById("turnRightButton").addEventListener("click", turnRightCode);
+
+document.getElementById("closeUpButton").addEventListener("click", closeUpNumber);
+document.getElementById("closeUpButton").addEventListener("click", closeUpCode);
+document.getElementById("screenNoAvatarButton").addEventListener("click", screenNoAvatarNumber);
+document.getElementById("screenNoAvatarButton").addEventListener("click", screenNoAvatarCode);
+
+document.getElementById("upperBodyVisibleButton").addEventListener("click", upperBodyVisibleNumber);
+document.getElementById("upperBodyVisibleButton").addEventListener("click", upperBodyVisibleCode);
+
+document.getElementById("upperBodyVisibleZoomedButton").addEventListener("click", upperBodyVisibleZoomedNumber);
+document.getElementById("upperBodyVisibleZoomedButton").addEventListener("click", upperBodyVisibleZoomedCode);
+
+document.getElementById("screenLeftButton").addEventListener("click", screenLeftNumber);
+document.getElementById("screenLeftButton").addEventListener("click", screenLeftCode);
+
+document.getElementById("screenRightButton").addEventListener("click", screenRightNumber);
+document.getElementById("screenRightButton").addEventListener("click", screenRightCode);
+
+document.getElementById("screenAvatarLeftButton").addEventListener("click", screenAvatarLeftNumber);
+document.getElementById("screenAvatarLeftButton").addEventListener("click", screenAvatarLeftCode);
+
+document.getElementById("screenAvatarRightButton").addEventListener("click", screenAvatarRightNumber);
+document.getElementById("screenAvatarRightButton").addEventListener("click", screenAvatarRightCode);
+
+// document.getElementById("screenAvatarCenterButton").addEventListener("click", screenAvatarCenterNumber);
+// document.getElementById("screenAvatarCenterButton").addEventListener("click", screenAvatarCenterCode);
+
+// document.getElementById("screenAvatarLeftLButton").addEventListener("click", screenAvatarLeftLNumber);
+// document.getElementById("screenAvatarLeftLButton").addEventListener("click", screenAvatarLeftLCode);
+
+// document.getElementById("screenAvatarRightLButton").addEventListener("click", screenAvatarRightLNumber);
+// document.getElementById("screenAvatarRightLButton").addEventListener("click", screenAvatarRightLCode);
+
+document.getElementById("screenAvatarCenterLButton").addEventListener("click", screenAvatarCenterLNumber);
+document.getElementById("screenAvatarCenterLButton").addEventListener("click", screenAvatarCenterLCode);
+
+document.getElementById("screenAvatarLeftMButton").addEventListener("click", screenAvatarLeftMNumber);
+document.getElementById("screenAvatarLeftMButton").addEventListener("click", screenAvatarLeftMCode);
+
+document.getElementById("screenAvatarRightMButton").addEventListener("click", screenAvatarRightMNumber);
+document.getElementById("screenAvatarRightMButton").addEventListener("click", screenAvatarRightMCode);
+
+
+document.getElementById("screenAvatarCenterMButton").addEventListener("click", screenAvatarCenterMNumber);
+document.getElementById("screenAvatarCenterMButton").addEventListener("click", screenAvatarCenterMCode);
+
+document.getElementById("screenAvatarLeftSButton").addEventListener("click", screenAvatarLeftSNumber);
+document.getElementById("screenAvatarLeftSButton").addEventListener("click", screenAvatarLeftSCode);
+
+document.getElementById("screenAvatarRightSButton").addEventListener("click", screenAvatarRightSNumber);
+document.getElementById("screenAvatarRightSButton").addEventListener("click", screenAvatarRightSCode);
+
+// document.getElementById("screenAvatarCenterSButton").addEventListener("click", screenAvatarCenterSNumber);
+// document.getElementById("screenAvatarCenterSButton").addEventListener("click", screenAvatarCenterSCode);
 document.getElementById("plusOne").addEventListener("click", addOne);
 document.getElementById("minusOne").addEventListener("click", removeOne);
 
@@ -157,6 +221,10 @@ document.getElementById("spMinusOne").addEventListener("click", spRemoveOne);
 
 document.getElementById("nodUpdate").addEventListener("click", updateNod);
 document.getElementById("mouthUpdate").addEventListener("click", updateMouth);
+
+
+
+
 
 document.getElementById("lookDownUpdate").addEventListener("click", updateLookDown);
 document.getElementById("lookRightUpdate").addEventListener("click", updateLookRight);
@@ -174,6 +242,7 @@ document.getElementById("frownSmallUpdate").addEventListener("click", updateSmal
 document.getElementById("shakeSlowUpdate").addEventListener("click", updateShakeSlow);
 document.getElementById("shakeFastUpdate").addEventListener("click", UpdateShakeFast);
 document.getElementById("leanInUpdate").addEventListener("click", updateLeanIn);
+document.getElementById("leanInUpdate").addEventListener("click", updateLeanIn2);
 
 document.getElementById("closedMouthUpdate").addEventListener("click", updateClosedMouth);
 document.getElementById("mouthTeethUpdate").addEventListener("click", updateMouthTeeth);
@@ -199,6 +268,28 @@ document.getElementById("nodLargeUpdate").addEventListener("click", updateNodLar
 document.getElementById("nodAverageUpdate").addEventListener("click", updateNodAverage);
 document.getElementById("nodSlowUpdate").addEventListener("click", updateNodSlow);
 document.getElementById("shakeUpdate").addEventListener("click", updateShake);
+document.getElementById("leanInNodUpdate").addEventListener("click", updateLeanInNod);
+document.getElementById("leanInNod2Update").addEventListener("click", updateLeanInNod2);
+document.getElementById("screenRightUpdate").addEventListener("click", updateScreenRight);
+document.getElementById("turnLeftUpdate").addEventListener("click", updateTurnLeft);
+document.getElementById("turnRightUpdate").addEventListener("click", updateTurnRight);
+document.getElementById("closeUpUpdate").addEventListener("click", updateCloseUp);
+document.getElementById("screenNoAvatarUpdate").addEventListener("click", updateScreenNoAvatar);
+document.getElementById("upperBodyVisibleUpdate").addEventListener("click", updateUpperBodyVisible);
+document.getElementById("upperBodyVisibleZoomedUpdate").addEventListener("click", updateUpperBodyVisibleZoomed);
+document.getElementById("screenRightUpdate").addEventListener("click", updateScreenRight);
+document.getElementById("screenLeftUpdate").addEventListener("click", updateScreenLeft);
+document.getElementById("screenAvatarRightUpdate").addEventListener("click", updateScreenAvatarRight);
+document.getElementById("screenAvatarLeftUpdate").addEventListener("click", updateScreenAvatarLeft);
+document.getElementById("screenAvatarCenterLUpdate").addEventListener("click", updateScreenAvatarCenterL);
+document.getElementById("screenAvatarCenterMUpdate").addEventListener("click", updateScreenAvatarCenterM);
+document.getElementById("screenAvatarLeftSUpdate").addEventListener("click", updateScreenAvatarLeftS);
+document.getElementById("screenAvatarRightSUpdate").addEventListener("click", updateScreenAvatarRightS);
+
+document.getElementById("screenAvatarLeftMUpdate").addEventListener("click", updateScreenAvatarLeftM);
+document.getElementById("screenAvatarRightMUpdate").addEventListener("click", updateScreenAvatarRightM);
+
+
 
 
 var element = document.getElementById("newImage");
@@ -210,9 +301,9 @@ var speed = 0;
 
 
 function closedMouthNumber() {
-  dura = 3;
-  blendSt = 0;
-  blendEn = 1;
+  dura = 3.5;
+  blendSt = 0.5;
+  blendEn = 0.5;
   document.getElementById('durationmeter').innerHTML = dura + "s";
   document.getElementById('blendStmeter').innerHTML = blendSt + "s";
   document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
@@ -229,7 +320,7 @@ function closedMouthNumber() {
 }
 
 function closedMouthCode() {
-  document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='smileLarge' duration='" + dura + "' blendStart='" + blendSt + "' blendEnd='" + blendEn + "' peak='0.8'/>";
+  document.getElementById("textReturn").value = "<trl-anim type='aux' id='smileSmall' duration='" + dura + "' blendStart='" + blendSt + "' blendEnd='" + blendEn + "' peak='0.8'/>";
 }
 
 function updateClosedMouth() {
@@ -575,18 +666,16 @@ function updateLookUpRight() {
 
 
 function eyebrowsRaiseXSNumber() {
-  dura = 3.5;
-  blendSt = 0.5;
-  blendEn = 0.5;
+speed = 0.3;
   document.getElementById('durationmeter').innerHTML = dura + "s";
   document.getElementById('blendStmeter').innerHTML = blendSt + "s";
   document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
-  document.getElementById("eyebrowsRaiseXSUpdate").classList.add("show");
+  document.getElementById("eyebrowRaiseXSUpdate").classList.add("show");
   document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
     el.classList.remove('active');
   });
-  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss").forEach((el) => {
+  document.querySelectorAll("#speedCss").forEach((el) => {
     el.classList.add('active');
   });
   img = document.createElement('img');
@@ -594,11 +683,11 @@ function eyebrowsRaiseXSNumber() {
 }
 
 function eyebrowsRaiseXSCode() {
-  document.getElementById("textReturn").value = "<trl-morph id='Right_BrowsUp,Left_BrowsUp' min='0' max='0.28' speed='0.3' wait='3' returnSpeed='0.8'/>";
+  document.getElementById("textReturn").value = "<trl-morph id='Right_BrowsUp,Left_BrowsUp' min='0' max='0.28' speed='"+ speed +"' wait='3' returnSpeed='0.8'/>";
 }
 
 function updateEyebrowsRaiseXS() {
-  eyebrowsRaiseSCode();
+  eyebrowsRaiseXSCode();
   img.classList = 'timelineImg';
   element.append(img);
   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
@@ -1416,7 +1505,8 @@ function leanInNumber() {
 }
 
 function leanInCode() {
-  document.getElementById("textReturn").value = "<trl-anim type='aux' id='leanIn' blendStart=" + blendSt + " blendEnd=" + blendEn + "/>";
+document.getElementById("textReturn").value = "<trl-anim type='aux' id='leanIn' blendStart=" + blendSt + " blendEnd=" + blendEn + "/>";
+
 }
 
 function updateLeanIn() {
@@ -1426,7 +1516,505 @@ function updateLeanIn() {
   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
+function leanIn2Number() {
+  blendSt = 1.25;
+  blendEn = 1.25;
+  document.getElementById('blendStmeter').innerHTML = blendSt + "s";
+  document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
+  document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+  document.getElementById("leanInUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');
+  });
+  document.querySelectorAll("#blendEnCss, #blendStCss").forEach((el) => {
+    el.classList.add('active');
+  });
+  img = document.createElement('img');
+  img.src = 'img/lean.png';
+}
 
+function leanIn2Code() {
+  document.getElementById("textReturn").value = "<trl-anim type='aux' id='MCleanIn' blendStart='"+ blendSt +"' blendEnd='"+ blendEn +"'/>";
+}
+
+function updateLeanIn2() {
+  leanIn2Code();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
+}
+
+
+function leanInNodNumber() {
+  blendSt = 1;
+  blendEn = 2;
+  document.getElementById('blendStmeter').innerHTML = blendSt + "s";
+  document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
+  document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+  document.getElementById("leanInNodUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');
+  });
+  document.querySelectorAll("#blendEnCss, #blendStCss").forEach((el) => {
+    el.classList.add('active');
+  });
+  img = document.createElement('img');
+  img.src = 'img/leaninnod.png';
+}
+
+function leanInNodCode() {
+  document.getElementById("textReturn").value = "<trl-anim type='aux' id='leanInNodding' blendStart='"+ blendSt +"' blendEnd='"+ blendEn +"'/>";
+}
+
+function updateLeanInNod() {
+  leanInNodCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
+}
+
+function leanInNod2Number() {
+  blendSt = 1.25;
+  blendEn = 1.25;
+  document.getElementById('blendStmeter').innerHTML = blendSt + "s";
+  document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
+  document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+  document.getElementById("leanInNod2Update").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');
+  });
+  document.querySelectorAll("#blendEnCss, #blendStCss").forEach((el) => {
+    el.classList.add('active');
+  });
+  img = document.createElement('img');
+  img.src = 'img/leaninnod2.png';
+}
+
+function leanInNod2Code() {
+  document.getElementById("textReturn").value = "<trl-anim type='aux' id='MCleanInNodding' blendStart='"+ blendSt +"' blendEnd='"+ blendEn +"'/>";
+}
+
+function updateLeanInNod2() {
+  leanInNod2Code();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
+}
+
+function turnLeftNumber() {
+  dura = 6;
+  blendSt = 1;
+  blendEn = 2;
+  document.getElementById('blendStmeter').innerHTML = blendSt + "s";
+  document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
+  document.getElementById('durationmeter').innerHTML = dura + "s";
+  document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+  document.getElementById("turnLeftUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');
+  });
+  document.querySelectorAll("#blendEnCss, #blendStCss, #duraCss").forEach((el) => {
+    el.classList.add('active');
+  });
+  img = document.createElement('img');
+  img.src = 'img/turnleft.png';
+}
+
+function turnLeftCode() {
+  document.getElementById("textReturn").value = "<trl-anim type='aux' id='turnLeft' duration='6' blendStart='1' blendEnd='2'/>";
+}
+
+function updateTurnLeft() {
+  turnLeftCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
+}
+
+function turnRightNumber() {
+  dura = 6;
+  blendSt = 1;
+  blendEn = 2;
+  document.getElementById('blendStmeter').innerHTML = blendSt + "s";
+  document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
+  document.getElementById('durationmeter').innerHTML = dura + "s";
+  document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+  document.getElementById("turnRightUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');
+  });
+  document.querySelectorAll("#blendEnCss, #blendStCss, #duraCss").forEach((el) => {
+    el.classList.add('active');
+  });
+  img = document.createElement('img');
+  img.src = 'img/turnright.png';
+}
+
+function turnRightCode() {
+  document.getElementById("textReturn").value = "<trl-anim type='aux' id='turnRight'' duration='6' blendStart='1' blendEnd='2'/>";
+}
+
+function updateTurnRight() {
+  turnRightCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
+}
+
+function closeUpNumber() {
+  speed = 1;
+  document.getElementById('speedmeter').innerHTML = speed + "s";
+  document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+  document.getElementById("closeUpUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');
+  });
+  document.querySelectorAll("#speedCss").forEach((el) => {
+    el.classList.add('active');
+  });
+  img = document.createElement('img');
+  img.src = 'img/turnleft.png';
+}
+
+function closeUpCode() {
+  document.getElementById("textReturn").value = "<trl-content position=\"DefaultCentre\" id='turnRight''  speed= "+ speed +"/>";
+
+}
+
+function updateCloseUp() {
+  closeUpCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
+}
+
+
+function screenNoAvatarNumber() {
+
+  document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+  document.getElementById("screenNoAvatarUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');
+  });
+  img = document.createElement('img');
+  img.src = 'img/screennoavatar.png';
+}
+function screenNoAvatarCode() {
+  document.getElementById("textReturn").value = "<trl-content position=\"ScreenFlatLargeNoAvatar\" showMovingScreen='true' />";
+}
+function updateScreenNoAvatar() {
+  screenNoAvatarCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
+}
+
+
+function upperBodyVisibleNumber() {
+
+  document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+  document.getElementById("upperBodyVisibleUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');
+  });
+  img = document.createElement('img');
+  img.src = 'img/upperbodyvisible.png';
+}
+function upperBodyVisibleCode() {
+  document.getElementById("textReturn").value = "<trl-content position=\"CenterUpperBody\" showMovingScreen='true' />";
+}
+function updateUpperBodyVisible() {
+  upperBodyVisibleCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
+}
+
+function upperBodyVisibleZoomedNumber() {
+
+  document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+  document.getElementById("upperBodyVisibleZoomedUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');
+  });
+  img = document.createElement('img');
+  img.src = 'img/upperbodyvisibleZoomed.png';
+}
+function upperBodyVisibleZoomedCode() {
+  document.getElementById("textReturn").value = "<trl-content position=\"CenterUpperBodyZoomOut\" showMovingScreen='true' />";
+}
+function updateUpperBodyVisibleZoomed() {
+  upperBodyVisibleZoomedCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
+}
+function screenLeftNumber() {
+
+  document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+  document.getElementById("screenLeftUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');
+  });
+  img = document.createElement('img');
+  img.src = 'img/screenleft.png';
+}
+function screenLeftCode() {
+  document.getElementById("textReturn").value = "<trl-content position=\"ScreenFlatSmallLeft\" showMovingScreen='true' />";
+}
+function updateScreenLeft() {
+  screenLeftCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
+}
+
+function screenRightNumber() {
+  document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+  document.getElementById("screenRightUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');
+  });
+  img = document.createElement('img');
+  img.src = 'img/screenright.png';
+}
+function screenRightCode() {
+  document.getElementById("textReturn").value = "<trl-content position=\"ScreenFlatSmallRight\" showMovingScreen='true' />";
+}
+function updateScreenRight() {
+  screenRightCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
+}
+function screenAvatarLeftNumber() {
+  document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+  document.getElementById("screenAvatarLeftUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');
+  });
+  img = document.createElement('img');
+  img.src = 'img/screenavatarleft.png';
+}
+function screenAvatarLeftCode() {
+  document.getElementById("textReturn").value = "<trl-content position=\"ScreenFlatMediumLeft\" showMovingScreen='true' />";
+}
+function updateScreenAvatarLeft() {
+  screenAvatarLeftCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
+}
+
+function screenAvatarRightNumber() {
+  document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+  document.getElementById("screenAvatarRightUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');
+  });
+  img = document.createElement('img');
+  img.src = 'img/screenavatarright.png';
+}
+function screenAvatarRightCode() {
+  document.getElementById("textReturn").value = "<trl-content position=\"ScreenFlatMediumRight\" showMovingScreen='true' />";
+}
+function updateScreenAvatarRight() {
+  screenAvatarRightCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
+}
+
+// function screenAvatarCenterNumber() {
+//   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+//   document.getElementById("screenAvatarCenterUpdate").classList.add("show");
+//   document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+//     el.classList.remove('active');
+//   });
+//   img = document.createElement('img');
+//   img.src = 'img/screenavatarcenter.png';
+// }
+// function screenAvatarCenterCode() {
+//   document.getElementById("textReturn").value = "<trl-content position=\"ScreenFlatLargeAvatarZoomOutDefaultCenter\" showMovingScreen='true' />";
+// }
+// function updateScreenAvatarCenter() {
+//   screenAvatarCenterCode();
+//   img.classList = 'timelineImg';
+//   element.append(img);
+//   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
+// }
+
+function screenAvatarLeftSNumber() {
+  document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+  document.getElementById("screenAvatarLeftSUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');
+  });
+  img = document.createElement('img');
+  img.src = 'img/screenavatarlefts.png';
+}
+function screenAvatarLeftSCode() {
+  document.getElementById("textReturn").value = "<trl-content position=\"ScreenFlatLargeAvatarSmallLeft\" showMovingScreen='true' />";
+}
+function updateScreenAvatarLeftS() {
+  screenAvatarLeftSCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
+}
+
+function screenAvatarRightSNumber() {
+  document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+  document.getElementById("screenAvatarRightSUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');
+  });
+  img = document.createElement('img');
+  img.src = 'img/screenavatarrights.png';
+}
+function screenAvatarRightSCode() {
+  document.getElementById("textReturn").value = "<trl-content position=\"ScreenFlatLargeAvatarSmallRight\" showMovingScreen='true' />";
+}
+function updateScreenAvatarRightS() {
+  screenAvatarRightSCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
+}
+
+// function screenAvatarCenterSNumber() {
+//   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+//   document.getElementById("screenAvatarCenterSUpdate").classList.add("show");
+//   document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+//     el.classList.remove('active');
+//   });
+//   img = document.createElement('img');
+//   img.src = 'img/screenavatarcenters.png';
+// }
+// function screenAvatarCenterSCode() {
+//   document.getElementById("textReturn").value = "<trl-content position=\"ScreenFlatLargeAvatarSmallCenter\" showMovingScreen='true' />";
+// }
+// function updateScreenAvatarSCenter() {
+//   screenAvatarCenterSCode();
+//   img.classList = 'timelineImg';
+//   element.append(img);
+//   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
+// }
+
+// function screenAvatarLeftLNumber() {
+//   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+//   document.getElementById("screenAvatarLeftLUpdate").classList.add("show");
+//   document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+//     el.classList.remove('active');
+//   });
+//   img = document.createElement('img');
+//   img.src = 'img/screenavatarleftl.png';
+// }
+// function screenAvatarLeftLCode() {
+//   document.getElementById("textReturn").value = "<trl-content position=\"ScreenFlatLargeAvatarSmallLeft\" showMovingScreen='true' />";
+// }
+// function updateScreenAvatarLeftL() {
+//   screenAvatarLeftSCode();
+//   img.classList = 'timelineImg';
+//   element.append(img);
+//   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
+// }
+
+// function screenAvatarRightLNumber() {
+//   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+//   document.getElementById("screenAvatarRightLUpdate").classList.add("show");
+//   document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+//     el.classList.remove('active');
+//   });
+//   img = document.createElement('img');
+//   img.src = 'img/screenavatarrightl.png';
+// }
+// function screenAvatarRightLCode() {
+//   document.getElementById("textReturn").value = "<trl-content position=\"ScreenFlatLargeAvatarSmallRight\" showMovingScreen='true' />";
+// }
+// function updateScreenAvatarRightL() {
+//   screenAvatarRightCode();
+//   img.classList = 'timelineImg';
+//   element.append(img);
+//   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
+// }
+
+function screenAvatarCenterLNumber() {
+  document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+  document.getElementById("screenAvatarCenterLUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');
+  });
+  img = document.createElement('img');
+  img.src = 'img/screenavatarcenterm.png';
+}
+function screenAvatarCenterLCode() {
+  document.getElementById("textReturn").value = "<trl-content position=\"ScreenFlatLargeAvatarMaxZoomInCenterUp\" showMovingScreen='true' />";
+}
+function updateScreenAvatarCenterL() {
+  screenAvatarCenterLCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
+}
+
+
+function screenAvatarLeftMNumber() {
+  document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+  document.getElementById("screenAvatarLeftMUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');
+  });
+  img = document.createElement('img');
+  img.src = 'img/screenavatarleftm.png';
+}
+function screenAvatarLeftMCode() {
+  document.getElementById("textReturn").value = "<trl-content position=\"ScreenFlatLargeAvatarMediumLeft\" showMovingScreen='true' />";
+}
+function updateScreenAvatarLeftM() {
+  screenAvatarLeftMCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
+}
+
+function screenAvatarRightMNumber() {
+  document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+  document.getElementById("screenAvatarRightMUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');
+  });
+  img = document.createElement('img');
+  img.src = 'img/screenavatarrightm.png';
+}
+function screenAvatarRightMCode() {
+  document.getElementById("textReturn").value = "<trl-content position=\"ScreenFlatLargeAvatarMediumRight\" showMovingScreen='true' />";
+}
+function updateScreenAvatarRightM() {
+  screenAvatarRightMCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
+}
+
+function screenAvatarCenterMNumber() {
+  document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+  document.getElementById("screenAvatarCenterMUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');
+  });
+  img = document.createElement('img');
+  img.src = 'img/screenavatarcenterm.png';
+}
+function screenAvatarCenterMCode() {
+  document.getElementById("textReturn").value = "<trl-content position=\"ScreenFlatLargeAvatarZoomOutDefaultCenter\" showMovingScreen='true' />";
+}
+function updateScreenAvatarCenterM() {
+  screenAvatarCenterMCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
+}
 
 
 
