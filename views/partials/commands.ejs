@@ -3,19 +3,20 @@
 <section class="commandList">
     <div class="filtercommands" >  <div id="myBtnContainer">
         <!--hier staan de categorieen buttons, je klikt op deze buttons en dan krijg je meerdere variaties te zien-->
-          <button class="btn" onclick="filterSelection('mouth')"><img src="/img/category_mouth.png" alt="">Mouth</button>
-          <button class="btn" onclick="filterSelection('eyes')"><img src="/img/category_eyes.png" alt="">Eyes</button>
-          <button class="btn" onclick="filterSelection('brow')"><img src="/img/category_brows.png" alt="">Brows</button>
-          <button class="btn" onclick="filterSelection('head')"><img src="/img/category_head.png" alt="">Head</button>
-          <button class="btn" onclick="filterSelection('position')"><img src="/img/category_position.png" alt="">Positions</button>
-          <button class="btn" onclick="filterSelection('visemes')"><img src="/img/visemes.png" alt="">Visemes</button>
-    
+          <button class="btn" onclick="filterSelection('mouth'); addEditor()"><img src="/img/category_mouth.png" alt="">Mouth</button>
+          <button class="btn" onclick="filterSelection('eyes'); addEditor()"><img src="/img/category_eyes.png" alt="">Eyes</button>
+          <button class="btn" onclick="filterSelection('brow'); addEditor()"><img src="/img/category_brows.png" alt="">Brows</button>
+          <button class="btn" onclick="filterSelection('head'); addEditor()"><img src="/img/category_head.png" alt="">Head</button>
+          <button class="btn" onclick="filterSelection('position'); addEditor()"><img src="/img/category_position.png" alt="">Positions</button>
+         
+          <button class="btn" onclick="filterSelection('animation'); addEditor()"><img src="/img/category_emotions.png" alt="">Emotions</button>
+          <button class="btn" id="deletebtn" onclick="filterSelection('textspeech')"><img src="/img/category_emotions.png" alt="">Text-to-speech</button>
         </div>
 
     <div class="autoAnimation">
         <!--hier is een apart div gemaakt, omdat dit button niet hoort bij de andere buttons. Dit is ook meteen gelinkt aan de buttons die animations hebben-->
-    <button class="btn" onclick="filterSelection('animation')">
-    <img src="/img/category_emotions.png" alt="animation">Emotions</button> 
+    <button class="btn" onclick="filterSelection('various'); addEditor()">
+    <img src="/img/various.png" alt="various">Various</button> 
     </div>
       </div>
     </div>
@@ -49,12 +50,12 @@
         <button class="filterDiv brow" id="frownSmallButton"><img src="/img/frowns.png" alt="frown s">Frown small</button>
         <button class="filterDiv brow" id="frowningButton"><img src="/img/frownm.png" alt="frown m">Frown medium</button>
         <button class="filterDiv brow" id="frownLButton"><img src="/img/frownl.png" alt="frown l">Frown large</button>
-        <button class="filterDiv brow" id=""><img src="/img/leftbrow.png" alt="leftbrow">Left brow raise</button>
-        <button class="filterDiv brow" id=""><img src="/img/rightbrow.png" alt="rightbrow">Right brow raise</button>
-        <button class="filterDiv brow" id=""><img src="/img/quizical.png" alt="quizical">Brows in (quizical)</button>
-        <button class="filterDiv brow" id=""><img src="/img/outer.png" alt="outer">Outer brows up</button>
-        <button class="filterDiv brow" id=""><img src="/img/browsin.png" alt="Brows in">Brows in & raised</button>
-        <button class="filterDiv brow" id=""><img src="/img/browsdown.png" alt="brows down">Brows down & scrunched</button>
+        <button class="filterDiv brow" id="leftBrowRaiseButton"><img src="/img/leftbrow.png" alt="leftbrow">Left brow raise</button>
+        <button class="filterDiv brow" id="rightBrowRaiseButton"><img src="/img/rightbrow.png" alt="rightbrow">Right brow raise</button>
+        <button class="filterDiv brow" id="quizicalButton"><img src="/img/quizical.png" alt="quizical">Brows in (quizical)</button>
+        <button class="filterDiv brow" id="outerBrowsButton"><img src="/img/outer.png" alt="outer">Outer brows up</button>
+        <button class="filterDiv brow" id="browsInRaisedButton"><img src="/img/browsin.png" alt="Brows in">Brows in & raised</button>
+        <button class="filterDiv brow" id="browsDownScrunchButton"><img src="/img/browsdown.png" alt="brows down">Brows down & scrunched</button>
 
         <button class="filterDiv head" id="nodSmallButton"><img src="/img/noddings.png" alt="nodding s">Nodding small</button>
         <button class="filterDiv head" id="noddingButton"><img src="/img/noddingm.png" alt="nodding m">Nodding medium</button>
@@ -90,27 +91,6 @@
         <button class="filterDiv position" id=""><img src="/img/avatarsl.png" alt="avatar medium right">L: Screen S: avatar left</button>
         <button class="filterDiv position" id=""><img src="/img/lscreensavatarright.png" alt="avatar small right">L: Screen S: avatar right</button>
         
-
-        <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="p">p viseme</button>
-        <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="t">t viseme</button>
-        <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="S">S viseme</button>
-        <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="T">T viseme</button>
-        <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="f">f viseme</button>
-        <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="k">k viseme</button>
-        <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="i">i viseme</button>
-        <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="r">r viseme</button>
-        <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="s">s viseme</button>
-        <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="u">u viseme</button>
-        <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="u_soft">u_soft viseme</button>
-        <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="@">@ viseme</button>
-        <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="a">a viseme</button>
-        <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="e">e viseme</button>
-        <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="E">E viseme</button>
-        <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="o">o viseme</button>
-        <button class="filterDiv visemes" id=""><img src="/img/lookleft.png" alt="O">O viseme</button>
-
-
-    <!--Deze buttons zijn gelinked aan de button die in de div animation zit. Voor deze commands heb je een andere button-->
         <button class="filterDiv animation" id=""><img src="/img/question.png" alt="question">Question</button>
         <button class="filterDiv animation" id=""><img src="/img/friendly.png" alt="friendly">Friendly</button>
         <button class="filterDiv animation" id=""><img src="/img/surprise.png" alt="surprise">Surprise</button>
@@ -118,7 +98,14 @@
         <button class="filterDiv animation" id=""><img src="/img/agreement.png" alt="agreement">Agreement</button>
         <button class="filterDiv animation" id=""><img src="/img/disagreement.png" alt="disagreement">Disagreement</button>
 
-       
+<ul class="various" id="variousStyling">
+   <h1 class="filterDiv various" id="">Various</h1> 
+     <p class="filterDiv various" id="">There are a hand full of other options that you can choose to implement in your Digital Human like visemes, lighting and breaks.</p> 
+     <p class="filterDiv various" id="">Check out all the options in the<a href="/list">animation catalog</a></p>
+  
+
+</ul>
+      
 
     </div>
 

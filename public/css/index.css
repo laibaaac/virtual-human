@@ -31,7 +31,9 @@ html {
     box-sizing: border-box;
     font-family: var(--main-font), Arial, Helvetica, sans-serif;
 }
-
+button:focus {
+    background-color: var(--orange);
+}
 button:focus,
 a:focus,
 textarea:focus {
@@ -389,6 +391,7 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 .timelineButtons div {
     display: flex;
     gap: 1em;
+  
 }
 
 /* play animation button */
@@ -453,7 +456,16 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 .timelineButtons > button:active {
     color: var(--orange);
 }
-
+#resetButton > img  {
+  
+    width: 45%;
+    
+}
+.timelineButtons div:last-of-type button {
+    font-size: 0.9em;
+ color: #ffffff;
+ background-color: #00000000;
+}
 /****************/
 /* RECHTERHELFT */
 /****************/
@@ -557,7 +569,9 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
     flex-direction: column;
     gap: .7em;
 }
-
+.commands.inactive {
+    display: none;
+ }
 /* filter & commands */
 .commandList {
     display: flex;
@@ -603,7 +617,7 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
     width: 80%;
     padding: 1em;
     border-radius: 1em;
-    height: 39vh;
+    height: 36vh;
 }
 
 .codeEditor {
@@ -624,7 +638,11 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
     max-height: 10em;
 
 }
-
+#textReturn.active {
+ 
+    height: 100%;
+    max-height: 20em;
+}
 /* horizontaal neerzetten van elke button */
 .buttonStyling {
     display: flex;
@@ -694,4 +712,68 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
     border-radius: 2em;
     padding: .5em;
     margin: 0 .5em;
+}
+#explanation {
+    color: white;
+    font-size: 0.9em;
+    font-weight: lighter;
+
+}
+.wrapper {
+    width: 100%;
+    height: 15em;
+    background-color: rgba(255, 0, 0, 0);
+color: rgba(255, 0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#explainButtons {
+   padding-bottom: 10em;
+    background-color: var(--blue);
+    border-radius: 1em;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#linkToList.filterDiv.filterShow {
+ max-width: 15em;
+ height: 5em;
+ position: relative;
+ background-color: rgba(255, 0, 0, 0);
+ filter: invert(100%) sepia(3%) saturate(13%) hue-rotate(81deg) brightness(106%);
+ display: flex;
+ justify-content: space-around;
+ flex-wrap: wrap;
+}
+.editor.active {
+    height: 60vh;
+}
+.various {
+    padding-bottom: 10em;
+}
+h3.filterDiv.filterShow {
+    
+    background-color: rgba(255, 0, 0, 0);
+    color: white;
+    font-weight: lighter;
+    font-size: 0.9em;
+    padding-bottom: 5em;
+    
+}
+.filterDiv.various.filterShow{
+z-index: 100;
+width: 450%;
+background-color: rgba(255, 0, 0, 0);
+color: white;
+height: 1em;
+text-align: left;
+
+}
+.animationAdd {
+    display: none;
+}
+.animationAdd.active {
+    display: block;
 }

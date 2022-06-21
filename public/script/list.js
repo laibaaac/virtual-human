@@ -39,12 +39,19 @@ faders.forEach(fader => {
   appearOnScroll.observe(fader);
 });
 
-
+// function copyToClipboard(text) {
+//   const elem = document.createElement('textarea');
+//   elem.value = text;
+//   document.body.appendChild(elem);
+//   elem.select();
+//   document.execCommand('copy');
+//   document.body.removeChild(elem);
+// }
 document.getElementById("resetButton").addEventListener('click', () => {
 
   document.getElementById("plain-textarea-id").value = '';
-  const timelineImages = Array.from(document.getElementsByClassName('timelineImg'));
 
+  const timelineImages = Array.from(document.getElementsByClassName('timelineImg'));
   timelineImages.forEach(timelineImg => {
     timelineImg.remove();
   })})
@@ -53,16 +60,6 @@ document.getElementById("resetButton").addEventListener('click', () => {
 //Get the button:
 mybutton = document.getElementById("B2TBtn");
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {

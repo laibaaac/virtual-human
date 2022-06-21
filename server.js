@@ -1,78 +1,58 @@
-
-const express = require('express');
+const express = require("express");
 const app = express();
 const router = express.Router();
-const port = process.env.PORT ||4000
-mongoose = require("mongoose"),
-passport = require("passport"),
-bodyParser = require("body-parser"),
-//const dotenv = require('dotenv').config();
-//const {
- // MongoClient
-//} = require('mongodb');
-//const {
-//ObjectID } = require('mongodb'); 
+const port = process.env.PORT || 4000;
+bodyParser = require("body-parser");
 
-app.engine('html', require('ejs').renderFile);
-app.set('view engine', 'ejs', 'html');
+app.engine("html", require("ejs").renderFile);
+app.set("view engine", "ejs", "html");
 
-app.get('/', function(req, res) {
-    
-    res.render('index', {
-     
-    });
-  });
+const auth = require("basic-auth");
+const compare = require("tsscmp");
 
+const check = (name, pass) => {
+  let valid = true;
+  valid = compare(name, "virtuallyhuman") && valid;
+  valid = compare(pass, "0000") && valid;
+  return valid;
+};
 
-  app.get("/start", async (req, res) => {
-  
-    res.render("start");
-  
-  });
+const basicAuth = (req, res, next) => {
+  const credentials = auth(req);
+  if (credentials && check(credentials.name, credentials.pass)) {
+    return next();
+  }
 
+  res.set("WWW-authenticate", 'Basic realm="someSite"');
+  return res.status(401).send("unauthorized");
+};
 
-  app.get("/list", async (req, res) => {
-  
-    res.render("list");
-  
-  });
+app.use(basicAuth);
 
- app.get("/login", async (req, res) => {
-  
-    res.render("login");
-  
-  });
+app.get("/", function (req, res) {
 
 
-  app.get("/avatar", async (req, res) => {
-  
-    res.render("avatar");
-  
-  });
-  app.get("/avataar", async (req, res) => {
-  
-    res.render("avataar");
-  
-  });
-  app.use(express.static("public"));
+  res.render("index", {});
+});
 
 
- 
-  /*async function connectDB() {
-    const uri = process.env.DB_URI;
-    const client = new MongoClient(uri, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
-    try {
-      await client.connect();
-      db = client.db(process.env.DB_NAME);
-    } catch (error) {
-      throw error;
-    }
-  }*/
+app.get("/start", async (req, res) => {
+  res.render("start");
+});
+
+
+app.get("/list", async (req, res) => {
+  res.render("list");
+});
+
+
+app.get("/avatar", async (req, res) => {
+  res.render("avatar");
+});
+
+app.use(express.static("public"));
 
 
 app.listen(port, () => {
-  console.log(`web server running on http://localhost:${port}}`)
-})
+  console.log(`web server running on http://localhost:${port}}`);
+});
