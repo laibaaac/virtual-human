@@ -74,7 +74,8 @@ i {
 
 .infoSvg1,
 .infoSvg2,
-.infoSvg3 {
+.infoSvg3,
+.infoSvg4 {
     position: absolute;
     width: 1em;
     aspect-ratio: 1/1;
@@ -96,9 +97,15 @@ i {
     left: 8.3em;
 }
 
+.infoSvg4 {
+    left: 6.7em;
+    top: .5em;
+}
+
 .infoTekst1,
 .infoTekst2,
-.infoTekst3 {
+.infoTekst3,
+.infoTekst4 {
     visibility: hidden;
     transition: 0s, 0.15s linear;
     opacity: 0;
@@ -115,20 +122,27 @@ i {
 }
 
 .infoTekst1 {
-    left: 13em;
+    left: 11.5em;
 }
 
 .infoTekst2 {
-    left: 10em;
+    left: 9em;
 }
 
 .infoTekst3 {
-    left: 12em;
+    left: 11em;
+}
+
+.infoTekst4 {
+    left: 8em;
+    top: -1.7em;
+    text-align: left;
 }
 
 .infoSvg1:hover + .infoTekst1,
 .infoSvg2:hover + .infoTekst2,
-.infoSvg3:hover + .infoTekst3 {
+.infoSvg3:hover + .infoTekst3,
+.infoSvg4:hover + .infoTekst4 {
     visibility: visible;
     opacity: 1;
 }
@@ -299,6 +313,7 @@ i {
     border-radius: 1em 1em 0 0;
     height: 40vh;
     object-fit: cover;
+    min-height: 20em;
 }
 
 .livePlayer {
@@ -438,7 +453,7 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 /*********/
 /* vormgeving timeline blok */
 .timelineArea {
-  
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -549,15 +564,22 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 .timelineButtons > button:active {
     color: var(--orange);
 }
+
+#resetButton {
+    position: absolute;
+    top: .5em;
+    right: 1em;
+}
+
 #resetButton > img  {
   
     height: 1.5em;
     
 }
-.timelineButtons div:last-of-type button {
-    font-size: 0.9em;
- color: #ffffff;
- background-color: #00000000;
+
+.breakButton {
+    position: relative;
+    margin-right: 1.5em;
 }
 /****************/
 /* RECHTERHELFT */
@@ -904,5 +926,15 @@ text-align: left;
 
     .partials {
         display: none;
+    }
+  }
+
+  @media only screen and (max-height: 765px) {
+    header {
+        height: 3.3125em !important;
+    }
+
+    .partials {
+        height: calc(100vh - 3.3125em);
     }
   }
