@@ -99,7 +99,7 @@ i {
 
 .infoSvg4 {
     left: 6.7em;
-    top: .65em;
+    top: .5em;
 }
 
 .infoTekst1,
@@ -565,15 +565,22 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 .timelineButtons > button:active {
     color: var(--orange);
 }
+
+#resetButton {
+    position: absolute;
+    top: .5em;
+    right: 1em;
+}
+
 #resetButton > img  {
   
     height: 1.5em;
     
 }
-.timelineButtons div:last-of-type button {
-    font-size: 0.9em;
- color: #ffffff;
- background-color: #00000000;
+
+.breakButton {
+    position: relative;
+    margin-right: 1.5em;
 }
 /****************/
 /* RECHTERHELFT */
@@ -920,5 +927,15 @@ text-align: left;
 
     .partials {
         display: none;
+    }
+  }
+
+  @media only screen and (max-height: 765px) {
+    header {
+        height: 3.3125em !important;
+    }
+
+    .partials {
+        height: calc(100vh - 3.3125em);
     }
   }
