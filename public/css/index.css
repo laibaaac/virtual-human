@@ -535,6 +535,7 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 
 .timelineButtons div button:nth-of-type(3) img {
     height: 100%;
+    width: 3em;
 }
 
 .timelineButtons div button:nth-of-type(3):hover {
