@@ -99,7 +99,7 @@ i {
 
 .infoSvg4 {
     left: 6.7em;
-    top: .5em;
+    top: .65em;
 }
 
 .infoTekst1,
@@ -535,6 +535,7 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 
 .timelineButtons div button:nth-of-type(3) img {
     height: 100%;
+    width: 3em;
 }
 
 .timelineButtons div button:nth-of-type(3):hover {
@@ -567,8 +568,9 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 
 #resetButton {
     position: absolute;
-    top: .5em;
+    top: 1em;
     right: 1em;
+    background-color: transparent;
 }
 
 #resetButton > img  {
@@ -937,4 +939,25 @@ text-align: left;
     .partials {
         height: calc(100vh - 3.3125em);
     }
+
+    #myBtnContainer button img {
+        height: 1.7em;
+    }
+
+    h1, h2 {
+        font-size: 1em;
+    }
+
+    .left__right {
+        gap: .5em;
+    }
+
+    .partials_right{
+        gap: .5em;
+    }
+
+    .commandList {
+        gap: .5em;
+    }
+
   }

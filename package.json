@@ -11,6 +11,7 @@
     "ejs": "^3.1.7",
     "express": "^4.17.3",
     "passport": "^0.6.0",
+    "pdfmake": "^0.2.5",
     "tsscmp": "^1.0.6"
   },
   "devDependencies": {
