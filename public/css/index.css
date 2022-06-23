@@ -12,7 +12,7 @@
 :root {
     --black: #020B23;
     --text-color-buttons: #FFFFFF;
-    --orange: #E84D3C;
+    --orange: #ef3f38;
     --blue: #143056;
     --grey: #D9D9D9;
     --main-font: 'Montserrat';
@@ -46,14 +46,14 @@ textarea:focus {
 /********************/
 h1 {
     color: var(--text-color-buttons);
-    font-size: 1.25em;
+    font-size: 1.1em;
     font-weight: 400;
     position: relative;
 }
 
 h2 {
     color: var(--text-color-buttons);
-    font-size: 1.25em;
+    font-size: 1.1em;
     font-weight: 100;
     position: relative;
 }
@@ -74,7 +74,8 @@ i {
 
 .infoSvg1,
 .infoSvg2,
-.infoSvg3 {
+.infoSvg3,
+.infoSvg4 {
     position: absolute;
     width: 1em;
     aspect-ratio: 1/1;
@@ -96,9 +97,15 @@ i {
     left: 8.3em;
 }
 
+.infoSvg4 {
+    left: 6.7em;
+    top: .65em;
+}
+
 .infoTekst1,
 .infoTekst2,
-.infoTekst3 {
+.infoTekst3,
+.infoTekst4 {
     visibility: hidden;
     transition: 0s, 0.15s linear;
     opacity: 0;
@@ -115,20 +122,27 @@ i {
 }
 
 .infoTekst1 {
-    left: 13em;
+    left: 11.5em;
 }
 
 .infoTekst2 {
-    left: 10em;
+    left: 9em;
 }
 
 .infoTekst3 {
-    left: 12em;
+    left: 11em;
+}
+
+.infoTekst4 {
+    left: 8em;
+    top: -1.7em;
+    text-align: left;
 }
 
 .infoSvg1:hover + .infoTekst1,
 .infoSvg2:hover + .infoTekst2,
-.infoSvg3:hover + .infoTekst3 {
+.infoSvg3:hover + .infoTekst3,
+.infoSvg4:hover + .infoTekst4 {
     visibility: visible;
     opacity: 1;
 }
@@ -139,7 +153,7 @@ i {
 ::-webkit-scrollbar-track {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	border-radius: 10px;
-	background-color: var(--black);l
+	background-color: var(--grey);
 }
 
 ::-webkit-scrollbar {
@@ -197,6 +211,99 @@ i {
 /***********/
 /* PREVIEW */
 /***********/
+/* loading animation */
+.lds-spinner {
+    display: none;
+    position: absolute;
+    left: calc(50% - 40px);
+    top: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+}
+
+.activeSpinner {
+    display: inline-block;
+    position: absolute;
+    left: calc(50% - 40px);
+    top: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+  }
+
+  .lds-spinner div {
+    transform-origin: 40px 40px;
+    animation: lds-spinner 1.2s linear infinite;
+  }
+  .lds-spinner div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 37px;
+    width: 6px;
+    height: 18px;
+    border-radius: 20%;
+    background: #fff;
+  }
+  .lds-spinner div:nth-child(1) {
+    transform: rotate(0deg);
+    animation-delay: -1.1s;
+  }
+  .lds-spinner div:nth-child(2) {
+    transform: rotate(30deg);
+    animation-delay: -1s;
+  }
+  .lds-spinner div:nth-child(3) {
+    transform: rotate(60deg);
+    animation-delay: -0.9s;
+  }
+  .lds-spinner div:nth-child(4) {
+    transform: rotate(90deg);
+    animation-delay: -0.8s;
+  }
+  .lds-spinner div:nth-child(5) {
+    transform: rotate(120deg);
+    animation-delay: -0.7s;
+  }
+  .lds-spinner div:nth-child(6) {
+    transform: rotate(150deg);
+    animation-delay: -0.6s;
+  }
+  .lds-spinner div:nth-child(7) {
+    transform: rotate(180deg);
+    animation-delay: -0.5s;
+  }
+  .lds-spinner div:nth-child(8) {
+    transform: rotate(210deg);
+    animation-delay: -0.4s;
+  }
+  .lds-spinner div:nth-child(9) {
+    transform: rotate(240deg);
+    animation-delay: -0.3s;
+  }
+  .lds-spinner div:nth-child(10) {
+    transform: rotate(270deg);
+    animation-delay: -0.2s;
+  }
+  .lds-spinner div:nth-child(11) {
+    transform: rotate(300deg);
+    animation-delay: -0.1s;
+  }
+  .lds-spinner div:nth-child(12) {
+    transform: rotate(330deg);
+    animation-delay: 0s;
+  }
+  @keyframes lds-spinner {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  
+/*  */
 .left__right li:nth-of-type(2) {
     margin-bottom: 2.1em;
 }
@@ -206,6 +313,7 @@ i {
     border-radius: 1em 1em 0 0;
     height: 40vh;
     object-fit: cover;
+    min-height: 20em;
 }
 
 .livePlayer {
@@ -260,13 +368,15 @@ table tbody tr:nth-of-type(2) td:first-of-type {
 }
 
 table tbody tr:nth-of-type(2) td:nth-of-type(2) {
+    display: flex;
     justify-content: flex-end;
     margin-right: 1em;
     width: 100%;
+    align-items: center;
 }
 
 .button.button-trl.button-green {
-    height: 100%;
+    height: 2em;
 }
 
 .button.button-trl.button-grey i,
@@ -343,7 +453,7 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 /*********/
 /* vormgeving timeline blok */
 .timelineArea {
-  
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -389,6 +499,7 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 .timelineButtons div {
     display: flex;
     gap: 1em;
+  
 }
 
 /* play animation button */
@@ -424,6 +535,7 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 
 .timelineButtons div button:nth-of-type(3) img {
     height: 100%;
+    width: 3em;
 }
 
 .timelineButtons div button:nth-of-type(3):hover {
@@ -443,6 +555,7 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
     background: transparent;
     color: var(--text-color-buttons);
     font-size: 1em;
+    padding-top: .4em;
 }
 
 .timelineButtons > button:hover {
@@ -453,6 +566,23 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
     color: var(--orange);
 }
 
+#resetButton {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    background-color: transparent;
+}
+
+#resetButton > img  {
+  
+    height: 1.5em;
+    
+}
+
+.breakButton {
+    position: relative;
+    margin-right: 1.5em;
+}
 /****************/
 /* RECHTERHELFT */
 /****************/
@@ -604,7 +734,7 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
     width: 80%;
     padding: 1em;
     border-radius: 1em;
-    height: 39vh;
+    height: 36vh;
 }
 
 .codeEditor {
@@ -622,14 +752,13 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
     border-radius: .5em;
     padding: .5em;
     resize: none;
-    height: 50%;
-    max-height: 6em;
+    max-height: 10em;
 
 }
 #textReturn.active {
  
     height: 100%;
-    max-height: 15em;
+    max-height: 20em;
 }
 /* horizontaal neerzetten van elke button */
 .buttonStyling {
@@ -690,8 +819,6 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 
 #newImage {
     object-fit: none;
-   
-    height: 5em;
 }
 #newImage > img {
     height: 2.5em;
@@ -699,7 +826,9 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
     background-color: var(--grey);
     border-radius: 2em;
     padding: .5em;
-    margin: 0 .5em;
+    margin: .5em;
+    margin-bottom: .3em;
+    
 }
 #explanation {
     color: white;
@@ -707,3 +836,128 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
     font-weight: lighter;
 
 }
+.wrapper {
+    width: 100%;
+    height: 15em;
+    background-color: rgba(255, 0, 0, 0);
+color: rgba(255, 0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#explainButtons {
+   padding-bottom: 10em;
+    background-color: var(--blue);
+    border-radius: 1em;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#linkToList.filterDiv.filterShow {
+ max-width: 15em;
+ height: 5em;
+ position: relative;
+ background-color: rgba(255, 0, 0, 0);
+ filter: invert(100%) sepia(3%) saturate(13%) hue-rotate(81deg) brightness(106%);
+ display: flex;
+ justify-content: space-around;
+ flex-wrap: wrap;
+}
+.editor.active {
+    height: 60vh;
+}
+.various {
+    padding-bottom: 10em;
+}
+h3.filterDiv.filterShow {
+    
+    background-color: rgba(255, 0, 0, 0);
+    color: white;
+    font-weight: lighter;
+    font-size: 0.9em;
+    padding-bottom: 5em;
+    
+}
+.filterDiv.various.filterShow{
+z-index: 100;
+width: 450%;
+background-color: rgba(255, 0, 0, 0);
+color: white;
+height: 1em;
+text-align: left;
+
+}
+.animationAdd {
+    display: none;
+}
+.animationAdd.active {
+    display: block;
+}
+
+.mobileShow {
+    display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    header {
+        display: none;
+    }
+
+    .mobileShow {
+      display: block;
+      width: 100vw;
+      height: 100vh;
+      background-color: var(--blue);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 10%;
+    }
+
+    .mobileShow img {
+        width: 100%;
+        max-width: 20em;
+        margin-bottom: 2em;
+    }
+
+    .mobileShow h1 {
+        text-align: center;
+    }
+
+    .partials {
+        display: none;
+    }
+  }
+
+  @media only screen and (max-height: 765px) {
+    header {
+        height: 3.3125em !important;
+    }
+
+    .partials {
+        height: calc(100vh - 3.3125em);
+    }
+
+    #myBtnContainer button img {
+        height: 1.7em;
+    }
+
+    h1, h2 {
+        font-size: 1em;
+    }
+
+    .left__right {
+        gap: .5em;
+    }
+
+    .partials_right{
+        gap: .5em;
+    }
+
+    .commandList {
+        gap: .5em;
+    }
+
+  }

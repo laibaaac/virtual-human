@@ -12,16 +12,23 @@
         <div id="newImage">
 
         </div>
+        <button id="resetButton"><img src="/img/resetbutton.png" alt="reset button"></button>
         <textarea id="plain-textarea-id"  placeholder="You have not added any animations yet. Choose from the categories in the animation editor on the right to add and/or adjust an animation." cols="100" rows="5"></textarea>
         <div class="timelineButtons">
             <div>
                 <button class="button button-light-grey"
                 value="Send" id="sendMsgBtn" onclick="sendMessageToVPS();" /> Play animation</button>
+                
                 <button id="copyTime">Copy code</button>
-                <button id="pdf" onclick=""><img src="/img/pdf_icon.png" alt="pdf icon"></button>
+                <button><img src="/img/pdf_icon.png" alt="pdf icon"></button>
+            
             </div>
-            <button id="resetButton" >Start again</button>
+   
+            <button 
+            onclick="oneSecBreak();" class="breakButton"> Add 1s break <img src="/img/circle-info-solid.svg" alt="" class="infoSvg4">  <p class="infoTekst4">A break adds a pause between animations.</p></button>
+
         </div>
+
     </div>
     
 </section>

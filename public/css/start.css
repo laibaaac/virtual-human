@@ -44,7 +44,7 @@ a:focus {
 .titlebar {
     display: flex;
     flex-direction: row;
-    padding: 1em 0 2em 15%;
+    padding: 3em 0 2em 15%;
   }
   ul.titlebar > li {
     color: white;
@@ -66,7 +66,6 @@ ul.guideTop {
     padding:5em;
     padding-left: 15%;
     padding-right: 15%;
-    margin-top: 5em;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -87,7 +86,7 @@ border:none;
     color: var(--text-color-buttons);
     font-weight: bolder;
     background-color: var(--orange);
-    border-radius: 1em;
+    border-radius: .5em;
     transition: all 0.3s;
 }
 ul.guideTop > li > a:hover {
@@ -177,30 +176,29 @@ ul.contact {
     padding-left: 15%;
     padding-right: 15%;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
     justify-content: space-between;
 }
 
-ul.contact > li {
-    width: 35%;
-    margin-top: 5em;
+ul.contact > li:nth-of-type(2) {
+    margin-top: 1em;
+    margin-right: 14vw;
 }
+
 ul.contact > li > img {
-    max-width: 35%;
-    height: auto;
+
 }
 ul.contact > li:first-of-type > a {
     font-weight: bold;
-color:var(--orange);
+    color:var(--orange);
 }
 
 .siteButton {
-    padding: 1em;
+    padding: 1.1em;
     background-color: var(--orange);
     color: var(--text-color-buttons);
-    border-radius: 1em;
+    border-radius: .5em;
     font-weight: bold;
+
 }
 
 .siteButton:hover {
