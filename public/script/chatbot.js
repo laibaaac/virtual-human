@@ -747,13 +747,15 @@ function updateMouth() {
 
 function lookLeftNumber() {
   dura = 4.5;
+  speed = 4.5;
   document.getElementById('durationmeter').innerHTML = dura + "s";
+  document.getElementById('speedmeter').innerHTML = speed + "s";
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
   document.getElementById("lookLeftUpdate").classList.add("show");
   document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
     el.classList.remove('active');
   });
-  document.querySelectorAll("#duraCss").forEach((el) => {
+  document.querySelectorAll("#duraCss, #speedCss").forEach((el) => {
     el.classList.add('active');
   });
   img = document.createElement('img');
@@ -761,7 +763,7 @@ function lookLeftNumber() {
 }
 
 function lookLeftCode() {
-  document.getElementById("textReturn").value = "<trl-config lookat='15,0,5' enable='true' speed='4.5' wait='2.5' returnSpeed='4.5' absolute='false' /><trl-anim type='aux' id='translateRotateLeftSmall' duration='2.5' /><trl-anim type='aux' id='tiltLeftUpMedium3' duration='"+ dura +"' />";
+  document.getElementById("textReturn").value = "<trl-config lookat='15,0,5' enable='true' speed='"+ speed +"' wait='2.5' returnSpeed='4.5' absolute='false' /><trl-anim type='aux' id='translateRotateLeftSmall' duration='2.5' /><trl-anim type='aux' id='tiltLeftUpMedium3' duration='"+ dura +"' />";
 }
 
 function updateLookLeft() {
@@ -774,15 +776,16 @@ function updateLookLeft() {
 
 function lookRightNumber() {
   dura = 3;
+  speed = 4.5;
   document.getElementById('durationmeter').innerHTML = dura + "s";
-  document.getElementById('blendStmeter').innerHTML = blendSt + "s";
-  document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
+  document.getElementById('speedmeter').innerHTML = speed + "s";
+
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
   document.getElementById("lookRightUpdate").classList.add("show");
   document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
     el.classList.remove('active');
   });
-  document.querySelectorAll("#duraCss").forEach((el) => {
+  document.querySelectorAll("#duraCss, #speedCss").forEach((el) => {
     el.classList.add('active');
   });
   img = document.createElement('img');
@@ -790,7 +793,7 @@ function lookRightNumber() {
 }
 
 function lookRightCode() {
-  document.getElementById("textReturn").value = "<trl-config lookat='-15,0,5' enable='true' speed='4.5' wait='2.5' returnSpeed='5.5' absolute='false' /><trl-anim type='aux' id='translateRotateRightSmall' duration='2.5' /><trl-anim type='aux' id='tiltRightUpMedium3' duration='"+ dura +"' />";
+  document.getElementById("textReturn").value = "<trl-config lookat='-15,0,5' enable='true' speed='"+ speed +"' wait='2.5' returnSpeed='5.5' absolute='false' /><trl-anim type='aux' id='translateRotateRightSmall' duration='2.5' /><trl-anim type='aux' id='tiltRightUpMedium3' duration='"+ dura +"' />";
 }
 
 function updateLookRight() {
@@ -803,13 +806,15 @@ function updateLookRight() {
 
 function lookDownNumber() {
   dura = 2.5;
+  speed = 3.75;
   document.getElementById('durationmeter').innerHTML = dura + "s";
+  document.getElementById('speedmeter').innerHTML = speed + "s";
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
   document.getElementById("lookDownUpdate").classList.add("show");
   document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
     el.classList.remove('active');
   });
-  document.querySelectorAll("#duraCss").forEach((el) => {
+  document.querySelectorAll("#duraCss, #speedCss").forEach((el) => {
     el.classList.add('active');
   });
   img = document.createElement('img');
@@ -817,7 +822,7 @@ function lookDownNumber() {
 }
 
 function lookDownCode() {
-  document.getElementById("textReturn").value = "<trl-config lookat='0,0,-20' enable='true' speed='3.75' wait='2.5' returnSpeed='5.25' absolute='false' /><trl-anim type='aux' id='tiltDownLarge3' duration=" + dura + " />";
+  document.getElementById("textReturn").value = "<trl-config lookat='0,0,-20' enable='true' speed='"+ speed +"' wait='2.5' returnSpeed='5.25' absolute='false' /><trl-anim type='aux' id='tiltDownLarge3' duration=" + dura + " />";
 }
 
 function updateLookDown() {
@@ -1187,7 +1192,7 @@ function rightBrowRaiseNumber() {
         }
         
         function browsInRaisedCode() {
-          document.getElementById("textReturn").value = "<trl-morph id='Right_BrowsOuterUp,Left_BrowsOuterUp' min='0' max='0.4' speed='"+ speed +"' wait='3' returnSpeed='0.3'/>";
+          document.getElementById("textReturn").value = "Right_BrowsInRaised,Left_BrowsInRaised' min='0' max='0.4' speed='"+ speed +"' wait='3' returnSpeed='0.3'/>";
         }
         
         function updateBrowsInRaised() {
