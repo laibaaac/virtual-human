@@ -846,12 +846,17 @@ color: rgba(255, 0, 0, 0);
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
 #explainButtons {
    padding-bottom: 10em;
     background-color: var(--blue);
     border-radius: 1em;
     flex-wrap: wrap;
     flex-direction: row;
+}
+
+#explainButtons .wrapper img:hover {
+    filter: invert(60%) sepia(91%) saturate(5059%) hue-rotate(338deg) brightness(94%) contrast(92%);
 }
 
 #linkToList.filterDiv.filterShow {
