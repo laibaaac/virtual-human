@@ -769,6 +769,11 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
     margin-bottom: 1.5em;
 }
 
+.activeVarious p a {
+    border-bottom: 1px solid var(--orange);
+    color: var(--orange);
+}
+
 .activeVarious ul a {
     display: flex;
     gap: 1em;
@@ -787,12 +792,20 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
     filter: invert(100%) sepia(3%) saturate(13%) hue-rotate(81deg) brightness(106%);
 }
 
+.activeVarious li:first-of-type img:hover {
+    filter: invert(38%) sepia(79%) saturate(2784%) hue-rotate(341deg) brightness(97%) contrast(87%);
+}
+
 .show {
     display: block;
 }
 
 .hide {
     display: none;
+}
+
+.activeVarious img:hover {
+    filter: invert(41%) sepia(18%) saturate(2013%) hue-rotate(318deg) brightness(100%) contrast(91%);
 }
 
 /* horizontaal neerzetten van elke button */
@@ -917,8 +930,14 @@ outline: none;
     outline: none;
     }
 .editor.active {
-    height: 60vh;
+    height: 63.8vh;
 }
+
+.editor.active button {
+    background-color: var(--orange);
+    color: var(--text-color-buttons);
+}
+
 .various {
     padding-bottom: 10em;
 }
