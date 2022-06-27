@@ -60,7 +60,7 @@ a {
 /*******************/
 .listIntro {
   background-color: var(--darkestblue);
-  padding: 0 20% 2em 20%;
+  padding: 0 15% 2em 15%;
   list-style: none;
   color: var(--text-color-buttons);
 }
@@ -166,7 +166,7 @@ p.introText {
 
 /* WHITESPACE ON SIDES */
 .listSections {
-  padding: 1em 20%;
+  padding: 1em 15%;
 }
 
 /* MARGIN TOP FOR FIRST CATEGORY */
@@ -224,6 +224,7 @@ p.introText {
   color: var(--text-color-buttons);
   border: none;
   resize: none;
+  width: 100%;
 }
 .list div textarea {
   
