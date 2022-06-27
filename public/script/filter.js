@@ -93,7 +93,10 @@ function removeEditor() {
     document.getElementById("explanation").innerHTML = " You can use the mstts:express-as element to express emotions like cheerfulness, empathy, and calmness. You can also optimize the voice for different scenarios like customer service, newscast, and voice assistant.";
     document.getElementById("codetitle").innerHTML = "text to speech";
     document.getElementById("textReturn").value = " ";
+    document.querySelector(".activeVarious").classList.remove('show');
     document.querySelectorAll(".commands").forEach((el) => {
+      
+
   el.classList.add('inactive');
   img = document.createElement('img');
   img.src = 'img/category_emotions.png';
@@ -110,7 +113,7 @@ function addEditor() {
   if (dura > 100) {
     document.getElementById("plain-textarea-id").value = '';
     document.getElementById("explanation").innerHTML = ""
-    document.getElementById("codetitle").innerHTML = "text to speech";
+    document.getElementById("codetitle").innerHTML = "Text to speech";
   } else {
     document.getElementById("codetitle").innerHTML = "Code editor";
   }
@@ -138,3 +141,53 @@ function addEditor() {
 // document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss").forEach((el) => {
 //   el.classList.add('active');
 // });
+
+//bron van code = w3school.com -- https://www.w3schools.com/howto/howto_js_filter_elements.asp//
+
+document.getElementById("deletebtn2").addEventListener("click", removeEditor2);
+
+function removeEditor2() {
+  dura = 101;
+  if (dura > 100) {
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+      
+      el.classList.remove('active');})
+      // document.querySelectorAll("#textReturn, .editor, .animationAdd").forEach(target => target.classList.add("active"));
+ 
+    document.getElementById("explanation").innerHTML = "You use the <mstts:express-as> element to express emotions like cheerfulness, empathy, and calmness. You can also optimize the voice for different scenarios like customer service, newscast, and voice assistant. Click on a button bellow to open the Animation Catalog and see what your options are.";
+    document.getElementById("codetitle").innerHTML = "Various";
+    document.getElementById("textReturn").classList.add('hide');
+    document.getElementById("addAnimation").classList.add('hide');
+    document.querySelector(".activeVarious").classList.add('show');
+    document.querySelectorAll(".commands").forEach((el) => {
+  el.classList.add('inactive');
+
+  document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+  });
+
+
+
+  } else {
+    document.getElementById("codetitle").innerHTML = "Code editor";
+  }}
+  
+function addEditor() {
+  dura = 0;
+  if (dura > 100) {
+    document.getElementById("plain-textarea-id").value = '';
+    document.getElementById("explanation").innerHTML = ""
+    document.getElementById("codetitle").innerHTML = "Various";
+  } else {
+    document.getElementById("codetitle").innerHTML = "Code editor";
+    document.getElementById("textReturn").classList.remove('hide');
+    document.getElementById("addAnimation").classList.remove('hide');
+    document.querySelector(".activeVarious").classList.remove('show');
+  }
+  document.querySelectorAll("#textReturn, .editor, .animationAdd").forEach(target => target.classList.remove("active"));
+  document.querySelectorAll(".commands").forEach((el) => {
+    document.getElementById("explanation").innerHTML = ""
+    el.classList.remove('inactive');
+  })}
+
+
+  

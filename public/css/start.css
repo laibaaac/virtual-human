@@ -81,7 +81,7 @@ img {
 ul.guideTop > li > a {
 float:right;
 border:none;
-    margin: 2em 3em 0em 0em;
+    margin-top: 2em;
     padding: 1em 3em 1em 3em;
     color: var(--text-color-buttons);
     font-weight: bolder;
@@ -99,6 +99,11 @@ ul.guideTop > li > a:active {
     color: var(--text-color-buttons);
 }
 
+ul.guideTop li:nth-last-of-type(1) p,
+ul.guideTop li:nth-last-of-type(1) h2 {
+    text-align: right;
+}
+
 ul.guideExplain {
     background-color: var(--darkblue);
     background-size: 100%;
@@ -109,6 +114,11 @@ ul.guideExplain {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
+}
+
+ul.guideExplain h2,
+ul.guideBrowse h2 {
+    font-size: 1.7em;
 }
 
 ul.guideExplain > li {
@@ -167,7 +177,7 @@ ul.guideBrowse > li > img {
 }
 .slideLeft.appear {
     margin-left: -3em;
-    padding-right: 3em;
+    padding-right: 2em;
    
 }
 ul.contact {
