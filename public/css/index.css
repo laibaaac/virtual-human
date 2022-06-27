@@ -756,10 +756,45 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 
 }
 #textReturn.active {
- 
     height: 100%;
     max-height: 20em;
 }
+
+.activeVarious {
+    display: none;
+}
+
+.activeVarious p {
+    color: var(--text-color-buttons);
+    margin-bottom: 1.5em;
+}
+
+.activeVarious ul a {
+    display: flex;
+    gap: 1em;
+    border-bottom: none;
+}
+
+.activeVarious li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5em;
+    justify-content: space-between;
+}
+
+.activeVarious li:first-of-type img {
+    filter: invert(100%) sepia(3%) saturate(13%) hue-rotate(81deg) brightness(106%);
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
 /* horizontaal neerzetten van elke button */
 .buttonStyling {
     display: flex;
