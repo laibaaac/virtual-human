@@ -77,7 +77,11 @@ ul.guideTop > li {
 img {
     -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
     filter: drop-shadow(15px 15px 15px rgba(0, 0, 0, 0.3));
+    max-width: calc(50% - 1.5em);
+    height: 100%;
+    object-fit: contain;
 }
+
 ul.guideTop > li > a {
 float:right;
 border:none;
@@ -127,13 +131,6 @@ ul.guideExplain > li {
     margin-bottom: 5em;
 }
 
-ul.guideExplain > li > img {
-    max-width: calc(50% - 1.5em);
-    height: 100%;
-    object-fit: contain;
-}
-
-
 ul.guideBrowse {
     background-color: var(--blue);
     background-size: cover;
@@ -151,11 +148,6 @@ ul.guideBrowse > li {
    justify-content: space-between;
     gap: 3em;
    margin-bottom: 5em;
-}
-
-ul.guideBrowse > li > img {
-    width: calc(50% - 1.5em);
-    height: 100%;
 }
 
 ul.contact {
