@@ -1,16 +1,28 @@
-var PdfPrinter = require('pdfmake');
+var pdfmake = require('pdfmake');
 
-("plain-textarea-id").submit(function(e){
-    e.preventDefault()
+var pdfContent = document.getElementById("plain-textarea-id");
+document.getElementById('pdftje').addEventlistener("click", pdfButton)
+function pdfButton() {
+  var docDefinition = {
+    content: [
+    pdfContent.value
+    ]}
+  
+    var now = new Date();
+  
+    var pdf = pdfmake.createPdf(docDefinition);
+    pdf.write('pdfs/code.pdf').then(() => {
+      console.log(new Date() - now);
+    }, err => {
+      console.error(err);
+    });  
+}
 
-    var text = $("#pdf").val()
-    
-    var val = htmlToPdfmake(text); 
 
-    var dd = {content:val};
 
-    pdfMake.createPdf(dd).download();
-});
+
+
+
 
 /*
  pdfMake.createPdf(docDefinition).download(); 
