@@ -564,3 +564,33 @@ button.plus:hover {
 #screenAvatarRightMUpdate.show {
     display: flex;
 }
+#friendlyUpdate {
+    display: none;
+}
+#friendlyUpdate.show {
+    display: flex;
+}
+#surpriseUpdate {
+    display: none;
+}
+#surpriseUpdate.show {
+    display: flex;
+}
+#disapprovalUpdate {
+    display: none;
+}
+#disapprovalUpdate.show {
+    display: flex;
+}
+#agreementUpdate {
+    display: none;
+}
+#agreementUpdate.show {
+    display: flex;
+}
+#disagreementUpdate {
+    display: none;
+}
+#disagreementUpdate.show {
+    display: flex;
+}
