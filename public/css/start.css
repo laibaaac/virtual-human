@@ -145,7 +145,7 @@ margin:5em 0em 0em 1em;
 height: auto;
 }
 .sizeUp {
-    transition: all 0.5s;
+    transition: all 5s;
 }
 .sizeUp.appear {
     transform: scale(1.05);
