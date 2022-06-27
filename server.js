@@ -2,6 +2,28 @@ const express = require("express");
 const app = express();
 const router = express.Router();
 const port = process.env.PORT || 4000;
+
+var pdfmake = require('pdfmake'); // only during development, otherwise use the following line
+//var pdfmake = require('pdfmake');
+
+var pdfContent = document.getElementById("plain-textarea-id");
+document.getElementById('pdftje').addEventlistener("click", pdfButton)
+function pdfButton() {
+  var docDefinition = {
+    content: [
+    pdfContent.value
+    ]}
+  
+    var now = new Date();
+  
+    var pdf = pdfmake.createPdf(docDefinition);
+    pdf.write('pdfs/code.pdf').then(() => {
+      console.log(new Date() - now);
+    }, err => {
+      console.error(err);
+    });  
+}
+
 bodyParser = require("body-parser");
 
 app.engine("html", require("ejs").renderFile);
