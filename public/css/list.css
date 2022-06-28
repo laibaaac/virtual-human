@@ -226,10 +226,17 @@ p.introText {
   resize: none;
   width: 100%;
 }
-
+.list div textarea {
+  
+  padding: 1.5em;
+  outline: none;
+  border: none;
+  border-radius: 1em;
+}
 /* HOVER ON TEXT */
 .list div textarea:hover {
   color: var(--orange);
+  background-color: #183863;
 }
 
 /* COPY CODE BUTTON STYLING */
@@ -268,4 +275,7 @@ p.introText {
 
 #B2TBtn:active {
   background-color: var(--orange);
+}
+#textchange {
+  color: white;
 }
