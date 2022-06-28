@@ -205,8 +205,9 @@ document.getElementById("screenAvatarLeftSButton").addEventListener("click", scr
 document.getElementById("screenAvatarRightSButton").addEventListener("click", screenAvatarRightSNumber);
 document.getElementById("screenAvatarRightSButton").addEventListener("click", screenAvatarRightSCode);
 
-// document.getElementById("screenAvatarCenterSButton").addEventListener("click", screenAvatarCenterSNumber);
-// document.getElementById("screenAvatarCenterSButton").addEventListener("click", screenAvatarCenterSCode);
+document.getElementById("officeButton").addEventListener("click", officeCode);
+document.getElementById("officeButton").addEventListener("click", officeNumber);
+
 document.getElementById("plusOne").addEventListener("click", addOne);
 document.getElementById("minusOne").addEventListener("click", removeOne);
 
@@ -221,6 +222,7 @@ document.getElementById("spMinusOne").addEventListener("click", spRemoveOne);
 
 document.getElementById("nodUpdate").addEventListener("click", updateNod);
 document.getElementById("mouthUpdate").addEventListener("click", updateMouth);
+
 
 
 
@@ -288,6 +290,7 @@ document.getElementById("screenAvatarRightSUpdate").addEventListener("click", up
 
 document.getElementById("screenAvatarLeftMUpdate").addEventListener("click", updateScreenAvatarLeftM);
 document.getElementById("screenAvatarRightMUpdate").addEventListener("click", updateScreenAvatarRightM);
+document.getElementById("officeBackUpdate").addEventListener("click", updateOfficeBack);
 
 
 
@@ -2017,7 +2020,26 @@ function updateScreenAvatarCenterM() {
 }
 
 
+function officeNumber() {
+  document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+  document.getElementById("officeBackUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');
+  });
+  img = document.createElement('img');
+  img.src = 'img/category_background.png';
+}
 
+function officeCode() {
+  document.getElementById("textReturn").value = "<trl-content screen='https://github.com/laibaaac/virtual-human/blob/development-lb/public/backgrounds/officeground.jpg' />";
+}
+
+function updateOfficeBack() {
+  officeCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
+}
 
 
 //   function questionCode() {
