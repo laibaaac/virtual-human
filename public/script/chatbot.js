@@ -2031,7 +2031,7 @@ function officeNumber() {
 }
 
 function officeCode() {
-  document.getElementById("textReturn").value = "<trl-content screen='https://github.com/laibaaac/virtual-human/blob/development-lb/public/backgrounds/officeground.jpg' />";
+  document.getElementById("textReturn").value = "<trl-content BgScreenUrl='https://raw.githubusercontent.com/laibaaac/virtual-human/development-lb/public/backgrounds/officeground.jpg' />";
 }
 
 function updateOfficeBack() {
