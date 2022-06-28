@@ -113,8 +113,7 @@ function addEditor() {
   if (dura > 100) {
     document.getElementById("plain-textarea-id").value = '';
     document.getElementById("explanation").innerHTML = ""
-    document.getElementById("codetitle").innerHTML = "Text to speech";
-   
+    document.getElementById("codetitle").innerHTML = "Add text to speech";
   } else {
     document.getElementById("codetitle").innerHTML = "Code editor";
   }
