@@ -8,8 +8,8 @@
           <button class="btn" onclick="filterSelection('brow'); addEditor()"><img src="/img/category_brows.png" alt="">Brows</button>
           <button class="btn" onclick="filterSelection('head'); addEditor()"><img src="/img/category_head.png" alt="">Head</button>
           <button class="btn" onclick="filterSelection('position'); addEditor()"><img src="/img/category_position.png" alt="">Positions</button>
-          <button class="btn" onclick="filterSelection('background'); addEditor()"><img src="/img/category_background.png" alt="">Background</button>
-          <button class="btn" onclick="filterSelection('foreground'); addEditor()"><img src="/img/category_foreground.png" alt="">foreground</button>
+          <button class="btn" id="quickfix" onclick="filterSelection('background'); addEditor()"><img src="/img/category_background.png" alt="">Background</button>
+          <button class="btn" id="quickfix" onclick="filterSelection('foreground'); addEditor()"><img src="/img/category_foreground.png" alt="">foreground</button>
          
           <!-- <button class="btn" onclick="filterSelection('animation'); addEditor()"><img src="/img/category_emotions.png" alt="">Emotions</button> -->
           <button class="btn" id="deletebtn" onclick="filterSelection('textspeech')"><img src="/img/category_textspeech.png" alt="">Speech</button>
@@ -76,22 +76,22 @@
         <button class="filterDiv head" id="turnRightButton"><img src="/img/tr.png" alt="turnright">Turn right</button>
 
         <button class="filterDiv position" id="closeUpButton"><img src="/img/default.png" alt="closeup">Close up</button>
-        <button class="filterDiv position" id="screenNoAvatarButton"><img src="/img/noavatar.png" alt="no avatar">L:screen no avatar</button>
+        <button class="filterDiv position" id="screenNoAvatarButton"><img src="/img/noavatar.png" alt="no avatar">L: Screen no Avatar</button>
         <button class="filterDiv position" id="upperBodyVisibleButton"><img src="/img/upperbody.png" alt="upper body visible">Upper body visible</button> <!--nog doen-->
         <button class="filterDiv position" id="upperBodyVisibleZoomedButton"><img src="/img/upperbodyzoomed.png" alt="upper body">Upper body (zoomed out)</button> <!--nog doen-->
-        <button class="filterDiv position" id="screenRightButton"><img src="/img/screenleft.png" alt="Screen small right">S:screen S:avatar right</button> 
-        <button class="filterDiv position" id="screenLeftButton"><img src="/img/screenright.png" alt="Screen small left">S:screen S:avatar left</button>
-        <button class="filterDiv position" id="screenAvatarLeftButton"><img src="/img/smr.png" alt="Screen medium left">M:screen S:avatar left</button>
-        <button class="filterDiv position" id="screenAvatarRightButton"><img src="/img/sml.png" alt="Screen medium right">M:screen S:avatar right</button>
-        <button class="filterDiv position" id="screenAvatarCenterLButton"><img src="/img/lm.png" alt="LM">L: Screen L: avatar center</button>
+        <button class="filterDiv position" id="screenRightButton"><img src="/img/screenleft.png" alt="Screen small right">S: Screen S: Avatar right</button> 
+        <button class="filterDiv position" id="screenLeftButton"><img src="/img/screenright.png" alt="Screen small left">S: Screen S: Avatar left</button>
+        <button class="filterDiv position" id="screenAvatarLeftButton"><img src="/img/smr.png" alt="Screen medium left">M: Screen S: Avatar left</button>
+        <button class="filterDiv position" id="screenAvatarRightButton"><img src="/img/sml.png" alt="Screen medium right">M: Screen S: Avatar right</button>
+        <button class="filterDiv position" id="screenAvatarCenterLButton"><img src="/img/lm.png" alt="LM">L: Screen L: Avatar center</button>
         <!-- <button class="filterDiv position" id="screenAvatarLeftLButton"><img src="/img/lscreenlav.png" alt="center up">L: Screen L:avatar left</button> 
         <button class="filterDiv position" id="screenAvatarRightLButton"><img src="/img/avatarl.png" alt="no avatar">L:screen L:avatar right</button> -->
-        <button class="filterDiv position" id="screenAvatarCenterMButton"><img src="/img/lscreenmavatarcenter.png" alt="avatar">L: Screen M:avatar center</button>
-        <button class="filterDiv position" id="screenAvatarLeftMButton"><img src="/img/medleft.png" alt="avatarmedium">L: Screen M: avatar left</button>
-        <button class="filterDiv position" id="screenAvatarRightMButton"><img src="/img/avatarlr.png" alt="avatar small left ">L: Screen M: avatar right</button>
+        <button class="filterDiv position" id="screenAvatarCenterMButton"><img src="/img/lscreenmavatarcenter.png" alt="avatar">L: Screen M: Avatar center</button>
+        <button class="filterDiv position" id="screenAvatarLeftMButton"><img src="/img/medleft.png" alt="avatarmedium">L: Screen M: Avatar left</button>
+        <button class="filterDiv position" id="screenAvatarRightMButton"><img src="/img/avatarlr.png" alt="avatar small left ">L: Screen M: Avatar right</button>
         <!-- <button class="filterDiv position" id="screenAvatarCenterSButton"><img src="/img/avatarcs.png" alt="avatar right">L: Screen S:avatar center</button> -->
-        <button class="filterDiv position" id="screenAvatarLeftSButton"><img src="/img/avatarsl.png" alt="avatar medium right">L: Screen S: avatar left</button>
-        <button class="filterDiv position" id="screenAvatarRightSButton"><img src="/img/lscreensavatarright.png" alt="avatar small right">L: Screen S: avatar right</button>
+        <button class="filterDiv position" id="screenAvatarLeftSButton"><img src="/img/avatarsl.png" alt="avatar medium right">L: Screen S: Avatar left</button>
+        <button class="filterDiv position" id="screenAvatarRightSButton"><img src="/img/lscreensavatarright.png" alt="avatar small right">L: Screen S: Avatar right</button>
         
         
         <button class="filterDiv animation" id="friendlyButton"><img src="/img/friendly.png" alt="friendly">Friendly</button>
