@@ -75,6 +75,7 @@ a {
 ul.titlebar {
   color: white;
   list-style: none;
+  text-transform: uppercase;
 }
 
 .titlebar > li {
