@@ -643,6 +643,12 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
     min-width: 5em;
 }
 
+/* back/fore ground aanspreken */
+#myBtnContainer button:nth-of-type(6),
+#myBtnContainer button:nth-of-type(7)  {
+    padding: 0.5em 4em;
+}
+
 #myBtnContainer button img {
     height: 2em;
 }
@@ -767,6 +773,7 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 .activeVarious p {
     color: var(--text-color-buttons);
     margin-bottom: 1.5em;
+    font-size: .9em;
 }
 
 .activeVarious p a {
@@ -776,7 +783,7 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 
 .activeVarious ul a {
     display: flex;
-    gap: 1em;
+    gap: 2em;
     border-bottom: none;
 }
 
@@ -909,7 +916,7 @@ color: rgba(255, 0, 0, 0);
 
 #linkToList.filterDiv.filterShow {
  max-width: 15em;
- height: 5em;
+ height: 4rem;
  position: relative;
  background-color: rgba(255, 0, 0, 0);
  filter: invert(100%) sepia(3%) saturate(13%) hue-rotate(81deg) brightness(106%);
