@@ -594,3 +594,11 @@ button.plus:hover {
 #disagreementUpdate.show {
     display: flex;
 }
+#officeBackUpdate {
+    display: none;
+
+}
+#officeBackUpdate.show {
+    display: flex;
+
+}
