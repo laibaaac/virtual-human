@@ -89,37 +89,34 @@ function removeEditor() {
       
       el.classList.remove('active');})
       document.querySelectorAll("#textReturn, .editor, .animationAdd").forEach(target => target.classList.add("active"));
- 
-    document.getElementById("explanation").innerHTML = "You use the <mstts:express-as> element to express emotions like cheerfulness, empathy, and calmness. You can also optimize the voice for different scenarios like customer service, newscast, and voice assistant. Click on a button bellow to open the Animation Catalog and see what your options are.";
-    document.getElementById("codetitle").innerHTML = "Add text to speech";
-    document.getElementById("textReturn").value = " ";
+      document.getElementById("textReturn").classList.remove('hide');
+    document.getElementById("codetitle").innerHTML = "text to speech";
+    document.getElementById("textReturn").placeholder = "Type text here...";
     document.querySelector(".activeVarious").classList.remove('show');
     document.querySelectorAll(".commands").forEach((el) => {
-      
-
   el.classList.add('inactive');
   img = document.createElement('img');
   img.src = 'img/category_textspeech.png';
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
   });
-
-
-
   } else {
-    document.getElementById("codetitle").innerHTML = "Code editor";
+    document.getElementById("codetitle").innerHTML = "Code editorrr";
+    
   }}
 function addEditor() {
   dura = 0;
   if (dura > 100) {
     document.getElementById("plain-textarea-id").value = '';
-    document.getElementById("explanation").innerHTML = ""
+    document.getElementById("explanation").innerHTML = "";
     document.getElementById("codetitle").innerHTML = "Add text to speech";
+    
+    
   } else {
-    document.getElementById("codetitle").innerHTML = "Code editor";
+    document.getElementById("codetitle").innerHTML = "Code editorrrr";
   }
   document.querySelectorAll("#textReturn, .editor, .animationAdd").forEach(target => target.classList.remove("active"));
   document.querySelectorAll(".commands").forEach((el) => {
-    document.getElementById("explanation").innerHTML = ""
+    document.getElementById("explanation").value = ""
     el.classList.remove('inactive');
   })}
   
@@ -154,7 +151,7 @@ function removeEditor2() {
       el.classList.remove('active');})
       // document.querySelectorAll("#textReturn, .editor, .animationAdd").forEach(target => target.classList.add("active"));
  
-    document.getElementById("explanation").innerHTML = "You use the <mstts:express-as> element to express emotions like cheerfulness, empathy, and calmness. You can also optimize the voice for different scenarios like customer service, newscast, and voice assistant. Click on a button bellow to open the Animation Catalog and see what your options are.";
+    
     document.getElementById("codetitle").innerHTML = "Various";
     document.getElementById("textReturn").classList.add('hide');
     document.getElementById("addAnimation").classList.add('hide');
@@ -165,10 +162,7 @@ function removeEditor2() {
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
   });
 
-
-
   } else {
-    document.getElementById("codetitle").innerHTML = "Code editor";
   }}
   
 function addEditor() {
@@ -177,7 +171,8 @@ function addEditor() {
     document.getElementById("plain-textarea-id").value = '';
     document.getElementById("explanation").innerHTML = ""
     document.getElementById("codetitle").innerHTML = "Various";
-  } else {
+  } else {//hier
+    document.getElementById("textReturn").placeholder = "You have not added any animations yet. Choose from the categories in the animation editor above to add and/or adjust an animation.";
     document.getElementById("codetitle").innerHTML = "Code editor";
     document.getElementById("textReturn").classList.remove('hide');
     document.getElementById("addAnimation").classList.remove('hide');
