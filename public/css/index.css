@@ -926,19 +926,7 @@ color: rgba(255, 0, 0, 0);
  display: flex;
  justify-content: space-around;
  flex-wrap: wrap;
- transition: all 0.3s;
 }
-#linkToList.filterDiv.filterShow:hover {
-    transform: scale(1.1);
-    outline: none;
-
-}
-#linkToList:active {
-outline: none;
-}
-#linkToList:focus {
-    outline: none;
-    }
 .editor.active {
     height: 63.8vh;
 }
