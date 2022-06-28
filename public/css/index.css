@@ -918,10 +918,7 @@ color: rgba(255, 0, 0, 0);
     flex-wrap: wrap;
     flex-direction: row;
 }
-#quickfix {
-    margin-top: 0.2em;
-    transform: scale(0.90);
-}
+
 #explainButtons .wrapper img:hover {
     filter: invert(60%) sepia(91%) saturate(5059%) hue-rotate(338deg) brightness(94%) contrast(92%);
 }

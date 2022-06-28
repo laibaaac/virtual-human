@@ -159,11 +159,11 @@ document.getElementById("closeUpButton").addEventListener("click", closeUpCode);
 document.getElementById("screenNoAvatarButton").addEventListener("click", screenNoAvatarNumber);
 document.getElementById("screenNoAvatarButton").addEventListener("click", screenNoAvatarCode);
 
-document.getElementById("upperBodyVisibleButton").addEventListener("click", upperBodyVisibleNumber);
-document.getElementById("upperBodyVisibleButton").addEventListener("click", upperBodyVisibleCode);
+// document.getElementById("upperBodyVisibleButton").addEventListener("click", upperBodyVisibleNumber);
+// document.getElementById("upperBodyVisibleButton").addEventListener("click", upperBodyVisibleCode);
 
-document.getElementById("upperBodyVisibleZoomedButton").addEventListener("click", upperBodyVisibleZoomedNumber);
-document.getElementById("upperBodyVisibleZoomedButton").addEventListener("click", upperBodyVisibleZoomedCode);
+// document.getElementById("upperBodyVisibleZoomedButton").addEventListener("click", upperBodyVisibleZoomedNumber);
+// document.getElementById("upperBodyVisibleZoomedButton").addEventListener("click", upperBodyVisibleZoomedCode);
 
 document.getElementById("screenLeftButton").addEventListener("click", screenLeftNumber);
 document.getElementById("screenLeftButton").addEventListener("click", screenLeftCode);
