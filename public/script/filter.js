@@ -96,7 +96,7 @@ function removeEditor() {
     document.querySelectorAll(".commands").forEach((el) => {
   el.classList.add('inactive');
   img = document.createElement('img');
-  img.src = 'img/category_textspeech.png';
+  img.src = 'img/category_emotions.png';
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
   });
   } else {
@@ -120,15 +120,7 @@ function addEditor() {
     el.classList.remove('inactive');
   })}
   
-  document.getElementById("resetButton").addEventListener('click', () => {
 
-    document.getElementById("plain-textarea-id").value = '';
-  
-    const timelineImages = Array.from(document.getElementsByClassName('timelineImg'));
-    timelineImages.forEach(timelineImg => {
-      timelineImg.remove();
-    })})
-  
 
 // document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
 // document.getElementById("smileLargeUpdate").classList.add("show");

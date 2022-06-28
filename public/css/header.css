@@ -59,6 +59,9 @@ a {
     text-decoration: none;
     color: var(--text-color-buttons);
     font-size: 0.875em;
+}
+
+nav a {
     text-transform: uppercase;
 }
 

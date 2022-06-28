@@ -39,6 +39,10 @@
     max-width: 70%;
   }
 
+  .filterDiv.mouth.filterShow img{
+    height: 2em;
+  }
+
   /* Add a light grey background on mouse-over */
   .btn:hover {
     background-color: #ddd;
