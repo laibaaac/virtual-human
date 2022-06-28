@@ -1,16 +1,46 @@
-var PdfPrinter = require('pdfmake');
+const pdfmake = window.pdfMake;
+const PDFButton = document.getElementById("pdftje");
 
-("plain-textarea-id").submit(function(e){
-    e.preventDefault()
+function pdfButton() {
+  var dd = { content: document.getElementById("plain-textarea-id").value };
+  pdfmake.createPdf(dd).download();
+}
 
-    var text = $("#pdf").val()
-    
-    var val = htmlToPdfmake(text); 
-
-    var dd = {content:val};
-
-    pdfMake.createPdf(dd).download();
+// Add an event listener on CopyButton, when clicked copy the value from #plain-textarea-id and log the value to the console
+PDFButton.addEventListener("click", function () {
+  var copyText = document.getElementById("plain-textarea-id");
+  console.log(copyText.value);
+  pdfButton();
 });
+
+
+
+
+/*var pdfmake = require('pdfmake');
+
+var pdfContent = document.getElementById("plain-textarea-id");
+document.getElementById('pdftje').addEventlistener("click", pdfButton)
+function pdfButton() {
+  var docDefinition = {
+    content: [
+    pdfContent.value
+    ]}
+  
+    var now = new Date();
+  
+    var pdf = pdfmake.createPdf(docDefinition);
+    pdf.write('pdfs/code.pdf').then(() => {
+      console.log(new Date() - now);
+    }, err => {
+      console.error(err);
+    });  
+}*/
+
+
+
+
+
+
 
 /*
  pdfMake.createPdf(docDefinition).download(); 
