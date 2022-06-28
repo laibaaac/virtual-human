@@ -31,6 +31,11 @@ html {
     box-sizing: border-box;
     font-family: var(--main-font), Arial, Helvetica, sans-serif;
 }
+
+button {
+    text-transform: capitalize;
+}
+
 button:focus {
     background-color: var(--orange);
 }
@@ -115,26 +120,26 @@ i {
     background-color: var(--grey);
     padding: 1em;
     border-radius: 1em;
-    font-size: 16px;
+    font-size: .7em;
     width: 25vw;
     color: var(--black);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .infoTekst1 {
-    left: 11.5em;
+    left: 14.5em;
 }
 
 .infoTekst2 {
-    left: 9em;
+    left: 12em;
 }
 
 .infoTekst3 {
-    left: 11em;
+    left: 14em;
 }
 
 .infoTekst4 {
-    left: 8em;
+    left: 11em;
     top: -1.7em;
     text-align: left;
 }
@@ -763,7 +768,7 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 }
 #textReturn.active {
     height: 100%;
-    max-height: 20em;
+    max-height: 12em;
 }
 
 .activeVarious {
@@ -801,6 +806,10 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 
 .activeVarious li:first-of-type img:hover {
     filter: invert(38%) sepia(79%) saturate(2784%) hue-rotate(341deg) brightness(97%) contrast(87%);
+}
+
+.activeVarious li p:hover {
+    color: var(--orange);
 }
 
 .show {
@@ -914,9 +923,10 @@ color: rgba(255, 0, 0, 0);
     filter: invert(60%) sepia(91%) saturate(5059%) hue-rotate(338deg) brightness(94%) contrast(92%);
 }
 
+
 #linkToList.filterDiv.filterShow {
  max-width: 15em;
- height: 4rem;
+ height: 3.5rem;
  position: relative;
  background-color: rgba(255, 0, 0, 0);
  filter: invert(100%) sepia(3%) saturate(13%) hue-rotate(81deg) brightness(106%);
@@ -924,6 +934,11 @@ color: rgba(255, 0, 0, 0);
  justify-content: space-around;
  flex-wrap: wrap;
 }
+
+.filterDiv.textspeech.filterShow {
+    padding: 1em;
+}
+
 .editor.active {
     height: 63.8vh;
 }
