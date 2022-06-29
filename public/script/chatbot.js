@@ -208,8 +208,7 @@ document.getElementById("screenAvatarRightSButton").addEventListener("click", sc
 document.getElementById("officeButton").addEventListener("click", officeCode);
 document.getElementById("officeButton").addEventListener("click", officeNumber);
 
-document.getElementById("officeVidButton").addEventListener("click", officeVidCode);
-document.getElementById("officeVidButton").addEventListener("click", officeVidNumber);
+
 
 document.getElementById("plusOne").addEventListener("click", addOne);
 document.getElementById("minusOne").addEventListener("click", removeOne);
@@ -294,7 +293,7 @@ document.getElementById("screenAvatarRightSUpdate").addEventListener("click", up
 document.getElementById("screenAvatarLeftMUpdate").addEventListener("click", updateScreenAvatarLeftM);
 document.getElementById("screenAvatarRightMUpdate").addEventListener("click", updateScreenAvatarRightM);
 document.getElementById("officeBackUpdate").addEventListener("click", updateOfficeBack);
-document.getElementById("officeVidBackUpdate").addEventListener("click", updateOfficeVidBack);
+
 
 
 
@@ -2044,26 +2043,7 @@ function updateOfficeBack() {
   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
-function officeVidNumber() {
-  document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
-  document.getElementById("officeVidBackUpdate").classList.add("show");
-  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
-    el.classList.remove('active');
-  });
-  img = document.createElement('img');
-  img.src = 'img/category_background.png';
-}
-
-function officeVidCode() {
-  document.getElementById("textReturn").value = "<trl-content BgScreenUrl='https://raw.githubusercontent.com/laibaaac/virtual-human/development-lb/public/backgrounds/officevideo.mov'/>";
-}
-
-function updateOfficeVidBack() {
-  officeCode();
-  img.classList = 'timelineImg';
-  element.append(img);
-  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
-}
+f
 //   function questionCode() {
 
 //     document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='frownLarge' duration='4.5' blendStart='1.5' blendEnd='1.5'/>";
