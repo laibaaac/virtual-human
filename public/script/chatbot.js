@@ -91,11 +91,14 @@ document.getElementById("nodSmallButton").addEventListener("click", nodSmallCode
 document.getElementById("nodLargeButton").addEventListener("click", nodLargeNumber);
 document.getElementById("nodLargeButton").addEventListener("click", nodLargeCode);
 
-document.getElementById("nodAverageButton").addEventListener("click", nodAverageNumber);
-document.getElementById("nodAverageButton").addEventListener("click", nodAverageCode);
+// document.getElementById("nodAverageButton").addEventListener("click", nodAverageNumber);
+// document.getElementById("nodAverageButton").addEventListener("click", nodAverageCode);
 
 document.getElementById("nodSlowButton").addEventListener("click", nodSlowNumber);
 document.getElementById("nodSlowButton").addEventListener("click", nodSlowCode);
+
+document.getElementById("nodFastButton").addEventListener("click", nodFastNumber);
+document.getElementById("nodFastButton").addEventListener("click", nodFastCode);
 
 document.getElementById("nodLargeButton").addEventListener("click", nodLargeNumber);
 document.getElementById("nodLargeButton").addEventListener("click", nodLargeCode);
@@ -255,8 +258,9 @@ document.getElementById("smallFrownUpdate").addEventListener("click", updateSmal
 document.getElementById("frownLUpdate").addEventListener("click", updateFrownL);
 document.getElementById("nodSmallUpdate").addEventListener("click", updateNodSmall);
 document.getElementById("nodLargeUpdate").addEventListener("click", updateNodLarge);
-document.getElementById("nodAverageUpdate").addEventListener("click", updateNodAverage);
+// document.getElementById("nodAverageUpdate").addEventListener("click", updateNodAverage);
 document.getElementById("nodSlowUpdate").addEventListener("click", updateNodSlow);
+document.getElementById("nodFastUpdate").addEventListener("click", updateNodFast);
 document.getElementById("shakeUpdate").addEventListener("click", updateShake);
 document.getElementById("leanInNodUpdate").addEventListener("click", updateLeanInNod);
 document.getElementById("leanInNod2Update").addEventListener("click", updateLeanInNod2);
@@ -722,14 +726,16 @@ function updateMouth() {
 
 
 function lookLeftNumber() {
-  dura = 4.5;
+  dura = 2.5;
+  speed = 4;
   document.getElementById('durationmeter').innerHTML = dura + "s";
+  document.getElementById('speedmeter').innerHTML = speed + "s";
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
   document.getElementById("lookLeftUpdate").classList.add("show");
   document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
     el.classList.remove('active');
   });
-  document.querySelectorAll("#duraCss").forEach((el) => {
+  document.querySelectorAll("#duraCss, #speedCss").forEach((el) => {
     el.classList.add('active');
   });
   img = document.createElement('img');
@@ -737,7 +743,7 @@ function lookLeftNumber() {
 }
 
 function lookLeftCode() {
-  document.getElementById("textReturn").value = "<trl-config lookat='15,0,5' enable='true' speed='4.5' wait='2.5' returnSpeed='4.5' absolute='false' /><trl-anim type='aux' id='translateRotateLeftSmall' duration='2.5' /><trl-anim type='aux' id='tiltLeftUpMedium3' duration='"+ dura +"' />";
+  document.getElementById("textReturn").value = "<trl-config lookat='20,0,0' enable='true' speed='"+ speed + "' wait='2.5' returnSpeed='3.5' absolute='false' /><trl-anim type='aux' id='translateRotateLeftSmall' duration='"+ dura +"' />";
 }
 
 function updateLookLeft() {
@@ -749,16 +755,17 @@ function updateLookLeft() {
 
 
 function lookRightNumber() {
-  dura = 3;
+  dura = 2.5;
+  speed = 4;
   document.getElementById('durationmeter').innerHTML = dura + "s";
-  document.getElementById('blendStmeter').innerHTML = blendSt + "s";
-  document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
+  document.getElementById('speedmeter').innerHTML = speed + "s";
+
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
   document.getElementById("lookRightUpdate").classList.add("show");
   document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
     el.classList.remove('active');
   });
-  document.querySelectorAll("#duraCss").forEach((el) => {
+  document.querySelectorAll("#duraCss, #speedCss").forEach((el) => {
     el.classList.add('active');
   });
   img = document.createElement('img');
@@ -766,7 +773,7 @@ function lookRightNumber() {
 }
 
 function lookRightCode() {
-  document.getElementById("textReturn").value = "<trl-config lookat='-15,0,5' enable='true' speed='4.5' wait='2.5' returnSpeed='5.5' absolute='false' /><trl-anim type='aux' id='translateRotateRightSmall' duration='2.5' /><trl-anim type='aux' id='tiltRightUpMedium3' duration='"+ dura +"' />";
+  document.getElementById("textReturn").value = "<trl-config lookat='-20,0,0' enable='true' speed='"+ speed +"' wait='2.5' returnSpeed='3.5' absolute='false' /><trl-anim type='aux' id='translateRotateRightSmall' duration='"+ dura +"' />";
 }
 
 function updateLookRight() {
@@ -1276,7 +1283,7 @@ function nodLargeNumber() {
   document.getElementById('blendStmeter').innerHTML = blendSt + "s";
   document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
-  document.getElementById("frownUpdate").classList.add("show");
+  document.getElementById("nodLargeUpdate").classList.add("show");
   document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
     el.classList.remove('active');
   });
@@ -1292,42 +1299,42 @@ function nodLargeCode() {
 }
 
 function updateNodLarge() {
-  nodlargeCode();
+  nodLargeCode();
   img.classList = 'timelineImg';
   element.append(img);
   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
 
-function nodAverageNumber() {
-  dura = 4;
-  blendSt = 1;
-  blendEn = 1;
-  document.getElementById('durationmeter').innerHTML = dura + "s";
-  document.getElementById('blendStmeter').innerHTML = blendSt + "s";
-  document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
-  document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
-  document.getElementById("frownUpdate").classList.add("show");
-  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
-    el.classList.remove('active');
-  });
-  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss").forEach((el) => {
-    el.classList.add('active');
-  });
-  img = document.createElement('img');
-  img.src = 'img/noddings.png';
-}
+// function nodAverageNumber() {
+//   dura = 4;
+//   blendSt = 1;
+//   blendEn = 1;
+//   document.getElementById('durationmeter').innerHTML = dura + "s";
+//   document.getElementById('blendStmeter').innerHTML = blendSt + "s";
+//   document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
+//   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+//   document.getElementById("nodAverageUpdate").classList.add("show");
+//   document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+//     el.classList.remove('active');
+//   });
+//   document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss").forEach((el) => {
+//     el.classList.add('active');
+//   });
+//   img = document.createElement('img');
+//   img.src = 'img/noddings.png';
+// }
 
-function nodAverageCode() {
-  document.getElementById("textReturn").value = "<trl-anim type='aux' id='frownLarge' duration=" + dura + " blendStart=" + blendSt + " blendEnd=" + blendEn + "/>";
-}
+// function nodAverageCode() {
+//   document.getElementById("textReturn").value = "<trl-anim type='aux' id='frownLarge' duration=" + dura + " blendStart=" + blendSt + " blendEnd=" + blendEn + "/>";
+// }
 
-function updateNodAverage() {
-  nodAverageCode();
-  img.classList = 'timelineImg';
-  element.append(img);
-  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
-}
+// function updateNodAverage() {
+//   nodAverageCode();
+//   img.classList = 'timelineImg';
+//   element.append(img);
+//   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
+// }
 
 
 function nodSlowNumber() {
@@ -1337,7 +1344,7 @@ function nodSlowNumber() {
   document.getElementById('blendStmeter').innerHTML = blendSt + "s";
   document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
-  document.getElementById("frownUpdate").classList.add("show");
+  document.getElementById("nodSlowUpdate").classList.add("show");
   document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
     el.classList.remove('active');
   });
@@ -1351,9 +1358,37 @@ function nodSlowNumber() {
 function nodSlowCode() {
   document.getElementById("textReturn").value = "<trl-anim type='aux' id='MCnoddingSlow' blendStart=" + blendSt + " blendEnd=" + blendEn + "/>";
 }
-
 function updateNodSlow() {
   nodSlowCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
+}
+
+
+function nodFastNumber() {
+  blendSt = 1.25;
+  blendEn = 1.25;
+  document.getElementById('durationmeter').innerHTML = dura + "s";
+  document.getElementById('blendStmeter').innerHTML = blendSt + "s";
+  document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
+  document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+  document.getElementById("nodFastUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');
+  });
+  document.querySelectorAll("#blendEnCss, #blendStCss").forEach((el) => {
+    el.classList.add('active');
+  });
+  img = document.createElement('img');
+  img.src = 'img/noddingfast.png';
+}
+
+function nodFastCode() {
+  document.getElementById("textReturn").value = "<trl-anim type='aux' id='MCnoddingFast' blendStart=" + blendSt + " blendEnd=" + blendEn + "/>";
+}
+function updateNodFast() {
+  nodFastCode();
   img.classList = 'timelineImg';
   element.append(img);
   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
@@ -1367,7 +1402,7 @@ function shakeNumber() {
   document.getElementById('blendStmeter').innerHTML = blendSt + "s";
   document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
-  document.getElementById("frownUpdate").classList.add("show");
+  document.getElementById("shakeUpdate").classList.add("show");
   document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
     el.classList.remove('active');
   });
