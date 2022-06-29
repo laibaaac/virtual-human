@@ -55,7 +55,7 @@ for (const btn of btns) {
     btn.classList.add('active')
   })
 }
-
+var testknopje = document.getElementById("codetitle")
 document.getElementById("deletebtn").addEventListener("click", removeEditor);
 
 function removeEditor() {
@@ -64,11 +64,11 @@ function removeEditor() {
     document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
       
       el.classList.remove('active');})
+      document.getElementById("explanation").innerHTML = " You can use the mstts:express-as element to express emotions like cheerfulness, empathy, and calmness. You can also optimize the voice for different scenarios like customer service, newscast, and voice assistant.";
       document.querySelectorAll("#textReturn, .editor, .animationAdd").forEach(target => target.classList.add("active"));
- 
-    document.getElementById("explanation").innerHTML = "You use the <mstts:express-as> element to express emotions like cheerfulness, empathy, and calmness. You can also optimize the voice for different scenarios like customer service, newscast, and voice assistant. Click on a button bellow to open the Animation Catalog and see what your options are.";
-    document.getElementById("codetitle").innerHTML = "Add text to speech";
-    document.getElementById("textReturn").value = " ";
+      document.getElementById("textReturn").classList.remove('hide');
+      testknopje.innerHTML = "Add text to speech";
+    document.getElementById("textReturn").placeholder = "Type text here...";
     document.querySelector(".activeVarious").classList.remove('show');
     document.querySelectorAll(".commands").forEach((el) => {
   el.classList.add('inactive');
@@ -89,7 +89,7 @@ function addEditor() {
     
     
   } else {
-    document.getElementById("codetitle").innerHTML = "Code editorrrr";
+ 
   }
   document.querySelectorAll("#textReturn, .editor, .animationAdd").forEach(target => target.classList.remove("active"));
   document.querySelectorAll(".commands").forEach((el) => {
@@ -125,7 +125,7 @@ function addEditor() {
     document.getElementById("explanation").innerHTML = ""
     document.getElementById("codetitle").innerHTML = "Various";
   } else {//hier
-var testknopje = document.getElementById("codetitle")
+
 testknopje.innerHTML = "Code editor" + "<img src='/img/circle-info-solid.svg' class='infoSvg2'>" + "<p class='infoTekst2'>When an animation has been chosen you can fine-tune the animation in the code editor. Add the variation to your timeline by pressing the “Add to animation X” button. If you want to reset the code to its original values you can press the default button.</p></h2>";
     document.getElementById("textReturn").placeholder = "You have not added any animations yet. Choose from the categories in the animation editor above to add and/or adjust an animation.";
 
