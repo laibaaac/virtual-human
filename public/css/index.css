@@ -1,14 +1,4 @@
-/*********/
-/* FONTS */
-/*********/
- /* @font-face {
-    font-family: 'montserrat'; 
-    src: url("../fonts/Montserrat-VariableFont_wght.woff2") format("woff2");
- } */
 
-/**************/
-/* VARIABELEN */
-/**************/
 :root {
     --black: #020B23;
     --text-color-buttons: #FFFFFF;
@@ -21,9 +11,7 @@
     --hover-orange: #f99a90;
 }
 
-/**************/
-/* CSS REMEDY */
-/**************/
+
 *,
 html {
     margin: 0;
@@ -46,9 +34,7 @@ textarea:focus {
     border-radius: 2px;
 }
 
-/********************/
-/* ALGEMENE STYLING */
-/********************/
+
 h1 {
     color: var(--text-color-buttons);
     font-size: 1.1em;
@@ -152,9 +138,7 @@ i {
     opacity: 1;
 }
 
-/*************/
-/* SCROLLBAR */
-/*************/
+
 ::-webkit-scrollbar-track {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	border-radius: 10px;
@@ -172,11 +156,6 @@ i {
 	background-color: #E84D3C;
 }
 
-/*************/
-/* DASHBOARD */
-/*************/
-
-/* splitten van de 2 kleuren */
 .partials {
     display: flex;
     flex-wrap: wrap;
@@ -184,11 +163,6 @@ i {
     height: calc(100vh - 5em);
 }
 
-/***************/
-/* LINKERHELFT */
-/***************/
-
-/* linkerhelft van het scherm */
 .partials_left {
 
     display: flex;
@@ -199,7 +173,7 @@ i {
     padding: 1em 2em 0 0;
 }
 
-/* rechts positioneren in het linkervak */
+
 .left__right {
     list-style: none;
     background-color: var(--black);
@@ -213,10 +187,6 @@ i {
     width: 80%;
 }
 
-/***********/
-/* PREVIEW */
-/***********/
-/* loading animation */
 .lds-spinner {
     display: none;
     position: absolute;
@@ -308,7 +278,7 @@ i {
   }
 
   
-/*  */
+
 .left__right li:nth-of-type(2) {
     margin-bottom: 2.1em;
 }
@@ -453,9 +423,6 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
     display: none !important;
 }
 
-/*********/
-/*  CODE */
-/*********/
 /* vormgeving timeline blok */
 .timelineArea {
     position: relative;

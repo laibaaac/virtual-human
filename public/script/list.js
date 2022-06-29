@@ -39,14 +39,6 @@ faders.forEach(fader => {
   appearOnScroll.observe(fader);
 });
 
-// function copyToClipboard(text) {
-//   const elem = document.createElement('textarea');
-//   elem.value = text;
-//   document.body.appendChild(elem);
-//   elem.select();
-//   document.execCommand('copy');
-//   document.body.removeChild(elem);
-// }
 document.getElementById("resetButton").addEventListener('click', () => {
 
   document.getElementById("plain-textarea-id").value = '';

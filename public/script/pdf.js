@@ -11,21 +11,3 @@ var PdfPrinter = require('pdfmake');
 
     pdfMake.createPdf(dd).download();
 });
-
-/*
- pdfMake.createPdf(docDefinition).download(); 
-
-var fs = require('fs');
-  
-  var docDefinition = {
- 
-
-  };
-  
-  var options = {
-    
-  };
-  
-  var pdfDoc = printer.createPdfKitDocument(docDefinition, options);
-  pdfDoc.pipe(fs.createWriteStream('document.pdf'));
-  pdfDoc.end();*/

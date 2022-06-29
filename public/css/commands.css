@@ -564,3 +564,48 @@ button.plus:hover {
 #screenAvatarRightMUpdate.show {
     display: flex;
 }
+#officeBackUpdate {
+    display: none;
+}
+#officeBackUpdate.show {
+    display: flex;
+}
+#friendlyUpdate {
+    display: none;
+}
+#friendlyUpdate.show {
+    display: flex;
+}
+
+#agreeUpdate {
+    display: none;
+}
+#agreeUpdate.show {
+    display: flex;
+}
+#disagreeUpdate {
+    display: none;
+}
+#disagreeUpdate.show {
+    display: flex;
+}
+#disapprovalUpdate {
+    display: none;
+}
+#disapprovalUpdate.show {
+    display: flex;
+}
+#surpriseUpdate {
+    display: none;
+}
+#surpriseUpdate.show {
+    display: flex;
+}
+#questionUpdate {
+    display: none;
+}
+#questionUpdate.show {
+    display: flex;
+}
+
+

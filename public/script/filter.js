@@ -55,30 +55,6 @@ for (const btn of btns) {
     btn.classList.add('active')
   })
 }
-// document.getElementById("emotionId").addEventListener("click", removeClass);
-
-// TO DO querySelector naar de emotion div, add eventlistener, voer dezelfde actie uit als hierboven + filter naar emoties
-
-
-// btns.forEach(element => {
-//   element.addEventListener('click', function() {
-//     console.log('klik op een knop')
-//     element.classList.add('active')
-//   })
-// });
-
-// for (var i = 0; i < btns.length; i++) {
-//   btns[i].addEventListener("click", function(event) {
-//     console.log(i)
-//     console.log(btns)
-//     // Als de button, is geklikt, check als de button class Active heeft, zo niet voeg de class active toe 
-//     btns.classList.add("active");
-//     var current = document.getElementsByClassName("active");
-//   });
-// }
-
-
-//bron van code = w3school.com -- https://www.w3schools.com/howto/howto_js_filter_elements.asp//
 
 document.getElementById("deletebtn").addEventListener("click", removeEditor);
 
@@ -121,19 +97,6 @@ function addEditor() {
     el.classList.remove('inactive');
   })}
   
-
-
-// document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
-// document.getElementById("smileLargeUpdate").classList.add("show");
-// document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
-//   el.classList.remove('active');
-// });
-// document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss").forEach((el) => {
-//   el.classList.add('active');
-// });
-
-//bron van code = w3school.com -- https://www.w3schools.com/howto/howto_js_filter_elements.asp//
-
 document.getElementById("deletebtn2").addEventListener("click", removeEditor2);
 
 function removeEditor2() {
@@ -142,9 +105,6 @@ function removeEditor2() {
     document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
       
       el.classList.remove('active');})
-      // document.querySelectorAll("#textReturn, .editor, .animationAdd").forEach(target => target.classList.add("active"));
- 
-    
     document.getElementById("codetitle").innerHTML = "Various";
     document.getElementById("textReturn").classList.add('hide');
     document.getElementById("addAnimation").classList.add('hide');

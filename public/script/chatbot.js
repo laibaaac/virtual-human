@@ -1,6 +1,9 @@
 window.onbeforeunload = function() {
   return "you will lose any progress on leaving or reloading, continue?";
 };
+
+//alle commands die er zijn worden doorgevoerd en met hun waardes meegegeven, 
+//number geeft aan welke waardes het zijn die bij de codestring hoort en code voert de string met waardes door naar het textvak
 document.getElementById("lookDownButton").addEventListener("click", lookDownNumber);
 document.getElementById("lookDownButton").addEventListener("click", lookDownCode);
 
@@ -85,9 +88,6 @@ document.getElementById("frownLButton").addEventListener("click", frownLCode);
 document.getElementById("nodSmallButton").addEventListener("click", nodSmallNumber);
 document.getElementById("nodSmallButton").addEventListener("click", nodSmallCode);
 
-// document.getElementById("nodFastButton").addEventListener("click", nodFastNumber);
-// document.getElementById("nodFastButton").addEventListener("click", nodFastCode);
-
 document.getElementById("nodLargeButton").addEventListener("click", nodLargeNumber);
 document.getElementById("nodLargeButton").addEventListener("click", nodLargeCode);
 
@@ -109,15 +109,11 @@ document.getElementById("shakeSlowButton").addEventListener("click", shakeSlowCo
 document.getElementById("shakeFastButton").addEventListener("click", shakeFastNumber);
 document.getElementById("shakeFastButton").addEventListener("click", shakeFastCode);
 
-//   document.getElementById("mouthTeethButton").addEventListener("click", mouthTeethNumber);
-//   document.getElementById("mouthTeethButton").addEventListener("click", mouthTeethCode);
-
 document.getElementById("mouthButton").addEventListener("click", mouthNumber);
 document.getElementById("mouthButton").addEventListener("click", mouthCode);
 
 document.getElementById("lookLeftButton").addEventListener("click", lookLeftNumber);
 document.getElementById("lookLeftButton").addEventListener("click", lookLeftCode);
-
 
 document.getElementById("lookrButton").addEventListener("click", lookRightNumber);
 document.getElementById("lookrButton").addEventListener("click", lookRightCode);
@@ -134,14 +130,12 @@ document.getElementById("frownSmallButton").addEventListener("click", frownSmall
 document.getElementById("noddingButton").addEventListener("click", nodNumber);
 document.getElementById("noddingButton").addEventListener("click", nodCode);
 
-
 document.getElementById("leanInButton").addEventListener("click", leanInNumber);
 document.getElementById("leanInButton").addEventListener("click", leanInCode);
-// vanaf hier?????????????????????????????????????????????????????????????????????????????????????
-// hiero
+
 document.getElementById("leanIn2Button").addEventListener("click", leanIn2Number);
 document.getElementById("leanIn2Button").addEventListener("click", leanIn2Code);
-////////
+
 document.getElementById("leanInNodButton").addEventListener("click", leanInNodNumber);
 document.getElementById("leanInNodButton").addEventListener("click", leanInNodCode);
 
@@ -156,14 +150,9 @@ document.getElementById("turnRightButton").addEventListener("click", turnRightCo
 
 document.getElementById("closeUpButton").addEventListener("click", closeUpNumber);
 document.getElementById("closeUpButton").addEventListener("click", closeUpCode);
+
 document.getElementById("screenNoAvatarButton").addEventListener("click", screenNoAvatarNumber);
 document.getElementById("screenNoAvatarButton").addEventListener("click", screenNoAvatarCode);
-
-// document.getElementById("upperBodyVisibleButton").addEventListener("click", upperBodyVisibleNumber);
-// document.getElementById("upperBodyVisibleButton").addEventListener("click", upperBodyVisibleCode);
-
-// document.getElementById("upperBodyVisibleZoomedButton").addEventListener("click", upperBodyVisibleZoomedNumber);
-// document.getElementById("upperBodyVisibleZoomedButton").addEventListener("click", upperBodyVisibleZoomedCode);
 
 document.getElementById("screenLeftButton").addEventListener("click", screenLeftNumber);
 document.getElementById("screenLeftButton").addEventListener("click", screenLeftCode);
@@ -177,15 +166,6 @@ document.getElementById("screenAvatarLeftButton").addEventListener("click", scre
 document.getElementById("screenAvatarRightButton").addEventListener("click", screenAvatarRightNumber);
 document.getElementById("screenAvatarRightButton").addEventListener("click", screenAvatarRightCode);
 
-// document.getElementById("screenAvatarCenterButton").addEventListener("click", screenAvatarCenterNumber);
-// document.getElementById("screenAvatarCenterButton").addEventListener("click", screenAvatarCenterCode);
-
-// document.getElementById("screenAvatarLeftLButton").addEventListener("click", screenAvatarLeftLNumber);
-// document.getElementById("screenAvatarLeftLButton").addEventListener("click", screenAvatarLeftLCode);
-
-// document.getElementById("screenAvatarRightLButton").addEventListener("click", screenAvatarRightLNumber);
-// document.getElementById("screenAvatarRightLButton").addEventListener("click", screenAvatarRightLCode);
-
 document.getElementById("screenAvatarCenterLButton").addEventListener("click", screenAvatarCenterLNumber);
 document.getElementById("screenAvatarCenterLButton").addEventListener("click", screenAvatarCenterLCode);
 
@@ -194,7 +174,6 @@ document.getElementById("screenAvatarLeftMButton").addEventListener("click", scr
 
 document.getElementById("screenAvatarRightMButton").addEventListener("click", screenAvatarRightMNumber);
 document.getElementById("screenAvatarRightMButton").addEventListener("click", screenAvatarRightMCode);
-
 
 document.getElementById("screenAvatarCenterMButton").addEventListener("click", screenAvatarCenterMNumber);
 document.getElementById("screenAvatarCenterMButton").addEventListener("click", screenAvatarCenterMCode);
@@ -271,6 +250,17 @@ document.getElementById("friendlyButton").addEventListener("click", friendlyCode
 
 document.getElementById("surpriseButton").addEventListener("click", surpriseNumber);
 document.getElementById("surpriseButton").addEventListener("click", surpriseCode);
+document.getElementById("friendlyButton").addEventListener("click", friendlyNumber);
+document.getElementById("friendlyButton").addEventListener("click", friendlyCode);
+
+document.getElementById("agreeButton").addEventListener("click", agreeNumber);
+document.getElementById("agreeButton").addEventListener("click", agreeCode);
+
+document.getElementById("disagreeButton").addEventListener("click", disagreeNumber);
+document.getElementById("disagreeButton").addEventListener("click", disagreeCode);
+
+document.getElementById("questionButton").addEventListener("click", questionNumber);
+document.getElementById("questionButton").addEventListener("click", questionCode);
 
 document.getElementById("disapprovalButton").addEventListener("click", disapprovalNumber);
 document.getElementById("disapprovalButton").addEventListener("click", disapprovalCode);
@@ -283,6 +273,10 @@ document.getElementById("disagreementButton").addEventListener("click", disagree
 
 // document.getElementById("screenAvatarCenterSButton").addEventListener("click", screenAvatarCenterSNumber);
 // document.getElementById("screenAvatarCenterSButton").addEventListener("click", screenAvatarCenterSCode);
+document.getElementById("surpriseButton").addEventListener("click", surpriseNumber);
+document.getElementById("surpriseButton").addEventListener("click", surpriseCode);
+
+//deze besturen de aanpasbare waardes van de codestrings
 document.getElementById("plusOne").addEventListener("click", addOne);
 document.getElementById("minusOne").addEventListener("click", removeOne);
 
@@ -295,13 +289,9 @@ document.getElementById("enMinusOne").addEventListener("click", enRemoveOne);
 document.getElementById("spPlusOne").addEventListener("click", spAddOne);
 document.getElementById("spMinusOne").addEventListener("click", spRemoveOne);
 
+//deze knoppen zijn voor het doorvoeren naar de final textarea en het updaten van aangepaste waardes
 document.getElementById("nodUpdate").addEventListener("click", updateNod);
 document.getElementById("mouthUpdate").addEventListener("click", updateMouth);
-
-
-
-
-
 document.getElementById("lookDownUpdate").addEventListener("click", updateLookDown);
 document.getElementById("lookRightUpdate").addEventListener("click", updateLookRight);
 document.getElementById("lookLeftUpdate").addEventListener("click", updateLookLeft);
@@ -319,7 +309,6 @@ document.getElementById("shakeSlowUpdate").addEventListener("click", updateShake
 document.getElementById("shakeFastUpdate").addEventListener("click", UpdateShakeFast);
 document.getElementById("leanInUpdate").addEventListener("click", updateLeanIn);
 document.getElementById("leanInUpdate").addEventListener("click", updateLeanIn2);
-
 document.getElementById("closedMouthUpdate").addEventListener("click", updateClosedMouth);
 document.getElementById("mouthTeethUpdate").addEventListener("click", updateMouthTeeth);
 document.getElementById("smileSmallUpdate").addEventListener("click", updateSmileSmall);
@@ -339,7 +328,6 @@ document.getElementById("frownXSUpdate").addEventListener("click", updateFrownXS
 document.getElementById("smallFrownUpdate").addEventListener("click", updateSmallFrown);
 document.getElementById("frownLUpdate").addEventListener("click", updateFrownL);
 document.getElementById("nodSmallUpdate").addEventListener("click", updateNodSmall);
-// document.getElementById("nodFastUpdate").addEventListener("click", updatenodFast);
 document.getElementById("nodLargeUpdate").addEventListener("click", updateNodLarge);
 document.getElementById("nodAverageUpdate").addEventListener("click", updateNodAverage);
 document.getElementById("nodSlowUpdate").addEventListener("click", updateNodSlow);
@@ -361,7 +349,6 @@ document.getElementById("screenAvatarCenterLUpdate").addEventListener("click", u
 document.getElementById("screenAvatarCenterMUpdate").addEventListener("click", updateScreenAvatarCenterM);
 document.getElementById("screenAvatarLeftSUpdate").addEventListener("click", updateScreenAvatarLeftS);
 document.getElementById("screenAvatarRightSUpdate").addEventListener("click", updateScreenAvatarRightS);
-
 document.getElementById("screenAvatarLeftMUpdate").addEventListener("click", updateScreenAvatarLeftM);
 document.getElementById("screenAvatarRightMUpdate").addEventListener("click", updateScreenAvatarRightM);
 document.getElementById("officeBackUpdate").addEventListener("click", updateOfficeBack);
@@ -372,6 +359,7 @@ document.getElementById("surpriseUpdate").addEventListener("click", updateSurpri
 document.getElementById("disapprovalUpdate").addEventListener("click", updateDisapproval);
 document.getElementById("agreementUpdate").addEventListener("click", updateAgreement);
 document.getElementById("disagreementUpdate").addEventListener("click", updateDisagreement);
+document.getElementById("questionUpdate").addEventListener("click", updateQuestion);
 
 
 var element = document.getElementById("newImage");
@@ -411,6 +399,7 @@ function updateClosedMouth() {
   element.append(img);
   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
+
 
 function mouthTeethNumber() {
   dura = 3.5;
@@ -506,6 +495,7 @@ function updateSmileMedium() {
   element.append(img);
   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
+
 
 function smileLargeNumber() {
   dura = 3.5;
@@ -714,7 +704,7 @@ function updatelookUpLeft() {
   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
-//checkpoint
+
 function lookUpRightNumber() {
   dura = 3.5;
   blendSt = 0.5;
@@ -805,26 +795,6 @@ function updateMouth() {
   element.append(img);
   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
-
-
-// function mouthTeethNumber() {
-//   dura = 2.5;
-//   blendSt = 2;
-//   blendEn = 2;
-//   document.getElementById('durationmeter').innerHTML = dura + "s";
-//   document.getElementById('blendStmeter').innerHTML = blendSt + "s";
-//   document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
-//   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
-//   document.getElementById("mouthTeethUpdate").classList.add("show");
-// }
-
-// function mouthTeethCode() {
-//   document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='mouthOpenTeeth' duration=" + dura + " blendStart=" + blendSt + " blendEnd=" + blendEn + "/>";
-// }
-
-// function updateMouthTeeth() {
-//   mouthTeethCode();
-// }
 
 
 function lookLeftNumber() {
@@ -1150,6 +1120,8 @@ function updateFrown() {
   element.append(img);
   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
+
+
 function leftBrowRaiseNumber() {
 speed = 0.6;
 document.getElementById('speedmeter').innerHTML = speed + "s";
@@ -1175,6 +1147,7 @@ function updateLeftBrowRaise() {
   element.append(img);
   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
+
 
 function rightBrowRaiseNumber() {
   speed = 0.6;
@@ -1202,6 +1175,7 @@ function rightBrowRaiseNumber() {
     document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
   }
 
+
   function quizicalNumber() {
     speed = 0.6;
     document.getElementById('speedmeter').innerHTML = speed + "s";
@@ -1228,6 +1202,7 @@ function rightBrowRaiseNumber() {
       document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
     }
 
+
     function outerBrowsNumber() {
       speed = 0.6;
       document.getElementById('speedmeter').innerHTML = speed + "s";
@@ -1253,6 +1228,8 @@ function rightBrowRaiseNumber() {
         element.append(img);
         document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
       }
+
+
       function browsInRaisedNumber() {
         speed = 0.6;
         document.getElementById('speedmeter').innerHTML = speed + "s";
@@ -1279,6 +1256,7 @@ function rightBrowRaiseNumber() {
           document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
         }
 
+
         function browsDownScrunchNumber() {
           speed = 0.6;
           document.getElementById('speedmeter').innerHTML = speed + "s";
@@ -1304,6 +1282,7 @@ function rightBrowRaiseNumber() {
             element.append(img);
             document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
           }
+
 
 function frownSmallNumber() {
   dura = 3.5;
@@ -1364,31 +1343,7 @@ function updateNod() {
   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
-// function nodFastNumber() {
-//   dura = 4;
-//   blendSt = 1;
-//   blendEn = 1;
 
-//   document.getElementById('durationmeter').innerHTML = dura + "s";
-//   document.getElementById('blendStmeter').innerHTML = blendSt + "s";
-//   document.getElementById('blendEnmeter').innerHTML = blendEn + "s";
-//   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
-//   document.getElementById("frownUpdate").classList.add("show");
-//   document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
-//     el.classList.remove('active');});
-//   document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss").forEach((el) => {
-//     el.classList.add('active');});
-
-// }
-
-// function nodFastCode() {
-//   document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='frownLarge' duration=" + dura + " blendStart=" + blendSt + " blendEnd=" + blendEn + "/>";
-// }
-
-// function updatenodFast() {
-//   nodFastCode();
-
-// }
 function nodLargeNumber() {
   dura = 3.9;
   blendSt = 0.9;
@@ -1597,6 +1552,7 @@ function updateLeanIn() {
   element.append(img);
   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
+
 
 function leanIn2Number() {
   blendSt = 1.25;
@@ -2137,6 +2093,7 @@ function updateLeanInNod() {
   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
+
 function leanInNod2Number() {
   blendSt = 1.25;
   blendEn = 1.25;
@@ -2164,6 +2121,7 @@ function updateLeanInNod2() {
   element.append(img);
   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
+
 
 function turnLeftNumber() {
   dura = 6;
@@ -2195,6 +2153,7 @@ function updateTurnLeft() {
   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
+
 function turnRightNumber() {
   dura = 6;
   blendSt = 1;
@@ -2224,6 +2183,7 @@ function updateTurnRight() {
   element.append(img);
   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
+
 
 function closeUpNumber() {
   speed = 1;
@@ -2294,6 +2254,7 @@ function updateUpperBodyVisible() {
   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
+
 function upperBodyVisibleZoomedNumber() {
 
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
@@ -2313,6 +2274,8 @@ function updateUpperBodyVisibleZoomed() {
   element.append(img);
   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
+
+
 function screenLeftNumber() {
 
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
@@ -2333,6 +2296,7 @@ function updateScreenLeft() {
   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
+
 function screenRightNumber() {
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
   document.getElementById("screenRightUpdate").classList.add("show");
@@ -2351,6 +2315,8 @@ function updateScreenRight() {
   element.append(img);
   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
+
+
 function screenAvatarLeftNumber() {
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
   document.getElementById("screenAvatarLeftUpdate").classList.add("show");
@@ -2369,6 +2335,7 @@ function updateScreenAvatarLeft() {
   element.append(img);
   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
+
 
 function screenAvatarRightNumber() {
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
@@ -2389,24 +2356,6 @@ function updateScreenAvatarRight() {
   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
-// function screenAvatarCenterNumber() {
-//   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
-//   document.getElementById("screenAvatarCenterUpdate").classList.add("show");
-//   document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
-//     el.classList.remove('active');
-//   });
-//   img = document.createElement('img');
-//   img.src = 'img/screenavatarcenter.png';
-// }
-// function screenAvatarCenterCode() {
-//   document.getElementById("textReturn").value = "<trl-content position=\"ScreenFlatLargeAvatarZoomOutDefaultCenter\" showMovingScreen='true' />";
-// }
-// function updateScreenAvatarCenter() {
-//   screenAvatarCenterCode();
-//   img.classList = 'timelineImg';
-//   element.append(img);
-//   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
-// }
 
 function screenAvatarLeftSNumber() {
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
@@ -2427,6 +2376,7 @@ function updateScreenAvatarLeftS() {
   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
+
 function screenAvatarRightSNumber() {
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
   document.getElementById("screenAvatarRightSUpdate").classList.add("show");
@@ -2446,62 +2396,6 @@ function updateScreenAvatarRightS() {
   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
-// function screenAvatarCenterSNumber() {
-//   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
-//   document.getElementById("screenAvatarCenterSUpdate").classList.add("show");
-//   document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
-//     el.classList.remove('active');
-//   });
-//   img = document.createElement('img');
-//   img.src = 'img/screenavatarcenters.png';
-// }
-// function screenAvatarCenterSCode() {
-//   document.getElementById("textReturn").value = "<trl-content position=\"ScreenFlatLargeAvatarSmallCenter\" showMovingScreen='true' />";
-// }
-// function updateScreenAvatarSCenter() {
-//   screenAvatarCenterSCode();
-//   img.classList = 'timelineImg';
-//   element.append(img);
-//   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
-// }
-
-// function screenAvatarLeftLNumber() {
-//   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
-//   document.getElementById("screenAvatarLeftLUpdate").classList.add("show");
-//   document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
-//     el.classList.remove('active');
-//   });
-//   img = document.createElement('img');
-//   img.src = 'img/screenavatarleftl.png';
-// }
-// function screenAvatarLeftLCode() {
-//   document.getElementById("textReturn").value = "<trl-content position=\"ScreenFlatLargeAvatarSmallLeft\" showMovingScreen='true' />";
-// }
-// function updateScreenAvatarLeftL() {
-//   screenAvatarLeftSCode();
-//   img.classList = 'timelineImg';
-//   element.append(img);
-//   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
-// }
-
-// function screenAvatarRightLNumber() {
-//   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
-//   document.getElementById("screenAvatarRightLUpdate").classList.add("show");
-//   document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
-//     el.classList.remove('active');
-//   });
-//   img = document.createElement('img');
-//   img.src = 'img/screenavatarrightl.png';
-// }
-// function screenAvatarRightLCode() {
-//   document.getElementById("textReturn").value = "<trl-content position=\"ScreenFlatLargeAvatarSmallRight\" showMovingScreen='true' />";
-// }
-// function updateScreenAvatarRightL() {
-//   screenAvatarRightCode();
-//   img.classList = 'timelineImg';
-//   element.append(img);
-//   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
-// }
 
 function screenAvatarCenterLNumber() {
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
@@ -2542,6 +2436,7 @@ function updateScreenAvatarLeftM() {
   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
+
 function screenAvatarRightMNumber() {
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
   document.getElementById("screenAvatarRightMUpdate").classList.add("show");
@@ -2560,6 +2455,7 @@ function updateScreenAvatarRightM() {
   element.append(img);
   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
+
 
 function screenAvatarCenterMNumber() {
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
@@ -2581,6 +2477,29 @@ function updateScreenAvatarCenterM() {
 }
 
 
+function questionNumber() {
+  dura = 1;
+  document.getElementById('durationmeter').innerHTML = dura + "s";
+  document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+  document.getElementById("questionUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');
+  });
+  document.querySelectorAll(" #duraCss").forEach((el) => {
+    el.classList.add('active');
+  });
+  img = document.createElement('img');
+  img.src = 'img/question.png';
+}
+function questionCode() {
+  document.getElementById("textReturn").value = "<trl-break duration='"+ dura +"' /><trl-info sentiment='question' />";
+}
+function updateQuestion() {
+  questionCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
+}
 
 function agreementNumber() {
   dura = 1;
@@ -2605,44 +2524,129 @@ function updateAgreement() {
   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
-function disagreementNumber() {
+function friendlyNumber() {
   dura = 1;
+  document.getElementById('durationmeter').innerHTML = dura + "s";
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
-  document.getElementById("disagreementUpdate").classList.add("show");
+  document.getElementById("friendlyUpdate").classList.add("show");
   document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
     el.classList.remove('active');
   });
-  document.querySelectorAll("#duraCss").forEach((el) => {
+  document.querySelectorAll(" #duraCss").forEach((el) => {
+    el.classList.add('active');
+  });
+  img = document.createElement('img');
+  img.src = 'img/friendly.png';
+}
+function friendlyCode() {
+  document.getElementById("textReturn").value = "<trl-break duration='"+ dura +"' /><trl-info sentiment='friendly' />";
+}
+function updateFriendly() {
+  friendlyCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
+}
+
+function agreeNumber() {
+  dura = 1;
+  document.getElementById('durationmeter').innerHTML = dura + "s";
+  document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+  document.getElementById("agreeUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');
+  });
+  document.querySelectorAll(" #duraCss").forEach((el) => {
+    el.classList.add('active');
+  });
+  img = document.createElement('img');
+  img.src = 'img/agreement.png';
+}
+function agreeCode() {
+  document.getElementById("textReturn").value = "<trl-break duration='"+ dura +"' /><trl-info sentiment='agreement' />";
+}
+function updateAgree() {
+  agreeCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
+}
+
+
+function disagreeNumber() {
+  dura = 1;
+  document.getElementById('durationmeter').innerHTML = dura + "s";
+  document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+  document.getElementById("disagreeUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');
+  });
+  document.querySelectorAll(" #duraCss").forEach((el) => {
     el.classList.add('active');
   });
   img = document.createElement('img');
   img.src = 'img/disagreement.png';
 }
-function disagreementCode() {
+function disagreeCode() {
   document.getElementById("textReturn").value = "<trl-break duration='"+ dura +"' /><trl-info sentiment='disagreement' />";
 }
-function updateDisagreement() {
-  disagreementCode();
+function updateDisagree() {
+  disagreeCode();
   img.classList = 'timelineImg';
   element.append(img);
   document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
-//   function questionCode() {
 
-//     document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='frownLarge' duration='4.5' blendStart='1.5' blendEnd='1.5'/>";
-//   }
 
-//   function friendlyCode() {
-//     document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='frownLarge' duration='4.5' blendStart='1.5' blendEnd='1.5'/>";
-//   }
+function disapprovalNumber() {
+  dura = 1;
+  document.getElementById('durationmeter').innerHTML = dura + "s";
+  document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+  document.getElementById("disapprovalUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');
+  });
+  document.querySelectorAll(" #duraCss").forEach((el) => {
+    el.classList.add('active');
+  });
+  img = document.createElement('img');
+  img.src = 'img/disapproval.png';
+}
+function disapprovalCode() {
+  document.getElementById("textReturn").value = "<trl-break duration='"+ dura +"' /><trl-info sentiment='disapproval' />";
+}
+function updateDisapproval() {
+  disapprovalCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
+}
 
-//   function agreeCode() {
-//     document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='frownLarge' duration='4.5' blendStart='1.5' blendEnd='1.5'/>";
-//   }
 
-//   function disagreeCode() {
-//     document.getElementById("textReturn").innerHTML = "<trl-anim type='aux' id='frownLarge' duration='4.5' blendStart='1.5' blendEnd='1.5'/>";
-//   }
+function surpriseNumber() {
+  dura = 1;
+  document.getElementById('durationmeter').innerHTML = dura + "s";
+  document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+  document.getElementById("surpriseUpdate").classList.add("show");
+  document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+    el.classList.remove('active');
+  });
+  document.querySelectorAll(" #duraCss").forEach((el) => {
+    el.classList.add('active');
+  });
+  img = document.createElement('img');
+  img.src = 'img/surprise.png';
+}
+function surpriseCode() {
+  document.getElementById("textReturn").value = "<trl-break duration='"+ dura +"' /><trl-info sentiment='surprise' />";
+}
+function updateSurprise() {
+  surpriseCode();
+  img.classList = 'timelineImg';
+  element.append(img);
+  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
+}  
+
 
 function addOne() {
 
