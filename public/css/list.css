@@ -1,6 +1,4 @@
- /****************/
-/* ROOT STYLING */
-/****************/
+
 :root {
   --black: #020B23;
   --text-color-buttons: #FFFFFF;
@@ -13,9 +11,7 @@
   --hover-orange: #f99a90;
 }
 
-/*************/
-/* CSS RESET */
-/*************/
+
 *,
 html {
     margin: 0;
@@ -263,7 +259,7 @@ p.introText {
 }
 
 #B2TBtn:hover {
-  background-color: var(--hover-orange); /* Add a dark-grey background on hover */
+  background-color: var(--hover-orange);
   color: var(--black);
 }
 
