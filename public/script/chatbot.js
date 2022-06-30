@@ -2183,9 +2183,19 @@ function oneSecBreak() {
   document.getElementById("plain-textarea-id").value += "<trl-break duration='1.0' />" +"\n";
 }
 
+document.getElementById("resetButton").addEventListener('click', () => {
+
+  document.getElementById("plain-textarea-id").value = '';
+
+  const timelineImages = Array.from(document.getElementsByClassName('timelineImg'));
+  timelineImages.forEach(timelineImg => {
+    timelineImg.remove();
+  })})
+
 // Loading animation
 
 var spinner = document.querySelector('.lds-spinner');
+
 
 document.querySelector('#startBtn').addEventListener('click', playAnimation);
 
@@ -2194,4 +2204,4 @@ function playAnimation() {
   setTimeout(()=>{
     spinner.classList.remove("activeSpinner"); 
    },7000);
-};
+}
