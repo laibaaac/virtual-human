@@ -25,7 +25,7 @@ h1, h2 {
 padding-bottom:0.5em;
 }
 h1, h2 {
-font-size: 3em;
+font-size: 2.5em;
 font-weight: 600;
 }
 p {
@@ -77,11 +77,15 @@ ul.guideTop > li {
 img {
     -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
     filter: drop-shadow(15px 15px 15px rgba(0, 0, 0, 0.3));
+    max-width: calc(50% - 4em);
+    height: 100%;
+    object-fit: contain;
 }
+
 ul.guideTop > li > a {
 float:right;
 border:none;
-    margin: 2em 3em 0em 0em;
+    margin-top: 2em;
     padding: 1em 3em 1em 3em;
     color: var(--text-color-buttons);
     font-weight: bolder;
@@ -99,10 +103,14 @@ ul.guideTop > li > a:active {
     color: var(--text-color-buttons);
 }
 
+ul.guideTop li:nth-last-of-type(1) p,
+ul.guideTop li:nth-last-of-type(1) h2 {
+    text-align: right;
+}
+
 ul.guideExplain {
     background-color: var(--darkblue);
-    background-size: 100%;
-    padding: 1em;
+    padding: 5em 15%;
     padding-left: 15%;
     padding-right: 15%;
     display: flex;
@@ -111,35 +119,18 @@ ul.guideExplain {
     justify-content: space-between;
 }
 
-ul.guideExplain > li {
-    width: 45%;
-    margin-top: 5em;
+ul.guideExplain h2,
+ul.guideBrowse h2 {
+    font-size: 1.7em;
 }
-ul.guideExplain > li:nth-of-type(2) > img {
-    
-    width: 35em;
-    
-    height: auto;
-}
-.moveUp {
-    transition: all 0.5s;
 
+ul.guideExplain > li {
+    display: flex;
+    justify-content: space-between;
+    gap: 8em;
+    margin-bottom: 5em;
 }
-.moveUp.appear {
-    margin-top: -5em;
-    padding-bottom: 5em;
-}
-ul.guideExplain > div.sizeUp >  li >  img {
-width: 30em;
-margin:5em 0em 0em 1em;
-height: auto;
-}
-.sizeUp {
-    transition: all 0.5s;
-}
-.sizeUp.appear {
-    transform: scale(1.05);
-}
+
 ul.guideBrowse {
     background-color: var(--blue);
     background-size: cover;
@@ -153,23 +144,12 @@ ul.guideBrowse {
 }
 
 ul.guideBrowse > li {
-    width: 45%;
-    margin-top: 2em;
+   display: flex;
+   justify-content: space-between;
+    gap: 8em;
+   margin-bottom: 5em;
 }
-ul.guideBrowse > li > img {
-    min-width: 50%;
-    max-width: 100%;
-    height: auto;
-    padding-left:5em;
-}
-.slideLeft {
-    transition: all 0.5s;
-}
-.slideLeft.appear {
-    margin-left: -3em;
-    padding-right: 3em;
-   
-}
+
 ul.contact {
     background-color: var(--lightblue);
     padding:5em;
@@ -184,9 +164,6 @@ ul.contact > li:nth-of-type(2) {
     margin-right: 14vw;
 }
 
-ul.contact > li > img {
-
-}
 ul.contact > li:first-of-type > a {
     font-weight: bold;
     color:var(--orange);
@@ -198,7 +175,6 @@ ul.contact > li:first-of-type > a {
     color: var(--text-color-buttons);
     border-radius: .5em;
     font-weight: bold;
-
 }
 
 .siteButton:hover {

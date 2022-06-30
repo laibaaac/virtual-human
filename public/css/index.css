@@ -1,14 +1,4 @@
-/*********/
-/* FONTS */
-/*********/
- /* @font-face {
-    font-family: 'montserrat'; 
-    src: url("../fonts/Montserrat-VariableFont_wght.woff2") format("woff2");
- } */
 
-/**************/
-/* VARIABELEN */
-/**************/
 :root {
     --black: #020B23;
     --text-color-buttons: #FFFFFF;
@@ -21,9 +11,7 @@
     --hover-orange: #f99a90;
 }
 
-/**************/
-/* CSS REMEDY */
-/**************/
+
 *,
 html {
     margin: 0;
@@ -31,6 +19,11 @@ html {
     box-sizing: border-box;
     font-family: var(--main-font), Arial, Helvetica, sans-serif;
 }
+
+button {
+    text-transform: capitalize;
+}
+
 button:focus {
     background-color: var(--orange);
 }
@@ -41,9 +34,7 @@ textarea:focus {
     border-radius: 2px;
 }
 
-/********************/
-/* ALGEMENE STYLING */
-/********************/
+
 h1 {
     color: var(--text-color-buttons);
     font-size: 1.1em;
@@ -115,26 +106,26 @@ i {
     background-color: var(--grey);
     padding: 1em;
     border-radius: 1em;
-    font-size: 16px;
+    font-size: .7em;
     width: 25vw;
     color: var(--black);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .infoTekst1 {
-    left: 11.5em;
+    left: 14.5em;
 }
 
 .infoTekst2 {
-    left: 9em;
+    left: 12em;
 }
 
 .infoTekst3 {
-    left: 11em;
+    left: 14em;
 }
 
 .infoTekst4 {
-    left: 8em;
+    left: 11em;
     top: -1.7em;
     text-align: left;
 }
@@ -147,9 +138,7 @@ i {
     opacity: 1;
 }
 
-/*************/
-/* SCROLLBAR */
-/*************/
+
 ::-webkit-scrollbar-track {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	border-radius: 10px;
@@ -167,11 +156,6 @@ i {
 	background-color: #E84D3C;
 }
 
-/*************/
-/* DASHBOARD */
-/*************/
-
-/* splitten van de 2 kleuren */
 .partials {
     display: flex;
     flex-wrap: wrap;
@@ -179,11 +163,6 @@ i {
     height: calc(100vh - 5em);
 }
 
-/***************/
-/* LINKERHELFT */
-/***************/
-
-/* linkerhelft van het scherm */
 .partials_left {
 
     display: flex;
@@ -194,7 +173,7 @@ i {
     padding: 1em 2em 0 0;
 }
 
-/* rechts positioneren in het linkervak */
+
 .left__right {
     list-style: none;
     background-color: var(--black);
@@ -208,10 +187,6 @@ i {
     width: 80%;
 }
 
-/***********/
-/* PREVIEW */
-/***********/
-/* loading animation */
 .lds-spinner {
     display: none;
     position: absolute;
@@ -303,7 +278,7 @@ i {
   }
 
   
-/*  */
+
 .left__right li:nth-of-type(2) {
     margin-bottom: 2.1em;
 }
@@ -448,9 +423,6 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
     display: none !important;
 }
 
-/*********/
-/*  CODE */
-/*********/
 /* vormgeving timeline blok */
 .timelineArea {
     position: relative;
@@ -535,7 +507,7 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 
 .timelineButtons div button:nth-of-type(3) img {
     height: 100%;
-    width: 3em;
+    width: 2.5em;
 }
 
 .timelineButtons div button:nth-of-type(3):hover {
@@ -641,6 +613,12 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
     padding: .5em;
     font-size: 1em;
     min-width: 5em;
+}
+
+/* back/fore ground aanspreken */
+#myBtnContainer button:nth-of-type(6),
+#myBtnContainer button:nth-of-type(7)  {
+    padding: 0.5em 4em;
 }
 
 #myBtnContainer button img {
@@ -756,10 +734,63 @@ table tbody tr:nth-of-type(2) td:first-of-type button {
 
 }
 #textReturn.active {
- 
     height: 100%;
-    max-height: 20em;
+    max-height: 12em;
 }
+
+.activeVarious {
+    display: none;
+}
+
+.activeVarious p {
+    color: var(--text-color-buttons);
+    margin-bottom: 1.5em;
+    font-size: .9em;
+}
+
+.activeVarious p a {
+    border-bottom: 1px solid var(--orange);
+    color: var(--orange);
+}
+
+.activeVarious ul a {
+    display: flex;
+    gap: 2em;
+    border-bottom: none;
+}
+
+.activeVarious li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5em;
+    justify-content: space-between;
+}
+
+.activeVarious li:first-of-type img {
+    filter: invert(100%) sepia(3%) saturate(13%) hue-rotate(81deg) brightness(106%);
+}
+
+.activeVarious li:first-of-type img:hover {
+    filter: invert(38%) sepia(79%) saturate(2784%) hue-rotate(341deg) brightness(97%) contrast(87%);
+}
+
+.activeVarious li p:hover {
+    color: var(--orange);
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.activeVarious img:hover {
+    filter: invert(41%) sepia(18%) saturate(2013%) hue-rotate(318deg) brightness(100%) contrast(91%);
+}
+
 /* horizontaal neerzetten van elke button */
 .buttonStyling {
     display: flex;
@@ -846,6 +877,7 @@ color: rgba(255, 0, 0, 0);
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
 #explainButtons {
    padding-bottom: 10em;
     background-color: var(--blue);
@@ -854,9 +886,14 @@ color: rgba(255, 0, 0, 0);
     flex-direction: row;
 }
 
+#explainButtons .wrapper img:hover {
+    filter: invert(60%) sepia(91%) saturate(5059%) hue-rotate(338deg) brightness(94%) contrast(92%);
+}
+
+
 #linkToList.filterDiv.filterShow {
  max-width: 15em;
- height: 5em;
+ height: 3.5rem;
  position: relative;
  background-color: rgba(255, 0, 0, 0);
  filter: invert(100%) sepia(3%) saturate(13%) hue-rotate(81deg) brightness(106%);
@@ -864,9 +901,20 @@ color: rgba(255, 0, 0, 0);
  justify-content: space-around;
  flex-wrap: wrap;
 }
-.editor.active {
-    height: 60vh;
+
+.filterDiv.textspeech.filterShow {
+    padding: 1em;
 }
+
+.editor.active {
+    height: 63.8vh;
+}
+
+.editor.active button {
+    background-color: var(--orange);
+    color: var(--text-color-buttons);
+}
+
 .various {
     padding-bottom: 10em;
 }

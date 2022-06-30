@@ -1,151 +1,190 @@
-
-
 <body>
-    <section class="codeEditor" >
-     
-        <h2 class="glass" id="codetitle">Code editor <img src="/img/circle-info-solid.svg" alt="" class="infoSvg2"> <p class="infoTekst2">When an animation has been chosen you can fine-tune the animation in the code editor. Update the code and add them to your timeline by pressing the “Add to animation X” button.
-            If you want to reset the code to its original values you can press the default button. </p></h2>
-          
-          <section id="explainButtons" class="filterDiv textspeech"> 
-           
+    <section class="codeEditor">
+
+        <h2 class="glass" id="codetitle">Code editor <img src="/img/circle-info-solid.svg" alt="" class="infoSvg2">
+            <p class="infoTekst2">When an animation has been chosen you can fine-tune the animation in the code editor.
+                Add the variation to your timeline by pressing the “Add to animation X” button.
+                If you want to reset the code to its original values you can press the default button.</p>
+        </h2>
+
+        <section id="explainButtons" class="filterDiv textspeech">
+
             <p id="explanation"></p>
-   
+
             <a href="/list">
-            <ul class="wrapper">
-                
-       <li> <img src="img/speechStyle.png" class="filterDiv textspeech"  id="linkToList" alt=""><li>
-        <li><img src="img/speechSpeed.png" class="filterDiv textspeech"  id="linkToList" alt=""><li>
-        <li><img src="img/speechBreak.png" class="filterDiv textspeech"  id="linkToList" alt=""><li>
-        <li><img src="img/speechPitch.png" class="filterDiv textspeech"  id="linkToList" alt=""><li>
-        <li><img src="img/speechVolume.png" class="filterDiv textspeech"  id="linkToList" alt=""><li>
-        </ul></a>
-        <p id="explanation"></p>
-            </section>
-      
+                <ul class="wrapper">
 
-       
+                    <li> <img src="img/speechStyle.png" class="filterDiv textspeech" id="linkToList" alt="">
+                    <li>
+                    <li><img src="img/speechSpeed.png" class="filterDiv textspeech" id="linkToList" alt="">
+                    <li>
+                    <li><img src="img/speechBreak.png" class="filterDiv textspeech" id="linkToList" alt="">
+                    <li>
+                    <li><img src="img/speechPitch.png" class="filterDiv textspeech" id="linkToList" alt="">
+                    <li>
+                    <li><img src="img/speechVolume.png" class="filterDiv textspeech" id="linkToList" alt="">
+                    <li>
+                </ul>
+            </a>
+            <p id="explanation"></p>
+        </section>
+
+
+
         <section class="buttonStyling" id="duraCss">
-        <p>Duration</p>
-        <section>
-            <div>
-                <button class="minus" id="minusOne">-</button>
-                <button class="plus" id="plusOne">+</button>
-            </div>
-            <p id="durationmeter">0s</p>
+            <p>Duration</p>
+            <section>
+                <div>
+                    <button class="minus" id="minusOne">-</button>
+                    <button class="plus" id="plusOne">+</button>
+                </div>
+                <p id="durationmeter">0s</p>
+            </section>
         </section>
-    </section>
 
-    <section class="buttonStyling" id="blendStCss">
-        <p>Blend start</p>
-        <section>
-            <div>
-                <button class="minus" id="stMinusOne">-</button>
-                <button class="plus" id="stPlusOne">+</button>
-            </div>
-            <p id="blendStmeter">0s</p>
+        <section class="buttonStyling" id="blendStCss">
+            <p>Blend start</p>
+            <section>
+                <div>
+                    <button class="minus" id="stMinusOne">-</button>
+                    <button class="plus" id="stPlusOne">+</button>
+                </div>
+                <p id="blendStmeter">0s</p>
+            </section>
         </section>
-    </section>
 
-    <section class="buttonStyling" id="blendEnCss">
-        <p>Blend end</p>
-        <section>
-            <div>
-                <button class="minus" id="enMinusOne">-</button>
-                <button class="plus" id="enPlusOne">+</button>
-            </div>
-            <p id="blendEnmeter">0s</p>
+        <section class="buttonStyling" id="blendEnCss">
+            <p>Blend end</p>
+            <section>
+                <div>
+                    <button class="minus" id="enMinusOne">-</button>
+                    <button class="plus" id="enPlusOne">+</button>
+                </div>
+                <p id="blendEnmeter">0s</p>
+            </section>
         </section>
-    </section>
 
-    <section class="buttonStyling" id="speedCss">
-        <p>speed</p>
-        <section>
-            <div>
-                <button class="minus" id="spMinusOne">-</button>
-                <button class="plus" id="spPlusOne">+</button>
-            </div>
-            <p id="speedmeter">0s</p>
+        <section class="buttonStyling" id="speedCss">
+            <p>speed</p>
+            <section>
+                <div>
+                    <button class="minus" id="spMinusOne">-</button>
+                    <button class="plus" id="spPlusOne">+</button>
+                </div>
+                <p id="speedmeter">0s</p>
+            </section>
         </section>
-    </section>
 
-    <section class="changesAdd">
-        <ul>
-            <li> 
-                <!--brows-->
-                <button id="eyebrowSmallUpdate">Apply changes to eyebrow small and add to timeline</button>
-                <button id="eyebrowRaiseUpdate">Apply changes to raise and add to timeline</button>
-                <button id="smileUpdate">Apply changes to smile and add to timeline</button>
-                <button id="frownUpdate">Apply changes frown and add to timeline</button>
-                <button id="frownSmallUpdate">Apply to small frown and add to timeline</button>
-                <button id="lookDownUpdate">apply to look down and add to timeline</button>
-                <button id="lookRightUpdate">apply to look right and add to timeline</button>
-                <button id="lookLeftUpdate">apply to look left and add to timeline</button>
-                <button id="mouthUpdate">apply changes to mouth and add to timeline</button>
-                <button id="mouthTeethUpdate">apply to mouth teeth and add to timeline</button>
-                <button id="nodUpdate">apply changes to nod and add to timeline</button>
-                <button id="shakeSlowUpdate">Apply to shake slow and add to timeline</button>
-                <button id="shakeFastUpdate">Apply to shake fast and add to timeline</button>
-                <button id="leanInUpdate">Apply changes to lean in and add to timeline</button>
-                <button id="leanIn2Update">Apply changes to lean 2 in and add to timeline</button>
-                <button id="closedMouthUpdate">Apply changes closed mouth and add to timeline</button>
-                <button id="mouthTeethUpdate">Apply changes to mouth teeth and add to timeline</button>
-                <button id="smileSmallUpdate">Apply changes to smile small and add to timeline</button>
-                <button id="smileMediumUpdate">Apply changes to smile medium and add to timeline</button>
-                <button id="smileLargeUpdate">Apply changes to smile large and add to timeline</button>
-                <button id="smileXlUpdate">Apply changes to smile XL and add to timeline</button>
-                <button id="lookDownLeftUpdate">Apply changes to look down left and add to timeline</button>
-                <button id="lookDownRightUpdate">Apply changes to look down right and add to timeline</button>
-                <button id="lookAtCamUpdate">Apply changes to look at cam and add to timeline</button>
-                <button id="lookUpLeftUpdate">Apply changes to look up left and add to timeline</button>
-                <button id="lookUpUpdate">Apply changes to look up and add to timeline</button>
-                <button id="lookUpRightUpdate">Apply changes to look up right and add to timeline</button>
-                <button id="eyebrowRaiseXSUpdate">Apply changes to eyebrows Raise XS and add to timeline</button>
-                <button id="eyebrowSmallUpdate">Apply changes to eyebrow small and add to timeline</button>
-                <button id="eyebrowRaiseUpdate">Apply changes eyebrow raise and add to timeline</button>
-                <button id="eyebrowRaiseLUpdate">Apply changes eyebrow raise L and add to timeline</button>
-                <button id="leftBrowRaiseUpdate">Apply changes to left brow and add to timeline</button>
-                <button id="rightBrowRaiseUpdate">Apply changes to right brow and add to timeline</button>
-                <button id="quizicalUpdate">Apply changes to quizical and add to timeline</button>
-                <button id="outerBrowsUpdate">Apply changes to outer brows and add to timeline</button>
-                <button id="browsInUpdate">Apply changes to brows in and add to timeline</button>
-                <button id="browsDownScrunchUpdate">Apply changes to scrunched brows and add to timeline</button>
-                <button id="frownXSUpdate">Apply changes to frown XS and add to timeline</button>
-                <button id="smallFrownUpdate">Apply changes to small frown and add to timeline</button>
-                <button id="frownLUpdate">Apply changes frown L and add to timeline</button>
-                <button id="nodSmallUpdate">Apply changes to nod small and add to timeline</button>
-                <button id="nodFastUpdate">Apply changes to nod fast and add to timeline</button>
-                <button id="nodLargeUpdate">Apply changes to nod large and add to timeline</button>
-                <button id="nodAverageUpdate">Apply changes to nod average and add to timeline</button>
-                <button id="nodSlowUpdate">Apply changes to nod slow and add to timeline</button>
-                <button id="shakeUpdate">Apply changes to shake and add to timeline</button>
-                
-                <button id="leanInNodUpdate">Apply changes to lean in nod and add to timeline</button>
-                <button id="leanInNod2Update">Apply changes to lean in nod 2 and add to timeline</button>
-                <button id="turnLeftUpdate">Apply changes to turn left and add to timeline</button>
-                <button id="turnRightUpdate">Apply changes to turn right and add to timeline</button>
-                <button id="closeUpUpdate">Apply changes to close up and add to timeline</button>
-                <button id="screenNoAvatarUpdate">Apply changes to screen no avatar and add to timeline</button>
-                <button id="upperBodyVisibleUpdate">Apply changes to upper body visible and add to timeline</button>
-                <button id="upperBodyVisibleZoomedUpdate">Apply changes to upper body visible zoomed out and add to timeline</button>
-                <button id="screenLeftUpdate">Apply changes to screen left and add to timeline</button>
-                <button id="screenRightUpdate">Apply changes to screen right and add to timeline</button>
-                <button id="screenAvatarRightUpdate">Apply changes to screen avatar right and add to timeline</button>
-                <button id="screenAvatarLeftUpdate">Apply changes to screen avatar left and add to timeline</button>
-                <button id="screenAvatarCenterLUpdate">Apply changes to screen avatar center L and add to timeline</button>
-                <button id="screenAvatarCenterMUpdate">Apply changes to screen avatar center M and add to timeline</button>
-                <button id="screenAvatarLeftSUpdate">Apply changes to screen avatar left S and add to timeline</button>
-                <button id="screenAvatarRightSUpdate">Apply changes to screen avatar right S and add to timeline</button>
-                <button id="screenAvatarLeftMUpdate">Apply changes to screen avatar left M and add to timeline</button>
-                <button id="screenAvatarRightMUpdate">Apply changes to screen avatar right M and add to timeline</button>
-                
-            </li>
-            <button class="animationAdd" id="addAnimation">add to animations</button>
-            <li>   
-                <button id="addAnimation">Add to animations</button>
-            </li>
-        </ul>
-        
-    </section>
-    <textarea id="textReturn" placeholder="You have not added any animations yet. Choose from the categories in the animation editor above to add and/or adjust an animation." name="code" rows="4" cols="85"></textarea>
-    <h3 class="filterDiv textspeech">*Close every Text to Speech sentence that has an emotion tag with: &lt;/mstts:express-as></h3>
+        <section class="changesAdd">
+            <ul>
+                <li>
+
+                    <button id="eyebrowSmallUpdate">Add to animation</button>
+                    <button id="eyebrowRaiseUpdate">Add to animation</button>
+                    <button id="smileUpdate">Add to animation</button>
+                    <button id="frownUpdate">Add to animation</button>
+                    <button id="frownSmallUpdate">Add to animation</button>
+                    <button id="lookDownUpdate">Add to animation</button>
+                    <button id="lookRightUpdate">Add to animation</button>
+                    <button id="lookLeftUpdate">Add to animation</button>
+                    <button id="mouthUpdate">Add to animation</button>
+                    <button id="mouthTeethUpdate">Add to animation</button>
+                    <button id="nodUpdate">Add to animation</button>
+                    <button id="shakeSlowUpdate">Add to animation</button>
+                    <button id="shakeFastUpdate">Add to animation</button>
+                    <button id="leanInUpdate">Add to animation</button>
+                    <button id="leanIn2Update">Add to animation</button>
+                    <button id="closedMouthUpdate">Add to animation</button>
+                    <button id="mouthTeethUpdate">Add to animation</button>
+                    <button id="smileSmallUpdate">Add to animation</button>
+                    <button id="smileMediumUpdate">Add to animation</button>
+                    <button id="smileLargeUpdate">Add to animation</button>
+                    <button id="smileXlUpdate">Add to animation</button>
+                    <button id="lookDownLeftUpdate">Add to animation</button>
+                    <button id="lookDownRightUpdate">Add to animation</button>
+                    <button id="lookAtCamUpdate">Add to animation</button>
+                    <button id="lookUpLeftUpdate">Add to animation</button>
+                    <button id="lookUpUpdate">Add to animation</button>
+                    <button id="lookUpRightUpdate">Add to animation</button>
+                    <button id="eyebrowRaiseXSUpdate">Add to animation</button>
+                    <button id="eyebrowSmallUpdate">Add to animation</button>
+                    <button id="eyebrowRaiseUpdate">Add to animation</button>
+                    <button id="eyebrowRaiseLUpdate">Add to animation</button>
+                    <button id="leftBrowRaiseUpdate">Add to animation</button>
+                    <button id="rightBrowRaiseUpdate">Add to animation</button>
+                    <button id="quizicalUpdate">Add to animation</button>
+                    <button id="outerBrowsUpdate">Add to animation</button>
+                    <button id="browsInUpdate">Add to animation</button>
+                    <button id="browsDownScrunchUpdate">Add to animation</button>
+                    <button id="frownXSUpdate">Add to animation</button>
+                    <button id="smallFrownUpdate">Add to animation</button>
+                    <button id="frownLUpdate">Add to animation</button>
+                    <button id="nodSmallUpdate">Add to animation</button>
+                    <button id="nodFastUpdate">Add to animation</button>
+                    <button id="nodLargeUpdate">Add to animation</button>
+                    <button id="nodAverageUpdate">Add to animation</button>
+                    <button id="nodSlowUpdate">Add to animation</button>
+                    <button id="shakeUpdate">Add to animation</button>
+                    <button id="leanInNodUpdate">Add to animation</button>
+                    <button id="leanInNod2Update">Add to animation</button>
+                    <button id="turnLeftUpdate">Add to animation</button>
+                    <button id="turnRightUpdate">Add to animation</button>
+                    <button id="closeUpUpdate">Add to animation</button>
+                    <button id="screenNoAvatarUpdate">Add to animation</button>
+                    <button id="upperBodyVisibleUpdate">Add to animation</button>
+                    <button id="upperBodyVisibleZoomedUpdate">Add to animation</button>
+                    <button id="screenLeftUpdate">Add to animation</button>
+                    <button id="screenRightUpdate">Add to animation</button>
+                    <button id="screenAvatarRightUpdate">Add to animation</button>
+                    <button id="screenAvatarLeftUpdate">Add to animation</button>
+                    <button id="screenAvatarCenterLUpdate">Add to animation</button>
+                    <button id="screenAvatarCenterMUpdate">Add to animation</button>
+                    <button id="screenAvatarLeftSUpdate">Add to animation</button>
+                    <button id="screenAvatarRightSUpdate">Add to animation</button>
+                    <button id="screenAvatarLeftMUpdate">Add to animation</button>
+                    <button id="screenAvatarRightMUpdate">Add to animation</button>
+                    <button id="friendlyUpdate">Add to animation</button>
+                    <button id="surpriseUpdate">Add to animation</button>
+                    <button id="disapprovalUpdate">Add to animation</button>
+                    <button id="agreeUpdate">Add to animation</button>
+                    <button id="disagreeUpdate">Add to animation</button>
+                    <button id="officeBackUpdate">Add to animation</button>
+                    <button id="questionUpdate">Add to animation</button>
+
+                </li>
+                <button class="animationAdd" id="addAnimation">add to animation</button>
+
+
+            </ul>
+
+        </section>
+        <textarea id="textReturn"
+            placeholder="You have not added any animations yet. Choose from the categories in the animation editor above to add and/or adjust an animation."
+            name="code" rows="4" cols="85"></textarea>
+        <h3 class="filterDiv textspeech">*Close every Text to Speech sentence that has an emotion tag with:
+            &lt;/mstts:express-as></h3>
+
+        <div class="activeVarious">
+            <p>There are a hand full of other options that you can choose to implement in your Digital Human like
+                visemes, lighting and breaks.</p>
+            <p>Click on a button bellow to open the <a href="/list" target="_blank">Animation Catalog.</a></p>
+            <ul>
+                <a href="/list" target="_blank">
+                    <li>
+                        <img src="/img/visemes.png" alt="">
+                        <p>Visemes</p>
+                    </li>
+
+                    <li>
+                        <img src="/img/lightning.png" alt="">
+                        <p>Lighting</p>
+                    </li>
+
+                    <li>
+                        <img src="/img/Break.png" alt="">
+                        <p>Break</p>
+                    </li>
+                </a>
+            </ul>
+        </div>
 </body>

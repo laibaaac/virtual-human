@@ -23,7 +23,7 @@
     align-items: center;
     justify-content: space-between;
     height: 8em;
-    padding: 2em 1em 1em 1em;    
+    padding: 1em;    
     background-color: var(--text-color-buttons);
     border: none;
     border-radius: 0.5em;
@@ -37,6 +37,10 @@
   .filterShow img {
     max-height: 70%;
     max-width: 70%;
+  }
+
+  .filterDiv.mouth.filterShow img{
+    height: 2em;
   }
 
   /* Add a light grey background on mouse-over */

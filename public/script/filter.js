@@ -55,31 +55,7 @@ for (const btn of btns) {
     btn.classList.add('active')
   })
 }
-// document.getElementById("emotionId").addEventListener("click", removeClass);
-
-// TO DO querySelector naar de emotion div, add eventlistener, voer dezelfde actie uit als hierboven + filter naar emoties
-
-
-// btns.forEach(element => {
-//   element.addEventListener('click', function() {
-//     console.log('klik op een knop')
-//     element.classList.add('active')
-//   })
-// });
-
-// for (var i = 0; i < btns.length; i++) {
-//   btns[i].addEventListener("click", function(event) {
-//     console.log(i)
-//     console.log(btns)
-//     // Als de button, is geklikt, check als de button class Active heeft, zo niet voeg de class active toe 
-//     btns.classList.add("active");
-//     var current = document.getElementsByClassName("active");
-//   });
-// }
-
-
-//bron van code = w3school.com -- https://www.w3schools.com/howto/howto_js_filter_elements.asp//
-
+var testknopje = document.getElementById("codetitle")
 document.getElementById("deletebtn").addEventListener("click", removeEditor);
 
 function removeEditor() {
@@ -88,45 +64,81 @@ function removeEditor() {
     document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
       
       el.classList.remove('active');})
+      document.getElementById("explanation").innerHTML = " You can use the mstts:express-as element to express emotions like cheerfulness, empathy, and calmness. You can also optimize the voice for different scenarios like customer service, newscast, and voice assistant.";
       document.querySelectorAll("#textReturn, .editor, .animationAdd").forEach(target => target.classList.add("active"));
- 
-    document.getElementById("explanation").innerHTML = "You use the <mstts:express-as> element to express emotions like cheerfulness, empathy, and calmness. You can also optimize the voice for different scenarios like customer service, newscast, and voice assistant. Click on a button bellow to open the Animation Catalog and see what your options are.";
-    document.getElementById("codetitle").innerHTML = "text to speech";
-    document.getElementById("textReturn").value = " ";
+      document.getElementById("textReturn").classList.remove('hide');
+      testknopje.innerHTML = "Add text to speech";
+    document.getElementById("textReturn").placeholder = "Type text here...";
+    document.querySelector(".activeVarious").classList.remove('show');
     document.querySelectorAll(".commands").forEach((el) => {
   el.classList.add('inactive');
   img = document.createElement('img');
   img.src = 'img/category_emotions.png';
   document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
   });
-
-
-
   } else {
-    document.getElementById("codetitle").innerHTML = "Code editor";
+   
+    
   }}
 function addEditor() {
   dura = 0;
   if (dura > 100) {
     document.getElementById("plain-textarea-id").value = '';
-    document.getElementById("explanation").innerHTML = ""
-    document.getElementById("codetitle").innerHTML = "text to speech";
+    document.getElementById("explanation").innerHTML = "";
+    document.getElementById("codetitle").innerHTML = "Add text to speech";
+    
+    
   } else {
-    document.getElementById("codetitle").innerHTML = "Code editor";
+ 
   }
   document.querySelectorAll("#textReturn, .editor, .animationAdd").forEach(target => target.classList.remove("active"));
   document.querySelectorAll(".commands").forEach((el) => {
-    document.getElementById("explanation").innerHTML = ""
+    document.getElementById("explanation").value = ""
     el.classList.remove('inactive');
   })}
   
+document.getElementById("deletebtn2").addEventListener("click", removeEditor2);
+
+function removeEditor2() {
+  dura = 101;
+  if (dura > 100) {
+    document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
+      
+      el.classList.remove('active');})
+    document.getElementById("codetitle").innerHTML = "Various";
+    document.getElementById("textReturn").classList.add('hide');
+    document.getElementById("addAnimation").classList.add('hide');
+    document.querySelector(".activeVarious").classList.add('show');
+    document.querySelectorAll(".commands").forEach((el) => {
+  el.classList.add('inactive');
+
+  document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
+  });
+
+  } else {
+  }}
+  
+function addEditor() {
+  dura = 0;
+  if (dura > 100) {
+    document.getElementById("plain-textarea-id").value = '';
+    document.getElementById("explanation").innerHTML = ""
+    document.getElementById("codetitle").innerHTML = "Various";
+  } else {//hier
+
+testknopje.innerHTML = "Code editor" + "<img src='/img/circle-info-solid.svg' class='infoSvg2'>" + "<p class='infoTekst2'>When an animation has been chosen you can fine-tune the animation in the code editor. Add the variation to your timeline by pressing the “Add to animation X” button. If you want to reset the code to its original values you can press the default button.</p></h2>";
+    document.getElementById("textReturn").placeholder = "You have not added any animations yet. Choose from the categories in the animation editor above to add and/or adjust an animation.";
 
 
-// document.querySelectorAll('button').forEach(target => target.classList.remove("show"));
-// document.getElementById("smileLargeUpdate").classList.add("show");
-// document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
-//   el.classList.remove('active');
-// });
-// document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss").forEach((el) => {
-//   el.classList.add('active');
-// });
+    document.getElementById("textReturn").classList.remove('hide');
+    document.getElementById("addAnimation").classList.remove('hide');
+    document.querySelector(".activeVarious").classList.remove('show');
+    document.querySelectorAll("#textReturn, .editor, .animationAdd").forEach(target => target.classList.remove("active"));
+  document.querySelectorAll(".commands").forEach((el) => {
+    document.getElementById("explanation").innerHTML = ""
+    el.classList.remove('inactive');
+  
+  })}}
+
+
+  

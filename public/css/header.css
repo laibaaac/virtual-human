@@ -1,14 +1,4 @@
-/*********/
-/* FONTS */
-/*********/
-/* @font-face {
-    font-family: 'montserrat';
-    src: url("/public/fonts/Montserrat-VariableFont_wght.woff2") format("woff2");
-} */
 
-/**************/
-/* CSS REMEDY */
-/**************/
 *,
 html {
     margin: 0;
@@ -17,10 +7,6 @@ html {
     font-family: var(--main-font), Arial, Helvetica, sans-serif;
 }
 
-
-/**********/
-/* HEADER */
-/**********/
 header {
     background-color: var(--black);
     height: 5.3125em;
@@ -59,16 +45,17 @@ a {
     text-decoration: none;
     color: var(--text-color-buttons);
     font-size: 0.875em;
+}
+
+nav a {
     text-transform: uppercase;
 }
 
-/* current state */
 .current {
     color: var(--orange);
     border-bottom: 2px solid var(--orange);
 }
 
-/* hover state */
 a:hover {
     color: var(--orange);
 }

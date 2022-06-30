@@ -11,13 +11,13 @@
           <button class="btn" onclick="filterSelection('background'); addEditor()"><img src="/img/category_background.png" alt="">Background</button>
           <button class="btn" onclick="filterSelection('foreground'); addEditor()"><img src="/img/category_foreground.png" alt="">Foreground</button>
          
-          <!-- <button class="btn" onclick="filterSelection('animation'); addEditor()"><img src="/img/category_emotions.png" alt="">Emotions</button> -->
+          <button class="btn" onclick="filterSelection('animation'); addEditor()"><img src="/img/category_emotions.png" alt="">Emotions</button>
           <button class="btn" id="deletebtn" onclick="filterSelection('textspeech')"><img src="/img/category_textspeech.png" alt="">Speech</button>
         </div>
 
     <div class="autoAnimation">
         <!--hier is een apart div gemaakt, omdat dit button niet hoort bij de andere buttons. Dit is ook meteen gelinkt aan de buttons die animations hebben-->
-    <button class="btn" onclick="filterSelection('various'); addEditor()">
+    <button class="btn" id="deletebtn2" onclick="filterSelection('various'); addEditor()">
     <img src="/img/various.png" alt="various">Various</button> 
     </div>
       </div>
@@ -86,22 +86,24 @@
         <button class="filterDiv position" id="screenAvatarCenterLButton"><img src="/img/lm.png" alt="LM">L: Screen L: avatar center</button>
         <!-- <button class="filterDiv position" id="screenAvatarLeftLButton"><img src="/img/lscreenlav.png" alt="center up">L: Screen L:avatar left</button> 
         <button class="filterDiv position" id="screenAvatarRightLButton"><img src="/img/avatarl.png" alt="no avatar">L:screen L:avatar right</button> -->
-        <button class="filterDiv position" id="screenAvatarCenterMButton"><img src="/img/lscreenmavatarcenter.png" alt="avatar">L: Screen M:avatar center</button>
-        <button class="filterDiv position" id="screenAvatarLeftMButton"><img src="/img/medleft.png" alt="avatarmedium">L: Screen M: avatar left</button>
-        <button class="filterDiv position" id="screenAvatarRightMButton"><img src="/img/avatarlr.png" alt="avatar small left ">L: Screen M: avatar right</button>
-        <!-- <button class="filterDiv position" id="screenAvatarCenterSButton"><img src="/img/avatarcs.png" alt="avatar right">L: Screen S:avatar center</button> -->
-        <button class="filterDiv position" id="screenAvatarLeftSButton"><img src="/img/avatarsl.png" alt="avatar medium right">L: Screen S: avatar left</button>
-        <button class="filterDiv position" id="screenAvatarRightSButton"><img src="/img/lscreensavatarright.png" alt="avatar small right">L: Screen S: avatar right</button>
+        <button class="filterDiv position" id="screenAvatarCenterMButton"><img src="/img/lscreenmavatarcenter.png" alt="avatar">L: Screen M: Avatar center</button>
+        <button class="filterDiv position" id="screenAvatarLeftMButton"><img src="/img/medleft.png" alt="avatarmedium">L: Screen M: Avatar left</button>
+        <button class="filterDiv position" id="screenAvatarRightMButton"><img src="/img/avatarlr.png" alt="avatar small left ">L: Screen M: Avatar right</button>
+        <button class="filterDiv position" id="screenAvatarLeftSButton"><img src="/img/avatarsl.png" alt="avatar medium right">L: Screen S: Avatar left</button>
+        <button class="filterDiv position" id="screenAvatarRightSButton"><img src="/img/lscreensavatarright.png" alt="avatar small right">L: Screen S: Avatar right</button>
         
+        <button class="filterDiv animation" id="friendlyButton"><img src="/img/friendly.png" alt="friendly">Friendly</button>
+        <button class="filterDiv animation" id="surpriseButton"><img src="/img/surprise.png" alt="surprise">Surprise</button>
+        <button class="filterDiv animation" id="disapprovalButton"><img src="/img/disapproval.png" alt="disapproval">Disapproval</button>
+        <button class="filterDiv animation" id="questionButton"><img src="/img/question.png" alt="question">Question</button>
+        <button class="filterDiv animation" id="agreeButton"><img src="/img/agreement.png" alt="agreement">Agreement</button>
+        <button class="filterDiv animation" id="disagreeButton"><img src="/img/disagreement.png" alt="disagreement">Disagreement</button>
         
-        <button class="filterDiv animation" id=""><img src="/img/friendly.png" alt="friendly">Friendly</button>
-        <button class="filterDiv animation" id=""><img src="/img/surprise.png" alt="surprise">Surprise</button>
-        <button class="filterDiv animation" id=""><img src="/img/disapproval.png" alt="disapproval">Disapproval</button>
-        <button class="filterDiv animation" id=""><img src="/img/agreement.png" alt="agreement">Agreement</button>
-        <button class="filterDiv animation" id=""><img src="/img/disagreement.png" alt="disagreement">Disagreement</button>
-        
+        <button class="filterDiv background" onClick="ssmlAppend(&quot;<trl-content BgScreenUrl='https://i.imgur.com/FFMbgkm.mp4' />&quot;);"><img src="/img/category_background.png" alt="tulpen">kijk ik kan toveren</button>
         <button class="filterDiv background" id="officeButton"><img src="/img/category_background.png" alt="office">Office</button>
         <button class="filterDiv background" id=""><img src="/img/category_background.png" alt="tulpen">Tulip Field</button>
+        
+        <button class="filterDiv background" onClick="ssmlAppend(&quot;<trl-content BgScreenUrl='https://www.trulience.com/jsp/video.jsp?url=https://www.trulience.com/home/assets/img/screen/movingoffice.mp4' />&quot;);"><img src="/img/category_background.png" alt="tulpen">Office bg</button>
         <button class="filterDiv background" id=""><img src="/img/category_background.png" alt="molen">Mill</button>
         <button class="filterDiv background" onclick="ssmlAppend("<trl-content screen='https://www.youtube.com/embed/05wNg1ifiuw?loop=1&autoplay=1&playlist=CYXKi2XF5pM'/>");"><img src="/img/category_background.png" alt="tulpen">officevideo</button>
         
@@ -114,11 +116,17 @@
 
 
         
+        
+        <button class="filterDiv animation" id="friendlyButton"><img src="/img/friendly.png" alt="friendly">Friendly</button>
+        <button class="filterDiv animation" id="surpriseButton"><img src="/img/surprise.png" alt="surprise">Surprise</button>
+        <button class="filterDiv animation" id="disapprovalButton"><img src="/img/disapproval.png" alt="disapproval">Disapproval</button>
+        <button class="filterDiv animation" id="agreementButton"><img src="/img/agreement.png" alt="agreement">Agreement</button>
+        <button class="filterDiv animation" id="disagreementButton"><img src="/img/disagreement.png" alt="disagreement">Disagreement</button>
 
 <ul class="various" id="variousStyling">
    <h1 class="filterDiv various" id="">Various</h1> 
      <p class="filterDiv various" id="">There are a hand full of other options that you can choose to implement in your Digital Human like visemes, lighting and breaks.</p> 
-     <p class="filterDiv various" id="">Check out all the options in the<a href="/list">animation catalog</a></p>
+     <p class="filterDiv various" id="">Check out all the options in the<a href="/list" target="_blank">animation catalog</a></p>
   
 
 </ul>
