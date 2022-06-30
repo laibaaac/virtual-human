@@ -248,6 +248,7 @@ document.getElementById("lookDownLeftUpdate").addEventListener("click", updateLo
 document.getElementById("lookDownRightUpdate").addEventListener("click", updateLookDownRight);
 document.getElementById("lookAtCamUpdate").addEventListener("click", updateLookAtCam);
 document.getElementById("lookUpLeftUpdate").addEventListener("click", updatelookUpLeft);
+document.getElementById("lookUpUpdate").addEventListener("click", updatelookUp);
 document.getElementById("lookUpRightUpdate").addEventListener("click", updateLookUpRight);
 document.getElementById("eyebrowRaiseXSUpdate").addEventListener("click", updateEyebrowsRaiseXS);
 document.getElementById("eyebrowSmallUpdate").addEventListener("click", updateEyebrowSmall);
@@ -1556,7 +1557,7 @@ function leanInNodNumber() {
     el.classList.add('active');
   });
   img = document.createElement('img');
-  img.src = 'img/leaninnod.png';
+  img.src = 'img/leaninn.png';
 }
 
 function leanInNodCode() {
@@ -1585,7 +1586,7 @@ function leanInNod2Number() {
     el.classList.add('active');
   });
   img = document.createElement('img');
-  img.src = 'img/leaninnod2.png';
+  img.src = 'img/leaninn2.png';
 }
 
 function leanInNod2Code() {
@@ -1616,7 +1617,7 @@ function turnLeftNumber() {
     el.classList.add('active');
   });
   img = document.createElement('img');
-  img.src = 'img/turnleft.png';
+  img.src = 'img/tl.png';
 }
 
 function turnLeftCode() {
@@ -1647,7 +1648,7 @@ function turnRightNumber() {
     el.classList.add('active');
   });
   img = document.createElement('img');
-  img.src = 'img/turnright.png';
+  img.src = 'img/tr.png';
 }
 
 function turnRightCode() {
@@ -1674,7 +1675,7 @@ function closeUpNumber() {
     el.classList.add('active');
   });
   img = document.createElement('img');
-  img.src = 'img/turnleft.png';
+  img.src = 'img/default.png';
 }
 
 function closeUpCode() {
@@ -1698,7 +1699,7 @@ function screenNoAvatarNumber() {
     el.classList.remove('active');
   });
   img = document.createElement('img');
-  img.src = 'img/screennoavatar.png';
+  img.src = 'img/noavatar.png';
 }
 function screenNoAvatarCode() {
   document.getElementById("textReturn").value = "<trl-content position=\"ScreenFlatLargeNoAvatar\" showMovingScreen='true' />";
@@ -1801,7 +1802,7 @@ function screenAvatarLeftNumber() {
     el.classList.remove('active');
   });
   img = document.createElement('img');
-  img.src = 'img/screenavatarleft.png';
+  img.src = 'img/screenright.png';
 }
 function screenAvatarLeftCode() {
   document.getElementById("textReturn").value = "<trl-content position=\"ScreenFlatMediumLeft\" showMovingScreen='true' />";
@@ -1821,7 +1822,7 @@ function screenAvatarRightNumber() {
     el.classList.remove('active');
   });
   img = document.createElement('img');
-  img.src = 'img/screenavatarright.png';
+  img.src = 'img/screenleft.png';
 }
 function screenAvatarRightCode() {
   document.getElementById("textReturn").value = "<trl-content position=\"ScreenFlatMediumRight\" showMovingScreen='true' />";
@@ -1841,7 +1842,7 @@ function screenAvatarLeftSNumber() {
     el.classList.remove('active');
   });
   img = document.createElement('img');
-  img.src = 'img/screenavatarlefts.png';
+  img.src = 'img/lscreensavatarright.png';
 }
 function screenAvatarLeftSCode() {
   document.getElementById("textReturn").value = "<trl-content position=\"ScreenFlatLargeAvatarSmallLeft\" showMovingScreen='true' />";
@@ -1861,7 +1862,7 @@ function screenAvatarRightSNumber() {
     el.classList.remove('active');
   });
   img = document.createElement('img');
-  img.src = 'img/screenavatarrights.png';
+  img.src = 'img/avatarsl.png';
 }
 function screenAvatarRightSCode() {
   document.getElementById("textReturn").value = "<trl-content position=\"ScreenFlatLargeAvatarSmallRight\" showMovingScreen='true' />";
@@ -1881,7 +1882,7 @@ function screenAvatarCenterLNumber() {
     el.classList.remove('active');
   });
   img = document.createElement('img');
-  img.src = 'img/screenavatarcenterm.png';
+  img.src = 'img/lm.png';
 }
 function screenAvatarCenterLCode() {
   document.getElementById("textReturn").value = "<trl-content position=\"ScreenFlatLargeAvatarMaxZoomInCenterUp\" showMovingScreen='true' />";
@@ -1901,7 +1902,7 @@ function screenAvatarLeftMNumber() {
     el.classList.remove('active');
   });
   img = document.createElement('img');
-  img.src = 'img/screenavatarleftm.png';
+  img.src = 'img/medleft.png';
 }
 function screenAvatarLeftMCode() {
   document.getElementById("textReturn").value = "<trl-content position=\"ScreenFlatLargeAvatarMediumLeft\" showMovingScreen='true' />";
@@ -1921,7 +1922,7 @@ function screenAvatarRightMNumber() {
     el.classList.remove('active');
   });
   img = document.createElement('img');
-  img.src = 'img/screenavatarrightm.png';
+  img.src = 'img/avatarlr.png';
 }
 function screenAvatarRightMCode() {
   document.getElementById("textReturn").value = "<trl-content position=\"ScreenFlatLargeAvatarMediumRight\" showMovingScreen='true' />";
@@ -1941,7 +1942,7 @@ function screenAvatarCenterMNumber() {
     el.classList.remove('active');
   });
   img = document.createElement('img');
-  img.src = 'img/screenavatarcenterm.png';
+  img.src = 'img/lscreenmavatarcenter.png';
 }
 function screenAvatarCenterMCode() {
   document.getElementById("textReturn").value = "<trl-content position=\"ScreenFlatLargeAvatarZoomOutDefaultCenter\" showMovingScreen='true' />";
