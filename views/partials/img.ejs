@@ -1,6 +1,17 @@
 <script src="https://cdn.jsdelivr.net/npm/html-to-pdfmake/browser.js"></script>
-<script src="/script/pdf.js"></script>
-
+<script defer
+src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.3.0-beta.2/pdfmake.min.js"
+integrity="sha512-k9XKlDENMt9s19gEl+L6F/r+OWAR4pesbUd8/SKQVMt3b1ECqsRXgLA9XnJoq4J9mjlxLQabfTxf3268lzpFUQ=="
+crossorigin="anonymous"
+referrerpolicy="no-referrer"
+></script>
+<script defer
+src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.3.0-beta.2/vfs_fonts.min.js"
+integrity="sha512-6RDwGHTexMgLUqN/M2wHQ5KIR9T3WVbXd7hg0bnT+vs5ssavSnCica4Uw0EJnrErHzQa6LRfItjECPqRt4iZmA=="
+crossorigin="anonymous"
+referrerpolicy="no-referrer"
+></script>
+<script defer src="/script/pdf.js"></script>
 
 <section class="imageArea">
 
@@ -20,7 +31,7 @@
                 value="Send" id="sendMsgBtn" onclick="sendMessageToVPS();" /> Play animation</button>
                 
                 <button id="copyTime">Copy code</button>
-                <button><img src="/img/pdf_icon.png" alt="pdf icon"></button>
+                <button id="pdftje"><img src="/img/pdf_icon.png" alt="pdf icon"></button>
             
             </div>
    

@@ -184,8 +184,7 @@ document.getElementById("screenAvatarLeftSButton").addEventListener("click", scr
 document.getElementById("screenAvatarRightSButton").addEventListener("click", screenAvatarRightSNumber);
 document.getElementById("screenAvatarRightSButton").addEventListener("click", screenAvatarRightSCode);
 
-document.getElementById("officeButton").addEventListener("click", officeCode);
-document.getElementById("officeButton").addEventListener("click", officeNumber);
+
 
 
 
@@ -351,7 +350,7 @@ document.getElementById("screenAvatarLeftSUpdate").addEventListener("click", upd
 document.getElementById("screenAvatarRightSUpdate").addEventListener("click", updateScreenAvatarRightS);
 document.getElementById("screenAvatarLeftMUpdate").addEventListener("click", updateScreenAvatarLeftM);
 document.getElementById("screenAvatarRightMUpdate").addEventListener("click", updateScreenAvatarRightM);
-document.getElementById("officeBackUpdate").addEventListener("click", updateOfficeBack);
+
 
 
 document.getElementById("friendlyUpdate").addEventListener("click", updateFriendly);

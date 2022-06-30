@@ -12,6 +12,3 @@ PDFButton.addEventListener("click", function () {
     console.log(copyText.value);
     pdfButton();
   });
-  
-  
-  
