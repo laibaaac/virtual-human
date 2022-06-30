@@ -41,7 +41,14 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+document.getElementById("resetButton").addEventListener('click', () => {
 
+  document.getElementById("plain-textarea-id").value = '';
+
+  const timelineImages = Array.from(document.getElementsByClassName('timelineImg'));
+  timelineImages.forEach(timelineImg => {
+    timelineImg.remove();
+  })})
 
 if(navigator.clipboard) {
   
