@@ -68,7 +68,9 @@ function removeEditor() {
       document.querySelectorAll("#textReturn, .editor, .animationAdd").forEach(target => target.classList.add("active"));
       document.getElementById("textReturn").classList.remove('hide');
       testknopje.innerHTML = "Add text to speech";
+      
     document.getElementById("textReturn").placeholder = "Type text here...";
+    document.getElementById("textReturn").value = "";
     document.querySelector(".activeVarious").classList.remove('show');
     document.querySelectorAll(".commands").forEach((el) => {
   el.classList.add('inactive');

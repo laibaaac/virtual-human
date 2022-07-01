@@ -312,3 +312,6 @@ ul.contact > li:first-of-type > a {
   font-weight: bold;
   color:var(--orange);
 }
+#variouslighting {
+  width: 90%;
+}
