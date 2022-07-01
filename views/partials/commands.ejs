@@ -75,14 +75,16 @@
         <button class="filterDiv head" id="turnRightButton"><img src="/img/tr.png" alt="turnright">Turn right</button>
 
         <button class="filterDiv position" id="closeUpButton"><img src="/img/default.png" alt="closeup">Close up</button>
-        <button class="filterDiv position" id="screenNoAvatarButton"><img src="/img/noavatar.png" alt="no avatar">L: Screen no Avatar</button>
-        <!-- <button class="filterDiv position" id="upperBodyVisibleButton"><img src="/img/upperbody.png" alt="upper body visible">Upper body visible</button> nog doen-->
-        <!-- <button class="filterDiv position" id="upperBodyVisibleZoomedButton"><img src="/img/upperbodyzoomed.png" alt="upper body">Upper body (zoomed out)</button> nog doen -->
-        <button class="filterDiv position" id="screenRightButton"><img src="/img/screenleft.png" alt="Screen small right">S: Screen S: Avatar right</button> 
-        <button class="filterDiv position" id="screenLeftButton"><img src="/img/screenright.png" alt="Screen small left">S: Screen S: Avatar left</button>
-        <button class="filterDiv position" id="screenAvatarLeftButton"><img src="/img/smr.png" alt="Screen medium left">M: Screen S: Avatar left</button>
-        <button class="filterDiv position" id="screenAvatarRightButton"><img src="/img/sml.png" alt="Screen medium right">M: Screen S: Avatar right</button>
-        <button class="filterDiv position" id="screenAvatarCenterLButton"><img src="/img/lm.png" alt="LM">L: Screen L: Avatar center</button>
+        <button class="filterDiv position" id="screenNoAvatarButton"><img src="/img/noavatar.png" alt="no avatar">L:screen no avatar</button>
+        <button class="filterDiv position" id="upperBodyVisibleButton"><img src="/img/upperbody.jpg" alt="upper body visible">Upper body visible</button> <!--nog doen-->
+        <button class="filterDiv position" id="upperBodyVisibleZoomedButton"><img src="/img/upperbodyzoomed.jpg" alt="upper body">Upper body (zoomed out)</button> <!--nog doen-->
+        <button class="filterDiv position" id="screenRightButton"><img src="/img/screenleft.png" alt="Screen small right">S:screen S:avatar right</button> 
+        <button class="filterDiv position" id="screenLeftButton"><img src="/img/screenright.png" alt="Screen small left">S:screen S:avatar left</button>
+        <button class="filterDiv position" id="screenAvatarLeftButton"><img src="/img/smr.png" alt="Screen medium left">M:screen S:avatar left</button>
+        <button class="filterDiv position" id="screenAvatarRightButton"><img src="/img/sml.png" alt="Screen medium right">M:screen S:avatar right</button>
+        <button class="filterDiv position" id="screenAvatarCenterLButton"><img src="/img/lm.png" alt="LM">L: Screen L: avatar center</button>
+        <!-- <button class="filterDiv position" id="screenAvatarLeftLButton"><img src="/img/lscreenlav.png" alt="center up">L: Screen L:avatar left</button> 
+        <button class="filterDiv position" id="screenAvatarRightLButton"><img src="/img/avatarl.png" alt="no avatar">L:screen L:avatar right</button> -->
         <button class="filterDiv position" id="screenAvatarCenterMButton"><img src="/img/lscreenmavatarcenter.png" alt="avatar">L: Screen M: Avatar center</button>
         <button class="filterDiv position" id="screenAvatarLeftMButton"><img src="/img/medleft.png" alt="avatarmedium">L: Screen M: Avatar left</button>
         <button class="filterDiv position" id="screenAvatarRightMButton"><img src="/img/avatarlr.png" alt="avatar small left ">L: Screen M: Avatar right</button>
@@ -95,26 +97,33 @@
         <button class="filterDiv animation" id="questionButton"><img src="/img/question.png" alt="question">Question</button>
         <button class="filterDiv animation" id="agreeButton"><img src="/img/agreement.png" alt="agreement">Agreement</button>
         <button class="filterDiv animation" id="disagreeButton"><img src="/img/disagreement.png" alt="disagreement">Disagreement</button>
-        
-           <button class="filterDiv background" id="officeButton" onClick="ssmlAppend(&quot;<trl-content BgScreenUrl='https://raw.githubusercontent.com/laibaaac/virtual-human/development-lb/public/backgrounds/officeafbeelding.png' />&quot;);"><img src="/img/office-background.png" alt="office"></button>
+
+        <!--<button class="filterDiv background" onClick="ssmlAppend(&quot;<trl-content BgScreenUrl='https://i.imgur.com/FFMbgkm.mp4' />&quot;);"><img src="/img/category_background.png" alt="tulpen">kijk ik kan toveren</button>-->
+        <button class="filterDiv background" onClick="ssmlAppend(&quot;<trl-content BgScreenUrl='https://raw.githubusercontent.com/laibaaac/virtual-human/development-lb/public/backgrounds/officeafbeelding.png' />&quot;);"><img src="/img/office-background.png" alt="office"></button>
+
         <button class="filterDiv background" onClick="ssmlAppend(&quot;<trl-content BgScreenUrl='https://raw.githubusercontent.com/laibaaac/virtual-human/development-lb/public/backgrounds/tulpenveld.jpg' />&quot;);"><img src="/img/tulpen-background.png" alt="tulpen"></button>
+
         <button class="filterDiv background" onClick="ssmlAppend(&quot;<trl-content BgScreenUrl='https://raw.githubusercontent.com/laibaaac/virtual-human/development-lb/public/backgrounds/molen.jpg' />&quot;);"><img src="/img/molen-background.png" alt="molen"></button>
-        <button class="filterDiv background" onClick="ssmlAppend(&quot;<trl-content screen='https://www.youtube.com/embed/GPodyPbz1Co?loop=1&autoplay=1&playlist=GPodyPbz1Co' />&quot;);"><img src="/img/MicrosoftTeams-image.png" alt="molen"></button>
-        <button class="filterDiv background" onClick="ssmlAppend(&quot;<trl-content screen='https://www.youtube.com/embed/05wNg1ifiuw?loop=1&autoplay=1&playlist=CYXKi2XF5pM' />&quot;);"><img src="/img/MicrosoftTeams-image.png" alt="molen"></button>
+
+        <button class="filterDiv background" onclick="ssmlAppend(&quot;<trl-content BgScreenUrl='https://www.youtube.com/embed/nqeJlqc3JcU?autoplay=1&loop=1'/>&quot;);"><img src="/img/MicrosoftTeams-image.png" alt="tulpen"></button>
 
 
-        <button class="filterDiv foreground" id="officeButton" onClick="ssmlAppend(&quot;<trl-content BgScreenUrl='https://raw.githubusercontent.com/laibaaac/virtual-human/development-lb/public/backgrounds/officeafbeelding.png' />&quot;);"><img src="/img/office-background.png" alt="office"></button>
-        <button class="filterDiv foreground" onClick="ssmlAppend(&quot;<trl-content BgScreenUrl='https://raw.githubusercontent.com/laibaaac/virtual-human/development-lb/public/backgrounds/tulpenveld.jpg' />&quot;);"><img src="/img/tulpen-background.png" alt="tulpen"></button>
-        <button class="filterDiv foreground" onClick="ssmlAppend(&quot;<trl-content BgScreenUrl='https://raw.githubusercontent.com/laibaaac/virtual-human/development-lb/public/backgrounds/molen.jpg' />&quot;);"><img src="/img/molen-background.png" alt="molen"></button>
-        <button class="filterDiv foreground" onClick="ssmlAppend(&quot;<trl-content screen='https://www.youtube.com/embed/05wNg1ifiuw?loop=1&autoplay=1&playlist=CYXKi2XF5pM' />&quot;);"><img src="/img/MicrosoftTeams-image.png"molen"></button>
+        <button class="filterDiv foreground"  onClick="ssmlAppend(&quot;<trl-content position='ScreenFlatSmallRight' showMovingScreen='true' trl-content screen='https://raw.githubusercontent.com/laibaaac/virtual-human/development-lb/public/backgrounds/officeafbeelding.png'/>&quot;);"><img src="/img/office-background.png" alt="office"></button>
 
-        <button class="filterDiv foreground" id=""><img src="/img/category_foreground.png" alt="office">Office</button>
-        <button class="filterDiv foreground" id=""><img src="/img/category_foreground.png" alt="tulpen">Tulip Field</button>
-        <button class="filterDiv foreground" id=""><img src="/img/category_foreground.png" alt="molen">Mill</button>
+        <button class="filterDiv foreground" onClick="ssmlAppend(&quot;<trl-content position='ScreenFlatSmallRight' showMovingScreen='true' trl-content screen='https://raw.githubusercontent.com/laibaaac/virtual-human/development-lb/public/backgrounds/tulpenveld.jpg' />&quot;);"><img src="/img/tulpen-background.png" alt="tulpen"></button>
+
+        <button class="filterDiv foreground" onClick="ssmlAppend(&quot;<trl-content position='ScreenFlatSmallRight' showMovingScreen='true' trl-content screen='https://raw.githubusercontent.com/laibaaac/virtual-human/development-lb/public/backgrounds/molen.jpg' />&quot;);"><img src="/img/molen-background.png" alt="molen"></button>
 
 
+        <button class="filterDiv foreground" onclick="ssmlAppend(&quot;<trl-content screen='https://www.youtube.com/embed/nqeJlqc3JcU?autoplay=1&loop=1' />&quot;);"><img src="/img/MicrosoftTeams-image.png" alt="tulpen"></button>
 
         
+        
+        <button class="filterDiv animation" id="friendlyButton"><img src="/img/friendly.png" alt="friendly">Friendly</button>
+        <button class="filterDiv animation" id="surpriseButton"><img src="/img/surprise.png" alt="surprise">Surprise</button>
+        <button class="filterDiv animation" id="disapprovalButton"><img src="/img/disapproval.png" alt="disapproval">Disapproval</button>
+        <button class="filterDiv animation" id="agreementButton"><img src="/img/agreement.png" alt="agreement">Agreement</button>
+        <button class="filterDiv animation" id="disagreementButton"><img src="/img/disagreement.png" alt="disagreement">Disagreement</button>
 
 <ul class="various" id="variousStyling">
    <h1 class="filterDiv various" id="">Various</h1> 
