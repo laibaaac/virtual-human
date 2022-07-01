@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<link href="/css/avatar.css" rel="stylesheet">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<section class="livePlayer">
+
+<head>
+
+    <link rel="shortcut icon" href="https://www.trulience.com/home/assets/img/favicon.png">
+
+
+
+    <!-- TRULIENCE SDK -->
+    <script>
+        var src_url = "https://trulience.com/sdk/trulience.sdk.js";
+        if (location.hostname === 'localhost')
+            src_url = "../trulience.sdk.js";
+        else if (location.hostname === 'digitalhuman.uk')
+            src_url = "/sdk/trulience.sdk.js";
+
+        let sdkScript = document.createElement("script");
+        sdkScript.setAttribute("src", src_url + "?r=" + Math.random().toString(36).substr(2, 9));
+        document.head.appendChild(sdkScript);
+    </script>
+
+    <script>
+        let trl = null;
+        let startBtn = null;
+        let endBtn = null;
+        let activeTab = 'plain';
+        let screenMessageArray = [];
+        let retryCount = 0;
+        let playInfoVideoDisabled = true;
+
+        pageOnloadHandler = (retry) => {
+
+            startBtn = document.getElementById("startBtn");
+            endBtn = document.getElementById("endBtn");
+
+            //AUTH Events Callback
+            a1 = (resp) => {
+                console.log("onReady  #a1 => onReady Event => Response: " + JSON.stringify(resp));
+                // To connect on page load call the method below here
+                //trl.connectGateway()
+            }
+            a2 = (authFailResp) => {
+                console.log("onFail #a2  => onFail Event => Message: " + authFailResp.message);
+
+                if (authFailResp.oauth && authFailResp.redirectTo) {
+                    console.log("Redirecting to Vendor Oauth Login page....");
+                    window.location.href = authFailResp.redirectTo;
+                } else {
+                    var errMsg = authFailResp.errorTitle + ':<br/><br/>' + authFailResp.message;
+                    writeErrorMessageToVideoScreen(errMsg);
+                }
+                toggleStatusInUI();
+            }
+
+
+            ws1 = (resp) => {
+                if (resp !== null && resp.failReason === 0 && resp.resultType === 1) {
+                    retryCount = 0;
+                    toggleStatusInUI();
+                }
+            }
+
+            ws2 = (resp) => {
+                console.log("WebSocket => onConnectFail Event => Response: " + resp);
+            }
+
+            ws3 = (trlResponse) => {
+                console.log("WebSocket => onMessage Event => Response: -------------------");
+                console.log(trlResponse);
+
+                if (trlResponse.messageType === Trulience.MessageType.AssignMediaEndPoints) {
+                    toggleStatusInUI();
+                }
+
+                if (trlResponse && trlResponse.messageType === Trulience.MessageType.ChatText) {
+                    if (trlResponse.status === 'MESSAGE_DELIVERED_TO_VPS' || trlResponse.status ===
+                        'MESSAGE_NOT_DELIVERED_TO_VPS') {
+                        //document.getElementById(activeTab + '-textarea-id').value = '';
+                        if (trlResponse && trlResponse.status === 'MESSAGE_DELIVERED_TO_VPS') {
+                            document.getElementById('statusOkId').style.display = 'inline';
+                        } else {
+                            document.getElementById('statusFailId').style.display = 'inline';
+                        }
+                        setTimeout(function () {
+                            document.getElementById('statusOkId').style.display = 'none';
+                            document.getElementById('statusFailId').style.display = 'none';
+                        }, 5000);
+                    } else {
+                        // Log text response
+                        var avatarMessage = trlResponse.messageArray[0].message;
+                        var displayText = trlResponse.messageArray[0].displayText;
+
+                        // Remove XML etc tags i.e. <trl-
+                        var plainText = strip_html_tags(displayText ? displayText : avatarMessage);
+                        console.log("DF Response -OR- Eco back (UE) Message -======> " + plainText);
+                    }
+                }
+            }
+
+            ws4 = (warningResponse) => {
+                console.log("WebSocket => onWarningHandler Event => Warning: " + warningMessage);
+            }
+
+            ws5 = (errorResponse) => {
+                console.log("WebSocket => onConnectionErrorHandler Event => Error: " + errorResponse);
+                if (errorResponse.messageType === 14 || errorResponse.messageType === 9) {
+                    toggleStatusInUI();
+                }
+            }
+
+            //onClose
+            ws6 = (closeResponse) => {
+                console.log("------WebSocket Terminated------", closeResponse);
+                toggleStatusInUI();
+                toggleUI('call_ended');
+                writeErrorMessageToVideoScreen('Call Ended');
+            }
+
+            /*
+             * SpeechRecognition Event Callbacks, SDK calls your methods on respective Event
+             */
+
+            sr1 = (msg) => {
+                animateMic();
+            }
+
+            // ----INTERIM-----
+            sr2 = (transcript) => {
+                //trl.screenManager().writeMsgToScreen(transcript, "grey", "user", false, true);
+                document.getElementById('voice-textarea-id').value = transcript;
+            }
+
+            // ----FINAL-----
+            sr3 = (transcript) => {
+                //trl.screenManager().writeMsgToScreen(transcript, "#444", "user", true, true);
+                //screenMessageArray.push(transcript.replace('\n', '.'));
+                trl.sendMessageToVPS(transcript);
+                document.getElementById('voice-textarea-id').value = transcript;
+                document.getElementById('voice-textarea-id').value = '';
+                //
+            }
+
+            sr4 = (error) => {
+                console.log("SpeechRecognition => onError Event => Error: " + error);
+                if (error == 'no-speech') {
+                    stopMicAnimation();
+                }
+                if (error == 'audio-capture') {
+                    stopMicAnimation();
+                }
+                if (event.error == 'not-allowed') {
+                    stopMicAnimation();
+                }
+            }
+
+            sr5 = (msg) => {
+                console.log("SpeechRecognition => onEnd Event => Message: " + msg);
+                stopMicAnimation();
+            }
+
+            mediaConnect = (msg) => {
+                console.log("mediaConnect => : ");
+                document.getElementById("spinner").style.display = "none";
+  
+                setTimeout(function () {
+                    trl.rtc().micOff();
+                }, 100);
+            }
+
+            mediaConnecting = (msg) => {
+                console.log("mediaConnecting => : ");
+                clearErrorMessageFromVideoScreen();
+                toggleStatusInUI();
+            }
+
+            mediaWaiting = (msg) => {
+                console.log("mediaWaiting => : ");
+                document.getElementById("spinner").style.display = "none";
+                toggleStatusInUI();
+                playInfoVideo('WAITING');
+            }
+
+            mediaBusy = (msg) => {
+                console.log("mediaBusy => : ");
+                document.getElementById("spinner").style.display = "none";
+                toggleStatusInUI();
+                playInfoVideo('BUSY');
+            }
+
+            mediaDisconnect = (msg) => {
+
+                console.log("mediaDisconnect => ", msg);
+                let errorMessage = null;
+
+                // User Hangs up
+                if (msg.reason == Trulience.CallEndReason.HANGED_UP) {
+                    console.log("------------HANGED_UP------------");
+                    errorMessage = 'Call Ended';
+                    // Call already ended as User hanged up
+                }
+
+                // Server Admin can terminate call or VPS Websocket closed
+                if (msg.reason == Trulience.CallEndReason.DISCONNECTED) {
+                    console.log("------------TG DISCONNECT------------");
+                    errorMessage = 'Call Ended';
+                    // Call already ended by SDK
+                }
+
+                //RTC call Fails due to 503 sdp error
+                if (msg.reason == Trulience.CallEndReason.FAILED) {
+                    console.log("------------RTC FAILED------------T");
+                    errorMessage = 'Call Failed';
+                    // Call already ended as RTC call Failed
+                }
+
+                // Reset UI
+                toggleStatusInUI();
+                writeErrorMessageToVideoScreen(errorMessage);
+                toggleUI('call_ended');
+            }
+
+            micStatus = (msg) => {
+                var element = document.getElementById("mic-icon");
+                if (msg.micStatus) {
+                    element.classList.remove("fa-microphone-slash");
+                    element.classList.add("fa-microphone");
+                } else {
+                    element.classList.add("fa-microphone-slash");
+                    element.classList.remove("fa-microphone");
+                }
+            }
+
+            let authEventsCB = {
+                onReady: a1,
+                onFail: a2
+            }
+
+            let wsEventsCB = {
+                onOpen: ws1,
+                onConnectFail: ws2,
+                onMessage: ws3,
+                onWarn: ws4,
+                onError: ws5,
+                onClose: ws6,
+            }
+
+            let mediaEventsCB = {
+                onConnected: mediaConnect,
+                onWaiting: mediaWaiting,
+                onBusy: mediaBusy,
+                onConnecting: mediaConnecting,
+                onDisconnect: mediaDisconnect,
+                micStatus: micStatus
+            }
+
+            let videoElements = {
+                remoteVideo: 'remoteVideo',
+                //previewVideo: 'previewVideo',
+            }
+
+            let srEventsCB = {
+                onStart: sr1,
+                onInterimTranscript: sr2,
+                onFinalTranscript: sr3,
+                onError: sr4,
+                onEnd: sr5,
+            }
+
+            var vps = null;
+            var alt_vps = GetURLParameter("vps");
+            if (alt_vps)
+                vps = alt_vps;
+
+            var webrtc = null;
+            var alt_webrtc = GetURLParameter("webrtc");
+            if (alt_webrtc)
+                webrtc = alt_webrtc;
+
+            var forceVideo = null;
+            var alt_forceVideo = GetURLParameter("forceVideo");
+            if (alt_forceVideo)
+                forceVideo = alt_forceVideo;
+
+            //Only one AvatarId can be set for a give UserId, in case
+            // different avatarId is sent for multi devices of same User
+            // TG won't allow multiple avatarIds to be set and AUTH FAILS
+            var avatarId = '5691210187936516088'; //Default Avatar Id = 10 = ECHO_TEST
+            var alt_avatarId = GetURLParameter("avatarId");
+            if (alt_avatarId) {
+                avatarId = alt_avatarId;
+            }
+
+            console.log("avatarId =======> " + avatarId);
+            if (avatarId == '10i') {
+                console.log(document.getElementById("plain-textarea-id"));
+                document.getElementById("plain-textarea-id").value = '<trl-body anim ="axis002" />';
+            }
+
+            //Passing userId is optional, but if passed by URL to SDK to TG then
+            //TG will allow only when Avatar allows insecure access i.e no OAUTH
+            //If Avatar requires OAUTH, TG will send AUTH FAILED with reason
+
+            //var _userId = 1234567890;
+            var _userId = null;
+            var alt_userId = GetURLParameter("userId");
+            if (alt_userId) {
+                _userId = alt_userId;
+            }
+
+            //var _accessToken = b57f890f-95f0-4419-90c0-b45f8b199bdd //OAUTH ACCESS_TOKEN passed when client is embedded in Customer Website
+            var _accessToken = null;
+            var alt_accessToken = GetURLParameter("accessToken");
+            if (alt_accessToken) {
+                _accessToken = alt_accessToken;
+            }
+
+            //if avatar has oauth enabled then it will be checked on sdk load
+            trl = Trulience.Builder()
+                .setAvatarId(avatarId) // Setting as String as Long values are truncated in JavaScript
+                .setUserId(_userId)
+                .setLanguagePreference('en-US')
+                .setUserName('Guest')
+                .assignVPS(vps)
+                .enableAvatar(true) // false for chat only, true for chat and video avatar
+                .setAuthCallbacks(authEventsCB)
+                .setWebSocketCallbacks(wsEventsCB)
+                .setSpeechRecognitionCallbacks(srEventsCB)
+                .setMediaCallbacks(mediaEventsCB)
+                .setScreenId('voice-textarea-id')
+                .setRetry(retry)
+                .registerVideoElements(videoElements)
+                .setWebRTCServer(webrtc)
+                .forceVideo(forceVideo)
+                .setAccessToken(_accessToken)
+                .build();
+
+            trl.authenticate();
+        };
+
+        window.onload = () => pageOnloadHandler(false);
+
+        function GetURLParameter(sParam) {
+            var sPageURL = window.location.search.substring(1);
+            var sURLVariables = sPageURL.split('&');
+            for (var i = 0; i < sURLVariables.length; i++) {
+                var sParameterName = sURLVariables[i].split('=');
+                if (sParameterName[0] == sParam) {
+                    return sParameterName[1];
+                }
+            }
+        }
+
+        function ssmlAppend(vin) {
+            document.getElementById("plain-textarea-id").value = document.getElementById("plain-textarea-id").value +
+                '\n' + vin
+        }
+
+        function sendMessageToVPS() {
+            let box = document.getElementById(activeTab + '-textarea-id');
+            let message = '';
+            if (box.tagName === 'DIV') {
+                message = screenMessageArray.join('');
+                screenMessageArray = [];
+                box.innerHTML = '';
+            } else if (box.tagName === 'TEXTAREA') {
+                message = box.value;
+            }
+            if (trl && message) {
+                if (trl.isConnected()) {
+                    trl.sendMessageToVPS(message);
+                } else {
+                    writeErrorMessageToVideoScreen('Call Not Connected Yet');
+                }
+            }
+        }
+
+        window.onunload = function () {
+            trl.disconnectGateway();
+        }
+
+        function startCall() {
+            //UI Stuff
+            toggleUI('call_starting');
+            clearErrorMessageFromVideoScreen();
+
+            //connect TG
+            var sttonly = GetURLParameter("sttonly");
+            if (sttonly) {
+                trl.setSTTAddress(sttonly);
+            }
+            trl.connectGateway();
+            toggleStatusInUI();
+        }
+
+        function fullscreen() {
+            if (endBtn.disabled) {
+                startCall();
+            }
+            var element = document.getElementById("remoteVideo");
+            if (element.requestFullscreen) {
+                element.requestFullscreen();
+            } else if (element.mozRequestFullScreen) {
+                element.mozRequestFullScreen();
+            } else if (element.webkitEnterFullscreen) {
+                element.webkitEnterFullscreen();
+            } else if (element.webkitRequestFullscreen) {
+                element.webkitRequestFullscreen();
+            } else if (element.msRequestFullscreen) {
+                element.msRequestFullscreen();
+            } else {
+                element.classList.toggle("Fullscreen");
+            }
+        }
+
+        function strip_html_tags(str) {
+            if ((str === null) || (str === ''))
+                return false;
+            else
+                str = str.toString();
+            return str.replace(/<[^>]*>/g, '');
+        }
+
+        function playInfoVideo(status) {
+
+            var videoElementId = null;
+            var errMsg = null;
+            if (status == 'WAITING') {
+                videoElementId = 'waitingInfoVideoId';
+                errMsg = 'Waiting for Avatar';
+            }
+            if (status == 'BUSY') {
+                videoElementId = 'busyInfoVideoId';
+                errMsg = 'The service is currently busy, please try again later.';
+            }
+
+
+            if (playInfoVideoDisabled) {
+                console.log("play info video disabled");
+                writeErrorMessageToVideoScreen(errMsg);
+                return;
+            }
+
+
+            var media = document.getElementById(videoElementId);
+
+            document.getElementById("remoteVideo").style.display = "none";
+            //document.getElementById("overlayButtonsDivId").style.display = "none";
+            media.style.display = "inline";
+
+            //NOTE:::: video dont play for firefox and safari if muted is set to false, only works for chrome
+            let isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+            if (isChrome) {
+                media.muted = false;
+            }
+
+            const playPromise = media.play();
+            if (playPromise !== null) {
+                playPromise.catch(() => {
+                    media.play();
+                })
+            }
+
+            media.onended = function () {
+                document.getElementById("remoteVideo").style.display = "inline";
+                media.style.display = "none";
+                //document.getElementById("overlayButtonsDivId").style.display = "inline";
+                writeErrorMessageToVideoScreen(errMsg);
+            }
+        }
+
+        function pauseInfoVideo(videoElementId) {
+            var media = document.getElementById(videoElementId);
+            media.pause();
+            media.style.display = "none";
+            document.getElementById("remoteVideo").style.display = "inline";
+        }
+
+        function writeErrorMessageToVideoScreen(errorMessage) {
+            document.getElementById('errorMessageId').style.display = 'inline';
+            document.getElementById('errorMessageId').innerHTML = errorMessage;
+        }
+
+        function clearErrorMessageFromVideoScreen() {
+            document.getElementById('errorMessageId').style.display = 'none';
+            document.getElementById('errorMessageId').innerHTML = '';
+        }
+
+        // Reasons => 0=HANGED_UP, 1=DISCONNECTED,  2=FAILED
+        function endCall(reason) {
+            console.log("ending Call => reason = " + reason);
+
+            //UI Stuff
+            toggleUI('call_ended');
+
+            // disconnect Gateway
+            trl.disconnectGateway(reason);
+        }
+
+        var cc = true;
+
+        function toggleCC() {
+            if (cc) {
+                cc = false;
+                Trulience.getInstance().sendMessageToVPS("<trl-config subtitlesEnabled='false' />");
+            } else {
+                cc = true;
+                Trulience.getInstance().sendMessageToVPS("<trl-config subtitlesEnabled='true' />");
+            }
+        }
+
+        function toggleURLBar() {
+            if (document.getElementById("urlbar").style.display == "table-cell")
+                document.getElementById("urlbar").style.display = "none";
+            else
+                document.getElementById("urlbar").style.display = "table-cell";
+        }
+
+        function toggleScreenBar() {
+            if (document.getElementById("screenbar").style.display == "table-cell")
+                document.getElementById("screenbar").style.display = "none";
+            else
+                document.getElementById("screenbar").style.display = "table-cell";
+        }
+
+
+        var faceRunning = false;
+        var faceInit = false;
+
+        function toggleFaceAPI() {
+            if (!faceRunning) {
+                document.getElementById("inputVideo").style.zIndex = "10";
+                document.getElementById("overlay").style.zIndex = "11";
+                faceRunning = true;
+                //if (document.getElementById('inputVideo').srcObject)
+                //	document.getElementById('inputVideo').srcObject.getTracks()[0].enabled=true;
+                if (!faceInit) {
+                    faceInit = true;
+                }
+                run();
+            } else {
+                faceRunning = false;
+                if (document.getElementById('inputVideo').srcObject) {
+                    document.getElementById('inputVideo').srcObject.getTracks()[0].enabled = false;
+                    videoTracks = document.getElementById('inputVideo').srcObject.getVideoTracks()
+                    for (i = 0; i < videoTracks.length; i++) {
+                        videoTracks[i].enabled = false;
+                        videoTracks[i].stop();
+                    }
+                }
+                document.getElementById("inputVideo").style.zIndex = "-10";
+                document.getElementById("overlay").style.zIndex = "-11";
+                trl.sendMessageToVPS('<trl-config lookat="camera" enable="true" />');
+            }
+
+        }
+
+        function toggleEmotiBar() {
+            if (document.getElementById("emotibar").style.display == "table-cell")
+                document.getElementById("emotibar").style.display = "none";
+            else
+                document.getElementById("emotibar").style.display = "table-cell";
+        }
+
+        function openTab(evt, tab) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(tab).style.display = "block";
+            evt.currentTarget.className += " active";
+            activeTab = tab;
+
+            if (activeTab === 'voice') {
+                startSpeechRecognition();
+            } else {
+                stopSpeechRecognition();
+            }
+        }
+
+        function startSpeechRecognition() {
+            if (trl.speechRecognition().isAlreadyInProgress()) {
+                stopSpeechRecognition()();
+                return;
+            }
+            console.log("Starting Speech Recognition....");
+            trl.speechRecognition().start();
+        }
+
+        function stopSpeechRecognition() {
+            if (trl && trl.speechRecognition()) {
+                console.log("Stopping Speech Recognition....");
+                trl.speechRecognition().stop(false);
+                stopMicAnimation();
+            }
+        }
+
+        function animateMic() {
+            document.getElementById('animatedMicId').style.display = 'inline';
+            document.getElementById('faMicId').style.display = 'none';
+        }
+
+        function stopMicAnimation() {
+            document.getElementById('animatedMicId').style.display = 'none';
+            document.getElementById('faMicId').style.display = 'inline';
+        }
+
+        function toggleUI(event) {
+            if (event === 'call_ended') {
+                document.getElementById("spinner").style.display = "none";
+                startBtn.disabled = false;
+                endBtn.disabled = true;
+            }
+
+            if (event === 'call_starting') {
+                document.getElementById("spinner").style.display = "block";
+                startBtn.disabled = true;
+                endBtn.disabled = false;
+            }
+
+        }
+
+        function toggleStatusInUI() {
+
+            let tgStatus = Trulience.getInstance().getTGStatus();
+            let vpsStatus = Trulience.getInstance().getVPSStatus();
+
+            console.log("toggleStatusInUI => tgStatus = " + tgStatus);
+            console.log("toggleStatusInUI => vpsStatus = " + vpsStatus);
+
+            if (tgStatus === Trulience.TGStatus.CONNECTING) {
+                //TGStatus
+                document.getElementById('tgConnectingId').style.display = 'none';
+                document.getElementById('tgConnectedId').style.display = 'none';
+                document.getElementById('tgDisconnectedId').style.display = 'none';
+                //VPSStatus
+                document.getElementById('vpsAssigningId').style.display = 'none';
+                document.getElementById('vpsAssignedId').style.display = 'none';
+
+            } else if (tgStatus === Trulience.TGStatus.CONNECTED) {
+
+                if (vpsStatus === Trulience.VPSStatus.ASSIGNED) {
+                    //TGStatus
+                    document.getElementById('tgConnectingId').style.display = 'none';
+                    document.getElementById('tgConnectedId').style.display = 'none';
+                    document.getElementById('tgDisconnectedId').style.display = 'none';
+                    //VPSStatus
+                    document.getElementById('vpsAssigningId').style.display = 'none';
+                    document.getElementById('vpsAssignedId').style.display = 'none';
+
+                } else if (vpsStatus === Trulience.VPSStatus.DISCONNECTED) {
+                    //TGStatus
+                    document.getElementById('tgConnectingId').style.display = 'none';
+                    document.getElementById('tgConnectedId').style.display = 'none';
+                    document.getElementById('tgDisconnectedId').style.display = 'none';
+                    //VPSStatus
+                    document.getElementById('vpsAssigningId').style.display = 'none';
+                    document.getElementById('vpsAssignedId').style.display = 'none';
+                } else if (vpsStatus === Trulience.VPSStatus.CONNECTING) {
+                    //TGStatus
+                    document.getElementById('tgConnectingId').style.display = 'none';
+                    document.getElementById('tgConnectedId').style.display = 'none';
+                    document.getElementById('tgDisconnectedId').style.display = 'none';
+                    //VPSStatus
+                    document.getElementById('vpsAssigningId').style.display = 'none';
+                    document.getElementById('vpsAssignedId').style.display = 'none';
+                } else {
+                    //TGStatus
+                    document.getElementById('tgConnectingId').style.display = 'none';
+                    document.getElementById('tgConnectedId').style.display = 'none';
+                    document.getElementById('tgDisconnectedId').style.display = 'none';
+                    //VPSStatus
+                    document.getElementById('vpsAssigningId').style.display = 'none';
+                    document.getElementById('vpsAssignedId').style.display = 'none';
+                }
+            } else /*if (tgStatus === Trulience.TGStatus.DISCONNECTED)*/ {
+                //TGStatus
+                document.getElementById('tgConnectingId').style.display = 'none';
+                document.getElementById('tgConnectedId').style.display = 'none';
+                document.getElementById('tgDisconnectedId').style.display = 'none';
+                //VPSStatus
+                document.getElementById('vpsAssigningId').style.display = 'none';
+                document.getElementById('vpsAssignedId').style.display = 'none';
+            }
+        }
+
+        function retryToConnect(retryCount) {
+            //Retry 3 times
+            if (retryCount === 0) {
+                Trulience.trlDialog(3000, "VPS Not Available", "...Retrying to connect VPS");
+            }
+            retryTask = () => {
+                retryCount++;
+                console.log("retryCount = " + retryCount);
+                if (retryCount > 1000) {
+                    console.log("clearing retry timer");
+                    clearInterval(retryTimeout);
+                    Trulience.getInstance().setVPSStatus(Trulience.VPSStatus.CONNECTING);
+                    toggleStatusInUI();
+                } else {
+                    this.pageOnloadHandler(true);
+                }
+            }
+            var retryTimeout = setInterval(retryTask, 10000);
+        }
+
+        function toggleMic() {
+            if (trl == null || trl.rtc() == null)
+                return;
+            trl.rtc().toggleMic();
+        }
+
+        function toggleCam() {
+            if (trl == null || trl.rtc() == null)
+                return;
+            trl.rtc().toggleCam();
+        }
+
+        var faceFound = false;
+        var expression = "";
+        var lastExpression = "";
+        var lastExpressionCount = 0;
+        var lostCount = 0;
+        var lastPositionTag = "";
+
+        async function onPlay() {
+            if (!faceRunning) {
+                setTimeout(() => onPlay(), 50);
+                return;
+            }
+            const videoEl = document.getElementById('inputVideo')
+            const options = new faceapi.TinyFaceDetectorOptions({
+                inputSize: 320,
+                scoreThreshold: 0.3
+            })
+            const displaySize = {
+                width: videoEl.width,
+                height: videoEl.height
+            }
+            const canvas = document.getElementById('overlay')
+            faceapi.matchDimensions(canvas, displaySize)
+
+            //result = await faceapi.detectSingleFace(videoEl, options).withFaceLandmarks(true)
+            result = await faceapi.detectSingleFace(videoEl, options).withFaceLandmarks(true).withFaceExpressions()
+                .withAgeAndGender();
+
+            if (result) {
+
+                const resizedResults = faceapi.resizeResults(result, displaySize)
+                // draw detections into the canvas
+                faceapi.draw.drawDetections(canvas, resizedResults)
+                // draw the landmarks into the canvas
+                faceapi.draw.drawFaceLandmarks(canvas, resizedResults)
+                const minProbability = 0.05
+                //      faceapi.draw.drawFaceExpressions(canvas, resizedResults, minProbability)
+
+                if (!faceFound) {
+                    trl.sendMessageToVPS('<trl-content rotateAvatar="false" />');
+
+                    var gwel = "my lady"
+                    if (result.gender === 'male') {
+                        gwel = "sir";
+
+                    }
+                    trl.sendMessageToVPS("Hello there " + gwel +
+                        ". I can see you and if I had to guess, I would say you are around " + Math.floor(result
+                            .age) + " years old <trl-anim type='aux' id= 'smileMedium1Sec' duration='2.0' />");
+                }
+
+                var currentExpression = result.expressions.asSortedArray()[0].expression;
+                lastExpressionCount--;
+                if (currentExpression != lastExpression && lastExpressionCount < 0) {
+                    if (currentExpression === 'happy') {
+                        lastExpressionCount = 15;
+                        trl.sendMessageToVPS("<trl-anim type='aux' id= 'smileMedium1Sec' duration='2.0' />");
+                    } else if (currentExpression === 'sad' || currentExpression === 'angry') {
+                        lastExpressionCount = 15;
+                        trl.sendMessageToVPS("<trl-anim type='aux' id= 'frownMedium1Sec' duration='2.0' />");
+                    } else if (currentExpression === 'surprised') {
+                        lastExpressionCount = 15;
+                        trl.sendMessageToVPS("<trl-anim type='aux' id= 'mouthOpen' duration='1.0' />");
+                    }
+                    lastExpression = currentExpression;
+                }
+
+
+                noseX = Math.round(result.unshiftedLandmarks.positions[30]._x + result.detection.box._x);
+                noseY = Math.round(result.unshiftedLandmarks.positions[30]._y + result.detection.box._y);
+                avatarX = 0.0;
+                avatarY = 0.0;
+
+                if (noseX > 500)
+                    avatarX = -3;
+                else if (noseX > 400)
+                    avatarX = -2;
+                else if (noseX > 350)
+                    avatarX = -1;
+                else if (noseX < 50)
+                    avatarX = 3;
+                else if (noseX < 100)
+                    avatarX = 2;
+                else if (noseX < 200)
+                    avatarX = 1;
+                else if (noseX < 250)
+                    avatarX = 0.5;
+
+                if (noseY > 400)
+                    avatarY = -2;
+                else if (noseY > 300)
+                    avatarY = -1;
+                else if (noseY < 100)
+                    avatarY = 2;
+                else if (noseY < 200)
+                    avatarY = 1;
+
+                // change direction and quantity
+                var holoflip = GetURLParameter("holoflip");
+                if (holoflip) {
+                    avatarX = avatarX * -2;
+                }
+                tag = '<trl-config lookat="' + avatarX + ',0,' + avatarY + '"  absolute="false" enable="true" />';
+                if (tag.valueOf() != lastPositionTag.valueOf()) {
+                    lastPositionTag = tag;
+                    trl.sendMessageToVPS(tag);
+                }
+
+
+                faceFound = true;
+                lostCount = 20;
+                // KEEP as useful for coords
+                //document.getElementById('myDiv01').innerHTML = 'Face Position X: '+ Math.round(result.unshiftedLandmarks.positions[30]._x+result.detection.box._x) + ' Y: '+ Math.round(result.unshiftedLandmarks.positions[30]._y+result.detection.box._y) + ' Mood: ' + result.expressions.asSortedArray()[0].expression + ' Gender: ' + result.gender + ' Age: '+Math.floor(result.age)  ;
+                document.getElementById('myDiv01').innerHTML = ' Gender: ' + result.gender + ' Mood: ' + result
+                    .expressions.asSortedArray()[0].expression + ' Age: ' + Math.floor(result.age);
+                //document.getElementById("plain-textarea-id").value =lastPositionTag;
+            } else {
+                lostCount--;
+                if (lostCount < 0) {
+                    if (faceFound) {
+                        trl.sendMessageToVPS('<trl-content rotateAvatar="true" />');
+                        trl.sendMessageToVPS("Where did you go? Bye for now");
+                    }
+                    faceFound = false;
+                    tag = '<trl-config lookat="camera" enable="true" />';
+                    if (tag.valueOf() != lastPositionTag.valueOf()) {
+                        lastPositionTag = tag;
+                        trl.sendMessageToVPS(tag);
+                    }
+                }
+                document.getElementById('myDiv01').innerHTML = 'No face';
+            }
+            setTimeout(() => onPlay(), 50)
+        }
+        var facestream
+        async function run() {
+            await faceapi.loadTinyFaceDetectorModel('https://www.trulience.com/js/face-api.js/weights/')
+            await faceapi.loadFaceLandmarkTinyModel('https://www.trulience.com/js/face-api.js/weights/')
+            await faceapi.loadFaceExpressionModel('https://www.trulience.com/js/face-api.js/weights/')
+            await faceapi.loadAgeGenderModel('https://www.trulience.com/js/face-api.js/weights/')
+            const stream = await navigator.mediaDevices.getUserMedia({
+                audio: false,
+                video: {
+                    mandatory: {
+                        minWidth: 640,
+                        minHeight: 480,
+                        maxWidth: 640,
+                        maxHeight: 480
+                    }
+                }
+            })
+            const videoEl = document.getElementById('inputVideo')
+            videoEl.srcObject = stream
+        }
+    </script>
+
+
+</head>
+
+
+
+<body>
+    <div class="banner">
+
+        <!----------------------------- TGStatus -------------------------------->
+        <span id="tgConnectingId" title="Connecting Trulience Gateway...">
+
+
+            <span id="tgConnectedId" title="Trulience WebSocket Connected">
+                <!-- <i class="fas fa-circle green"></i>-->
+
+            </span>
+
+            <span id="tgDisconnectedId" title="Disconnected">
+                <i class="fa-lg fas fa-ban"></i>
+            </span>
+
+            <!----------------------------- VPSStatus -------------------------------->
+            <span id="vpsAssigningId" title="Waiting for VPS Assignment...">
+                <img src='/img/fixpix.png'/> </span>
+            <span id="vpsAssignedId" title="VPS Assigned"> <img src='/img/fixpix.png'
+           /> </span> </div>
+    <div id="errorMessageId"></div>
+
+ 
+
+    <table border="0">
+  
+            
+     
+    
+        <tr>
+            <td colspan="2">
+                <video id="remoteVideo" onclick="fullscreen();" width="700" height="420"
+                    style="  margin-bottom:0px; background-color:#000;" playsinline autoplay></video>
+                <video onplay="onPlay(this)" id="inputVideo" autoplay muted width="160" height="120" onClick="run();"
+                    style="z-index: -10; top: 363px; left:35px; position: absolute; border: 1px solid #ddd;"></video><br>
+                <canvas id="overlay" width="160" height="120" onClick="run();"
+                    style="z-index: -11; top: 363px; left:35px; position: absolute; border: 1px solid #ddd;"></canvas>
+
+
+            </td>
+        </tr>
+        <tr>
+
+            <td>
+                <button class="button button-trl button-green" value="Connect" id="startBtn"
+                onClick="startCall();" />Connect virtual human</button>
+                <span id="statusOkId" style="display:none"><i class="fa fa-check"
+                        style="position:absolute;left:560px;top:524px;color:white;"></i></span>
+                <span id="statusFailId" style="display:none"><i class="fa fa-times"></i></span>
+            </td>
+            
+            <td align="left">
+                <input type="image" src="/img/closed-captioning-solid.svg" id="captions"  value="Left" onClick="toggleCC();" ></button>
+
+           
+                <button class="button button-trl button-red" value="End" id="endBtn" onClick="endCall(0);"
+                disabled /><i class="fa fa-stop"></i></button>
+
+                <button class="button button-trl button-grey" value="End" id="endBtn" onClick="toggleMic();" /><i
+                id="mic-icon" class="fa fa-microphone-slash"></i></button>
+
+                <button class="button button-trl button-blue" value="Full" id="fsBtn"
+                onClick="fullscreen();" /><i class="fa fa-expand"></i></button>
+            </td>
+        </tr>
+
+
+    </table>
+
+
+
+    <div style="margin-left:10px; ">
+        <div id="myDiv01"></div>
+        
+      
+    </div>
+
+    <div id='spinner' class="lds-dual-ring"></div>
+
+    </table>
+    </div>
+
+    <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+
+</section>
+
+</body>
+
+</html>

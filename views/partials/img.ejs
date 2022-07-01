@@ -1,29 +1,46 @@
+
+<script src="https://cdn.jsdelivr.net/npm/html-to-pdfmake/browser.js"></script>
+<script defer
+src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.3.0-beta.2/pdfmake.min.js"
+integrity="sha512-k9XKlDENMt9s19gEl+L6F/r+OWAR4pesbUd8/SKQVMt3b1ECqsRXgLA9XnJoq4J9mjlxLQabfTxf3268lzpFUQ=="
+crossorigin="anonymous"
+referrerpolicy="no-referrer"
+></script>
+<script defer
+src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.3.0-beta.2/vfs_fonts.min.js"
+integrity="sha512-6RDwGHTexMgLUqN/M2wHQ5KIR9T3WVbXd7hg0bnT+vs5ssavSnCica4Uw0EJnrErHzQa6LRfItjECPqRt4iZmA=="
+crossorigin="anonymous"
+referrerpolicy="no-referrer"
+></script>
+<script defer src="/script/pdf.js"></script>
+
 <section class="imageArea">
-    <div class="preview">
-        <img class="placeholder" src="/img/placeholder.png"></img>
-        <div class="previewbuttons">
-            <button class="playpauseButton"></button>
-            <button class="stopButton"></button>
-            <button class="fullscreenButton"></button>
-        </div>
-    </div>
+
 
     <div class="timelineArea">
-        <h2>Timeline</h2>
-        <div class="timeline">
-            <!-- Hier de timeline nog neerzetten -->
+        <h2>Your animation <img src="/img/circle-info-solid.svg" alt="" class="infoSvg3"><p class="infoTekst3">Here you can see the variations that you added. The full code can be seen in the bottom. It is possible to change values manually by changing the text. 
+            The timeline will show the order of the animations that are added. If you want to delete the full timeline you can press the reset button in the bottom right.</p></h2>
+       
+        <div id="newImage">
+
         </div>
-
-        <h2>Copy your code</h2>
-        <textarea id="sequence" placeholder="You have not added any animations yet. Choose from the categories in the animation editor on the right to add and/or adjust an animation." cols="10" rows="5"></textarea>
-
+        <button id="resetButton"><img src="/img/resetbutton.png" alt="reset button"></button>
+        <textarea id="plain-textarea-id"  placeholder="You have not added any animations yet. Choose from the categories in the animation editor on the right to add and/or adjust an animation." cols="100" rows="5"></textarea>
         <div class="timelineButtons">
             <div>
+                <button class="button button-light-grey"
+                value="Send" id="sendMsgBtn" onclick="sendMessageToVPS();" /> Play animation</button>
+                
                 <button id="copyTime">Copy code</button>
-                <button><img src="/img/pdf_icon.svg" alt="pdf icon"></button>
+                <button id="pdftje"><img src="/img/pdf_icon.png" alt="pdf icon"></button>
+            
             </div>
-            <button>reset</button>
+   
+            <button 
+            onclick="oneSecBreak();" class="breakButton"> Add a break <img src="/img/circle-info-solid.svg" alt="" class="infoSvg4">  <p class="infoTekst4">A break adds a pause from 1 second between animations.</p></button>
+
         </div>
+
     </div>
     
 </section>

@@ -6,29 +6,46 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
+    <title>Dashboard - Virtually Human</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/>
+    <title>Animation dashboard - Virtually Human</title>
+
 </head>
 
 <body>
     <%- include('partials/header') %>
 
+   
+
     <main>
+    <section class="mobileShow">
+        <img src="/img/logo_wit.png" alt="">
+        <h1>Please use a desktop to use the Dashboard</h1>
+    </section>
         <section class="partials">
+          
             <section class="partials_left">
-                <div class="left__right">
-                    <h1>Live preview</h1>
-                    <%- include('partials/img') %>
-                </div>
+        
+                <ul class="left__right">
+                  <li>  <h1>Preview</h1> </li>
+                    <li><%- include('partials/avatar') %> </li>
+                  <li>  <%- include('partials/img') %> </li>
+
+                  
+                </ul>
                 
             </section>
 
             <sections class="partials_right">
-                <h1>Animation editor</h1>
+                <h1>Animation editor <img src="/img/circle-info-solid.svg" alt="" class="infoSvg1">  <p class="infoTekst1">In the dashboard you will find a series of categories you can choose from to personalise your Digital Human.  When a variation has been chosen it will be send to the code editor where you can fine-tune the animation. Then you can send it to your animation timeline.
+                    <br><br> For more information, see the User Guide.</p></h1>
 
                 <section class="filter&commands">
                     <%- include('partials/commands') %>

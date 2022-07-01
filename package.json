@@ -4,8 +4,15 @@
   "description": "virtually-human chatbot",
   "main": "server.js",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@fortawesome/react-fontawesome": "^0.1.18",
+    "basic-auth": "^2.0.1",
     "ejs": "^3.1.7",
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "passport": "^0.6.0",
+    "pdfmake": "^0.2.5",
+    "tsscmp": "^1.0.6"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
@@ -22,7 +29,7 @@
     "express",
     "routing"
   ],
-  "author": "Laiba Choudhry" ,
+  "author": "Laiba Choudhry",
   "co-owner": "Chris Gabriel |||",
   "license": "MIT",
   "bugs": {

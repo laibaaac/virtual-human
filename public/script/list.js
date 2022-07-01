@@ -1,11 +1,4 @@
 
-  for (var i = 0; i < document.links.length; i++) {
-    if (document.links[i].href === document.URL) {
-        document.links[i].className = 'current';
-    }
- }
- 
-
 const faders = document.querySelectorAll(".moveUp");
 const sizes = document.querySelectorAll(".sizeUp");
 const slides = document.querySelectorAll(".slideLeft");
@@ -39,4 +32,21 @@ faders.forEach(fader => {
   appearOnScroll.observe(fader);
 });
 
+//Get the button:
+mybutton = document.getElementById("B2TBtn");
+
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+document.getElementById("resetButton").addEventListener('click', () => {
+
+  document.getElementById("plain-textarea-id").value = '';
+
+  const timelineImages = Array.from(document.getElementsByClassName('timelineImg'));
+  timelineImages.forEach(timelineImg => {
+    timelineImg.remove();
+  })})
 

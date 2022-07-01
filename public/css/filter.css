@@ -1,7 +1,4 @@
-
-  
   .filterDiv {
-
     display: none; /* Hidden by default */
   }
   
@@ -9,6 +6,7 @@
   .show {
     display: block;
   }
+
   section > ul > li.filterDiv {
  
     display: none; /* Hidden by default */
@@ -18,18 +16,33 @@
   .show {
     display: block;
   }
+
   .filterShow {
-    display: block;
-  }
-  /* Style the buttons */
-  .btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 8em;
+    padding: 1em;    
+    background-color: var(--text-color-buttons);
     border: none;
-    outline: none;
-    padding: 12px 16px;
-    background-color: #f1f1f1;
-    cursor: pointer;
+    border-radius: 0.5em;
   }
-  
+
+  .filterDiv.position.filterShow {
+    padding: 1em 0.5em;
+  }
+
+
+  .filterShow img {
+    max-height: 70%;
+    max-width: 70%;
+  }
+
+  .filterDiv.mouth.filterShow img{
+    height: 2em;
+  }
+
   /* Add a light grey background on mouse-over */
   .btn:hover {
     background-color: #ddd;
@@ -37,6 +50,6 @@
   
   /* Add a dark background to the active button */
   .btn.active {
-    background-color: #666;
     color: white;
   }
+

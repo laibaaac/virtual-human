@@ -1,0 +1,128 @@
+:root {
+    --black: #020B23;
+    --text-color-buttons: #FFFFFF;
+    --orange: #E84D3C;
+    --blue: #143056;
+    --grey: #D9D9D9;
+    --main-font: 'Montserrat';
+    --darkestblue: #121B30;
+    --darkblue: #17223C;
+    --hover-orange: #f99a90;
+}
+
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font), Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: var(--text-color-buttons);
+    margin-bottom: 1em;
+    font-weight: 500;
+}
+
+p {
+    color: var(--text-color-buttons);
+    margin-bottom: 1em;
+}
+
+a {
+    color: var(--orange);
+}
+
+header {
+    background-color: var(--blue);
+    height: 5.3125em;
+    display: flex;
+    align-items: center;
+    padding: 0 20%; 
+}
+
+header img {
+    height: 2rem;
+    image-rendering: -moz-crisp-edges; /* Firefox */
+    image-rendering: -o-crisp-edges; /* Opera */
+    image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+}
+
+body{
+    background-color: var(--black);
+    height: calc(100vh - 5.3125em);
+}
+
+main {
+    padding: 10em 20% 0 20%;
+    display: flex;
+    justify-content: space-around;
+}
+
+main section {
+    width: 100%;
+    padding: 0 3em;
+    max-width: 30em;
+}
+
+main section:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;  
+}
+
+main img {
+    width: 100%;
+    image-rendering: -moz-crisp-edges; /* Firefox */
+    image-rendering: -o-crisp-edges; /* Opera */
+    image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input:first-of-type {
+    background: transparent;
+    border: none;
+    border-bottom: 4px solid var(--orange);
+    padding: 1em .1em;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    color: var(--text-color-buttons);
+}
+
+form input:nth-of-type(2) {
+    background: var(--orange);
+    border-radius: .5rem;
+    border: none;
+    font-size: 1.2em;
+    color: var(--text-color-buttons);
+    text-align: left;
+    padding: .5em;
+    cursor: pointer;
+}
+
+form input:nth-of-type(2):hover {
+    background-color: var(--hover-orange);
+    color: var(--black);
+}
+
+form input:nth-of-type(2):active {
+    background-color: var(--orange);
+    color: var(--text-color-buttons);
+}
+
+form input:nth-of-type(2):focus {
+    outline: 2px solid var(--text-color-buttons) !important;
+    border-radius: 2px;
+}
+
+*:focus {
+    outline: 2px solid var(--orange);
+    border-radius: 2px;
+}
