@@ -609,3 +609,41 @@ button.plus:hover {
 }
 
 
+.filterDiv.foreground.filterShow{
+    padding: 0 !important;
+}
+
+.filterDiv.background.filterShow {
+    padding: 0 !important;
+}
+
+.filterDiv.foreground.filterShow img{
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 0.5em;
+
+    max-width: none;
+
+    max-height: none;
+}
+
+.filterDiv.background.filterShow img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 0.5em;
+
+    max-width: none;
+
+    max-height: none;
+
+}
+
