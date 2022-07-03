@@ -8,9 +8,6 @@ app.engine("html", require("ejs").renderFile);
 app.set("view engine", "ejs", "html");
 
 
-  res.render("index", {});
-
-
 
 app.get("/start", async (req, res) => {
   res.render("start");
