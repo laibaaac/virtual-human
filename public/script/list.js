@@ -41,12 +41,36 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
-document.getElementById("resetButton").addEventListener('click', () => {
 
-  document.getElementById("plain-textarea-id").value = '';
 
-  const timelineImages = Array.from(document.getElementsByClassName('timelineImg'));
-  timelineImages.forEach(timelineImg => {
-    timelineImg.remove();
-  })})
+if(navigator.clipboard) {
+  
+
+  const codeSnippet = document.querySelectorAll('li textarea')
+  
+  codeSnippet.forEach((element, index) => {  
+    element.addEventListener('click', () =>{
+    setClipboard(element.textContent)
+    })
+  })
+  
+  function setClipboard(text) {
+
+      const type = "text/plain";
+      const blob = new Blob([text], { type });
+      const data = [new ClipboardItem({ [type]: blob })];
+  
+      navigator.clipboard.write(data).then(
+          function () {
+          /* success */
+            // console.log(data)
+          },
+          function () {
+          /* failure */
+            // console.log('error clipping')
+          }
+      );
+  
+  }
+  }
 
