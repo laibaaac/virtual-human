@@ -7,6 +7,11 @@ bodyParser = require("body-parser");
 app.engine("html", require("ejs").renderFile);
 app.set("view engine", "ejs", "html");
 
+app.get("/", function (req, res) {
+
+
+  res.render("index", {});
+});
 
 
 app.get("/start", async (req, res) => {
