@@ -60,4 +60,15 @@ a:hover {
     color: var(--orange);
 }
     
+.logo:hover {
+    transition: 0.3s;
+    transform: scale(1.05);
+}
+.logo:active {
 
+    outline: none;
+}
+.logo:focus {
+
+    outline: none;
+}

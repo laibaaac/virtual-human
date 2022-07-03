@@ -74,7 +74,7 @@ ul.guideTop {
 ul.guideTop > li {
     width: 45%;
 }
-img {
+img.start {
     -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
     filter: drop-shadow(15px 15px 15px rgba(0, 0, 0, 0.3));
     max-width: calc(50% - 4em);

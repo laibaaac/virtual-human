@@ -121,8 +121,3 @@ form input:nth-of-type(2):focus {
     outline: 2px solid var(--text-color-buttons) !important;
     border-radius: 2px;
 }
-
-*:focus {
-    outline: 2px solid var(--orange);
-    border-radius: 2px;
-}
