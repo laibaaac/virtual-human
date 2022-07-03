@@ -577,10 +577,10 @@ button.plus:hover {
     display: flex;
 }
 
-#agreeUpdate {
+#agreementUpdate {
     display: none;
 }
-#agreeUpdate.show {
+#agreementUpdate.show {
     display: flex;
 }
 #disagreeUpdate {

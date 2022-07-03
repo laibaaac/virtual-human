@@ -186,11 +186,7 @@ document.getElementById("screenAvatarLeftSButton").addEventListener("click", scr
 
 document.getElementById("screenAvatarRightSButton").addEventListener("click", screenAvatarRightSNumber);
 document.getElementById("screenAvatarRightSButton").addEventListener("click", screenAvatarRightSCode);
-document.getElementById("friendlyButton").addEventListener("click",friendlyNumber);
-document.getElementById("friendlyButton").addEventListener("click", friendlyCode);
 
-document.getElementById("surpriseButton").addEventListener("click", surpriseNumber);
-document.getElementById("surpriseButton").addEventListener("click", surpriseCode);
 document.getElementById("friendlyButton").addEventListener("click", friendlyNumber);
 document.getElementById("friendlyButton").addEventListener("click", friendlyCode);
 
@@ -286,19 +282,12 @@ document.getElementById("screenAvatarLeftSUpdate").addEventListener("click", upd
 document.getElementById("screenAvatarRightSUpdate").addEventListener("click", updateScreenAvatarRightS);
 document.getElementById("screenAvatarLeftMUpdate").addEventListener("click", updateScreenAvatarLeftM);
 document.getElementById("screenAvatarRightMUpdate").addEventListener("click", updateScreenAvatarRightM);
-document.getElementById("agreeUpdate").addEventListener("click", updateAgree);
+document.getElementById("agreementUpdate").addEventListener("click", updateAgree);
 document.getElementById("disagreeUpdate").addEventListener("click", updateDisagree);
 document.getElementById("questionUpdate").addEventListener("click", updateQuestion);
 document.getElementById("disapprovalUpdate").addEventListener("click", updateDisapproval);
 document.getElementById("friendlyUpdate").addEventListener("click", updateFriendly);
 document.getElementById("surpriseUpdate").addEventListener("click", updateSurprise);
-
-document.getElementById("friendlyUpdate").addEventListener("click", updateFriendly);
-document.getElementById("surpriseUpdate").addEventListener("click", updateSurprise);
-document.getElementById("disapprovalUpdate").addEventListener("click", updateDisapproval);
-document.getElementById("agreementUpdate").addEventListener("click", updateAgreement);
-document.getElementById("disagreementUpdate").addEventListener("click", updateDisagreement);
-document.getElementById("questionUpdate").addEventListener("click", updateQuestion);
 
 
 //standaard waardes van de codestrings
@@ -1540,17 +1529,6 @@ function leanIn2Number() {
   });
   img = document.createElement('img');
   img.src = 'img/lean.png';
-}
-
-function leanIn2Code() {
-  document.getElementById("textReturn").value = "<trl-anim type='aux' id='MCleanIn' blendStart='"+ blendSt +"' blendEnd='"+ blendEn +"'/>";
-}
-
-function updateLeanIn2() {
-  leanIn2Code();
-  img.classList = 'timelineImg';
-  element.append(img);
-  document.getElementById("plain-textarea-id").value += textReturn.value +"\n\n";
 }
 
 function leanIn2Code() {

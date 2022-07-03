@@ -890,7 +890,6 @@ color: rgba(255, 0, 0, 0);
     filter: invert(60%) sepia(91%) saturate(5059%) hue-rotate(338deg) brightness(94%) contrast(92%);
 }
 
-
 #linkToList.filterDiv.filterShow {
  max-width: 15em;
  height: 3.5rem;
@@ -914,7 +913,17 @@ color: rgba(255, 0, 0, 0);
     background-color: var(--orange);
     color: var(--text-color-buttons);
 }
+#linkToList.filterDiv.filterShow:hover {
+    transform: scale(1.1);
+    outline: none;
 
+}
+#linkToList:active {
+outline: none;
+}
+#linkToList:focus {
+    outline: none;
+    }
 .various {
     padding-bottom: 10em;
 }

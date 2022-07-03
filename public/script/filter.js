@@ -93,6 +93,7 @@ function addEditor() {
   } else {
  
   }
+  
   document.querySelectorAll("#textReturn, .editor, .animationAdd").forEach(target => target.classList.remove("active"));
   document.querySelectorAll(".commands").forEach((el) => {
     document.getElementById("explanation").value = ""
@@ -107,6 +108,7 @@ function removeEditor2() {
     document.querySelectorAll("#blendEnCss, #duraCss, #blendStCss, #speedCss").forEach((el) => {
       
       el.classList.remove('active');})
+      
     document.getElementById("codetitle").innerHTML = "Various";
     document.getElementById("textReturn").classList.add('hide');
     document.getElementById("addAnimation").classList.add('hide');
@@ -130,7 +132,7 @@ function addEditor() {
 
 testknopje.innerHTML = "Code editor" + "<img src='/img/circle-info-solid.svg' class='infoSvg2'>" + "<p class='infoTekst2'>When an animation has been chosen you can fine-tune the animation in the code editor. Add the variation to your timeline by pressing the “Add to animation X” button. If you want to reset the code to its original values you can press the default button.</p></h2>";
     document.getElementById("textReturn").placeholder = "You have not added any animations yet. Choose from the categories in the animation editor above to add and/or adjust an animation.";
-
+    document.getElementById("textReturn").value = "";
 
     document.getElementById("textReturn").classList.remove('hide');
     document.getElementById("addAnimation").classList.remove('hide');

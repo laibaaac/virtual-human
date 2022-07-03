@@ -222,8 +222,11 @@ p.introText {
   border: none;
   resize: none;
   width: 100%;
-}
+  padding: 1.5em;
+  outline: none;
 
+  border-radius: 1em;
+}
 /* HOVER ON TEXT */
 .list div textarea:hover {
   color: var(--orange);
